@@ -71,3 +71,4 @@ map('i', '<C-i>', '<cmd>lua vim.lsp.buf.completion()<CR>', opts) -- Approximatio
 -- Insert Mode Non-Recursive
 map('i', '<C-e>', '<C-e><Esc>', { noremap = false, silent = true })
 
+map("n", "<leader>s", ":source ~/.config/nvim/init.lua<CR>")

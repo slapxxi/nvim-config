@@ -4,7 +4,6 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
-  -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
   use('nvim-treesitter/nvim-treesitter', {run = 'TSUpdate'})
@@ -30,11 +29,7 @@ return require('packer').startup(function(use)
     requires = { {"nvim-lua/plenary.nvim"} }
   }
 
-  use('neovim/nvim-lspconfig')
-  use('jose-elias-alvarez/null-ls.nvim')
-  --use('MunifTanjim/prettier.nvim')
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
-  --use('sbdchd/neoformat')
 end)
 
