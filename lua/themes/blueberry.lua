@@ -42,12 +42,15 @@ local blueberry = {
     Identifier = { fg = colors.white },           -- Variable names, function names
     Function = { fg = colors.blue },              -- Function calls
     Keyword = { fg = colors.blue },               -- Keywords
-    Operator = { fg = colors.dark_gray },         -- Punctuation, operators
+    Operator = { fg = colors.blue },              -- Punctuation, operators
     Type = { fg = colors.gray },                  -- Types
     PreProc = { fg = colors.blue },               -- Preprocessor (e.g., storage.type)
     Special = { fg = colors.light_blue },         -- Embedded, constants
+    Delimiter = { fg = colors.dark_gray },         -- Embedded, constants
     Error = { fg = colors.red },                  -- Errors
     Todo = { fg = colors.yellow, bg = colors.bg },
+    Folded = { fg = colors.dark_gray },
+    SpecialKey = { fg = colors.dark_gray },
 
     -- Diff
     DiffAdd = { bg = "#99b76d" },              -- diffEditor.insertedTextBackground
