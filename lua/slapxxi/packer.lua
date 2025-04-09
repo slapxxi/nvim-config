@@ -7,11 +7,13 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
   use('nvim-treesitter/nvim-treesitter', {run = 'TSUpdate'})
+  use 'nvim-treesitter/playground'
 
-  use({'neovim/nvim-lspconfig'})
-  use({'hrsh7th/nvim-cmp'})
-  use({'hrsh7th/cmp-nvim-lsp'})
-
+  use 'neovim/nvim-lspconfig'
+  use 'hrsh7th/nvim-cmp'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
 
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.8', -- or                            , branch = '0.1.x',
@@ -29,7 +31,7 @@ return require('packer').startup(function(use)
     requires = { {"nvim-lua/plenary.nvim"} }
   }
 
-  use('mbbill/undotree')
-  use('tpope/vim-fugitive')
+  use 'mbbill/undotree'
+  use 'tpope/vim-fugitive'
 end)
 
