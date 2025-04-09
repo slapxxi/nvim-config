@@ -7,7 +7,6 @@ map("n", "<leader>e", vim.cmd.Ex)
 map("n", "<leader>w", vim.cmd.w)
 map("n", "<leader>q", vim.cmd.q)
 
-
 -- remove search highlight
 map("n", "<leader><BS>", vim.cmd.noh)
 
