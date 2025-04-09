@@ -14,3 +14,10 @@ autocmd!
 au TextYankPost * silent! lua vim.highlight.on_yank({higroup="Visual", timeout=50})
 augroup END
 ]]
+
+require('lspconfig').lua_ls.setup({})
+require('lspconfig').ts_ls.setup({
+  on_attach = on_attach,
+  filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
+  cmd = { "typescript-language-server", "--stdio" }
+})

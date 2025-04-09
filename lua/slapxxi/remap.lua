@@ -33,7 +33,7 @@ map('n', 'V', 'V$', opts)
 map('n', 'g/', ':%s/', opts)
 -- DO NOT REMAP TAB TO NOT BREAK CTRL+I AND CTRL+O COMBO
 -- map('n', '<Tab>', '@q', opts)
-map('n', '<leader><Tab>', '@@', opts)
+map('n', '<leader><Tab>', '@q', opts)
 map('n', 'mm', "m'", opts)
 
 -- Editor Commands (Normal Mode)
