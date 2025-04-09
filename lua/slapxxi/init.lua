@@ -1,7 +1,4 @@
 require("slapxxi.packer")
-require("slapxxi.null-ls")
-require("slapxxi.prettier")
-
 require("slapxxi.remap")
 
 vim.opt.relativenumber = true
