@@ -7,6 +7,8 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
+  use('nvim-treesitter/nvim-treesitter', {run = 'TSUpdate'})
+
   use({'neovim/nvim-lspconfig'})
   use({'hrsh7th/nvim-cmp'})
   use({'hrsh7th/cmp-nvim-lsp'})
@@ -30,9 +32,9 @@ return require('packer').startup(function(use)
 
   use('neovim/nvim-lspconfig')
   use('jose-elias-alvarez/null-ls.nvim')
-  -- use('MunifTanjim/prettier.nvim')
+  --use('MunifTanjim/prettier.nvim')
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
-  use('sbdchd/neoformat')
+  --use('sbdchd/neoformat')
 end)
 
