@@ -25,8 +25,8 @@ local blueberry = {
     CursorLine = { bg = colors.line_bg },
     LineNr = { fg = colors.dark_gray },
     CursorLineNr = { fg = colors.blue },
-    Visual = { bg = colors.highlight },
-    Search = { bg = "#5f7e97", fg = colors.fg }, -- editor.findMatchBackground
+    Visual = { bg = colors.highlight, fg = colors.white },
+    Search = { bg = colors.yellow, fg = colors.bg }, -- editor.findMatchBackground
     IncSearch = { bg = "#2E3248" },               -- editor.findMatchHighlightBackground
     StatusLine = { fg = colors.dark_gray, bg = colors.status_bg },
     StatusLineNC = { fg = colors.subtle_gray, bg = colors.status_bg },
@@ -122,4 +122,3 @@ end
 apply_theme()
 
 return blueberry
-

@@ -7,6 +7,13 @@ map("n", "<leader>e", vim.cmd.Ex)
 map("n", "<leader>w", vim.cmd.w)
 map("n", "<leader>q", vim.cmd.q)
 
+
+-- remove search highlight
+map("n", "<leader><BS>", vim.cmd.noh)
+
+-- Packer
+map("n", "<leader>Ps", vim.cmd.PackerSync)
+
 -- Visual Mode Keybindings
 map('v', '<C-e>', '<cmd>EmmetWrapWithAbbreviation<CR>', opts)
 map('v', '<C-l>', '<Esc>a', opts)
@@ -25,7 +32,8 @@ map('n', 'L', '$', opts)
 map('n', 'H', '^', opts)
 map('n', 'V', 'V$', opts)
 map('n', 'g/', ':%s/', opts)
-map('n', '<Tab>', '@q', opts)
+-- DO NOT REMAP TAB TO NOT BREAK CTRL+I AND CTRL+O COMBO
+-- map('n', '<Tab>', '@q', opts)
 map('n', '<leader><Tab>', '@@', opts)
 map('n', 'mm', "m'", opts)
 
@@ -45,7 +53,6 @@ map('n', '<C-h>', '<cmd>EmmetMatchTag<CR>', opts)
 map('n', '<C-j>', '<cmd>lua vim.api.nvim_command("normal m`o<Esc>``")<CR>', opts) -- Approximation
 map('n', '<C-k>', '<cmd>lua vim.api.nvim_command("normal m`O<Esc>``")<CR>', opts) -- Approximation
 map('n', '<leader><leader>u', '<cmd>Git clean<CR>', opts) -- Requires git plugin
-map('n', '<leader>p', '<cmd>Telescope find_files<CR>', opts) -- Requires Telescope
 
 -- Leader Commands (Normal Mode)
 map('n', '<leader>f', '0/fun<CR>cwlet<Esc>f(i=<Esc>f{i=><Esc>0', opts)
