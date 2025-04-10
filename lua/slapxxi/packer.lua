@@ -44,6 +44,7 @@ return require('packer').startup(function(use)
   use 'elihunter173/dirbuf.nvim'
   use 'chentoast/marks.nvim'
   use 'nvim-treesitter/nvim-treesitter-context'
+  use 'lewis6991/gitsigns.nvim'
 
   -- use 'nvim-tree/nvim-tree.lua'
 

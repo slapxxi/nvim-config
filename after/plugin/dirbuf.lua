@@ -1,5 +1,5 @@
 if (true) then
-  vim.keymap.set("n", "<leader>e", ':Dirbuf<CR>')
+  -- vim.keymap.set("n", "<leader>e", ':Dirbuf<CR>')
   vim.keymap.set("n", "<leader>E", ':DirbufQuit<CR>')
 
   require("dirbuf").setup {
