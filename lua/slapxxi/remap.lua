@@ -3,8 +3,9 @@ local opts = { noremap = true, silent = true }
 
 vim.g.mapleader = " "
 
+map("n", "<leader>w", ':bd<CR>')
+
 map("n", "<leader>e", vim.cmd.Ex)
-map("n", "<leader>w", vim.cmd.w)
 map("n", "<leader>q", vim.cmd.q)
 
 -- remove search highlight
