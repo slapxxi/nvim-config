@@ -40,10 +40,11 @@ map('n', 'g/', ':%s/', opts)
 -- DO NOT REMAP TAB TO NOT BREAK CTRL+I AND CTRL+O COMBO
 -- map('n', '<Tab>', '@q', opts)
 map('n', '<leader><Tab>', '@q', opts)
-
-map('n', 'mm', "m'", opts)
+--map('n', 'mm', "m'")
 
 -- Editor Commands (Normal Mode)
+map('n', 'n', 'nzz')
+
 map('n', '<leader>dt', '<cmd>EmmetRemoveTag<CR>', opts)
 map('n', '<leader>u', '<cmd>EmmetUpdateTag<CR>', opts)
 map('n', '<leader>s', '<cmd>EmmetSplitJoinTag<CR>', opts)

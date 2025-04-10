@@ -1,4 +1,5 @@
 require('marks').setup {
+  line_highlight = false,
   -- whether to map keybinds or not. default true
   default_mappings = false,
   -- which builtin marks to show. default {}
