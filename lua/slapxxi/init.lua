@@ -10,14 +10,14 @@ local automarkGroup = augroup("automark", { clear = true })
 local yank_group = augroup("yank_group", {})
 
 autocmd('TextYankPost', {
-    group = yank_group,
-    pattern = '*',
-    callback = function()
-        vim.highlight.on_yank({
-            higroup = 'IncSearch',
-            timeout = 40,
-        })
-    end,
+  group = yank_group,
+  pattern = '*',
+  callback = function()
+    vim.highlight.on_yank({
+      higroup = 'IncSearch',
+      timeout = 40,
+    })
+  end,
 })
 
 autocmd("BufLeave", {
@@ -61,4 +61,3 @@ autocmd("BufLeave", {
   pattern = ".env*",
   command = "normal! mE",
 })
-

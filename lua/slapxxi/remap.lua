@@ -3,6 +3,8 @@ local opts = { noremap = true, silent = true }
 
 vim.g.mapleader = " "
 
+map("n", "<leader>Ps", ':PackerSync<CR>')
+
 map("n", "<leader>w", ':bd<CR>')
 map("n", "<leader>n", ':bn<CR>')
 map("n", "<leader>p", ':bp<CR>')
@@ -25,8 +27,8 @@ map('v', '<leader>y', 'ygv', opts)
 map('v', 'gy', 'ygv<Esc>', opts)
 
 -- move line up/down
-map("n", "<A-j>", ":m .+1<CR>==") -- move line up(n)
-map("n", "<A-k>", ":m .-2<CR>==") -- move line down(n)
+map("n", "<A-j>", ":m .+1<CR>==")     -- move line up(n)
+map("n", "<A-k>", ":m .-2<CR>==")     -- move line down(n)
 map("v", "<A-j>", ":m '>+1<CR>gv=gv") -- move line up(v)
 map("v", "<A-k>", ":m '<-2<CR>gv=gv") -- move line down(v)
 
@@ -51,7 +53,7 @@ map('n', '<leader>s', '<cmd>EmmetSplitJoinTag<CR>', opts)
 map('n', '<C-l>', '<cmd>EmmetMatchTag<CR>', opts)
 map('n', '<C-h>', '<cmd>EmmetMatchTag<CR>', opts)
 
-map('n', '<leader><leader>u', '<cmd>Git clean<CR>', opts)                         -- Requires git plugin
+map('n', '<leader><leader>u', '<cmd>Git clean<CR>', opts) -- Requires git plugin
 
 -- Leader Commands (Normal Mode)
 map('n', '<leader>f', '0/fun<CR>cwlet<Esc>f(i=<Esc>f{i=><Esc>0', opts)
