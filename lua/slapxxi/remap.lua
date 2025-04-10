@@ -6,6 +6,7 @@ vim.g.mapleader = " "
 map("n", "<leader>Ps", ':PackerSync<CR>')
 
 map("n", "<leader>w", ':bd<CR>')
+map("n", "<leader>W", ':bd!<CR>')
 map("n", "<leader>n", ':bn<CR>')
 map("n", "<leader>p", ':bp<CR>')
 
@@ -47,11 +48,13 @@ map('n', '<leader><Tab>', '@q', opts)
 -- Editor Commands (Normal Mode)
 map('n', 'n', 'nzz')
 
+-- Emmet Commands (Normal Mode)
 map('n', '<leader>dt', '<cmd>EmmetRemoveTag<CR>', opts)
 map('n', '<leader>u', '<cmd>EmmetUpdateTag<CR>', opts)
 map('n', '<leader>s', '<cmd>EmmetSplitJoinTag<CR>', opts)
 map('n', '<C-l>', '<cmd>EmmetMatchTag<CR>', opts)
 map('n', '<C-h>', '<cmd>EmmetMatchTag<CR>', opts)
+map('i', '<C-e>', '<cmd>EmmetExpandAbbreviation<CR>', opts)
 
 map('n', '<leader><leader>u', '<cmd>Git clean<CR>', opts) -- Requires git plugin
 
@@ -63,15 +66,18 @@ map('n', '<leader>,', 'A,<Esc>', opts)
 map('n', '<leader><leader>{', 'f{ds{cs`"', opts)
 
 -- Insert Mode Keybindings
-map('i', '<C-e>', '<cmd>EmmetExpandAbbreviation<CR>', opts)
 map('i', '<C-h>', '<Left>', opts)
 map('i', '<C-l>', '<Right>', opts)
 map('i', '<C-k>', '<Up>', opts)
 map('i', '<C-j>', '<Down>', opts)
 map('i', '<C-i>', '<cmd>lua vim.lsp.buf.completion()<CR>', opts) -- Approximation
 
+
 -- Insert Mode Non-Recursive
 map('i', '<C-e>', '<C-e><Esc>', { noremap = false, silent = true })
 
 map("n", "<C-s>", ":w<CR>")
 map("n", "<C-S-s>", ":w!<CR>")
+
+map("n", "<leader><Tab>", '<C-^>', {noremap = false})
+map("n", "<C-r>", '@q')
