@@ -102,6 +102,11 @@ _G.packer_plugins = {
     path = "/home/slava/.local/share/nvim/site/pack/packer/start/copilot.lua",
     url = "https://github.com/zbirenbaum/copilot.lua"
   },
+  ["dirbuf.nvim"] = {
+    loaded = true,
+    path = "/home/slava/.local/share/nvim/site/pack/packer/start/dirbuf.nvim",
+    url = "https://github.com/elihunter173/dirbuf.nvim"
+  },
   harpoon = {
     loaded = true,
     path = "/home/slava/.local/share/nvim/site/pack/packer/start/harpoon",
@@ -111,6 +116,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/slava/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
+  ["marks.nvim"] = {
+    loaded = true,
+    path = "/home/slava/.local/share/nvim/site/pack/packer/start/marks.nvim",
+    url = "https://github.com/chentoast/marks.nvim"
   },
   ["nvim-cmp"] = {
     loaded = true,

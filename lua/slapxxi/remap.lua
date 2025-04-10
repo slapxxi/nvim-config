@@ -7,14 +7,10 @@ map("n", "<leader>w", ':bd<CR>')
 map("n", "<leader>n", ':bn<CR>')
 map("n", "<leader>p", ':bp<CR>')
 
-map("n", "<leader>e", vim.cmd.Ex)
 map("n", "<leader>q", vim.cmd.q)
 
 -- remove search highlight
 map("n", "<leader><BS>", vim.cmd.noh)
-
--- Packer
-map("n", "<leader>Ps", vim.cmd.PackerSync)
 
 -- Visual Mode Keybindings
 map('v', '<C-e>', '<cmd>EmmetWrapWithAbbreviation<CR>', opts)
@@ -41,11 +37,11 @@ map('n', '<leader><Tab>', '@q', opts)
 map('n', 'mm', "m'", opts)
 
 -- Editor Commands (Normal Mode)
-map('n', '<leader>r', '<cmd>lua vim.lsp.buf.restart()<CR>', opts) -- Approximation
+map('n', '<leader>r', '<cmd>lua vim.lsp.buf.restart()<CR>', opts)      -- Approximation
 map('n', '<leader>k', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts) -- Approximation
 map('n', '<leader>j', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts) -- Approximation
-map('n', '<leader>h', '<cmd>lua vim.lsp.buf.hover()<CR>', opts) -- Approximation
-map('n', '<leader>l', '<cmd>lua vim.lsp.buf.definition()<CR>', opts) -- Approximation
+map('n', '<leader>h', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)        -- Approximation
+map('n', '<leader>l', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)   -- Approximation
 map('n', '<leader>dt', '<cmd>EmmetRemoveTag<CR>', opts)
 map('n', '<leader>u', '<cmd>EmmetUpdateTag<CR>', opts)
 map('n', '<leader>s', '<cmd>EmmetSplitJoinTag<CR>', opts)
@@ -55,7 +51,7 @@ map('n', '<C-l>', '<cmd>EmmetMatchTag<CR>', opts)
 map('n', '<C-h>', '<cmd>EmmetMatchTag<CR>', opts)
 map('n', '<C-j>', '<cmd>lua vim.api.nvim_command("normal m`o<Esc>``")<CR>', opts) -- Approximation
 map('n', '<C-k>', '<cmd>lua vim.api.nvim_command("normal m`O<Esc>``")<CR>', opts) -- Approximation
-map('n', '<leader><leader>u', '<cmd>Git clean<CR>', opts) -- Requires git plugin
+map('n', '<leader><leader>u', '<cmd>Git clean<CR>', opts)                         -- Requires git plugin
 
 -- Leader Commands (Normal Mode)
 map('n', '<leader>f', '0/fun<CR>cwlet<Esc>f(i=<Esc>f{i=><Esc>0', opts)

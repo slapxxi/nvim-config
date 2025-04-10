@@ -3,6 +3,8 @@
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
 
+vim.keymap.set('n', '<leader>Ps', vim.cmd.PackerSync)
+
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
@@ -40,6 +42,14 @@ return require('packer').startup(function(use)
   use 'tpope/vim-surround'
 
   use 'zbirenbaum/copilot.lua'
+
+  use 'elihunter173/dirbuf.nvim'
+
+  use 'chentoast/marks.nvim'
+
+  -- use 'nvim-tree/nvim-tree.lua'
+
+  -- use 'stevearc/oil.nvim'
 
   -- temp disable 
   -- use {'romgrk/nvim-treesitter-context', cond = function() return false end}
