@@ -16,7 +16,7 @@ require('marks').setup {
   -- can be either a table with all/none of the keys, or a single number, in which case
   -- the priority applies to all marks.
   -- default 10.
-  sign_priority = { lower=10, upper=15, builtin=8, bookmark=20 },
+  -- sign_priority = { lower=10, upper=15, builtin=8, bookmark=20 },
   -- disables mark tracking for specific filetypes. default {}
   excluded_filetypes = {},
   -- disables mark tracking for specific buftypes. default {}
@@ -31,6 +31,12 @@ require('marks').setup {
     -- explicitly prompt for a virtual line annotation when setting a bookmark from this group.
     -- defaults to false.
     annotate = false,
+  },
+  sign_priority = {
+    builtin = 1,
+    lower = 10,
+    upper = 15,
+    bookmark = 20,
   },
   mappings = {}
 }

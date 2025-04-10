@@ -3,5 +3,6 @@ require('gitsigns').setup({
   numhl = false,
   linehl = false,
   word_diff = false,
+  sign_priority = 10,
 })
 
