@@ -24,6 +24,12 @@ map('v', 'g/', ':s/', opts)
 map('v', '<leader>y', 'ygv', opts)
 map('v', 'gy', 'ygv<Esc>', opts)
 
+-- move line up/down
+map("n", "<A-j>", ":m .+1<CR>==") -- move line up(n)
+map("n", "<A-k>", ":m .-2<CR>==") -- move line down(n)
+map("v", "<A-j>", ":m '>+1<CR>gv=gv") -- move line up(v)
+map("v", "<A-k>", ":m '<-2<CR>gv=gv") -- move line down(v)
+
 -- Normal Mode Keybindings
 map('n', 'Y', '"Yy', opts)
 map('n', 'L', '$', opts)
@@ -34,23 +40,16 @@ map('n', 'g/', ':%s/', opts)
 -- DO NOT REMAP TAB TO NOT BREAK CTRL+I AND CTRL+O COMBO
 -- map('n', '<Tab>', '@q', opts)
 map('n', '<leader><Tab>', '@q', opts)
+
 map('n', 'mm', "m'", opts)
 
 -- Editor Commands (Normal Mode)
-map('n', '<leader>r', '<cmd>lua vim.lsp.buf.restart()<CR>', opts)      -- Approximation
-map('n', '<leader>k', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts) -- Approximation
-map('n', '<leader>j', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts) -- Approximation
-map('n', '<leader>h', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)        -- Approximation
-map('n', '<leader>l', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)   -- Approximation
 map('n', '<leader>dt', '<cmd>EmmetRemoveTag<CR>', opts)
 map('n', '<leader>u', '<cmd>EmmetUpdateTag<CR>', opts)
 map('n', '<leader>s', '<cmd>EmmetSplitJoinTag<CR>', opts)
-map('n', 'gB', '<cmd>lua vim.lsp.buf.document_highlight()<CR>', opts)
-map('n', 'gD', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
 map('n', '<C-l>', '<cmd>EmmetMatchTag<CR>', opts)
 map('n', '<C-h>', '<cmd>EmmetMatchTag<CR>', opts)
-map('n', '<C-j>', '<cmd>lua vim.api.nvim_command("normal m`o<Esc>``")<CR>', opts) -- Approximation
-map('n', '<C-k>', '<cmd>lua vim.api.nvim_command("normal m`O<Esc>``")<CR>', opts) -- Approximation
+
 map('n', '<leader><leader>u', '<cmd>Git clean<CR>', opts)                         -- Requires git plugin
 
 -- Leader Commands (Normal Mode)
