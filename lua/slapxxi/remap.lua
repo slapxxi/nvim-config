@@ -4,6 +4,8 @@ local opts = { noremap = true, silent = true }
 vim.g.mapleader = " "
 
 map("n", "<leader>w", ':bd<CR>')
+map("n", "<leader>n", ':bn<CR>')
+map("n", "<leader>p", ':bp<CR>')
 
 map("n", "<leader>e", vim.cmd.Ex)
 map("n", "<leader>q", vim.cmd.q)
@@ -32,6 +34,7 @@ map('n', 'L', '$', opts)
 map('n', 'H', '^', opts)
 map('n', 'V', 'V$', opts)
 map('n', 'g/', ':%s/', opts)
+
 -- DO NOT REMAP TAB TO NOT BREAK CTRL+I AND CTRL+O COMBO
 -- map('n', '<Tab>', '@q', opts)
 map('n', '<leader><Tab>', '@q', opts)
@@ -72,4 +75,5 @@ map('i', '<C-i>', '<cmd>lua vim.lsp.buf.completion()<CR>', opts) -- Approximatio
 -- Insert Mode Non-Recursive
 map('i', '<C-e>', '<C-e><Esc>', { noremap = false, silent = true })
 
-map("n", "<C-s>", ":w!<CR>")
+map("n", "<C-s>", ":w<CR>")
+map("n", "<C-S-s>", ":w!<CR>")

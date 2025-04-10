@@ -75,8 +75,11 @@ time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   ["bufferline.nvim"] = {
-    loaded = true,
-    path = "/home/slava/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
+    cond = { "\27LJ\2\n\15\0\0\1\0\0\0\2+\0\2\0L\0\2\0\0" },
+    loaded = false,
+    needs_bufread = false,
+    only_cond = true,
+    path = "/home/slava/.local/share/nvim/site/pack/packer/opt/bufferline.nvim",
     url = "https://github.com/akinsho/bufferline.nvim"
   },
   ["cmp-buffer"] = {
@@ -93,6 +96,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/slava/.local/share/nvim/site/pack/packer/start/cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
+  },
+  ["copilot.lua"] = {
+    loaded = true,
+    path = "/home/slava/.local/share/nvim/site/pack/packer/start/copilot.lua",
+    url = "https://github.com/zbirenbaum/copilot.lua"
   },
   harpoon = {
     loaded = true,
@@ -163,6 +171,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Conditional loads
+time([[Conditional loading of bufferline.nvim]], true)
+  require("packer.load")({"bufferline.nvim"}, {}, _G.packer_plugins)
+time([[Conditional loading of bufferline.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

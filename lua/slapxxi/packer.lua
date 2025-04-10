@@ -35,8 +35,13 @@ return require('packer').startup(function(use)
   use 'tpope/vim-fugitive'
 
   -- using packer.nvim
-  use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
+  use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons', cond = function() return true end}
 
   use 'tpope/vim-surround'
+
+  use 'zbirenbaum/copilot.lua'
+
+  -- temp disable 
+  -- use {'romgrk/nvim-treesitter-context', cond = function() return false end}
 end)
 
