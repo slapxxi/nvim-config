@@ -33,20 +33,16 @@ return require('packer').startup(function(use)
     requires = { {"nvim-lua/plenary.nvim"} }
   }
 
-  use 'mbbill/undotree'
-  use 'tpope/vim-fugitive'
 
   -- using packer.nvim
   use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons', cond = function() return true end}
 
+  use 'mbbill/undotree'
+  use 'tpope/vim-fugitive'
   use 'tpope/vim-surround'
-
   use 'zbirenbaum/copilot.lua'
-
   use 'elihunter173/dirbuf.nvim'
-
   use 'chentoast/marks.nvim'
-
   use 'nvim-treesitter/nvim-treesitter-context'
 
   -- use 'nvim-tree/nvim-tree.lua'
