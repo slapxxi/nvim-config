@@ -97,6 +97,11 @@ _G.packer_plugins = {
     path = "/home/slava/.local/share/nvim/site/pack/packer/start/cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
   },
+  ["conform.nvim"] = {
+    loaded = true,
+    path = "/home/slava/.local/share/nvim/site/pack/packer/start/conform.nvim",
+    url = "https://github.com/stevearc/conform.nvim"
+  },
   ["copilot.lua"] = {
     loaded = true,
     path = "/home/slava/.local/share/nvim/site/pack/packer/start/copilot.lua",

@@ -43,6 +43,7 @@ return require('packer').startup(function(use)
   use 'chentoast/marks.nvim'
   use 'nvim-treesitter/nvim-treesitter-context'
   use 'lewis6991/gitsigns.nvim'
+  use 'stevearc/conform.nvim'
 
   -- use 'nvim-tree/nvim-tree.lua'
 

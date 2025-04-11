@@ -9,6 +9,13 @@ local autocmd = vim.api.nvim_create_autocmd
 local automarkGroup = augroup("automark", { clear = true })
 local yank_group = augroup("yank_group", {})
 
+autocmd("BufWritePre", {
+  pattern = "*",
+  callback = function(args)
+    require("conform").format({ bufnr = args.buf })
+  end,
+})
+
 autocmd('TextYankPost', {
   group = yank_group,
   pattern = '*',
