@@ -12,6 +12,8 @@ map("n", "<leader>p", ":bp<CR>")
 
 map("n", "<leader>q", vim.cmd.q)
 
+map("n", "<leader>P", "o<Esc>p")
+
 -- remove search highlight
 map("n", "<leader><BS>", vim.cmd.noh)
 
@@ -82,3 +84,6 @@ map("n", "<leader><Tab>", "<C-^>", { noremap = false })
 map("n", "<C-r>", "@q")
 
 map("n", "G", "Gzz")
+
+map("n", "<C-d>", "<C-d>zz")
+map("n", "<C-u>", "<C-u>zz")

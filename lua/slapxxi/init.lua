@@ -47,6 +47,12 @@ autocmd("BufLeave", {
 
 autocmd("BufLeave", {
 	group = automarkGroup,
+	pattern = { "*.jsx", "*.tsx" },
+	command = "normal! mX",
+})
+
+autocmd("BufLeave", {
+	group = automarkGroup,
 	pattern = "*.md",
 	command = "normal! mM",
 })

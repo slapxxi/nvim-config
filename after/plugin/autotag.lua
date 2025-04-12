@@ -1,4 +1,4 @@
-if false then
+if true then
 	require("nvim-ts-autotag").setup({
 		enabled = false,
 		opts = {

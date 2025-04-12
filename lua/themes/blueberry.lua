@@ -20,21 +20,21 @@ local colors = {
 local blueberry = {
 	-- Basic UI elements
 	Normal = { fg = colors.fg, bg = colors.bg },
-	NormalFloat = { fg = colors.fg, bg = colors.line_bg }, -- Floating windows
+	NormalFloat = { fg = colors.fg, bg = colors.subtle_gray }, -- Floating windows
 	Cursor = { fg = colors.bg, bg = colors.blue },
 	CursorLine = { bg = colors.line_bg },
 	LineNr = { fg = colors.dark_gray },
 	CursorLineNr = { fg = colors.blue },
 	Visual = { bg = colors.highlight, fg = colors.white },
 	Search = { bg = colors.yellow, fg = colors.bg }, -- editor.findMatchBackground
-	IncSearch = { bg = "#2E3248" }, -- editor.findMatchHighlightBackground
+	IncSearch = { bg = colors.bg }, -- editor.findMatchHighlightBackground
 	StatusLine = { fg = colors.dark_gray, bg = colors.status_bg },
 	StatusLineNC = { fg = colors.subtle_gray, bg = colors.status_bg },
 	VertSplit = { fg = "#14141a" }, -- sideBar.border
-	Pmenu = { fg = colors.fg, bg = "#131318" }, -- editorSuggestWidget.background
-	PmenuSel = { bg = "#1a1a1f" }, -- editorSuggestWidget.selectedBackground
+	Pmenu = { fg = colors.fg, bg = colors.subtle_gray }, -- editorSuggestWidget.background
+	PmenuSel = { bg = colors.yellow, fg = colors.bg }, -- editorSuggestWidget.selectedBackground
 	WildMenu = { fg = colors.white, bg = colors.blue },
-	SnippetTabStop = { fg = colors.text, bg = colors.bg },
+	SnippetTabStop = { fg = colors.text, bg = colors.yellow },
 	MatchParen = { fg = colors.yellow, bold = true },
 
 	-- Syntax highlighting (mapped from tokenColors)
@@ -67,11 +67,31 @@ local blueberry = {
 	GitSignsChange = { fg = "#555770" }, -- gitDecoration.modifiedResourceForeground
 	GitSignsDelete = { fg = "#EF5350" }, -- gitDecoration.deletedResourceForeground
 
+	-- LSP
+	LspReferenceText = { fg = colors.bg, bg = colors.yellow },
+
+	-- LSP diagnostics
+	LspDiagnosticsDefaultError = { fg = colors.red, bg = colors.bg },
+	LspDiagnosticsDefaultWarning = { fg = colors.yellow, bg = colors.bg },
+	LspDiagnosticsDefaultInformation = { fg = colors.light_blue, bg = colors.bg },
+	LspDiagnosticsDefaultHint = { fg = colors.gray, bg = colors.bg },
+
+	-- LSP floating windows
+	LspFloatWinNormal = { fg = colors.fg, bg = colors.bg },
+	LspFloatWinBorder = { fg = colors.dark_gray, bg = colors.bg },
+
+	-- LSP signature help
+	LspSignatureActiveParameter = { fg = colors.white, bg = colors.bg, bold = true },
+
 	-- Markdown
+	RenderMarkdownCode = { bg = colors.line_bg },
 	markdownBold = { fg = colors.fg, bold = true },
 	markdownItalic = { fg = "#a2bffc", italic = true }, -- markup.changed
 	markdownHeadingDelimiter = { fg = colors.blue },
 	markdownBlockquote = { fg = colors.fg },
+
+	TreesitterContext = { bg = colors.line_bg, fg = colors.bg },
+	TreesitterContextLineNumber = { bg = colors.line_bg, fg = colors.white },
 
 	-- Terminal colors
 	TermCursor = { fg = colors.bg, bg = colors.blue },

@@ -41,31 +41,15 @@ lspconfig.ts_ls.setup({
 	cmd = { "typescript-language-server", "--stdio" },
 })
 
--- lspconfig.emmet_ls.setup({
--- 	capabilities = capabilities,
--- 	filetypes = {
--- 		"css",
--- 		"eruby",
--- 		"html",
--- 		"javascript",
--- 		"javascriptreact",
--- 		"less",
--- 		"sass",
--- 		"scss",
--- 		"svelte",
--- 		"pug",
--- 		"typescriptreact",
--- 		"vue",
--- 	},
--- 	init_options = {
--- 		html = {
--- 			options = {
--- 				-- For possible options, see: https://github.com/emmetio/emmet/blob/master/src/config.ts#L79-L267
--- 				["bem.enabled"] = true,
--- 			},
--- 		},
--- 	},
--- })
+lspconfig.html.setup({
+	capabilities = capabilities,
+})
+
+lspconfig.cssls.setup({
+	capabilities = capabilities,
+})
+
+lspconfig.tailwindcss.setup({})
 
 lspconfig.emmet_language_server.setup({
 	filetypes = {

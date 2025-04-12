@@ -53,7 +53,35 @@ return require("packer").startup(function(use)
 	use("stevearc/conform.nvim")
 	use("catgoose/nvim-colorizer.lua")
 	use("numToStr/Comment.nvim")
-	--use("windwp/nvim-ts-autotag")
+	use("windwp/nvim-ts-autotag")
+	use("luckasRanarison/tailwind-tools.nvim")
+
+	-- AVANTE
+	-- Required plugins
+	use("stevearc/dressing.nvim")
+	use("MunifTanjim/nui.nvim")
+	use("MeanderingProgrammer/render-markdown.nvim")
+
+	-- Optional dependencies
+	use("nvim-tree/nvim-web-devicons") -- or use 'echasnovski/mini.icons'
+	use("HakonHarnes/img-clip.nvim")
+
+	-- Avante.nvim with build process
+	use({
+		"yetone/avante.nvim",
+		branch = "main",
+		run = "make",
+		config = function()
+			require("avante").setup()
+		end,
+	})
+
+	use({
+		"OlegGulevskyy/better-ts-errors.nvim",
+		requires = {
+			{ "MunifTanjim/nui.nvim" },
+		},
+	})
 	--use("mattn/emmet-vim")
 
 	-- use 'nvim-tree/nvim-tree.lua'
