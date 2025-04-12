@@ -20,7 +20,7 @@ local colors = {
 local blueberry = {
 	-- Basic UI elements
 	Normal = { fg = colors.fg, bg = colors.bg },
-	NormalFloat = { fg = colors.fg, bg = colors.subtle_gray }, -- Floating windows
+	NormalFloat = { fg = colors.fg, bg = colors.line_bg }, -- Floating windows
 	Cursor = { fg = colors.bg, bg = colors.blue },
 	CursorLine = { bg = colors.line_bg },
 	LineNr = { fg = colors.dark_gray },
@@ -54,6 +54,7 @@ local blueberry = {
 	Todo = { fg = colors.yellow, bg = colors.bg },
 	Folded = { fg = colors.dark_gray },
 	SpecialKey = { fg = colors.dark_gray },
+	NonText = { fg = colors.fg },
 
 	-- Diff
 	DiffAdd = { bg = "#addb67", fg = "#000000" }, -- diffEditor.insertedTextBackground
@@ -77,8 +78,8 @@ local blueberry = {
 	LspDiagnosticsDefaultHint = { fg = colors.gray, bg = colors.bg },
 
 	-- LSP floating windows
-	LspFloatWinNormal = { fg = colors.fg, bg = colors.bg },
-	LspFloatWinBorder = { fg = colors.dark_gray, bg = colors.bg },
+	LspFloatWinNormal = { fg = colors.fg, bg = colors.red },
+	LspFloatWinBorder = { fg = colors.dark_gray, bg = colors.red },
 
 	-- LSP signature help
 	LspSignatureActiveParameter = { fg = colors.white, bg = colors.bg, bold = true },
