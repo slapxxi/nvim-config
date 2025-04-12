@@ -74,6 +74,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["Comment.nvim"] = {
+    loaded = true,
+    path = "/home/slava/.local/share/nvim/site/pack/packer/start/Comment.nvim",
+    url = "https://github.com/numToStr/Comment.nvim"
+  },
   ["bufferline.nvim"] = {
     cond = { "\27LJ\2\n\15\0\0\1\0\0\0\2+\0\2\0L\0\2\0\0" },
     loaded = false,

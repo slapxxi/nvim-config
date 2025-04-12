@@ -80,3 +80,5 @@ map("n", "<C-S-s>", ":w!<CR>")
 
 map("n", "<leader><Tab>", "<C-^>", { noremap = false })
 map("n", "<C-r>", "@q")
+
+map("n", "G", "Gzz")

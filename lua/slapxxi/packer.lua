@@ -52,6 +52,7 @@ return require("packer").startup(function(use)
 	use("lewis6991/gitsigns.nvim")
 	use("stevearc/conform.nvim")
 	use("catgoose/nvim-colorizer.lua")
+	use("numToStr/Comment.nvim")
 
 	-- use 'nvim-tree/nvim-tree.lua'
 
