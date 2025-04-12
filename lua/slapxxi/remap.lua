@@ -16,7 +16,6 @@ map("n", "<leader>q", vim.cmd.q)
 map("n", "<leader><BS>", vim.cmd.noh)
 
 -- Visual Mode Keybindings
-map("v", "<C-e>", "<cmd>EmmetWrapWithAbbreviation<CR>", opts)
 map("v", "<C-l>", "<Esc>a", opts)
 map("v", "<C-h>", "<Esc>i", opts)
 map("v", "L", "$", opts)
@@ -42,19 +41,20 @@ map("n", "g/", ":%s/", opts)
 
 -- DO NOT REMAP TAB TO NOT BREAK CTRL+I AND CTRL+O COMBO
 -- map('n', '<Tab>', '@q', opts)
-map("n", "<leader><Tab>", "@q", opts)
+--map("n", "<leader><Tab>", "@q", opts)
 --map('n', 'mm', "m'")
 
 -- Editor Commands (Normal Mode)
 map("n", "n", "nzz")
 
 -- Emmet Commands (Normal Mode)
-map("n", "<leader>dt", "<cmd>EmmetRemoveTag<CR>", opts)
-map("n", "<leader>u", "<cmd>EmmetUpdateTag<CR>", opts)
-map("n", "<leader>s", "<cmd>EmmetSplitJoinTag<CR>", opts)
-map("n", "<C-l>", "<cmd>EmmetMatchTag<CR>", opts)
-map("n", "<C-h>", "<cmd>EmmetMatchTag<CR>", opts)
-map("i", "<C-e>", "<cmd>EmmetExpandAbbreviation<CR>", opts)
+--map("v", "<C-e>", "<cmd>EmmetWrapWithAbbreviation<CR>", opts)
+-- map("n", "<leader>dt", "<cmd>EmmetRemoveTag<CR>", opts)
+-- map("n", "<leader>u", "<cmd>EmmetUpdateTag<CR>", opts)
+-- map("n", "<leader>s", "<cmd>EmmetSplitJoinTag<CR>", opts)
+-- map("n", "<C-l>", "<cmd>EmmetMatchTag<CR>", opts)
+-- map("n", "<C-h>", "<cmd>EmmetMatchTag<CR>", opts)
+-- map("i", "<C-e>", "<cmd>EmmetExpandAbbreviation<CR>", opts)
 
 map("n", "<leader><leader>u", "<cmd>Git clean<CR>", opts) -- Requires git plugin
 
@@ -73,7 +73,7 @@ map("i", "<C-j>", "<Down>", opts)
 map("i", "<C-i>", "<cmd>lua vim.lsp.buf.completion()<CR>", opts) -- Approximation
 
 -- Insert Mode Non-Recursive
-map("i", "<C-e>", "<C-e><Esc>", { noremap = false, silent = true })
+-- map("i", "<C-e>", "<C-e><Esc>", { noremap = false, silent = true })
 
 map("n", "<C-s>", ":w<CR>")
 map("n", "<C-S-s>", ":w!<CR>")

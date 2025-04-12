@@ -34,6 +34,8 @@ local blueberry = {
 	Pmenu = { fg = colors.fg, bg = "#131318" }, -- editorSuggestWidget.background
 	PmenuSel = { bg = "#1a1a1f" }, -- editorSuggestWidget.selectedBackground
 	WildMenu = { fg = colors.white, bg = colors.blue },
+	SnippetTabStop = { fg = colors.text, bg = colors.bg },
+	MatchParen = { fg = colors.yellow, bold = true },
 
 	-- Syntax highlighting (mapped from tokenColors)
 	Statement = { fg = colors.blue },

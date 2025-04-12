@@ -1,6 +1,6 @@
 require("copilot").setup({
 	suggestion = {
-		enabled = false,
+		enabled = true,
 		auto_trigger = true,
 		hide_during_completion = false,
 		accept_mappings = true,

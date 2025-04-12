@@ -10,6 +10,9 @@ local lspconfig_defaults = lspconfig.util.default_config
 lspconfig_defaults.capabilities =
 	vim.tbl_deep_extend("force", lspconfig_defaults.capabilities, require("cmp_nvim_lsp").default_capabilities())
 
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
 -- This is where you enable features that only work
 -- if there is a language server active in the file
 vim.api.nvim_create_autocmd("LspAttach", {
@@ -31,8 +34,63 @@ vim.api.nvim_create_autocmd("LspAttach", {
 })
 
 lspconfig.lua_ls.setup({})
+
 lspconfig.ts_ls.setup({
 	on_attach = on_attach,
 	filetypes = { "javascript", "typescript", "typescriptreact", "typescript.tsx" },
 	cmd = { "typescript-language-server", "--stdio" },
+})
+
+-- lspconfig.emmet_ls.setup({
+-- 	capabilities = capabilities,
+-- 	filetypes = {
+-- 		"css",
+-- 		"eruby",
+-- 		"html",
+-- 		"javascript",
+-- 		"javascriptreact",
+-- 		"less",
+-- 		"sass",
+-- 		"scss",
+-- 		"svelte",
+-- 		"pug",
+-- 		"typescriptreact",
+-- 		"vue",
+-- 	},
+-- 	init_options = {
+-- 		html = {
+-- 			options = {
+-- 				-- For possible options, see: https://github.com/emmetio/emmet/blob/master/src/config.ts#L79-L267
+-- 				["bem.enabled"] = true,
+-- 			},
+-- 		},
+-- 	},
+-- })
+
+lspconfig.emmet_language_server.setup({
+	filetypes = {
+		"css",
+		"eruby",
+		"html",
+		"javascript",
+		"javascriptreact",
+		"less",
+		"sass",
+		"scss",
+		"pug",
+		"typescriptreact",
+	},
+	-- Read more about this options in the [vscode docs](https://code.visualstudio.com/docs/editor/emmet#_emmet-configuration).
+	-- **Note:** only the options listed in the table are supported.
+	init_options = {
+		includeLanguages = {},
+		excludeLanguages = {},
+		extensionsPath = {},
+		preferences = {},
+		showAbbreviationSuggestions = true,
+		showExpandedAbbreviation = "always",
+		showSuggestionsAsSnippets = false,
+		syntaxProfiles = {},
+		variables = {},
+	},
 })

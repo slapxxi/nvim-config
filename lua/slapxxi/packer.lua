@@ -53,6 +53,8 @@ return require("packer").startup(function(use)
 	use("stevearc/conform.nvim")
 	use("catgoose/nvim-colorizer.lua")
 	use("numToStr/Comment.nvim")
+	--use("windwp/nvim-ts-autotag")
+	--use("mattn/emmet-vim")
 
 	-- use 'nvim-tree/nvim-tree.lua'
 
