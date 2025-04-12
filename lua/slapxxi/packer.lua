@@ -51,7 +51,7 @@ return require("packer").startup(function(use)
 	use("nvim-treesitter/nvim-treesitter-context")
 	use("lewis6991/gitsigns.nvim")
 	use("stevearc/conform.nvim")
-	use("catgoose/nvim-colorizer.lua")
+	-- use("catgoose/nvim-colorizer.lua")
 	use("numToStr/Comment.nvim")
 	use("windwp/nvim-ts-autotag")
 	use("luckasRanarison/tailwind-tools.nvim")
@@ -72,7 +72,28 @@ return require("packer").startup(function(use)
 		branch = "main",
 		run = "make",
 		config = function()
-			require("avante").setup()
+			require("avante").setup({
+				opts = {
+					-- provider = "openai",
+					provider = "groq",
+					openai = {
+						endpoint = "https://api.openai.com/v1",
+						model = "gpt-4o", -- your desired model (or use gpt-4o, etc.)
+						timeout = 30000, -- Timeout in milliseconds, increase this for reasoning models
+						temperature = 0,
+						max_completion_tokens = 8192, -- Increase this to include reasoning tokens (for reasoning models)
+						--reasoning_effort = "medium", -- low|medium|high, only used for reasoning models
+					},
+					vendors = {
+						groq = {
+							__inherited_from = "openai",
+							api_key_name = "GROQ_API_KEY",
+							endpoint = "https://api.groq.com/openai/v1/",
+							model = "llama-3.1-70b-versatile",
+						},
+					},
+				},
+			})
 		end,
 	})
 

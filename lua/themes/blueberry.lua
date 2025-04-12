@@ -9,7 +9,8 @@ local colors = {
 	gray = "#535a7a", -- Deemphasized text, object keys
 	dark_gray = "#303345", -- Punctuation, inactive elements
 	subtle_gray = "#242533", -- Inactive foreground
-	highlight = "#3c5888", -- Selection highlights
+	--highlight = "#3c5888", -- Selection highlights
+	highlight = "#0a2556", -- Selection highlights
 	line_bg = "#121217", -- Line highlight background
 	sidebar_bg = "#0e0e12", -- SideBar.background
 	status_bg = "#0e0e12", -- StatusBar.background
@@ -25,7 +26,7 @@ local blueberry = {
 	CursorLine = { bg = colors.line_bg },
 	LineNr = { fg = colors.dark_gray },
 	CursorLineNr = { fg = colors.blue },
-	Visual = { bg = colors.highlight, fg = colors.white },
+	Visual = { bg = colors.highlight },
 	Search = { bg = colors.yellow, fg = colors.bg }, -- editor.findMatchBackground
 	IncSearch = { bg = colors.bg }, -- editor.findMatchHighlightBackground
 	StatusLine = { fg = colors.dark_gray, bg = colors.status_bg },
