@@ -15,3 +15,6 @@ vim.opt.hidden = true
 vim.opt.smartindent = true
 
 vim.opt.ignorecase = true
+
+vim.opt.foldenable = false
+vim.opt.foldmethod = "manual"
