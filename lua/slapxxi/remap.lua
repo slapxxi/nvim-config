@@ -33,6 +33,9 @@ map("v", "gd", "ygvd", opts)
 map("n", "g/", ":%s/", opts)
 map("v", "g/", ":s/", opts)
 
+-- case insensitive search in case the option is not enabled
+-- map("n", "<leader>/", "/\\c")
+
 -- yank but go to the end of the yanked text
 map("v", "gy", "ygv<Esc>", opts)
 

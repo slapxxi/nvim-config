@@ -13,3 +13,5 @@ vim.opt.softtabstop = 2 -- Number of spaces inserted when pressing <Tab>
 vim.opt.hidden = true
 
 vim.opt.smartindent = true
+
+vim.opt.ignorecase = true

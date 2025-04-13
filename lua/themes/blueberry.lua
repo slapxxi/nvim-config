@@ -21,7 +21,7 @@ local colors = {
 local blueberry = {
 	-- Basic UI elements
 	Normal = { fg = colors.fg, bg = colors.bg },
-	NormalFloat = { fg = colors.fg, bg = colors.line_bg }, -- Floating windows
+	NormalFloat = { fg = colors.blue }, -- Floating windows
 	Cursor = { fg = colors.bg, bg = colors.blue },
 	CursorLine = { bg = colors.line_bg },
 	LineNr = { fg = colors.dark_gray },
@@ -56,6 +56,12 @@ local blueberry = {
 	Folded = { fg = colors.dark_gray },
 	SpecialKey = { fg = colors.dark_gray },
 	NonText = { fg = colors.fg },
+
+	-- CmpSel = { bg = colors.red },
+	-- CmpItemAbbr = { bg = colors.yellow },
+	-- CmpItemAbbrMatch = { bg = colors.yellow, fg = colors.white },
+	-- CmpItemKind = { bg = colors.yellow },
+	-- CmpItemMenu = { bg = colors.yellow },
 
 	-- Diff
 	DiffAdd = { bg = "#addb67", fg = "#000000" }, -- diffEditor.insertedTextBackground
