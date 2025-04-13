@@ -61,7 +61,9 @@ return require("packer").startup(function(use)
 	use("stevearc/conform.nvim")
 	use("numToStr/Comment.nvim")
 	use("windwp/nvim-ts-autotag")
+
 	use("luckasRanarison/tailwind-tools.nvim")
+	use("onsails/lspkind-nvim")
 
 	use("stevearc/dressing.nvim")
 	use("MunifTanjim/nui.nvim")

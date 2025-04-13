@@ -152,6 +152,11 @@ _G.packer_plugins = {
     path = "/home/slava/.local/share/nvim/site/pack/packer/start/img-clip.nvim",
     url = "https://github.com/HakonHarnes/img-clip.nvim"
   },
+  ["lspkind-nvim"] = {
+    loaded = true,
+    path = "/home/slava/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
+    url = "https://github.com/onsails/lspkind-nvim"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/home/slava/.local/share/nvim/site/pack/packer/start/lualine.nvim",
