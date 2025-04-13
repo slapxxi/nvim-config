@@ -3,6 +3,8 @@
 vim.opt.signcolumn = "yes"
 
 local lspconfig = require("lspconfig")
+local autocmd = vim.api.nvim_create_autocmd
+local augroup = vim.api.nvim_create_augroup
 
 -- Add cmp_nvim_lsp capabilities settings to lspconfig
 -- This should be executed before you configure any language server
@@ -12,6 +14,15 @@ lspconfig_defaults.capabilities =
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+vim.o.updatetime = 250
+
+autocmd({ "CursorHold", "CursorHoldI" }, {
+	group = augroup("float_diagnostic", { clear = true }),
+	callback = function()
+		vim.diagnostic.open_float(nil, { focus = false })
+	end,
+})
 
 -- This is where you enable features that only work
 -- if there is a language server active in the file

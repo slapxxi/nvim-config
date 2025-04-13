@@ -79,6 +79,11 @@ local blueberry = {
 	LspReferenceText = { fg = colors.bg, bg = colors.yellow },
 
 	-- LSP diagnostics
+	-- DiagnosticsError = { fg = colors.red },
+	-- DiagnosticsWarn = { fg = colors.red },
+	-- DiagnosticsInfo = { fg = colors.red },
+	-- DiagnosticsHint = { fg = colors.red },
+
 	LspDiagnosticsDefaultError = { fg = colors.red, bg = colors.bg },
 	LspDiagnosticsDefaultWarning = { fg = colors.yellow, bg = colors.bg },
 	LspDiagnosticsDefaultInformation = { fg = colors.light_blue, bg = colors.bg },
