@@ -137,11 +137,6 @@ _G.packer_plugins = {
     path = "/home/slava/.local/share/nvim/site/pack/packer/start/dressing.nvim",
     url = "https://github.com/stevearc/dressing.nvim"
   },
-  ["fzf-lua"] = {
-    loaded = true,
-    path = "/home/slava/.local/share/nvim/site/pack/packer/start/fzf-lua",
-    url = "https://github.com/ibhagwan/fzf-lua"
-  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/home/slava/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
@@ -207,11 +202,6 @@ _G.packer_plugins = {
     path = "/home/slava/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
-  ["parrot.nvim"] = {
-    loaded = true,
-    path = "/home/slava/.local/share/nvim/site/pack/packer/start/parrot.nvim",
-    url = "https://github.com/frankroeder/parrot.nvim"
-  },
   playground = {
     loaded = true,
     path = "/home/slava/.local/share/nvim/site/pack/packer/start/playground",
@@ -256,10 +246,20 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/slava/.local/share/nvim/site/pack/packer/start/vim-vsnip",
     url = "https://github.com/hrsh7th/vim-vsnip"
+  },
+  ["windsurf.nvim"] = {
+    config = { "\27LJ\2\n…\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\17virtual_text\1\0\1\17virtual_text\0\1\0\2\fenabled\2\29default_filetype_enabled\2\nsetup\fcodeium\frequire\0" },
+    loaded = true,
+    path = "/home/slava/.local/share/nvim/site/pack/packer/start/windsurf.nvim",
+    url = "https://github.com/Exafunction/windsurf.nvim"
   }
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: windsurf.nvim
+time([[Config for windsurf.nvim]], true)
+try_loadstring("\27LJ\2\n…\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\17virtual_text\1\0\1\17virtual_text\0\1\0\2\fenabled\2\29default_filetype_enabled\2\nsetup\fcodeium\frequire\0", "config", "windsurf.nvim")
+time([[Config for windsurf.nvim]], false)
 -- Conditional loads
 time([[Conditional loading of bufferline.nvim]], true)
   require("packer.load")({"bufferline.nvim"}, {}, _G.packer_plugins)

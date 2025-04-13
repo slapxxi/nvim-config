@@ -1,4 +1,4 @@
-if true then
+if false then
 	require("parrot").setup({
 		show_context_hints = true,
 		hooks = {

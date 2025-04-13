@@ -10,7 +10,8 @@ cmp.setup({
 		{ name = "buffer" },
 		{ name = "path" },
 		-- { name = "vsnip" },
-		{ name = "parrot" },
+		-- { name = "parrot" },
+		{ name = "codeium" },
 	},
 	snippet = {
 		expand = function(args)

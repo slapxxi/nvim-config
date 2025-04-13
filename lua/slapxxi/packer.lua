@@ -77,7 +77,18 @@ return require("packer").startup(function(use)
 		},
 	})
 
-	use({ "frankroeder/parrot.nvim", requires = { "ibhagwan/fzf-lua", "nvim-lua/plenary.nvim" } })
+	-- use({ "frankroeder/parrot.nvim", requires = { "ibhagwan/fzf-lua", "nvim-lua/plenary.nvim" } })
+
+	use({
+		"Exafunction/windsurf.nvim",
+		requires = {
+			"nvim-lua/plenary.nvim",
+			"hrsh7th/nvim-cmp",
+		},
+		config = function()
+			require("codeium").setup({ virtual_text = { enabled = true, default_filetype_enabled = true } })
+		end,
+	})
 
 	-- use("nvim-tree/nvim-tree.lua")
 	-- use("stevearc/oil.nvim")

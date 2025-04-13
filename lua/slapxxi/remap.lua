@@ -8,8 +8,7 @@ map("n", "<leader>Ps", ":PackerSync<CR>")
 map("n", "<leader>w", ":bd<CR>")
 map("n", "<leader>W", ":bd!<CR>")
 
--- map("n", "<leader>n", ":bn<CR>")
--- map("n", "<leader>p", ":bp<CR>")
+map("i", "<C-a>", "<Home>")
 
 -- quit
 map("n", "<leader>q", vim.cmd.q)
@@ -34,7 +33,8 @@ map("n", "g/", ":%s/", opts)
 map("v", "g/", ":s/", opts)
 
 -- case insensitive search in case the option is not enabled
--- map("n", "<leader>/", "/\\c")
+-- map("n", "<leader>/","/\\c")
+map("n", "<leader>/", ":g/")
 
 -- yank but go to the end of the yanked text
 map("v", "gy", "ygv<Esc>", opts)
