@@ -79,12 +79,6 @@ _G.packer_plugins = {
     path = "/home/slava/.local/share/nvim/site/pack/packer/start/Comment.nvim",
     url = "https://github.com/numToStr/Comment.nvim"
   },
-  ["avante.nvim"] = {
-    config = { "\27LJ\2\n4\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\vavante\frequire\0" },
-    loaded = true,
-    path = "/home/slava/.local/share/nvim/site/pack/packer/start/avante.nvim",
-    url = "https://github.com/yetone/avante.nvim"
-  },
   ["better-ts-errors.nvim"] = {
     loaded = true,
     path = "/home/slava/.local/share/nvim/site/pack/packer/start/better-ts-errors.nvim",
@@ -102,6 +96,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/slava/.local/share/nvim/site/pack/packer/start/cmp-buffer",
     url = "https://github.com/hrsh7th/cmp-buffer"
+  },
+  ["cmp-cmdline"] = {
+    loaded = true,
+    path = "/home/slava/.local/share/nvim/site/pack/packer/start/cmp-cmdline",
+    url = "https://github.com/hrsh7th/cmp-cmdline"
   },
   ["cmp-nvim-lsp"] = {
     loaded = true,
@@ -132,6 +131,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/slava/.local/share/nvim/site/pack/packer/start/dressing.nvim",
     url = "https://github.com/stevearc/dressing.nvim"
+  },
+  ["fzf-lua"] = {
+    loaded = true,
+    path = "/home/slava/.local/share/nvim/site/pack/packer/start/fzf-lua",
+    url = "https://github.com/ibhagwan/fzf-lua"
   },
   ["gitsigns.nvim"] = {
     loaded = true,
@@ -198,6 +202,11 @@ _G.packer_plugins = {
     path = "/home/slava/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
+  ["parrot.nvim"] = {
+    loaded = true,
+    path = "/home/slava/.local/share/nvim/site/pack/packer/start/parrot.nvim",
+    url = "https://github.com/frankroeder/parrot.nvim"
+  },
   playground = {
     loaded = true,
     path = "/home/slava/.local/share/nvim/site/pack/packer/start/playground",
@@ -241,10 +250,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: avante.nvim
-time([[Config for avante.nvim]], true)
-try_loadstring("\27LJ\2\n4\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\vavante\frequire\0", "config", "avante.nvim")
-time([[Config for avante.nvim]], false)
 -- Conditional loads
 time([[Conditional loading of bufferline.nvim]], true)
   require("packer.load")({"bufferline.nvim"}, {}, _G.packer_plugins)

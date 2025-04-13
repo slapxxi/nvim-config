@@ -6,14 +6,19 @@ vim.cmd([[packadd packer.nvim]])
 return require("packer").startup(function(use)
 	use("wbthomason/packer.nvim")
 
+	-- Parser
 	use("nvim-treesitter/nvim-treesitter", { run = "TSUpdate" })
 	use("nvim-treesitter/playground")
 
+	-- LSP
 	use("neovim/nvim-lspconfig")
+
+	-- Autocomplete
 	use("hrsh7th/nvim-cmp")
 	use("hrsh7th/cmp-nvim-lsp")
 	use("hrsh7th/cmp-buffer")
 	use("hrsh7th/cmp-path")
+	use("hrsh7th/cmp-cmdline")
 
 	use({
 		"nvim-telescope/telescope.nvim",
@@ -68,6 +73,8 @@ return require("packer").startup(function(use)
 			{ "MunifTanjim/nui.nvim" },
 		},
 	})
+
+	use({ "frankroeder/parrot.nvim", requires = { "ibhagwan/fzf-lua", "nvim-lua/plenary.nvim" } })
 
 	-- use("nvim-tree/nvim-tree.lua")
 	-- use("stevearc/oil.nvim")
