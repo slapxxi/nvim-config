@@ -222,11 +222,6 @@ _G.packer_plugins = {
     path = "/home/slava/.local/share/nvim/site/pack/packer/start/render-markdown.nvim",
     url = "https://github.com/MeanderingProgrammer/render-markdown.nvim"
   },
-  ["stay-centered.nvim"] = {
-    loaded = true,
-    path = "/home/slava/.local/share/nvim/site/pack/packer/start/stay-centered.nvim",
-    url = "https://github.com/arnamak/stay-centered.nvim"
-  },
   ["tailwind-tools.nvim"] = {
     loaded = true,
     path = "/home/slava/.local/share/nvim/site/pack/packer/start/tailwind-tools.nvim",

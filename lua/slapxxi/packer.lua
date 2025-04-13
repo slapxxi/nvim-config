@@ -73,13 +73,6 @@ return require("packer").startup(function(use)
 	use("HakonHarnes/img-clip.nvim")
 
 	use({
-		"arnamak/stay-centered.nvim",
-		config = function()
-			require("stay-centered").setup({})
-		end,
-	})
-
-	use({
 		"OlegGulevskyy/better-ts-errors.nvim",
 		requires = {
 			{ "MunifTanjim/nui.nvim" },

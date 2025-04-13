@@ -2,6 +2,14 @@
 -- This will avoid an annoying layout shift in the screen
 vim.opt.signcolumn = "yes"
 
+vim.diagnostic.config({
+	virtual_text = false,
+	signs = true,
+	underline = true,
+	update_in_insert = false,
+	severity_sort = false,
+})
+
 local lspconfig = require("lspconfig")
 local autocmd = vim.api.nvim_create_autocmd
 local augroup = vim.api.nvim_create_augroup
@@ -15,7 +23,7 @@ lspconfig_defaults.capabilities =
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-vim.o.updatetime = 250
+vim.o.updatetime = 150
 
 autocmd({ "CursorHold", "CursorHoldI" }, {
 	group = augroup("float_diagnostic", { clear = true }),
@@ -24,9 +32,17 @@ autocmd({ "CursorHold", "CursorHoldI" }, {
 	end,
 })
 
+-- Cursor specific diagnostics
+-- autocmd({ "CursorHold", "CursorHoldI" }, {
+-- 	group = augroup("float_diagnostic_cursor", { clear = true }),
+-- 	callback = function()
+-- 		vim.diagnostic.open_float(nil, { focus = false, scope = "cursor" })
+-- 	end,
+-- })
+
 -- This is where you enable features that only work
 -- if there is a language server active in the file
-vim.api.nvim_create_autocmd("LspAttach", {
+autocmd("LspAttach", {
 	desc = "LSP actions",
 	callback = function(event)
 		local opts = { buffer = event.buf }

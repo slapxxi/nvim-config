@@ -103,3 +103,5 @@ map("n", "G", "Gzz")
 -- scroll and center
 map("n", "<C-d>", "<C-d>zz")
 map("n", "<C-u>", "<C-u>zz")
+map("n", "<C-i>", "<C-i>zz")
+map("n", "<C-o>", "<C-o>zz")
