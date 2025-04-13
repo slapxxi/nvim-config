@@ -9,12 +9,14 @@ cmp.setup({
 		{ name = "nvim_lsp" },
 		{ name = "buffer" },
 		{ name = "path" },
+		-- { name = "vsnip" },
 		{ name = "parrot" },
 	},
 	snippet = {
 		expand = function(args)
 			-- You need Neovim v0.10 to use vim.snippet
 			vim.snippet.expand(args.body)
+			-- vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
 		end,
 	},
 	mapping = cmp.mapping.preset.insert({
@@ -39,7 +41,7 @@ cmp.setup.cmdline(":", {
 })
 
 -- `/` cmdline setup.
-cmp.setup.cmdline("/", {
+cmp.setup.cmdline({ "/", "?" }, {
 	mapping = cmp.mapping.preset.cmdline(),
 	sources = {
 		{ name = "buffer" },
