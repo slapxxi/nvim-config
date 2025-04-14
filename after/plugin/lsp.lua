@@ -23,14 +23,14 @@ lspconfig_defaults.capabilities =
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-vim.o.updatetime = 150
+-- vim.o.updatetime = 150
 
-autocmd({ "CursorHold", "CursorHoldI" }, {
-	group = augroup("float_diagnostic", { clear = true }),
-	callback = function()
-		vim.diagnostic.open_float(nil, { focus = false })
-	end,
-})
+-- autocmd({ "CursorHold", "CursorHoldI" }, {
+-- 	group = augroup("float_diagnostic", { clear = true }),
+-- 	callback = function()
+-- 		vim.diagnostic.open_float(nil, { focus = false })
+-- 	end,
+-- })
 
 -- Cursor specific diagnostics
 -- autocmd({ "CursorHold", "CursorHoldI" }, {
@@ -56,7 +56,9 @@ autocmd("LspAttach", {
 		vim.keymap.set("n", "gs", "<cmd>lua vim.lsp.buf.signature_help()<cr>", opts)
 		vim.keymap.set("n", "<F2>", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
 		vim.keymap.set({ "n", "x" }, "<F3>", "<cmd>lua vim.lsp.buf.format({async = true})<cr>", opts)
-		vim.keymap.set("n", "<leader>h", "<cmd>lua vim.lsp.buf.code_action()<cr>", opts)
+
+		vim.keymap.set("n", "<leader>h", "<cmd>lua vim.diagnostic.open_float(nil, {focus = false})<cr>", opts)
+		vim.keymap.set("n", "<leader>H", "<cmd>lua vim.lsp.buf.code_action()<cr>", opts)
 	end,
 })
 

@@ -20,3 +20,5 @@ vim.opt.foldenable = false
 vim.opt.foldmethod = "manual"
 
 vim.opt.showmode = false
+
+vim.opt.termguicolors = true

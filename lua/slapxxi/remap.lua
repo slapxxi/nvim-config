@@ -14,7 +14,7 @@ map("i", "<C-a>", "<Home>")
 map("n", "<leader>q", vim.cmd.q)
 
 -- paste next line
-map("n", "<leader>p", 'o<C-r>"<BS><Esc>^')
+-- map("n", "<leader>p", 'o<C-r>"<BS><Esc>^')
 
 -- remove search highlight
 map("n", "<leader><BS>", vim.cmd.noh)
