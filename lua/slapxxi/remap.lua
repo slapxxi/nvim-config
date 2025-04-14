@@ -57,7 +57,9 @@ map("n", "V", "V$", opts)
 -- DO NOT REMAP TAB TO NOT BREAK CTRL+I AND CTRL+O COMBO
 -- map('n', '<Tab>', '@q', opts)
 -- map("n", "<leader><Tab>", "@q", opts)
--- map('n', 'mm', "m'")
+
+-- quick mark
+map("n", "mm", "m'")
 
 -- go to next match and center
 map("n", "n", "nzz")

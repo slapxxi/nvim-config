@@ -9,6 +9,9 @@ local autocmd = vim.api.nvim_create_autocmd
 local automarkGroup = augroup("automark", { clear = true })
 local yank_group = augroup("yank_group", {})
 
+-- mark with I mark when leaving insert mode via Esc key. doesnt work  with <C-c>
+autocmd("InsertLeave", { group = automarkGroup, pattern = "*", command = "normal! mI" })
+
 autocmd("BufWritePre", {
 	pattern = "*",
 	callback = function(args)

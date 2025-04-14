@@ -9,7 +9,7 @@ if true then
 	vim.keymap.set("n", "<leader>{", ":BufferLineMovePrev<CR>")
 	vim.keymap.set("n", "<leader>}", ":BufferLineMoveNext<CR>")
 
-	vim.keymap.set("n", "<leader>P", ":BufferLinePick<CR>")
+	-- vim.keymap.set("n", "<leader>P", ":BufferLinePick<CR>")
 
 	vim.keymap.set("n", "<leader>1", ":BufferLineGoToBuffer 1<CR>")
 	vim.keymap.set("n", "<leader>2", ":BufferLineGoToBuffer 2<CR>")
@@ -17,9 +17,13 @@ if true then
 	vim.keymap.set("n", "<leader>4", ":BufferLineGoToBuffer 4<CR>")
 	vim.keymap.set("n", "<leader>5", ":BufferLineGoToBuffer 5<CR>")
 	vim.keymap.set("n", "<leader>6", ":BufferLineGoToBuffer 6<CR>")
+	vim.keymap.set("n", "<leader>7", ":BufferLineGoToBuffer 7<CR>")
+	vim.keymap.set("n", "<leader>8", ":BufferLineGoToBuffer 8<CR>")
+	vim.keymap.set("n", "<leader>9", ":BufferLineGoToBuffer 9<CR>")
 
 	bufferline.setup({
 		options = {
+			diagnostics = "nvim_lsp",
 			mode = "buffers",
 			themable = true,
 			modified_icon = "● ",
