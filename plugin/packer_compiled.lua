@@ -253,7 +253,7 @@ _G.packer_plugins = {
     url = "https://github.com/hrsh7th/vim-vsnip"
   },
   ["windsurf.nvim"] = {
-    config = { "\27LJ\2\n…\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\17virtual_text\1\0\1\17virtual_text\0\1\0\2\29default_filetype_enabled\2\fenabled\2\nsetup\fcodeium\frequire\0" },
+    config = { "\27LJ\2\n…\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\17virtual_text\1\0\1\17virtual_text\0\1\0\2\fenabled\2\29default_filetype_enabled\2\nsetup\fcodeium\frequire\0" },
     loaded = true,
     path = "/home/slava/.local/share/nvim/site/pack/packer/start/windsurf.nvim",
     url = "https://github.com/Exafunction/windsurf.nvim"
@@ -263,7 +263,7 @@ _G.packer_plugins = {
 time([[Defining packer_plugins]], false)
 -- Config for: windsurf.nvim
 time([[Config for windsurf.nvim]], true)
-try_loadstring("\27LJ\2\n…\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\17virtual_text\1\0\1\17virtual_text\0\1\0\2\29default_filetype_enabled\2\fenabled\2\nsetup\fcodeium\frequire\0", "config", "windsurf.nvim")
+try_loadstring("\27LJ\2\n…\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\17virtual_text\1\0\1\17virtual_text\0\1\0\2\fenabled\2\29default_filetype_enabled\2\nsetup\fcodeium\frequire\0", "config", "windsurf.nvim")
 time([[Config for windsurf.nvim]], false)
 -- Conditional loads
 time([[Conditional loading of bufferline.nvim]], true)
