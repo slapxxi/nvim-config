@@ -1,4 +1,4 @@
-if true then
+if false then
 	local bufferline = require("bufferline")
 
 	-- vim.keymap.set('n', '<leader>w', ':BufferLinePickClose<CR>')

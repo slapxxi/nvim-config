@@ -41,14 +41,14 @@ return require("packer").startup(function(use)
 	})
 
 	-- using packer.nvim
-	use({
-		"akinsho/bufferline.nvim",
-		tag = "*",
-		requires = "nvim-tree/nvim-web-devicons",
-		cond = function()
-			return true
-		end,
-	})
+	-- use({
+	-- 	"akinsho/bufferline.nvim",
+	-- 	tag = "*",
+	-- 	requires = "nvim-tree/nvim-web-devicons",
+	-- 	cond = function()
+	-- 		return false
+	-- 	end,
+	-- })
 
 	use("mbbill/undotree")
 	use("tpope/vim-fugitive")
