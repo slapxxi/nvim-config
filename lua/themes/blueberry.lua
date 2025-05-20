@@ -22,6 +22,7 @@ local blueberry = {
 	-- Basic UI elements
 	Normal = { fg = colors.fg, bg = colors.bg },
 	NormalFloat = { fg = colors.blue }, -- Floating windows
+	WinSeparator = { fg = colors.dark_gray },
 	Cursor = { fg = colors.bg, bg = colors.blue },
 	CursorLine = { bg = colors.line_bg },
 	LineNr = { fg = colors.dark_gray },
@@ -31,7 +32,7 @@ local blueberry = {
 	IncSearch = { bg = colors.blue }, -- editor.findMatchHighlightBackground
 	StatusLine = { fg = colors.dark_gray, bg = colors.status_bg },
 	StatusLineNC = { fg = colors.subtle_gray, bg = colors.status_bg },
-	VertSplit = { fg = "#14141a" }, -- sideBar.border
+	VertSplit = { fg = colors.gray }, -- sideBar.border
 	Pmenu = { fg = colors.fg, bg = colors.subtle_gray }, -- editorSuggestWidget.background
 	PmenuSel = { bg = colors.yellow, fg = colors.bg }, -- editorSuggestWidget.selectedBackground
 	WildMenu = { fg = colors.white, bg = colors.blue },
@@ -57,11 +58,23 @@ local blueberry = {
 	SpecialKey = { fg = colors.dark_gray },
 	NonText = { fg = colors.fg },
 
+	Directory = { fg = colors.blue },
+
+	TelescopeBorder = { fg = colors.dark_gray },
+
 	-- CmpSel = { bg = colors.red },
 	-- CmpItemAbbr = { bg = colors.yellow },
 	-- CmpItemAbbrMatch = { bg = colors.yellow, fg = colors.white },
 	-- CmpItemKind = { bg = colors.yellow },
 	-- CmpItemMenu = { bg = colors.yellow },
+
+	NvimTreeSpecialFile = { bg = colors.blue, fg = colors.text },
+	NvimTreeSymlink = { bg = colors.blue, fg = colors.text },
+	NvimTreeImageFile = { bg = colors.blue, fg = colors.text },
+	NvimTreeExecFile = { bg = colors.blue, fg = colors.text },
+	NvimTreeFolderName = { fg = colors.blue },
+	NvimTreeIndentMarker = { fg = colors.light_blue },
+	NvimTreeRootFolder = { fg = colors.gray },
 
 	-- Diff
 	DiffAdd = { bg = "#addb67", fg = "#000000" }, -- diffEditor.insertedTextBackground

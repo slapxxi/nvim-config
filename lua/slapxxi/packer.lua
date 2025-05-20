@@ -71,8 +71,7 @@ return require("packer").startup(function(use)
 
 	use("nvim-tree/nvim-web-devicons") -- or use 'echasnovski/mini.icons'
 	use("HakonHarnes/img-clip.nvim")
-	--NOT NEEDED WITH FUGITIVE
-	--use("sindrets/diffview.nvim")
+	use("nvim-tree/nvim-tree.lua")
 
 	use({
 		"OlegGulevskyy/better-ts-errors.nvim",
