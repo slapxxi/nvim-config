@@ -26,6 +26,8 @@ if true then
 	-- OR setup with some options
 	require("nvim-tree").setup({
 		on_attach = my_on_attach,
+		update_cwd = true,
+		update_focused_file = { enable = true, update_cwd = true },
 		sort = {
 			sorter = "case_sensitive",
 		},

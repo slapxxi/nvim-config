@@ -22,3 +22,5 @@ vim.opt.foldmethod = "manual"
 vim.opt.showmode = false
 
 vim.opt.termguicolors = true
+
+vim.g.nvim_tree_respect_buf_cwd = 1
