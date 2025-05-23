@@ -3,6 +3,12 @@ local opts = { noremap = true, silent = true }
 
 vim.g.mapleader = " "
 
+map("n", "<C-e>", "<C-e>j")
+map("n", "<C-y>", "<C-y>k")
+
+map("n", "<leader>o", "o<Esc>")
+map("n", "<leader>O", "O<Esc>")
+
 map("n", "<leader>Ps", ":PackerSync<CR>")
 
 map("n", "<leader>w", ":bd<CR>")
@@ -97,7 +103,7 @@ map("n", "<C-S-s>", ":w!<CR>")
 map("n", "<leader><Tab>", "<C-^>", { noremap = false })
 
 -- repeat q macro
-map("n", "<C-r>", "@q")
+map("n", "<C-space>", "@q")
 
 -- go to end & center
 map("n", "G", "Gzz")

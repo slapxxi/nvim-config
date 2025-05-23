@@ -77,3 +77,11 @@ autocmd("BufLeave", {
 	pattern = ".env*",
 	command = "normal! mE",
 })
+
+autocmd("FileType", {
+	pattern = "*",
+	callback = function()
+		vim.opt_local.iskeyword:remove("-")
+		vim.opt_local.iskeyword:remove("_")
+	end,
+})
