@@ -150,7 +150,9 @@ local blueberry = {
 	["@variable"] = { fg = colors.fg }, -- optional: apply to all langs
 	["@variable.member"] = { fg = colors.gray }, -- optional: apply to all langs
 	["@variable.member.javascript"] = { fg = colors.gray },
+
 	["@lsp.type.property"] = { fg = colors.gray },
+	["@lsp.mod.declaration"] = { fg = colors.white },
 }
 
 -- Apply the theme

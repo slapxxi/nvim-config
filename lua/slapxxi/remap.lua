@@ -3,6 +3,11 @@ local opts = { noremap = true, silent = true }
 
 vim.g.mapleader = " "
 
+map("n", "p", ":pu<CR>")
+map("n", "P", ":pu!<CR>")
+
+map("i", "<M-CR>", "<Esc>o")
+
 map("n", "<C-e>", "<C-e>j")
 map("n", "<C-y>", "<C-y>k")
 
