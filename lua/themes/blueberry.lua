@@ -1,7 +1,7 @@
 local colors = {
 	-- Base colors from VSCode theme
 	bg = "#0e0e12", -- editor.background
-	fg = "#a7b2d5", -- editor.foreground
+	fg = "#a8b3d7", -- editor.foreground
 	blue = "#1166ff", -- Primary accent color (e.g., keywords, cursor)
 	light_blue = "#1ab2ff", -- Secondary accent (e.g., constants)
 	yellow = "#ffc82a", -- JSON properties, regex
@@ -141,8 +141,16 @@ local blueberry = {
 	-- JavaScript
 	javascriptParens = colors.dark_gray,
 
+	["@tag.builtin"] = { fg = colors.fg },
+	["@tag"] = { fg = colors.blue },
+	["@tag.html"] = { fg = colors.light_blue },
+	["@tag.attribute"] = { fg = colors.gray },
+	["@tag.delimiter"] = { fg = colors.dark_gray },
+
+	["@variable"] = { fg = colors.fg }, -- optional: apply to all langs
 	["@variable.member"] = { fg = colors.gray }, -- optional: apply to all langs
 	["@variable.member.javascript"] = { fg = colors.gray },
+	["@lsp.type.property"] = { fg = colors.gray },
 }
 
 -- Apply the theme
