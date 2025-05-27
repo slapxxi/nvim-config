@@ -3,6 +3,9 @@ local opts = { noremap = true, silent = true }
 
 vim.g.mapleader = " "
 
+map("n", "<M-p>", ":bp<CR>")
+map("n", "<M-n>", ":bn<CR>")
+
 map("n", "p", ":pu<CR>")
 map("n", "P", ":pu!<CR>")
 
@@ -45,6 +48,7 @@ map("v", "g/", ":s/", opts)
 
 -- case insensitive search in case the option is not enabled
 -- map("n", "<leader>/","/\\c")
+
 map("n", "<leader>/", ":g/")
 
 -- yank but go to the end of the yanked text
@@ -116,5 +120,3 @@ map("n", "G", "Gzz")
 -- scroll and center
 map("n", "<C-d>", "<C-d>zz")
 map("n", "<C-u>", "<C-u>zz")
-map("n", "<C-i>", "<C-i>zz")
-map("n", "<C-o>", "<C-o>zz")

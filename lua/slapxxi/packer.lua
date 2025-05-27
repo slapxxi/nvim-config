@@ -20,8 +20,13 @@ return require("packer").startup(function(use)
 	use("hrsh7th/cmp-path")
 	use("hrsh7th/cmp-cmdline")
 
+	-- Snippets
 	use("hrsh7th/vim-vsnip")
 	use("hrsh7th/cmp-vsnip")
+
+	-- Eslint
+	use("jose-elias-alvarez/null-ls.nvim")
+	use("MunifTanjim/eslint.nvim")
 
 	use({
 		"nvim-telescope/telescope.nvim",
@@ -49,14 +54,17 @@ return require("packer").startup(function(use)
 	-- 		return false
 	-- 	end,
 	-- })
+	--
+	use("nvim-treesitter/nvim-treesitter-context")
 
 	use("mbbill/undotree")
+
 	use("tpope/vim-fugitive")
 	use("tpope/vim-surround")
+
 	use("zbirenbaum/copilot.lua")
 	use("elihunter173/dirbuf.nvim")
 	use("chentoast/marks.nvim")
-	use("nvim-treesitter/nvim-treesitter-context")
 	use("lewis6991/gitsigns.nvim")
 	use("stevearc/conform.nvim")
 	use("numToStr/Comment.nvim")

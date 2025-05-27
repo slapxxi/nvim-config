@@ -72,9 +72,12 @@ local blueberry = {
 	NvimTreeSymlink = { bg = colors.blue, fg = colors.text },
 	NvimTreeImageFile = { bg = colors.blue, fg = colors.text },
 	NvimTreeExecFile = { bg = colors.blue, fg = colors.text },
-	NvimTreeFolderName = { fg = colors.blue },
-	NvimTreeIndentMarker = { fg = colors.light_blue },
 	NvimTreeRootFolder = { fg = colors.gray },
+	NvimTreeIndentMarker = { fg = colors.dark_gray },
+	NvimTreeFolderName = { fg = colors.gray },
+	NvimTreeFolderIcon = { fg = colors.dark_gray },
+	NvimTreeOpenedFolderIcon = { fg = colors.white },
+	NvimTreeOpenedFolderName = { fg = colors.white },
 
 	-- Diff
 	DiffAdd = { bg = "#addb67", fg = "#000000" }, -- diffEditor.insertedTextBackground
