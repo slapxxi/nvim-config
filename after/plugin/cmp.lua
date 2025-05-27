@@ -1,5 +1,4 @@
 local cmp = require("cmp")
-local compare = require("cmp.config.compare")
 
 cmp.setup({
 	window = {
@@ -12,7 +11,7 @@ cmp.setup({
 		{ name = "buffer" },
 		{ name = "path" },
 		-- { name = "parrot" },
-		{ name = "codeium" },
+		-- { name = "codeium" },
 	},
 	snippet = {
 		expand = function(args)

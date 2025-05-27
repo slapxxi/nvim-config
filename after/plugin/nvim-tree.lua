@@ -32,7 +32,7 @@ if true then
 			sorter = "case_sensitive",
 		},
 		view = {
-			width = 30,
+			width = 34,
 		},
 		renderer = {
 			group_empty = true,

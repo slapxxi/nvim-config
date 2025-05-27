@@ -5,7 +5,7 @@ require("conform").setup({
 				return {
 					"--single-quote",
 					"--print-width",
-					"120",
+					"100",
 					"--config-precedence",
 					"prefer-file",
 				}
