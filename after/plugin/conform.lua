@@ -1,4 +1,17 @@
 require("conform").setup({
+	formatters = {
+		prettier = {
+			prepend_args = function()
+				return {
+					"--single-quote",
+					"--print-width",
+					"120",
+					"--config-precedence",
+					"prefer-file",
+				}
+			end,
+		},
+	},
 	formatters_by_ft = {
 		lua = { "stylua" },
 		-- Conform will run multiple formatters sequentially
