@@ -74,6 +74,18 @@ autocmd("BufLeave", {
 
 autocmd("BufLeave", {
 	group = automarkGroup,
+	pattern = "*.json",
+	command = "normal! mS",
+})
+
+autocmd("BufLeave", {
+	group = automarkGroup,
+	pattern = "package.json",
+	command = "normal! mP",
+})
+
+autocmd("BufLeave", {
+	group = automarkGroup,
 	pattern = ".env*",
 	command = "normal! mE",
 })

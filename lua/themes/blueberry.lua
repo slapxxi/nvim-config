@@ -153,6 +153,9 @@ local blueberry = {
 	["@tag.attribute"] = { fg = colors.gray },
 	["@tag.delimiter"] = { fg = colors.dark_gray },
 
+	["@property.json"] = { fg = colors.yellow },
+	["@property.jsonc"] = { fg = colors.yellow },
+
 	["@variable"] = { fg = colors.fg }, -- optional: apply to all langs
 	["@variable.member"] = { fg = colors.gray }, -- optional: apply to all langs
 	["@variable.member.javascript"] = { fg = colors.gray },

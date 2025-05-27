@@ -31,7 +31,7 @@ map("n", "<leader>W", ":bd!<CR>")
 map("i", "<C-a>", "<Home>")
 
 -- quit
-map("n", "<leader>q", vim.cmd.q)
+map("n", "<leader>q", ":qa!<CR>")
 
 -- paste next line
 -- map("n", "<leader>p", 'o<C-r>"<BS><Esc>^')
