@@ -23,6 +23,7 @@ return require("packer").startup(function(use)
 	-- Snippets
 	use("hrsh7th/vim-vsnip")
 	use("hrsh7th/cmp-vsnip")
+	use("rafamadriz/friendly-snippets")
 
 	-- Eslint
 	use("jose-elias-alvarez/null-ls.nvim")

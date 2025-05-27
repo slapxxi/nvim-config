@@ -9,6 +9,7 @@ local colors = {
 	gray = "#535a7a", -- Deemphasized text, object keys
 	dark_gray = "#303345", -- Punctuation, inactive elements
 	subtle_gray = "#242533", -- Inactive foreground
+	green = "#98ff35",
 	--highlight = "#3c5888", -- Selection highlights
 	highlight = "#0a2556", -- Selection highlights
 	line_bg = "#121217", -- Line highlight background
@@ -78,6 +79,8 @@ local blueberry = {
 	NvimTreeFolderIcon = { fg = colors.dark_gray },
 	NvimTreeOpenedFolderIcon = { fg = colors.white },
 	NvimTreeOpenedFolderName = { fg = colors.white },
+	NvimTreeGitDirtyIcon = { fg = colors.yellow },
+	NvimTreeGitStagedIcon = { fg = colors.green },
 
 	-- Diff
 	DiffAdd = { bg = "#addb67", fg = "#000000" }, -- diffEditor.insertedTextBackground

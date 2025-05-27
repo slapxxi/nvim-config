@@ -1,4 +1,5 @@
 local cmp = require("cmp")
+local compare = require("cmp.config.compare")
 
 cmp.setup({
 	window = {
@@ -6,10 +7,10 @@ cmp.setup({
 		documentation = cmp.config.window.bordered(),
 	},
 	sources = {
+		{ name = "vsnip", priority = 1000 },
 		{ name = "nvim_lsp" },
 		{ name = "buffer" },
 		{ name = "path" },
-		{ name = "vsnip" },
 		-- { name = "parrot" },
 		{ name = "codeium" },
 	},
