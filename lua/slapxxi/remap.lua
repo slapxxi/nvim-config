@@ -3,6 +3,37 @@ local opts = { noremap = true, silent = true }
 
 vim.g.mapleader = " "
 
+-- Expand
+map({ "i", "s" }, "<C-j>", function()
+	return vim.fn["vsnip#expandable"]() == 1 and "<Plug>(vsnip-expand)" or "<C-j>"
+end, { expr = true, noremap = false })
+
+-- Expand or jump
+map({ "i", "s" }, "<C-l>", function()
+	return vim.fn == 1 and "<Plug>(vsnip-expand-or-jump)" or "<C-l>"
+end, { expr = true, noremap = false })
+
+-- Jump forward
+map({ "i", "s" }, "<Tab>", function()
+	return vim.fn == 1 and "<Plug>(vsnip-jump-next)" or "<Tab>"
+end, { expr = true, noremap = false })
+
+-- Jump backward
+map({ "i", "s" }, "<S-Tab>", function()
+	return vim.fn["vsnip#jumpable"](-1) == 1 and "<Plug>(vsnip-jump-prev)" or "<S-Tab>"
+end, { expr = true, noremap = false })
+
+-- map("n", "s", "<Plug>(vsnip-select-text)")
+-- map("x", "s", "<Plug>(vsnip-select-text)")
+-- map("n", "S", "<Plug>(vsnip-cut-text)")
+-- map("x", "S", "<Plug>(vsnip-cut-text)")
+
+-- navigate with  jklh
+map("i", "<C-h>", "<Left>", opts)
+map("i", "<C-l>", "<Right>", opts)
+map("i", "<C-k>", "<Up>", opts)
+map("i", "<C-j>", "<Down>", opts)
+
 map("n", "<M-p>", ":bp<CR>")
 map("n", "<M-n>", ":bn<CR>")
 
@@ -92,12 +123,6 @@ map("n", "<leader><leader>u", "<cmd>Git clean<CR>", opts) -- Requires git plugin
 
 -- add comma at the end and go normal mode
 map("n", "<leader>,", "A,<Esc>", opts)
-
--- navigate with  jklh
-map("i", "<C-h>", "<Left>", opts)
-map("i", "<C-l>", "<Right>", opts)
-map("i", "<C-k>", "<Up>", opts)
-map("i", "<C-j>", "<Down>", opts)
 
 -- Insert Mode Non-Recursive
 -- map("i", "<C-e>", "<C-e><Esc>", { noremap = false, silent = true })
