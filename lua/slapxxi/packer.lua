@@ -24,6 +24,7 @@ return require("packer").startup(function(use)
 	use("hrsh7th/vim-vsnip")
 	use("hrsh7th/cmp-vsnip")
 	use("rafamadriz/friendly-snippets")
+	use("kcsuraj/typescript-snippets")
 
 	-- Eslint
 	use("jose-elias-alvarez/null-ls.nvim")
@@ -126,8 +127,7 @@ return require("packer").startup(function(use)
 		},
 		config = function()
 			require("codeium").setup({
-				virtual_text = { enabled = true, default_filetype_enabled = true, key_bindings = { clear = "<Esc>" } },
-
+				virtual_text = { enabled = true, default_filetype_enabled = true, key_bindings = { clear = "<M-[>" } },
 				enable_cmp_source = false,
 			})
 		end,

@@ -59,6 +59,7 @@ map("v", "g/", ":s/", opts)
 -- map("n", "<leader>/","/\\c")
 
 map("n", "<leader>/", ":g/")
+map("v", "<leader>/", "y:%s/<C-R>0/")
 
 -- yank but go to the end of the yanked text
 map("v", "gy", "ygv<Esc>", opts)
@@ -101,9 +102,6 @@ map("n", "<leader><leader>u", "<cmd>Git clean<CR>", opts) -- Requires git plugin
 
 -- add comma at the end and go normal mode
 map("n", "<leader>,", "A,<Esc>", opts)
-
--- Insert Mode Non-Recursive
--- map("i", "<C-e>", "<C-e><Esc>", { noremap = false, silent = true })
 
 -- save
 map("n", "<C-s>", ":w<CR>")

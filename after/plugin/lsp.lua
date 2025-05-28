@@ -57,7 +57,12 @@ autocmd("LspAttach", {
 		vim.keymap.set("n", "<F2>", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
 		vim.keymap.set({ "n", "x" }, "<F3>", "<cmd>lua vim.lsp.buf.format({async = true})<cr>", opts)
 
-		vim.keymap.set("n", "<leader>h", "<cmd>lua vim.diagnostic.open_float(nil, {focus = false})<cr>", opts)
+		vim.keymap.set(
+			"n",
+			"<leader>h",
+			"<cmd>lua vim.diagnostic.open_float(nil, {focus = false, border = 'rounded'})<cr>",
+			opts
+		)
 		vim.keymap.set("n", "<leader>H", "<cmd>lua vim.lsp.buf.code_action()<cr>", opts)
 	end,
 })

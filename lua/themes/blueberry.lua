@@ -10,6 +10,8 @@ local colors = {
 	dark_gray = "#303345", -- Punctuation, inactive elements
 	subtle_gray = "#242533", -- Inactive foreground
 	green = "#98ff35",
+	yellow_pastel = "#ffe08c", -- Softer, more pastel yellow
+	red_pastel = "#ff8a75", -- Softer, more pastel red
 	--highlight = "#3c5888", -- Selection highlights
 	highlight = "#0a2556", -- Selection highlights
 	line_bg = "#15151a", -- Line highlight background
@@ -69,7 +71,6 @@ local blueberry = {
 	-- CmpItemKind = { bg = colors.yellow },
 	-- CmpItemMenu = { bg = colors.yellow },
 
-	NvimTreeSpecialFile = { bg = colors.blue, fg = colors.text },
 	NvimTreeSymlink = { bg = colors.blue, fg = colors.text },
 	NvimTreeImageFile = { bg = colors.blue, fg = colors.text },
 	NvimTreeExecFile = { bg = colors.blue, fg = colors.text },
@@ -103,7 +104,9 @@ local blueberry = {
 	-- DiagnosticsWarn = { fg = colors.red },
 	-- DiagnosticsInfo = { fg = colors.red },
 	-- DiagnosticsHint = { fg = colors.red },
-	DiagnosticUnderlineError = { fg = colors.red, underline = true },
+	DiagnosticUnnecessary = { fg = colors.gray, underline = true },
+	DiagnosticUnderlineError = { fg = colors.red_pastel, underline = true },
+	DiagnosticUnderlineWarn = { fg = colors.yellow_pastel, underline = true },
 
 	LspDiagnosticsDefaultError = { fg = colors.red, bg = colors.bg },
 	LspDiagnosticsDefaultWarning = { fg = colors.yellow, bg = colors.bg },
