@@ -89,6 +89,33 @@ return require("packer").startup(function(use)
 		},
 	})
 
+	use({
+		"Shatur/neovim-session-manager",
+		config = function()
+			local config = require("session_manager.config")
+			require("session_manager").setup({
+				autoload_mode = { config.AutoloadMode.CurrentDir, config.AutoloadMode.LastSession },
+			})
+		end,
+	})
+
+	-- use({
+	-- 	"natecraddock/sessions.nvim",
+	-- 	config = function()
+	-- 		require("sessions").setup({})
+	-- 	end,
+	-- })
+
+	-- use({
+	-- 	"rmagatti/auto-session",
+	-- 	config = function()
+	-- 		require("auto-session").setup({
+	-- 			suppressed_dirs = nil,
+	-- 			-- suppressed_dirs = { "~/", "~/Projects", "~/Downloads", "/" },
+	-- 		})
+	-- 	end,
+	-- })
+
 	-- use({ "frankroeder/parrot.nvim", requires = { "ibhagwan/fzf-lua", "nvim-lua/plenary.nvim" } })
 
 	use({
@@ -98,7 +125,11 @@ return require("packer").startup(function(use)
 			"hrsh7th/nvim-cmp",
 		},
 		config = function()
-			require("codeium").setup({ virtual_text = { enabled = true, default_filetype_enabled = true } })
+			require("codeium").setup({
+				virtual_text = { enabled = true, default_filetype_enabled = true, key_bindings = { clear = "<Esc>" } },
+
+				enable_cmp_source = false,
+			})
 		end,
 	})
 

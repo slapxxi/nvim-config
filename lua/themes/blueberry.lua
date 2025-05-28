@@ -81,6 +81,7 @@ local blueberry = {
 	NvimTreeOpenedFolderName = { fg = colors.white },
 	NvimTreeGitDirtyIcon = { fg = colors.yellow },
 	NvimTreeGitStagedIcon = { fg = colors.green },
+	NvimTreeSpecialFile = { fg = colors.yellow },
 
 	-- Diff
 	DiffAdd = { bg = "#addb67", fg = "#000000" }, -- diffEditor.insertedTextBackground
@@ -102,6 +103,7 @@ local blueberry = {
 	-- DiagnosticsWarn = { fg = colors.red },
 	-- DiagnosticsInfo = { fg = colors.red },
 	-- DiagnosticsHint = { fg = colors.red },
+	DiagnosticUnderlineError = { fg = colors.red, underline = true },
 
 	LspDiagnosticsDefaultError = { fg = colors.red, bg = colors.bg },
 	LspDiagnosticsDefaultWarning = { fg = colors.yellow, bg = colors.bg },

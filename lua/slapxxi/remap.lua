@@ -3,6 +3,9 @@ local opts = { noremap = true, silent = true }
 
 vim.g.mapleader = " "
 
+map("n", "<leader>s", ":SessionManager save_current_session<CR>", opts)
+map("n", "<leader>l", ":SessionManager load_last_session<CR>", opts)
+
 -- navigate with  jklh
 map("i", "<C-h>", "<Left>", opts)
 map("i", "<C-l>", "<Right>", opts)
@@ -31,7 +34,7 @@ map("n", "<leader>W", ":bd!<CR>")
 map("i", "<C-a>", "<Home>")
 
 -- quit
-map("n", "<leader>q", ":qa!<CR>")
+map("n", "<leader>q", ":qa<CR>")
 
 -- paste next line
 -- map("n", "<leader>p", 'o<C-r>"<BS><Esc>^')
