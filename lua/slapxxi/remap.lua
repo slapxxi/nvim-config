@@ -25,6 +25,7 @@ map("n", "<C-y>", "<C-y>k")
 
 map("n", "<leader>o", "o<Esc>")
 map("n", "<leader>O", "O<Esc>")
+map("n", "<M-CR>", "o<Esc>")
 
 map("n", "<leader>Ps", ":PackerSync<CR>")
 
@@ -59,6 +60,8 @@ map("v", "g/", ":s/", opts)
 -- map("n", "<leader>/","/\\c")
 
 map("n", "<leader>/", ":g/")
+
+-- yank and replace currently selected
 map("v", "<leader>/", "y:%s/<C-R>0/")
 
 -- yank but go to the end of the yanked text
@@ -88,17 +91,6 @@ map("n", "mm", "m'")
 
 -- go to next match and center
 map("n", "n", "nzz")
-
--- Emmet Commands (Normal Mode)
---map("v", "<C-e>", "<cmd>EmmetWrapWithAbbreviation<CR>", opts)
--- map("n", "<leader>dt", "<cmd>EmmetRemoveTag<CR>", opts)
--- map("n", "<leader>u", "<cmd>EmmetUpdateTag<CR>", opts)
--- map("n", "<leader>s", "<cmd>EmmetSplitJoinTag<CR>", opts)
--- map("n", "<C-l>", "<cmd>EmmetMatchTag<CR>", opts)
--- map("n", "<C-h>", "<cmd>EmmetMatchTag<CR>", opts)
--- map("i", "<C-e>", "<cmd>EmmetExpandAbbreviation<CR>", opts)
-
-map("n", "<leader><leader>u", "<cmd>Git clean<CR>", opts) -- Requires git plugin
 
 -- add comma at the end and go normal mode
 map("n", "<leader>,", "A,<Esc>", opts)
