@@ -11,7 +11,7 @@ end
 
 cmp.setup({
 	completion = {
-		completeopt = "menu,menuone,noinsert",
+		completeopt = "menu,menuone,noselect",
 	},
 	window = {
 		completion = cmp.config.window.bordered(),
@@ -20,6 +20,7 @@ cmp.setup({
 	sources = {
 		{ name = "vsnip", priority = 1000 },
 		{ name = "nvim_lsp" },
+		{ name = "nvim_lsp_signature_help" },
 		{ name = "buffer" },
 		{ name = "path" },
 		-- { name = "parrot" },
@@ -35,7 +36,7 @@ cmp.setup({
 	mapping = cmp.mapping.preset.insert({
 		["<C-b>"] = cmp.mapping.scroll_docs(-4),
 		["<C-f>"] = cmp.mapping.scroll_docs(4),
-		["<C-Space>"] = cmp.mapping.complete({ select = true }),
+		-- ["<C-Space>"] = cmp.mapping.complete({ select = true }),
 		["<C-y>"] = cmp.mapping.confirm({ select = true }),
 		["<S-Tab>"] = cmp.mapping(function(fallback)
 			if cmp.visible() then

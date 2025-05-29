@@ -13,6 +13,8 @@ local colors = {
 	yellow_pastel = "#ffe08c", -- Softer, more pastel yellow
 	red_pastel = "#ff8a75", -- Softer, more pastel red
 	--highlight = "#3c5888", -- Selection highlights
+	-- copilot = "#8893e7", -- Softer, more pastel red
+	copilot = "#434a6f", -- Softer, more pastel red
 	highlight = "#0a2556", -- Selection highlights
 	line_bg = "#15151a", -- Line highlight background
 	sidebar_bg = "#0e0e12", -- SideBar.background
@@ -167,6 +169,9 @@ local blueberry = {
 
 	["@lsp.type.property"] = { fg = colors.gray },
 	["@lsp.mod.declaration"] = { fg = colors.white },
+	["@lsp.typemod.variable.defaultLibrary"] = { fg = colors.white },
+
+	CopilotSuggestion = { fg = colors.copilot, italic = true },
 }
 
 -- Apply the theme

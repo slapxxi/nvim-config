@@ -19,6 +19,7 @@ return require("packer").startup(function(use)
 	use("hrsh7th/cmp-buffer")
 	use("hrsh7th/cmp-path")
 	use("hrsh7th/cmp-cmdline")
+	use("hrsh7th/cmp-nvim-lsp-signature-help")
 
 	-- Snippets
 	use("hrsh7th/vim-vsnip")
@@ -64,7 +65,8 @@ return require("packer").startup(function(use)
 	use("tpope/vim-fugitive")
 	use("tpope/vim-surround")
 
-	use("zbirenbaum/copilot.lua")
+	-- use("zbirenbaum/copilot.lua")
+	use("github/copilot.vim")
 	use("elihunter173/dirbuf.nvim")
 	use("chentoast/marks.nvim")
 	use("lewis6991/gitsigns.nvim")
@@ -119,19 +121,24 @@ return require("packer").startup(function(use)
 
 	-- use({ "frankroeder/parrot.nvim", requires = { "ibhagwan/fzf-lua", "nvim-lua/plenary.nvim" } })
 
-	use({
-		"Exafunction/windsurf.nvim",
-		requires = {
-			"nvim-lua/plenary.nvim",
-			"hrsh7th/nvim-cmp",
-		},
-		config = function()
-			require("codeium").setup({
-				virtual_text = { enabled = true, default_filetype_enabled = true, key_bindings = { clear = "<M-[>" } },
-				enable_cmp_source = false,
-			})
-		end,
-	})
+	-- use({
+	-- 	"Exafunction/windsurf.nvim",
+	-- 	requires = {
+	-- 		"nvim-lua/plenary.nvim",
+	-- 		"hrsh7th/nvim-cmp",
+	-- 	},
+	-- 	config = function()
+	-- 		require("codeium").setup({
+	-- 			virtual_text = {
+	-- 				enabled = true,
+	-- 				manual = false,
+	-- 				default_filetype_enabled = true,
+	-- 				-- key_bindings = { clear = "" },
+	-- 			},
+	-- 			enable_cmp_source = false,
+	-- 		})
+	-- 	end,
+	-- })
 
 	-- use("nvim-tree/nvim-tree.lua")
 	-- use("stevearc/oil.nvim")

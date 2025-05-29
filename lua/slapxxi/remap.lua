@@ -3,6 +3,11 @@ local opts = { noremap = true, silent = true }
 
 vim.g.mapleader = " "
 
+-- auto close brackets
+-- map("i", "(", "()<Esc>i", opts)
+-- map("i", "[", "[]<Esc>i", opts)
+-- map("i", "{", "{}<Esc>i", opts)
+
 map("n", "<leader>s", ":SessionManager save_current_session<CR>", opts)
 map("n", "<leader>l", ":SessionManager load_last_session<CR>", opts)
 
@@ -56,13 +61,13 @@ map("v", "gd", "ygvd", opts)
 map("n", "g/", ":%s/", opts)
 map("v", "g/", ":s/", opts)
 
--- case insensitive search in case the option is not enabled
--- map("n", "<leader>/","/\\c")
-
 map("n", "<leader>/", ":g/")
 
 -- yank and replace currently selected
 map("v", "<leader>/", "y:%s/<C-R>0/")
+
+-- case insensitive search in case the option is not enabled
+-- map("n", "<leader>/","/\\c")
 
 -- yank but go to the end of the yanked text
 map("v", "gy", "ygv<Esc>", opts)
