@@ -8,14 +8,22 @@ vim.g.mapleader = " "
 -- map("i", "[", "[]<Esc>i", opts)
 -- map("i", "{", "{}<Esc>i", opts)
 
+-- go to start/end of line in insert mode
+map("i", "<M-S-l>", "<Esc>$a")
+map("i", "<M-S-h>", "<Esc>^i")
+map("i", "<M-l>", "<Right>")
+map("i", "<M-h>", "<Left>")
+map("i", "<M-j>", "<Down>")
+map("i", "<M-k>", "<Up>")
+
 map("n", "<leader>s", ":SessionManager save_current_session<CR>", opts)
 map("n", "<leader>l", ":SessionManager load_last_session<CR>", opts)
 
 -- navigate with  jklh
-map("i", "<C-h>", "<Left>", opts)
-map("i", "<C-l>", "<Right>", opts)
-map("i", "<C-k>", "<Up>", opts)
-map("i", "<C-j>", "<Down>", opts)
+-- map("i", "<C-h>", "<Left>", opts)
+-- map("i", "<C-l>", "<Right>", opts)
+-- map("i", "<C-k>", "<Up>", opts)
+-- map("i", "<C-j>", "<Down>", opts)
 
 map("n", "<M-p>", ":bp<CR>")
 map("n", "<M-n>", ":bn<CR>")
