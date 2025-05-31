@@ -110,6 +110,8 @@ return require("packer").startup(function(use)
 
 	use("github/copilot.vim")
 
+	use("jake-stewart/multicursor.nvim")
+
 	-- use({
 	-- 	"natecraddock/sessions.nvim",
 	-- 	config = function()
