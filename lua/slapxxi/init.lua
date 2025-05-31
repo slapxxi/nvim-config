@@ -98,6 +98,8 @@ autocmd("FileType", {
 	end,
 })
 
+local session_manager = require("session_manager")
+
 -- Auto save session
 autocmd({ "BufWritePre" }, {
 	callback = function()

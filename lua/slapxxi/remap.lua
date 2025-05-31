@@ -1,4 +1,5 @@
 local map = vim.keymap.set
+
 local opts = { noremap = true, silent = true }
 
 vim.g.mapleader = " "
@@ -8,6 +9,9 @@ vim.g.mapleader = " "
 -- map("i", "[", "[]<Esc>i", opts)
 -- map("i", "{", "{}<Esc>i", opts)
 
+map("n", "<leader>s", ":SessionManager save_current_session<CR>", opts)
+map("n", "<leader>l", ":SessionManager load_last_session<CR>", opts)
+
 -- go to start/end of line in insert mode
 map("i", "<M-S-l>", "<Esc>$a")
 map("i", "<M-S-h>", "<Esc>^i")
@@ -15,9 +19,6 @@ map("i", "<M-l>", "<Right>")
 map("i", "<M-h>", "<Left>")
 map("i", "<M-j>", "<Down>")
 map("i", "<M-k>", "<Up>")
-
-map("n", "<leader>s", ":SessionManager save_current_session<CR>", opts)
-map("n", "<leader>l", ":SessionManager load_last_session<CR>", opts)
 
 -- navigate with  jklh
 -- map("i", "<C-h>", "<Left>", opts)
@@ -96,7 +97,7 @@ map("n", "Y", '"Yy', opts)
 map("n", "V", "V$", opts)
 
 -- DO NOT REMAP TAB TO NOT BREAK CTRL+I AND CTRL+O COMBO
--- map('n', '<Tab>', '@q', opts)
+-- map("n", "<Tab>", "@q", opts)
 -- map("n", "<leader><Tab>", "@q", opts)
 
 -- quick mark
@@ -110,6 +111,7 @@ map("n", "<leader>,", "A,<Esc>", opts)
 
 -- save
 map("n", "<C-s>", ":w<CR>")
+map("n", "<leader>s", ":w<CR>")
 
 --force save
 map("n", "<C-S-s>", ":w!<CR>")
@@ -117,10 +119,9 @@ map("n", "<C-S-s>", ":w!<CR>")
 -- switch buffers
 -- map("n", "<leader><Tab>", "<C-^>", { noremap = false })
 
--- repeat q macro
-map("n", "<C-space>", "@q")
--- repeat last macro
-map("n", "<C-M-space>", "@@")
+-- repeat macros
+map("n", "Q", "@q")
+map("n", "<C-space>", "@@")
 
 -- go to end & center
 map("n", "G", "Gzz")

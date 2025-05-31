@@ -65,9 +65,7 @@ return require("packer").startup(function(use)
 	use("tpope/vim-fugitive")
 	use("tpope/vim-surround")
 
-	-- use("zbirenbaum/copilot.lua")
-	use("github/copilot.vim")
-	use("elihunter173/dirbuf.nvim")
+	-- use("elihunter173/dirbuf.nvim")
 	use("chentoast/marks.nvim")
 	use("lewis6991/gitsigns.nvim")
 	use("stevearc/conform.nvim")
@@ -83,6 +81,9 @@ return require("packer").startup(function(use)
 
 	use("nvim-tree/nvim-web-devicons") -- or use 'echasnovski/mini.icons'
 	use("HakonHarnes/img-clip.nvim")
+
+	use("stevearc/oil.nvim")
+
 	use("nvim-tree/nvim-tree.lua")
 
 	use({
@@ -101,6 +102,13 @@ return require("packer").startup(function(use)
 			})
 		end,
 	})
+
+	use("mason-org/mason.nvim")
+	use("mfussenegger/nvim-dap")
+	use("jay-babu/mason-nvim-dap.nvim")
+	-- use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } })
+
+	use("github/copilot.vim")
 
 	-- use({
 	-- 	"natecraddock/sessions.nvim",
