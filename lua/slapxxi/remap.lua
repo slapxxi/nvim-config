@@ -20,26 +20,22 @@ map("i", "<M-h>", "<Left>")
 map("i", "<M-j>", "<Down>")
 map("i", "<M-k>", "<Up>")
 
--- navigate with  jklh
--- map("i", "<C-h>", "<Left>", opts)
--- map("i", "<C-l>", "<Right>", opts)
--- map("i", "<C-k>", "<Up>", opts)
--- map("i", "<C-j>", "<Down>", opts)
+-- insert new line
+map("n", "<M-o>", "o<Esc>")
+map("n", "<M-O>", "O<Esc>")
 
+map("n", "<M-CR>", "o<Esc>")
+map("i", "<M-CR>", "<CR><Esc>O  ")
+
+-- prev/next buffer
 map("n", "<M-p>", ":bp<CR>")
 map("n", "<M-n>", ":bn<CR>")
 
 map("n", "p", ":pu<CR>")
 map("n", "P", ":pu!<CR>")
 
-map("i", "<M-CR>", "<Esc>o")
-
 map("n", "<C-e>", "<C-e>j")
 map("n", "<C-y>", "<C-y>k")
-
-map("n", "<leader>o", "o<Esc>")
-map("n", "<leader>O", "O<Esc>")
-map("n", "<M-CR>", "o<Esc>")
 
 map("n", "<leader>Ps", ":PackerSync<CR>")
 
@@ -49,7 +45,7 @@ map("n", "<leader>W", ":bd!<CR>")
 map("i", "<C-a>", "<Home>")
 
 -- quit
-map("n", "<leader>q", ":qa<CR>")
+map("n", "<leader>q", ":qa!<CR>")
 
 -- paste next line
 -- map("n", "<leader>p", 'o<C-r>"<BS><Esc>^')

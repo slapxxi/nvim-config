@@ -1,6 +1,9 @@
+local bg = "#0e0e12"
+
 local colors = {
 	-- Base colors from VSCode theme
-	bg = "#0e0e12", -- editor.background
+	-- bg = "#0e0e12", -- editor.background
+	bg = bg,
 	fg = "#a8b3d7", -- editor.foreground
 	blue = "#1166ff", -- Primary accent color (e.g., keywords, cursor)
 	light_blue = "#1ab2ff", -- Secondary accent (e.g., constants)
@@ -17,8 +20,8 @@ local colors = {
 	copilot = "#434a6f", -- Softer, more pastel red
 	highlight = "#0a2556", -- Selection highlights
 	line_bg = "#15151a", -- Line highlight background
-	sidebar_bg = "#0e0e12", -- SideBar.background
-	status_bg = "#0e0e12", -- StatusBar.background
+	sidebar_bg = bg,
+	status_bg = bg,
 	white = "#f5f7ff", -- Main text color
 	comment = "#323546", -- Comments
 }

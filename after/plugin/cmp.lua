@@ -38,14 +38,15 @@ cmp.setup({
 		["<C-f>"] = cmp.mapping.scroll_docs(4),
 		-- ["<C-Space>"] = cmp.mapping.complete({ select = true }),
 		["<C-y>"] = cmp.mapping.confirm({ select = true }),
-		["<C-l>"] = cmp.mapping(function(fallback)
+		["<Tab>"] = cmp.mapping(function(fallback)
 			if cmp.visible() then
 				-- cmp.select_next_item()
 				fallback()
 			elseif vim.fn["vsnip#jumpable"](1) == 1 then
 				feedkey("<Plug>(vsnip-jump-next)", "")
 			elseif has_words_before() then
-				cmp.complete()
+				-- cmp.complete()
+				fallback()
 			else
 				fallback() -- The fallback function sends a already mapped key. In this case, it's probably `<Tab>`.
 			end

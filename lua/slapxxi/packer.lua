@@ -48,16 +48,6 @@ return require("packer").startup(function(use)
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
 
-	-- using packer.nvim
-	-- use({
-	-- 	"akinsho/bufferline.nvim",
-	-- 	tag = "*",
-	-- 	requires = "nvim-tree/nvim-web-devicons",
-	-- 	cond = function()
-	-- 		return false
-	-- 	end,
-	-- })
-	--
 	use("nvim-treesitter/nvim-treesitter-context")
 
 	use("mbbill/undotree")
@@ -112,23 +102,6 @@ return require("packer").startup(function(use)
 
 	use("jake-stewart/multicursor.nvim")
 
-	-- use({
-	-- 	"natecraddock/sessions.nvim",
-	-- 	config = function()
-	-- 		require("sessions").setup({})
-	-- 	end,
-	-- })
-
-	-- use({
-	-- 	"rmagatti/auto-session",
-	-- 	config = function()
-	-- 		require("auto-session").setup({
-	-- 			suppressed_dirs = nil,
-	-- 			-- suppressed_dirs = { "~/", "~/Projects", "~/Downloads", "/" },
-	-- 		})
-	-- 	end,
-	-- })
-
 	-- use({ "frankroeder/parrot.nvim", requires = { "ibhagwan/fzf-lua", "nvim-lua/plenary.nvim" } })
 
 	-- use({
@@ -147,17 +120,6 @@ return require("packer").startup(function(use)
 	-- 			},
 	-- 			enable_cmp_source = false,
 	-- 		})
-	-- 	end,
-	-- })
-
-	-- use("nvim-tree/nvim-tree.lua")
-	-- use("stevearc/oil.nvim")
-
-	-- temp disable example
-	-- use({
-	-- 	"romgrk/nvim-treesitter-context",
-	-- 	cond = function()
-	-- 		return false
 	-- 	end,
 	-- })
 end)
