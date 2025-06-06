@@ -98,28 +98,15 @@ return require("packer").startup(function(use)
 	use("jay-babu/mason-nvim-dap.nvim")
 	-- use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } })
 
-	use("github/copilot.vim")
-
 	use("jake-stewart/multicursor.nvim")
 
 	-- use({ "frankroeder/parrot.nvim", requires = { "ibhagwan/fzf-lua", "nvim-lua/plenary.nvim" } })
-
-	-- use({
-	-- 	"Exafunction/windsurf.nvim",
-	-- 	requires = {
-	-- 		"nvim-lua/plenary.nvim",
-	-- 		"hrsh7th/nvim-cmp",
-	-- 	},
-	-- 	config = function()
-	-- 		require("codeium").setup({
-	-- 			virtual_text = {
-	-- 				enabled = true,
-	-- 				manual = false,
-	-- 				default_filetype_enabled = true,
-	-- 				-- key_bindings = { clear = "" },
-	-- 			},
-	-- 			enable_cmp_source = false,
-	-- 		})
-	-- 	end,
-	-- })
+	-- use("github/copilot.vim")
+	use({
+		"Exafunction/windsurf.nvim",
+		requires = {
+			"nvim-lua/plenary.nvim",
+			"hrsh7th/nvim-cmp",
+		},
+	})
 end)

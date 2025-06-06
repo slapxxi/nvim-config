@@ -5,9 +5,13 @@
 -- vim.g.copilot_no_tab_map = true
 
 -- vim.keymap.set("i", "<C-f>", "<Plug>(copilot-accept-word)")
+
 vim.keymap.set("n", "<leader><leader>", ":Copilot disable<CR>")
-vim.keymap.set("i", "<C-c>", "<Plug>(copilot-dismiss)<C-c>")
-vim.keymap.set("i", "<C-j>", "<Plug>(copilot-suggest)")
+
+if false then
+	vim.keymap.set("i", "<C-c>", "<Plug>(copilot-dismiss)<C-c>")
+	vim.keymap.set("i", "<C-j>", "<Plug>(copilot-suggest)")
+end
 
 if false then
 	require("copilot").setup({

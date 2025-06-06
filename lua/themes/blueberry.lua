@@ -178,6 +178,7 @@ local blueberry = {
 	-- ["@lsp.typemod.class"] = { fg = colors.white },
 
 	CopilotSuggestion = { fg = colors.copilot, italic = true },
+	CodeiumSuggestion = { fg = colors.copilot, italic = true },
 }
 
 -- Apply the theme
