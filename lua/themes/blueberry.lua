@@ -13,6 +13,7 @@ local colors = {
 	dark_gray = "#303345", -- Punctuation, inactive elements
 	subtle_gray = "#242533", -- Inactive foreground
 	green = "#98ff35",
+	green_pastel = "#90EE90",
 	yellow_pastel = "#ffe08c", -- Softer, more pastel yellow
 	red_pastel = "#ff8a75", -- Softer, more pastel red
 	--highlight = "#3c5888", -- Selection highlights
@@ -90,11 +91,14 @@ local blueberry = {
 	NvimTreeSpecialFile = { fg = colors.yellow },
 
 	-- Diff
-	DiffAdd = { bg = "#addb67", fg = "#000000" }, -- diffEditor.insertedTextBackground
+	-- DiffAdd = { bg = "#addb67", fg = "#000000" }, -- diffEditor.insertedTextBackground
+	DiffAdd = { bg = "#adfb67", fg = "#000000" }, -- diffEditor.insertedTextBackground
 	diffEditor = { bg = "#0e0e12" }, -- diffEditor.background
 	DiffDelete = { bg = "#ef5350", fg = "#000000" }, -- diffEditor.removedTextBackground
 	DiffChange = { bg = "#555770", fg = colors.white },
 	DiffText = { bg = colors.blue, fg = colors.white },
+	diffAdded = { fg = colors.green_pastel },
+	diffRemoved = { fg = colors.red_pastel },
 
 	-- Git
 	GitSignsAdd = { fg = "#addb67" }, -- gitDecoration.untrackedResourceForeground

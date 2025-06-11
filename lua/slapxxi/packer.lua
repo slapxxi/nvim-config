@@ -34,7 +34,7 @@ return require("packer").startup(function(use)
 	use({
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.8", -- or                            , branch = '0.1.x',
-		requires = { { "nvim-lua/plenary.nvim" } },
+		requires = { "nvim-lua/plenary.nvim", { "nvim-telescope/telescope-fzf-native.nvim", run = "make" } },
 	})
 
 	use({
@@ -93,9 +93,20 @@ return require("packer").startup(function(use)
 		end,
 	})
 
-	use("mason-org/mason.nvim")
-	use("mfussenegger/nvim-dap")
-	use("jay-babu/mason-nvim-dap.nvim")
+	-- use("mason-org/mason.nvim")
+	-- use("mfussenegger/nvim-dap")
+	-- use("jay-babu/mason-nvim-dap.nvim")
+
+	use({
+		"mason-org/mason.nvim",
+		requires = {
+			"rcarriga/nvim-dap-ui",
+			"nvim-neotest/nvim-nio",
+			"theHamsta/nvim-dap-virtual-text",
+			"williamboman/mason.nvim",
+		},
+	})
+
 	-- use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } })
 
 	use("jake-stewart/multicursor.nvim")

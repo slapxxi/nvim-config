@@ -31,8 +31,8 @@ map("i", "<M-CR>", "<CR><Esc>O  ")
 map("n", "<M-p>", ":bp<CR>")
 map("n", "<M-n>", ":bn<CR>")
 
-map("n", "p", ":pu<CR>")
-map("n", "P", ":pu!<CR>")
+map("n", "<leader>p", ":pu<CR>")
+map("n", "<leader>P", ":pu!<CR>")
 
 map("n", "<C-e>", "<C-e>j")
 map("n", "<C-y>", "<C-y>k")

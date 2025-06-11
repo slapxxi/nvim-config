@@ -7,16 +7,26 @@ vim.keymap.set("n", "<C-p>", function()
 		find_command = find_command,
 	})
 end, { desc = "Go to file (includes ignored)" })
+vim.keymap.set("n", "<leader>ff", function()
+	local opts = require("telescope.themes").get_ivy({})
+	require("telescope.builtin").find_files(opts)
+end, { desc = "Go to file (includes ignored)" })
+vim.keymap.set("n", "<leader>fg", builtin.git_files)
+vim.keymap.set("n", "<leader>fc", builtin.git_commits)
+vim.keymap.set("n", "<leader>fl", builtin.live_grep)
+vim.keymap.set("n", "<leader>fb", builtin.buffers)
+vim.keymap.set("n", "<leader>fh", builtin.help_tags)
+vim.keymap.set("n", "<leader>fr", builtin.resume, {})
 
-vim.keymap.set("n", "<leader>pg", builtin.git_files)
-vim.keymap.set("n", "<leader>pp", builtin.live_grep, { desc = "Telescope live grep" })
-vim.keymap.set("n", "<leader>pb", builtin.buffers, { desc = "Telescope buffers" })
-vim.keymap.set("n", "<leader>ph", builtin.help_tags, { desc = "Telescope help tags" })
-
-vim.keymap.set("n", "<leader>pr", builtin.resume, {})
+require("telescope").load_extension("fzf")
 
 require("telescope").setup({
-	pickers = { find_files = { hidden = true } },
+	pickers = {
+		find_files = {
+			hidden = true, --[[ theme = "ivy" ]]
+		},
+	},
+	extensions = { fzf = {} },
 	defaults = {
 		sorting_strategy = "ascending", -- display results top->bottom
 		layout_config = {
