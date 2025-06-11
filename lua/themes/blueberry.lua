@@ -179,6 +179,7 @@ local blueberry = {
 	["@lsp.mod.declaration"] = { fg = colors.white },
 	["@lsp.typemod.variable.defaultLibrary"] = { fg = colors.gray },
 	["@lsp.typemod.class.defaultLibrary"] = { fg = colors.white },
+	["@lsp.typemod.property.declaration"] = { fg = colors.gray },
 	-- ["@lsp.typemod.class"] = { fg = colors.white },
 
 	CopilotSuggestion = { fg = colors.copilot, italic = true },
