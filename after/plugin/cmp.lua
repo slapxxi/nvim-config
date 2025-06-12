@@ -51,7 +51,7 @@ cmp.setup({
 		-- 		fallback() -- The fallback function sends a already mapped key. In this case, it's probably `<Tab>`.
 		-- 	end
 		-- end, { "i", "s" }),
-		["<Tab>"] = cmp.mapping(function(fallback)
+		["<S-Tab>"] = cmp.mapping(function(fallback)
 			if cmp.visible() then
 				-- cmp.select_next_item()
 				fallback()

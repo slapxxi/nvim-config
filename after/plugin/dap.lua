@@ -144,6 +144,8 @@ dap.configurations.typescript = {
 	},
 }
 
+dap.configurations.javascript = dap.configurations.typescript
+
 dap.configurations.typescriptreact = {
 	{
 		name = "Attach Chrome",
@@ -157,3 +159,5 @@ dap.configurations.typescriptreact = {
 		webRoot = "${workspaceFolder}",
 	},
 }
+
+dap.configurations.javascriptreact = dap.configurations.typescriptreact

@@ -10,7 +10,7 @@ local automarkGroup = augroup("automark", { clear = true })
 local yank_group = augroup("yank_group", {})
 
 -- mark with I mark when leaving insert mode via Esc key. doesnt work  with <C-c>
-autocmd("InsertLeave", { group = automarkGroup, pattern = "*", command = "normal! mI" })
+-- autocmd("InsertLeave", { group = automarkGroup, pattern = "*", command = "normal! mI" })
 
 autocmd("BufWritePre", {
 	pattern = "*",
@@ -54,41 +54,41 @@ autocmd("BufLeave", {
 	command = "normal! mX",
 })
 
-autocmd("BufLeave", {
-	group = automarkGroup,
-	pattern = "*.md",
-	command = "normal! mM",
-})
+-- autocmd("BufLeave", {
+-- 	group = automarkGroup,
+-- 	pattern = "*.md",
+-- 	command = "normal! mM",
+-- })
 
-autocmd("BufLeave", {
-	group = automarkGroup,
-	pattern = { "*.yml", "*.yaml" },
-	command = "normal! mY",
-})
+-- autocmd("BufLeave", {
+-- 	group = automarkGroup,
+-- 	pattern = { "*.yml", "*.yaml" },
+-- 	command = "normal! mY",
+-- })
 
-autocmd("BufLeave", {
-	group = automarkGroup,
-	pattern = "*.vue",
-	command = "normal! mV",
-})
+-- autocmd("BufLeave", {
+-- 	group = automarkGroup,
+-- 	pattern = "*.vue",
+-- 	command = "normal! mV",
+-- })
 
-autocmd("BufLeave", {
-	group = automarkGroup,
-	pattern = "*.json",
-	command = "normal! mS",
-})
+-- autocmd("BufLeave", {
+-- 	group = automarkGroup,
+-- 	pattern = "*.json",
+-- 	command = "normal! mS",
+-- })
 
-autocmd("BufLeave", {
-	group = automarkGroup,
-	pattern = "package.json",
-	command = "normal! mP",
-})
+-- autocmd("BufLeave", {
+-- 	group = automarkGroup,
+-- 	pattern = "package.json",
+-- 	command = "normal! mP",
+-- })
 
-autocmd("BufLeave", {
-	group = automarkGroup,
-	pattern = ".env*",
-	command = "normal! mE",
-})
+-- autocmd("BufLeave", {
+-- 	group = automarkGroup,
+-- 	pattern = ".env*",
+-- 	command = "normal! mE",
+-- })
 
 autocmd("FileType", {
 	pattern = "*",
@@ -111,4 +111,42 @@ autocmd({ "BufWritePre" }, {
 		end
 		session_manager.save_current_session()
 	end,
+})
+
+-- Define excluded mark letters
+local excluded_marks = {
+	J = true,
+	X = true,
+	C = true,
+	H = true,
+}
+
+-- Function to set mark when leaving a buffer
+local function set_mark_on_bufleave()
+	local bufname = vim.api.nvim_buf_get_name(0)
+	if bufname == "" then
+		return
+	end -- Ignore unnamed buffers
+
+	local filename = vim.fn.fnamemodify(bufname, ":t")
+	local first_letter = filename:sub(1, 1):upper()
+
+	if not first_letter:match("%a") then
+		return
+	end -- Only mark with letters
+
+	if excluded_marks[first_letter] then
+		return
+	end -- Skip excluded letters
+
+	-- Set mark at current cursor position in the buffer being left
+	pcall(vim.cmd, "mark " .. first_letter)
+end
+
+-- Create autocommand
+autocmd("BufLeave", {
+	group = automarkGroup,
+	pattern = { "*.jsx", "*.tsx", "*.js", "*.ts" },
+	callback = set_mark_on_bufleave,
+	desc = "Set alphabetical mark on buffer leave",
 })
