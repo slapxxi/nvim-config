@@ -4,14 +4,14 @@ local colors = {
 	-- Base colors from VSCode theme
 	-- bg = "#0e0e12", -- editor.background
 	bg = bg,
-	fg = "#a8b3d7", -- editor.foreground
+	fg = "#a9b4d8", -- editor.foreground
 	blue = "#1166ff", -- Primary accent color (e.g., keywords, cursor)
 	light_blue = "#1ab2ff", -- Secondary accent (e.g., constants)
 	yellow = "#ffc82a", -- JSON properties, regex
 	red = "#ff3c1a", -- Errors
-	gray = "#535a7a", -- Deemphasized text, object keys
-	dark_gray = "#303345", -- Punctuation, inactive elements
-	subtle_gray = "#242533", -- Inactive foreground
+	gray = "#545b7b", -- Deemphasized text, object keys
+	dark_gray = "#313446", -- Punctuation, inactive elements
+	subtle_gray = "#252634", -- Inactive foreground
 	green = "#98ff35",
 	green_pastel = "#90EE90",
 	yellow_pastel = "#ffe08c", -- Softer, more pastel yellow
@@ -185,6 +185,10 @@ local blueberry = {
 
 	CopilotSuggestion = { fg = colors.copilot, italic = true },
 	CodeiumSuggestion = { fg = colors.copilot, italic = true },
+
+	qfFileName = { fg = colors.gray },
+	qfText = { fg = colors.dark_gray },
+	QuickFixLine = { fg = colors.blue },
 }
 
 -- Apply the theme
