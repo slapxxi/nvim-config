@@ -125,3 +125,37 @@ map("n", "G", "Gzz")
 -- scroll and center
 map("n", "<C-d>", "<C-d>zz")
 map("n", "<C-u>", "<C-u>zz")
+
+-- Open quickfix list
+map("n", "<leader>;o", ":copen<CR>", { desc = "Quickfix: Open list" })
+
+-- Close quickfix list
+map("n", "<leader>;c", ":cclose<CR>", { desc = "Quickfix: Close list" })
+
+-- Go to next quickfix item
+map("n", "<leader>;n", ":cnext<CR>zz", { desc = "Quickfix: Next item" })
+
+-- Go to previous quickfix item
+map("n", "<leader>;p", ":cprev<CR>zz", { desc = "Quickfix: Previous item" })
+
+-- Clear quickfix list
+map("n", "<leader>;f", ":call setqflist([])<CR>", { desc = "Quickfix: Clear list" })
+
+-- Toggle quickfix list
+map("n", "<leader>;t", function()
+	local wininfo = vim.fn.getwininfo()
+	for _, win in ipairs(wininfo) do
+		if win.quickfix == 1 then
+			vim.cmd("cclose")
+			vim.cmd("wincmd p") -- go back to previous window
+			return
+		end
+	end
+	vim.cmd("copen")
+	vim.cmd("wincmd p") -- go back to previous window
+end, { desc = "Quickfix: Toggle list" })
+
+vim.keymap.set("n", "<leader>;o", function()
+	vim.cmd("copen")
+	vim.cmd("wincmd p") -- go back to previous window
+end, { desc = "Quickfix: Open without focus" })
