@@ -33,6 +33,7 @@ if true then
 		},
 		view = {
 			width = 34,
+			side = "right",
 		},
 		renderer = {
 			group_empty = true,
