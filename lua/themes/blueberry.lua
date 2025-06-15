@@ -105,6 +105,8 @@ local blueberry = {
 	GitSignsChange = { fg = "#555770" }, -- gitDecoration.modifiedResourceForeground
 	GitSignsDelete = { fg = "#EF5350" }, -- gitDecoration.deletedResourceForeground
 
+	FugitiveBlameTime = { fg = colors.gray },
+
 	-- LSP
 	LspReferenceText = { fg = colors.bg, bg = colors.yellow },
 
