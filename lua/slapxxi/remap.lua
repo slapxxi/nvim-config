@@ -160,3 +160,6 @@ vim.keymap.set("n", "<leader>;o", function()
 	vim.cmd("copen")
 	vim.cmd("wincmd p") -- go back to previous window
 end, { desc = "Quickfix: Open without focus" })
+
+map("n", "<M-S-j>", ":cnext<CR>zz", { desc = "Quickfix: Next item" })
+map("n", "<M-S-k>", ":cprev<CR>zz", { desc = "Quickfix: Next item" })
