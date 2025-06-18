@@ -24,6 +24,7 @@ require("conform").setup({
 		typescriptreact = { "prettierd", "prettier", stop_after_first = true },
 		javascriptreact = { "prettierd", "prettier", stop_after_first = true },
 		json = { "prettier" },
+		jsonc = { "prettier" },
 		html = { "prettier" },
 		css = { "prettier" },
 		markdown = { "prettier" },

@@ -76,7 +76,7 @@ lspconfig.lua_ls.setup({})
 
 lspconfig.ts_ls.setup({
 	on_attach = on_attach,
-	filetypes = { "javascript", "typescript", "typescriptreact", "typescript.tsx" },
+	filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "typescript.tsx", "json", "jsonc" },
 	cmd = { "typescript-language-server", "--stdio" },
 })
 
