@@ -91,14 +91,14 @@ local blueberry = {
 	NvimTreeSpecialFile = { fg = colors.yellow },
 
 	-- Diff
-	-- DiffAdd = { bg = "#addb67", fg = "#000000" }, -- diffEditor.insertedTextBackground
-	DiffAdd = { bg = "#adfb67", fg = "#000000" }, -- diffEditor.insertedTextBackground
-	diffEditor = { bg = "#0e0e12" }, -- diffEditor.background
-	DiffDelete = { bg = "#ef5350", fg = "#000000" }, -- diffEditor.removedTextBackground
-	DiffChange = { bg = "#555770", fg = colors.white },
-	DiffText = { bg = colors.blue, fg = colors.white },
-	diffAdded = { fg = colors.green_pastel },
-	diffRemoved = { fg = colors.red_pastel },
+	DiffAdd = { bg = colors.bg, fg = colors.green_pastel },
+	DiffDelete = { bg = colors.bg, fg = colors.red_pastel },
+	DiffChange = { bg = colors.bg, fg = colors.yellow_pastel },
+	DiffText = { bg = colors.bg, fg = colors.fg },
+	-- diffEditor = { bg = "#0e0e12" }, -- diffEditor.background
+	-- diffAdded = { fg = colors.green_pastel },
+	-- diffRemoved = { fg = colors.red_pastel },
+	-- diffRemoved = { fg = colors.red_pastel },
 
 	-- Git
 	GitSignsAdd = { fg = "#addb67" }, -- gitDecoration.untrackedResourceForeground
