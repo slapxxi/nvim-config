@@ -1,30 +1,33 @@
 local bg = "#0e0e12"
+-- local dark_gray = "#343749"
+local dark_gray = "#393c4e"
 
 local colors = {
-	-- Base colors from VSCode theme
-	-- bg = "#0e0e12", -- editor.background
+	-- bg = "#0e0e12",
 	bg = bg,
-	fg = "#a9b4d8", -- editor.foreground
+	sidebar_bg = bg,
+	status_bg = bg,
+	line_bg = "#15151a",
+	-- fg
+	fg = "#abb6da",
+	-- gray = "#545b7b", -- Deemphasized text, object keys
+	gray = "#5e6485",
+	-- dark_gray = "#323547", -- Punctuation, inactive elements
+	dark_gray = dark_gray, -- Punctuation, inactive elements
+	subtle_gray = "#252634", -- Inactive foreground
+	-- colors
 	blue = "#1166ff", -- Primary accent color (e.g., keywords, cursor)
 	light_blue = "#1ab2ff", -- Secondary accent (e.g., constants)
 	yellow = "#ffc82a", -- JSON properties, regex
 	red = "#ff3c1a", -- Errors
-	gray = "#545b7b", -- Deemphasized text, object keys
-	dark_gray = "#313446", -- Punctuation, inactive elements
-	subtle_gray = "#252634", -- Inactive foreground
 	green = "#98ff35",
 	green_pastel = "#90EE90",
 	yellow_pastel = "#ffe08c", -- Softer, more pastel yellow
 	red_pastel = "#ff8a75", -- Softer, more pastel red
-	--highlight = "#3c5888", -- Selection highlights
-	-- copilot = "#8893e7", -- Softer, more pastel red
-	copilot = "#434a6f", -- Softer, more pastel red
+	copilot = "#434a6f",
 	highlight = "#0a2556", -- Selection highlights
-	line_bg = "#15151a", -- Line highlight background
-	sidebar_bg = bg,
-	status_bg = bg,
-	white = "#f5f7ff", -- Main text color
-	comment = "#323546", -- Comments
+	white = "#f6f8ff", -- Main text color
+	comment = dark_gray, -- Comments
 }
 
 local blueberry = {

@@ -1,7 +1,12 @@
 if true then
-	vim.keymap.set("i", "<C-e>", function()
+	vim.keymap.set({ "i" }, "<C-c>", function()
 		require("codeium.virtual_text").clear()
-	end, { expr = true, silent = true })
+		vim.api.nvim_feedkeys(
+			vim.api.nvim_replace_termcodes("<C-c>", true, false, true),
+			"n", -- non-remappable
+			true -- insert at the end of the input queue
+		)
+	end, { expr = false, silent = true })
 
 	require("codeium").setup({
 		-- Optionally disable cmp source if using virtual text only
