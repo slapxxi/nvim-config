@@ -97,9 +97,6 @@ map("n", "V", "V$", opts)
 -- map("n", "<Tab>", "@q", opts)
 -- map("n", "<leader><Tab>", "@q", opts)
 
--- quick mark
-map("n", "mm", "m'")
-
 -- go to next match and center
 map("n", "n", "nzz")
 
