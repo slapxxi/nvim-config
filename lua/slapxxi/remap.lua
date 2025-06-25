@@ -39,8 +39,6 @@ map("n", "<leader>P", ":pu!<CR>")
 map("n", "<C-e>", "<C-e>j")
 map("n", "<C-y>", "<C-y>k")
 
-map("n", "<leader>Ps", ":PackerSync<CR>")
-
 map("n", "<leader>w", ":bd<CR>")
 map("n", "<leader>W", ":bd!<CR>")
 
