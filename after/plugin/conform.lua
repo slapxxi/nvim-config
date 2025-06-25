@@ -1,5 +1,10 @@
 require("conform").setup({
 	formatters = {
+		svgo = {
+			command = "svgo",
+			args = { "--input", "$FILENAME", "--output", "$FILENAME" },
+			stdin = false,
+		},
 		prettier = {
 			prepend_args = function()
 				return {
@@ -28,5 +33,6 @@ require("conform").setup({
 		html = { "prettier" },
 		css = { "prettier" },
 		markdown = { "prettier" },
+		svg = { "svgo" },
 	},
 })
