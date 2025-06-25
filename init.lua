@@ -41,7 +41,7 @@ _G.paste_register_no_indent = function()
 end
 
 -- Map <C-r> in insert mode to call our function
-api.nvim_set_keymap("i", "<C-r>", "<C-o>:lua paste_register_no_indent()<CR>", { noremap = true, silent = true })
+-- api.nvim_set_keymap("i", "<C-r>", "<C-o>:lua paste_register_no_indent()<CR>", { noremap = true, silent = true })
 
 local function disable_relative_number_temporarily(duration_ms)
 	-- Save current state

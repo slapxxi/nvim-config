@@ -8,7 +8,8 @@ vim.g.mapleader = " "
 -- map("i", "(", "()<Esc>i", opts)
 -- map("i", "[", "[]<Esc>i", opts)
 -- map("i", "{", "{}<Esc>i", opts)
--- map("n", "<C-g>", "<C-^>")
+
+map("n", "<C-g>", "<C-^>")
 
 map("n", "<leader>s", ":SessionManager save_current_session<CR>", opts)
 map("n", "<leader>l", ":SessionManager load_last_session<CR>", opts)
@@ -105,6 +106,7 @@ map("n", "<leader>,", "A,<Esc>", opts)
 
 -- save
 map("n", "<C-s>", ":w<CR>")
+map("i", "<C-s>", "<C-o>:w<CR>")
 map("n", "<leader>s", ":w<CR>")
 
 --force save

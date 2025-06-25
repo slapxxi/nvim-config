@@ -8,6 +8,10 @@ if true then
 		)
 	end, { expr = false, silent = true })
 
+	vim.keymap.set({ "i" }, "<C-e>", function()
+		require("codeium.virtual_text").clear()
+	end, { expr = true, silent = true })
+
 	require("codeium").setup({
 		-- Optionally disable cmp source if using virtual text only
 		enable_cmp_source = false,

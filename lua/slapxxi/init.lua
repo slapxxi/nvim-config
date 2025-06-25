@@ -2,7 +2,6 @@ require("slapxxi.packer")
 require("slapxxi.remap")
 require("slapxxi.set")
 
-local lspconfig = require("lspconfig")
 local augroup = vim.api.nvim_create_augroup
 local autocmd = vim.api.nvim_create_autocmd
 
@@ -53,42 +52,6 @@ autocmd("BufLeave", {
 	pattern = { "*.jsx", "*.tsx" },
 	command = "normal! mX",
 })
-
--- autocmd("BufLeave", {
--- 	group = automarkGroup,
--- 	pattern = "*.md",
--- 	command = "normal! mM",
--- })
-
--- autocmd("BufLeave", {
--- 	group = automarkGroup,
--- 	pattern = { "*.yml", "*.yaml" },
--- 	command = "normal! mY",
--- })
-
--- autocmd("BufLeave", {
--- 	group = automarkGroup,
--- 	pattern = "*.vue",
--- 	command = "normal! mV",
--- })
-
--- autocmd("BufLeave", {
--- 	group = automarkGroup,
--- 	pattern = "*.json",
--- 	command = "normal! mS",
--- })
-
--- autocmd("BufLeave", {
--- 	group = automarkGroup,
--- 	pattern = "package.json",
--- 	command = "normal! mP",
--- })
-
--- autocmd("BufLeave", {
--- 	group = automarkGroup,
--- 	pattern = ".env*",
--- 	command = "normal! mE",
--- })
 
 autocmd("FileType", {
 	pattern = "*",
