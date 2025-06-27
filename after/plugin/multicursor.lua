@@ -37,7 +37,7 @@ if true then
 	set("n", "<c-leftrelease>", mc.handleMouseRelease)
 
 	-- Disable and enable cursors.
-	set({ "n", "x" }, "<c-q>", mc.toggleCursor)
+	set({ "n", "x" }, "<M-q>", mc.toggleCursor)
 
 	mc.addKeymapLayer(function(layerSet)
 		-- Select a different cursor as the main one.

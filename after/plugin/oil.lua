@@ -65,7 +65,11 @@ if true then
 			["<CR>"] = "actions.select",
 			["<C-h>"] = { "actions.select", opts = { horizontal = true } },
 			["<C-t>"] = { "actions.select", opts = { tab = true } },
-			-- ["<C-s>"] = { "actions.select", opts = { vertical = true } },
+			["<C-q>"] = "actions.send_to_qflist",
+			["<C-s>"] = {
+				"actions.toggle_hidden",
+				mode = { "n" },
+			},
 			-- ["<C-p>"] = "actions.preview",
 			["<C-p>"] = nil,
 			["="] = "actions.preview",
