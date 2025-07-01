@@ -64,8 +64,14 @@ autocmd("LspAttach", {
 			"<cmd>lua vim.diagnostic.open_float(nil, {focus = false, border = 'rounded'})<cr>",
 			opts
 		)
-		vim.keymap.set("n", "<leader>H", "<cmd>lua vim.lsp.buf.code_action()<cr>", opts)
+		vim.keymap.set({ "n", "v" }, "<leader>H", "<cmd>lua vim.lsp.buf.code_action()<cr>", opts)
 	end,
+})
+
+lspconfig.ts_ls.setup({
+	on_attach = on_attach,
+	filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "typescript.tsx", "json", "jsonc" },
+	cmd = { "typescript-language-server", "--stdio" },
 })
 
 lspconfig.eslint.setup({
@@ -74,12 +80,6 @@ lspconfig.eslint.setup({
 })
 
 lspconfig.lua_ls.setup({})
-
-lspconfig.ts_ls.setup({
-	on_attach = on_attach,
-	filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "typescript.tsx", "json", "jsonc" },
-	cmd = { "typescript-language-server", "--stdio" },
-})
 
 lspconfig.html.setup({
 	capabilities = capabilities,
