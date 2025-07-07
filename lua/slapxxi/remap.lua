@@ -9,6 +9,8 @@ vim.g.mapleader = " "
 -- map("i", "[", "[]<Esc>i", opts)
 -- map("i", "{", "{}<Esc>i", opts)
 
+-- map({ "n", "v", "i" }, "<C-c>", "<Esc>", { noremap = true })
+
 map("n", "<C-g>", "<C-^>")
 
 map("n", "<leader>s", ":SessionManager save_current_session<CR>", opts)

@@ -12,7 +12,6 @@ vim.diagnostic.config({
 
 local lspconfig = require("lspconfig")
 local autocmd = vim.api.nvim_create_autocmd
-local augroup = vim.api.nvim_create_augroup
 
 -- Add cmp_nvim_lsp capabilities settings to lspconfig
 -- This should be executed before you configure any language server
@@ -68,11 +67,11 @@ autocmd("LspAttach", {
 	end,
 })
 
-lspconfig.ts_ls.setup({
-	on_attach = on_attach,
-	filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "typescript.tsx", "json", "jsonc" },
-	cmd = { "typescript-language-server", "--stdio" },
-})
+-- lspconfig.ts_ls.setup({
+-- 	on_attach = on_attach,
+-- 	filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "typescript.tsx", "json", "jsonc" },
+-- 	cmd = { "typescript-language-server", "--stdio" },
+-- })
 
 lspconfig.eslint.setup({
 	on_attach = on_attach,

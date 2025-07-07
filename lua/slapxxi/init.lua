@@ -113,3 +113,19 @@ autocmd("BufLeave", {
 	callback = set_mark_on_bufleave,
 	desc = "Set alphabetical mark on buffer leave",
 })
+
+-- local Format = vim.api.nvim_create_augroup("Format", { clear = true })
+-- autocmd("BufWritePre", {
+-- 	group = Format,
+-- 	pattern = "*.tsx,*.ts,*.jsx,*.js",
+-- 	callback = function()
+-- 		if vim.fn.exists(":TSToolsFixAll") then
+-- 			vim.cmd("TSToolsFixAll")
+-- 			vim.cmd("TSToolsRemoveUnused")
+-- 			vim.cmd("TSToolsOrganizeImports")
+-- 			vim.cmd("TSToolsAddMissingImports")
+-- 			return nil
+-- 		end
+-- 		return {}
+-- 	end,
+-- })

@@ -13,6 +13,11 @@ return require("packer").startup(function(use)
 	-- LSP
 	use("neovim/nvim-lspconfig")
 
+	use({
+		"pmizio/typescript-tools.nvim",
+		requires = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+	})
+
 	-- Autocomplete
 	use("hrsh7th/nvim-cmp")
 	use("hrsh7th/cmp-nvim-lsp")
@@ -24,8 +29,8 @@ return require("packer").startup(function(use)
 	-- Snippets
 	use("hrsh7th/vim-vsnip")
 	use("hrsh7th/cmp-vsnip")
-	use("rafamadriz/friendly-snippets")
-	use("kcsuraj/typescript-snippets")
+	-- use("rafamadriz/friendly-snippets")
+	-- use("kcsuraj/typescript-snippets")
 
 	-- Eslint
 	use("jose-elias-alvarez/null-ls.nvim")
@@ -93,9 +98,9 @@ return require("packer").startup(function(use)
 		end,
 	})
 
-	-- use("mason-org/mason.nvim")
-	-- use("mfussenegger/nvim-dap")
-	-- use("jay-babu/mason-nvim-dap.nvim")
+	use("mason-org/mason.nvim")
+	use("mfussenegger/nvim-dap")
+	use("jay-babu/mason-nvim-dap.nvim")
 
 	use({
 		"mason-org/mason.nvim",
