@@ -18,7 +18,7 @@ local colors = {
 	-- colors
 	blue = "#1166ff", -- Primary accent color (e.g., keywords, cursor)
 	light_blue = "#1ab2ff", -- Secondary accent (e.g., constants)
-	yellow = "#ffc82a", -- JSON properties, regex
+	yellow = "#f0c82a", -- JSON properties, regex
 	red = "#ff3c1a", -- Errors
 	green = "#98ff35",
 	green_pastel = "#90EE90",
