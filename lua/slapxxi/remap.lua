@@ -76,12 +76,6 @@ map("v", "<leader>/", "y:%s/<C-R>0/")
 -- case insensitive search in case the option is not enabled
 -- map("n", "<leader>/","/\\c")
 
--- yank but go to the end of the yanked text
-map("v", "gy", "ygv<Esc>", opts)
-
--- yank but keep the selection
-map("v", "<leader>y", "ygv", opts)
-
 -- move line up/down
 map("n", "<A-j>", ":m .+1<CR>==") -- move line up(n)
 map("n", "<A-k>", ":m .-2<CR>==") -- move line down(n)
@@ -89,7 +83,7 @@ map("v", "<A-j>", ":m '>+1<CR>gv=gv") -- move line up(v)
 map("v", "<A-k>", ":m '<-2<CR>gv=gv") -- move line down(v)
 
 -- add motion to register Y
-map("n", "Y", '"Yy', opts)
+map({ "n", "v" }, "Y", '"Yy', opts)
 
 -- go to end of line when entering visual
 map("n", "V", "V$", opts)
