@@ -1,8 +1,8 @@
 if true then
-	vim.keymap.set({ "i" }, "<C-c>", function()
+	vim.keymap.set({ "i" }, "<Esc>", function()
 		require("codeium.virtual_text").clear()
 		vim.api.nvim_feedkeys(
-			vim.api.nvim_replace_termcodes("<C-c>", true, false, true),
+			vim.api.nvim_replace_termcodes("<Esc>", true, false, true),
 			"n", -- non-remappable
 			true -- insert at the end of the input queue
 		)

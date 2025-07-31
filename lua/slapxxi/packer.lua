@@ -99,8 +99,8 @@ return require("packer").startup(function(use)
 	})
 
 	use("mason-org/mason.nvim")
-	use("mfussenegger/nvim-dap")
-	use("jay-babu/mason-nvim-dap.nvim")
+	-- use("mfussenegger/nvim-dap")
+	-- use("jay-babu/mason-nvim-dap.nvim")
 
 	use({
 		"mason-org/mason.nvim",

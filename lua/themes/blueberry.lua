@@ -1,4 +1,4 @@
-local bg = "#0e0e12"
+local bg = "#0d0d11"
 -- local dark_gray = "#343749"
 local dark_gray = "#393c4e"
 
