@@ -1,12 +1,46 @@
 if true then
-	vim.keymap.set({ "i" }, "<Esc>", function()
-		require("codeium.virtual_text").clear()
-		vim.api.nvim_feedkeys(
-			vim.api.nvim_replace_termcodes("<Esc>", true, false, true),
-			"n", -- non-remappable
-			true -- insert at the end of the input queue
-		)
-	end, { expr = false, silent = true })
+	-- vim.keymap.set({ "i" }, "<C-c>", function()
+	-- 	require("codeium.virtual_text").clear()
+	-- 	vim.api.nvim_feedkeys(
+	-- 		vim.api.nvim_replace_termcodes("<C-c>", true, false, true),
+	-- 		"n", -- non-remappable
+	-- 		true -- insert at the end of the input queue
+	-- 	)
+	-- end, { expr = false, silent = true })
+
+	-- vim.keymap.set({ "i" }, "<C-c>", function()
+	-- 	-- Only clear Codeium's virtual text if not recording/replaying a macro
+	-- 	local reg_recording = vim.fn.reg_recording()
+	-- 	local reg_executing = vim.fn.reg_executing()
+	--
+	-- 	if reg_recording == "" and reg_executing == "" then
+	-- 		pcall(function()
+	-- 			require("codeium.virtual_text").clear()
+	-- 		end)
+	--
+	-- 		return vim.api.nvim_feedkeys(
+	-- 			vim.api.nvim_replace_termcodes("<C-c>", true, false, true),
+	-- 			"n", -- non-remappable
+	-- 			false -- do not insert at end; insert immediately to avoid queue issues in macros
+	-- 		)
+	-- 	end
+	--
+	-- 	return vim.api.nvim_replace_termcodes("<C-c>", true, false, true)
+	-- end, { expr = true, silent = true })
+
+	vim.keymap.set("i", "<C-c>", function()
+		-- If a macro is being recorded or executed, fall back to the default <C-c>
+		if vim.fn.reg_recording() ~= "" or vim.fn.reg_executing() ~= "" then
+			return vim.api.nvim_replace_termcodes("<C-c>", true, false, true)
+		end
+
+		-- Otherwise, clear Codeium's virtual text and send <C-c>
+		pcall(function()
+			require("codeium.virtual_text").clear()
+		end)
+
+		return vim.api.nvim_replace_termcodes("<C-c>", true, false, true)
+	end, { expr = true, silent = true })
 
 	vim.keymap.set({ "i" }, "<C-e>", function()
 		require("codeium.virtual_text").clear()
