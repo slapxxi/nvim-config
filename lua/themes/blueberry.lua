@@ -1,7 +1,7 @@
 -- local bg = "#0e0e12"
 
 local bg = "#0e0e11"
-local dark_gray = "#3b3e51" -- comments
+local dark_gray = "#3b3e54" -- comments
 
 local colors = {
 	bg = bg,
@@ -10,7 +10,7 @@ local colors = {
 	line_bg = "#141419",
 
 	fg = "#afbadd", -- main text
-	gray = "#616786", -- properties
+	gray = "#616785", -- properties
 	dark_gray = dark_gray, -- Punctuation, inactive elements
 	subtle_gray = "#252634", -- Inactive foreground
 
