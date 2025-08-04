@@ -25,6 +25,7 @@ vim.keymap.set("n", "<leader>ff", builtin.lsp_references, {})
 vim.keymap.set("n", "<leader>fd", builtin.diagnostics, {})
 
 vim.keymap.set("n", "<leader>fg", builtin.git_commits, {})
+vim.keymap.set("n", "<leader>ft", builtin.git_status, {})
 
 require("telescope").load_extension("fzf")
 
