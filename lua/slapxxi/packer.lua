@@ -59,6 +59,7 @@ return require("packer").startup(function(use)
 
 	use("tpope/vim-fugitive")
 	use("tpope/vim-surround")
+	use("tpope/vim-unimpaired")
 
 	-- use("elihunter173/dirbuf.nvim")
 	use("chentoast/marks.nvim")

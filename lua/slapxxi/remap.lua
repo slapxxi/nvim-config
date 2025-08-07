@@ -120,21 +120,6 @@ map("n", "G", "Gzz")
 map("n", "<C-d>", "<C-d>zz")
 map("n", "<C-u>", "<C-u>zz")
 
--- Open quickfix list
-map("n", "<leader>;o", ":copen<CR>", { desc = "Quickfix: Open list" })
-
--- Close quickfix list
-map("n", "<leader>;c", ":cclose<CR>", { desc = "Quickfix: Close list" })
-
--- Go to next quickfix item
-map("n", "<leader>;n", ":cnext<CR>zz", { desc = "Quickfix: Next item" })
-
--- Go to previous quickfix item
-map("n", "<leader>;p", ":cprev<CR>zz", { desc = "Quickfix: Previous item" })
-
--- Clear quickfix list
-map("n", "<leader>;f", ":call setqflist([])<CR>", { desc = "Quickfix: Clear list" })
-
 -- Toggle quickfix list
 map("n", "<leader>;t", function()
 	local wininfo = vim.fn.getwininfo()
@@ -156,3 +141,9 @@ end, { desc = "Quickfix: Open without focus" })
 
 map("n", "<M-S-j>", ":cnext<CR>zz", { desc = "Quickfix: Next item" })
 map("n", "<M-S-k>", ":cprev<CR>zz", { desc = "Quickfix: Next item" })
+
+-- Go to next quickfix item
+-- map("n", "]q", ":cnext<CR>zz", { desc = "Quickfix: Next item" })
+
+-- Go to previous quickfix item
+-- map("n", "[q", ":cprev<CR>zz", { desc = "Quickfix: Previous item" })
