@@ -13,7 +13,6 @@ vim.keymap.set("n", "<leader>ff", function()
 	require("telescope.builtin").find_files(opts)
 end, { desc = "Go to file (includes ignored)" })
 
-vim.keymap.set("n", "<leader>fg", builtin.git_files)
 vim.keymap.set("n", "<leader>fl", builtin.live_grep)
 vim.keymap.set("n", "<leader>fb", builtin.buffers)
 vim.keymap.set("n", "<leader>fh", builtin.help_tags)
@@ -24,7 +23,8 @@ vim.keymap.set("n", "<leader>fw", builtin.lsp_workspace_symbols, {})
 vim.keymap.set("n", "<leader>ff", builtin.lsp_references, {})
 vim.keymap.set("n", "<leader>fd", builtin.diagnostics, {})
 
-vim.keymap.set("n", "<leader>fg", builtin.git_commits, {})
+vim.keymap.set("n", "<leader>fg", builtin.git_files)
+vim.keymap.set("n", "<leader>fc", builtin.git_commits, {})
 vim.keymap.set("n", "<leader>ft", builtin.git_status, {})
 
 require("telescope").load_extension("fzf")
