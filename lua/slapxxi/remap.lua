@@ -13,8 +13,8 @@ vim.g.mapleader = " "
 
 map("n", "<C-g>", "<C-^>")
 
-map("n", "<leader>s", ":SessionManager save_current_session<CR>", opts)
-map("n", "<leader>l", ":SessionManager load_last_session<CR>", opts)
+-- map("n", "<leader>s", ":SessionManager save_current_session<CR>", opts)
+-- map("n", "<leader>l", ":SessionManager load_last_session<CR>", opts)
 
 -- go to start/end of line in insert mode
 map("i", "<M-S-l>", "<Esc>$a")

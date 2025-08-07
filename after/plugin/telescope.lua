@@ -45,6 +45,10 @@ require("telescope").setup({
 			n = {
 				["<M-b>"] = require("telescope.actions").preview_scrolling_up,
 				["<M-f>"] = require("telescope.actions").preview_scrolling_down,
+				["<M-d>"] = require("telescope.actions").delete_buffer,
+			},
+			i = {
+				["<M-d>"] = require("telescope.actions").delete_buffer,
 			},
 		},
 	},
