@@ -2,8 +2,8 @@ local resession = require("resession")
 
 resession.setup({
 	autosave = {
-		enabled = true,
-		interval = 25,
+		enabled = false,
+		interval = 60,
 		notify = true,
 	},
 })

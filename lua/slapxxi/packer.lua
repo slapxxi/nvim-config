@@ -73,7 +73,7 @@ return require("packer").startup(function(use)
 
 	use("stevearc/dressing.nvim")
 	use("MunifTanjim/nui.nvim")
-	use("MeanderingProgrammer/render-markdown.nvim")
+	-- use("MeanderingProgrammer/render-markdown.nvim")
 
 	use("nvim-tree/nvim-web-devicons") -- or use 'echasnovski/mini.icons'
 	use("HakonHarnes/img-clip.nvim")
