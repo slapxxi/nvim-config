@@ -30,7 +30,7 @@ local colors = {
 	white = "#f6f8ff", -- Main text color
 
 	copilot = "#434a6d",
-	highlight = "#0f1728", -- Selection highlights
+	highlight = "#0e1b34", -- Selection highlights
 	comment = dark_gray, -- Comments
 }
 
