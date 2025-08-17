@@ -19,6 +19,7 @@ local colors = {
 
 	yellow = "#f0c82a", -- JSON properties, regex
 	yellow_pastel = "#ffe08c", -- Softer, more pastel yellow
+	yellow_transparent = "#ceac27", -- Softer, more pastel yellow
 
 	red = "#ff3c1a", -- Errors
 	red_pastel = "#ff8a75", -- Softer, more pastel red
@@ -29,7 +30,7 @@ local colors = {
 	white = "#f6f8ff", -- Main text color
 
 	copilot = "#434a6d",
-	highlight = "#0a2556", -- Selection highlights
+	highlight = "#0f1728", -- Selection highlights
 	comment = dark_gray, -- Comments
 }
 
@@ -43,8 +44,8 @@ local blueberry = {
 	LineNr = { fg = colors.dark_gray },
 	CursorLineNr = { fg = colors.blue },
 	Visual = { bg = colors.highlight },
-	Search = { bg = colors.yellow, fg = colors.bg }, -- editor.findMatchBackground
-	IncSearch = { bg = colors.blue }, -- editor.findMatchHighlightBackground
+	Search = { bg = colors.yellow_transparent, fg = colors.bg }, -- editor.findMatchBackground
+	IncSearch = { bg = colors.blue, fg = colors.bg }, -- editor.findMatchHighlightBackground
 	StatusLine = { fg = colors.dark_gray, bg = colors.status_bg },
 	StatusLineNC = { fg = colors.subtle_gray, bg = colors.status_bg },
 	VertSplit = { fg = colors.gray }, -- sideBar.border
