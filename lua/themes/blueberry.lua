@@ -1,18 +1,18 @@
 -- local bg = "#0e0e12"
 
-local bg = "#0e0e11"
-local dark_gray = "#3b3e54" -- comments
+local bg = "#0e0e10"
+local dark_gray = "#3d4054" -- comments
 
 local colors = {
 	bg = bg,
 	sidebar_bg = bg,
 	status_bg = bg,
-	line_bg = "#141419",
+	line_bg = "#141418",
 
-	fg = "#afbadd", -- main text
-	gray = "#616785", -- properties
+	fg = "#b1bcdc", -- main text
+	gray = "#676d8a", -- properties
 	dark_gray = dark_gray, -- Punctuation, inactive elements
-	subtle_gray = "#252634", -- Inactive foreground
+	subtle_gray = "#252734", -- Inactive foreground
 
 	blue = "#1166ff", -- primary accent color
 	light_blue = "#1ab2ff", -- Secondary accent (e.g., constants)
@@ -27,9 +27,9 @@ local colors = {
 	green = "#98ff35",
 	green_pastel = "#90EE90",
 
-	white = "#f6f8ff", -- Main text color
+	white = "#f6f8ff", -- strings color
 
-	copilot = "#434a6d",
+	copilot = "#434a69",
 	highlight = "#0e1b34", -- Selection highlights
 	comment = dark_gray, -- Comments
 }
