@@ -1,3 +1,5 @@
+vim.keymap.set("n", "<leader>tws", ":TailwindSort<CR>")
+
 require("tailwind-tools").setup({
 	document_color = {
 		enabled = true, -- can be toggled by commands
