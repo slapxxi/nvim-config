@@ -16,6 +16,7 @@ end, { desc = "Go to file (includes ignored)" })
 vim.keymap.set("n", "<leader>fl", builtin.live_grep)
 vim.keymap.set("n", "<leader>fb", builtin.buffers)
 vim.keymap.set("n", "<leader>fr", builtin.resume, {})
+vim.keymap.set("n", "<leader>fm", builtin.marks, {})
 
 vim.keymap.set("n", "<leader>fs", builtin.lsp_document_symbols, {})
 vim.keymap.set("n", "<leader>fw", builtin.lsp_workspace_symbols, {})
