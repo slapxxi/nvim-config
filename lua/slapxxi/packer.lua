@@ -128,11 +128,18 @@ return require("packer").startup(function(use)
 
 	-- use({ "frankroeder/parrot.nvim", requires = { "ibhagwan/fzf-lua", "nvim-lua/plenary.nvim" } })
 	-- use("github/copilot.vim")
+	-- use({
+	-- 	"Exafunction/windsurf.nvim",
+	-- 	requires = {
+	-- 		"nvim-lua/plenary.nvim",
+	-- 		"hrsh7th/nvim-cmp",
+	-- 	},
+	-- })
+	--
 	use({
-		"Exafunction/windsurf.nvim",
-		requires = {
-			"nvim-lua/plenary.nvim",
-			"hrsh7th/nvim-cmp",
-		},
+		"supermaven-inc/supermaven-nvim",
+		config = function()
+			require("supermaven-nvim").setup({})
+		end,
 	})
 end)

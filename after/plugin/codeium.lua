@@ -1,4 +1,4 @@
-if true then
+if false then
 	-- vim.keymap.set({ "i" }, "<C-c>", function()
 	-- 	require("codeium.virtual_text").clear()
 	-- 	vim.api.nvim_feedkeys(
