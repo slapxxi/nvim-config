@@ -7,12 +7,6 @@ vim.g.mapleader = " "
 -- General
 map("n", "<leader>,", "A,<Esc>", opts) -- add comma at the end and go normal mode
 
--- Newline Insert
-map("n", "<M-o>", "o<Esc>")
-map("n", "<M-O>", "O<Esc>")
-map("n", "<M-CR>", "o<Esc>")
-map("i", "<M-CR>", "<CR><Esc>O  ")
-
 -- Move
 map({ "n", "v" }, "L", "$", opts) -- to end of line
 map({ "n", "v" }, "H", "^", opts) -- to start of line
@@ -67,6 +61,12 @@ map("i", "<M-l>", "<Right>")
 map("i", "<M-h>", "<Left>")
 map("i", "<M-j>", "<Down>")
 map("i", "<M-k>", "<Up>")
+
+-- Newline Insert
+map("n", "<M-o>", "o<Esc>")
+map("n", "<M-O>", "O<Esc>")
+map("n", "<M-CR>", "o<Esc>")
+map("i", "<M-CR>", "<CR><Esc>O  ")
 
 -- Buffers
 map("n", "<C-g>", "<C-^>") -- alternate buffer
