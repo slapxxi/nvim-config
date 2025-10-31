@@ -17,6 +17,9 @@ map({ "n", "v" }, "Y", '"Yy', opts) -- add motion to register Y
 map("n", "<leader>p", ":pu<CR>")
 map("n", "<leader>P", ":pu!<CR>")
 
+map({ "n", "v" }, "<leader>y", [["+y]]) -- copy to system clipboard
+map("n", "<leader>Y", [["+Y]]) -- copy to system clipboard
+
 -- Quit
 map("n", "<leader>q", ":qa!<CR>")
 
