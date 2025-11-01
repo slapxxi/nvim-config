@@ -1,5 +1,3 @@
--- local bg = "#0e0e12"
-
 local bg = "#0e0e10"
 local dark_gray = "#3d4054" -- comments
 

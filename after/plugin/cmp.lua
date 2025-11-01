@@ -67,8 +67,17 @@ cmp.setup({
 		end, { "i", "s" }),
 	}),
 	formatting = {
+		fields = { "abbr", "icon", "menu" },
 		format = require("lspkind").cmp_format({
 			before = require("tailwind-tools.cmp").lspkind_format,
+			menu = {
+				buffer = "[Buffer]",
+				nvim_lsp = "[LSP]",
+				luasnip = "[LuaSnip]",
+				vsnip = "[VSnip]",
+				nvim_lua = "[Lua]",
+				latex_symbols = "[Latex]",
+			},
 		}),
 	},
 })

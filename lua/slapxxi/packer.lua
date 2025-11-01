@@ -79,7 +79,9 @@ return require("packer").startup(function(use)
 		"nvim-lualine/lualine.nvim",
 		requires = { "nvim-tree/nvim-web-devicons", opt = true },
 	})
-	use("nvim-tree/nvim-web-devicons") -- or use 'echasnovski/mini.icons'
+	use({ "nvim-tree/nvim-web-devicons" }) -- or use 'echasnovski/mini.icons'
+	use({ "MunifTanjim/nui.nvim" })
+	use({ "stevearc/dressing.nvim" })
 
 	-- Tools
 	use({ "MunifTanjim/eslint.nvim" })
