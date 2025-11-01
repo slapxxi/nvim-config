@@ -4,84 +4,90 @@
 vim.cmd([[packadd packer.nvim]])
 
 return require("packer").startup(function(use)
-	use("wbthomason/packer.nvim")
+	use({ "wbthomason/packer.nvim" })
+
+	-- Mason
+	use({ "mason-org/mason.nvim" })
 
 	-- Parser
-	use("nvim-treesitter/nvim-treesitter", { run = "TSUpdate" })
-	use("nvim-treesitter/playground")
+	use({ "nvim-treesitter/nvim-treesitter", run = "TSUpdate" })
+	use({ "nvim-treesitter/playground" })
+	use({ "nvim-treesitter/nvim-treesitter-context" })
 
 	-- LSP
-	use("neovim/nvim-lspconfig")
-
-	use({
-		"pmizio/typescript-tools.nvim",
-		requires = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
-	})
+	use({ "neovim/nvim-lspconfig" })
+	use({ "onsails/lspkind-nvim" })
 
 	-- Autocomplete
-	use("hrsh7th/nvim-cmp")
-	use("hrsh7th/cmp-nvim-lsp")
-	use("hrsh7th/cmp-buffer")
-	use("hrsh7th/cmp-path")
-	use("hrsh7th/cmp-cmdline")
-	use("hrsh7th/cmp-nvim-lsp-signature-help")
+	use({ "hrsh7th/nvim-cmp" })
+	use({ "hrsh7th/cmp-nvim-lsp" })
+	use({ "hrsh7th/cmp-buffer" })
+	use({ "hrsh7th/cmp-path" })
+	use({ "hrsh7th/cmp-cmdline" })
+	use({ "hrsh7th/cmp-nvim-lsp-signature-help" })
 
 	-- Snippets
-	use("hrsh7th/vim-vsnip")
-	use("hrsh7th/cmp-vsnip")
-	-- use("rafamadriz/friendly-snippets")
-	-- use("kcsuraj/typescript-snippets")
+	use({ "hrsh7th/vim-vsnip" })
+	use({ "hrsh7th/cmp-vsnip" })
 
-	-- Eslint
-	use("jose-elias-alvarez/null-ls.nvim")
-	use("MunifTanjim/eslint.nvim")
+	-- Lint
+	use({ "jose-elias-alvarez/null-ls.nvim" })
 
+	-- Telescope
 	use({
 		"nvim-telescope/telescope.nvim",
-		tag = "0.1.8", -- or                            , branch = '0.1.x',
+		tag = "0.1.8",
 		requires = { "nvim-lua/plenary.nvim", { "nvim-telescope/telescope-fzf-native.nvim", run = "make" } },
 	})
 
+	-- Formatting
+	use({ "stevearc/conform.nvim" })
+
+	-- Filetrees
+	use({ "stevearc/oil.nvim" })
+	use("nvim-tree/nvim-tree.lua")
+
+	-- Session Management
 	use({
-		"nvim-lualine/lualine.nvim",
-		requires = { "nvim-tree/nvim-web-devicons", opt = true },
+		"stevearc/resession.nvim",
+		config = function()
+			require("resession").setup()
+		end,
 	})
 
+	-- tpope
+	use({ "tpope/vim-fugitive" })
+	use({ "tpope/vim-surround" })
+	use({ "tpope/vim-unimpaired" })
+
+	-- Harpoon
 	use({
 		"ThePrimeagen/harpoon",
 		branch = "harpoon2",
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
 
-	use("nvim-treesitter/nvim-treesitter-context")
+	-- Quality of Life
+	use({ "chentoast/marks.nvim" })
+	use({ "lewis6991/gitsigns.nvim" })
+	use({ "numToStr/Comment.nvim" })
+	use({ "windwp/nvim-ts-autotag" })
+	use({ "jake-stewart/multicursor.nvim" })
 
-	use("mbbill/undotree")
-
-	use("tpope/vim-fugitive")
-	use("tpope/vim-surround")
-	use("tpope/vim-unimpaired")
-
-	-- use("elihunter173/dirbuf.nvim")
-	use("chentoast/marks.nvim")
-	use("lewis6991/gitsigns.nvim")
-	use("stevearc/conform.nvim")
-	use("numToStr/Comment.nvim")
-	use("windwp/nvim-ts-autotag")
-
-	use("luckasRanarison/tailwind-tools.nvim")
-	use("onsails/lspkind-nvim")
-
-	use("stevearc/dressing.nvim")
-	use("MunifTanjim/nui.nvim")
-	-- use("MeanderingProgrammer/render-markdown.nvim")
-
+	-- Appearance
+	use({
+		"nvim-lualine/lualine.nvim",
+		requires = { "nvim-tree/nvim-web-devicons", opt = true },
+	})
 	use("nvim-tree/nvim-web-devicons") -- or use 'echasnovski/mini.icons'
-	use("HakonHarnes/img-clip.nvim")
 
-	use("stevearc/oil.nvim")
-
-	use("nvim-tree/nvim-tree.lua")
-
+	-- Tools
+	use({ "MunifTanjim/eslint.nvim" })
+	use({ "luckasRanarison/tailwind-tools.nvim" })
+	use({
+		"pmizio/typescript-tools.nvim",
+		requires = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+	})
 	use({
 		"OlegGulevskyy/better-ts-errors.nvim",
 		requires = {
@@ -89,53 +95,7 @@ return require("packer").startup(function(use)
 		},
 	})
 
-	-- use({
-	-- 	"Shatur/neovim-session-manager",
-	-- 	config = function()
-	-- 		local config = require("session_manager.config")
-	-- 		require("session_manager").setup({
-	-- 			autoload_mode = { config.AutoloadMode.CurrentDir, config.AutoloadMode.LastSession },
-	-- 		})
-	-- 	end,
-	-- })
-
-	require("packer").startup(function()
-		use({
-			"stevearc/resession.nvim",
-			config = function()
-				require("resession").setup()
-			end,
-		})
-	end)
-
-	use("mason-org/mason.nvim")
-	-- use("mfussenegger/nvim-dap")
-	-- use("jay-babu/mason-nvim-dap.nvim")
-
-	use({
-		"mason-org/mason.nvim",
-		requires = {
-			"rcarriga/nvim-dap-ui",
-			"nvim-neotest/nvim-nio",
-			"theHamsta/nvim-dap-virtual-text",
-			"williamboman/mason.nvim",
-		},
-	})
-
-	-- use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } })
-
-	use("jake-stewart/multicursor.nvim")
-
-	-- use({ "frankroeder/parrot.nvim", requires = { "ibhagwan/fzf-lua", "nvim-lua/plenary.nvim" } })
-	-- use("github/copilot.vim")
-	-- use({
-	-- 	"Exafunction/windsurf.nvim",
-	-- 	requires = {
-	-- 		"nvim-lua/plenary.nvim",
-	-- 		"hrsh7th/nvim-cmp",
-	-- 	},
-	-- })
-	--
+	-- AI
 	use({
 		"supermaven-inc/supermaven-nvim",
 		config = function()

@@ -43,7 +43,7 @@ local blueberry = {
 	CursorLine = { bg = colors.line_bg },
 	LineNr = { fg = colors.dark_gray },
 	CursorLineNr = { fg = colors.blue },
-	Visual = { bg = colors.highlight },
+	Visual = { bg = colors.white, fg = colors.bg },
 	Search = { bg = colors.yellow_transparent, fg = colors.bg }, -- editor.findMatchBackground
 	IncSearch = { bg = colors.blue, fg = colors.bg }, -- editor.findMatchHighlightBackground
 	StatusLine = { fg = colors.dark_gray, bg = colors.status_bg },
@@ -77,6 +77,7 @@ local blueberry = {
 	Directory = { fg = colors.blue },
 
 	TelescopeBorder = { fg = colors.dark_gray },
+	TelescopeSelection = { bg = colors.highlight, fg = colors.white, bold = true },
 
 	-- CmpSel = { bg = colors.red },
 	-- CmpItemAbbr = { bg = colors.yellow },
