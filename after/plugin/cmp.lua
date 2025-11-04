@@ -9,6 +9,34 @@ local feedkey = function(key, mode)
 	vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(key, true, true, true), mode, true)
 end
 
+local kind_icons = {
+	Text = "",
+	Method = "󰆧",
+	Function = "󰊕",
+	Constructor = "",
+	Field = "󰇽",
+	Variable = "󰂡",
+	Class = "󰠱",
+	Interface = "",
+	Module = "",
+	Property = "󰜢",
+	Unit = "",
+	Value = "󰎠",
+	Enum = "",
+	Keyword = "󰌋",
+	Snippet = "",
+	Color = "󰏘",
+	File = "󰈙",
+	Reference = "",
+	Folder = "󰉋",
+	EnumMember = "",
+	Constant = "󰏿",
+	Struct = "",
+	Event = "",
+	Operator = "󰆕",
+	TypeParameter = "󰅲",
+}
+
 cmp.setup({
 	completion = {
 		completeopt = "menu,menuone,noselect",
@@ -67,7 +95,7 @@ cmp.setup({
 		end, { "i", "s" }),
 	}),
 	formatting = {
-		fields = { "abbr", "icon", "menu" },
+		fields = { "abbr", "kind" },
 		format = require("lspkind").cmp_format({
 			before = require("tailwind-tools.cmp").lspkind_format,
 			menu = {
