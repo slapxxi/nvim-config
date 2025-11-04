@@ -24,7 +24,7 @@ autocmd("TextYankPost", {
 	callback = function()
 		vim.highlight.on_yank({
 			higroup = "IncSearch",
-			timeout = 40,
+			timeout = 50,
 		})
 	end,
 })
@@ -98,4 +98,3 @@ autocmd("BufLeave", {
 	callback = set_mark_on_bufleave,
 	desc = "Set alphabetical mark on buffer leave",
 })
-

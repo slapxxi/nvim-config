@@ -43,7 +43,7 @@ local blueberry = {
 	CursorLineNr = { fg = colors.blue },
 	Visual = { bg = colors.white, fg = colors.bg },
 	Search = { bg = colors.yellow_transparent, fg = colors.bg }, -- editor.findMatchBackground
-	IncSearch = { bg = colors.blue, fg = colors.bg }, -- editor.findMatchHighlightBackground
+	IncSearch = { bg = colors.blue, fg = colors.white }, -- editor.findMatchHighlightBackground
 	StatusLine = { fg = colors.dark_gray, bg = colors.status_bg },
 	StatusLineNC = { fg = colors.subtle_gray, bg = colors.status_bg },
 	VertSplit = { fg = colors.gray }, -- sideBar.border
