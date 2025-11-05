@@ -50,7 +50,8 @@ return require("packer").startup(function(use)
 
 	-- Filetrees
 	use({ "stevearc/oil.nvim" })
-	use("nvim-tree/nvim-tree.lua")
+	use({ "nvim-tree/nvim-tree.lua" })
+	use({ "mikavilpas/yazi.nvim" })
 
 	-- Session Management
 	use({
