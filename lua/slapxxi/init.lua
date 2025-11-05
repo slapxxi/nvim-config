@@ -98,3 +98,18 @@ autocmd("BufLeave", {
 	callback = set_mark_on_bufleave,
 	desc = "Set alphabetical mark on buffer leave",
 })
+
+-- Change msgarea highlight when entering/leaving command-line mode
+autocmd("CmdlineEnter", {
+	callback = function()
+		-- Change the message area (command line) colors
+		vim.api.nvim_set_hl(0, "MsgArea", { fg = "#f6f8ff" })
+	end,
+})
+
+autocmd("CmdlineLeave", {
+	callback = function()
+		-- Restore your normal MsgArea highlight
+		vim.api.nvim_set_hl(0, "MsgArea", { fg = "#3d4054" })
+	end,
+})
