@@ -110,6 +110,6 @@ autocmd("CmdlineEnter", {
 autocmd("CmdlineLeave", {
 	callback = function()
 		-- Restore your normal MsgArea highlight
-		vim.api.nvim_set_hl(0, "MsgArea", { fg = "#3d4054" })
+		vim.api.nvim_set_hl(0, "MsgArea", { fg = "#676d8a" })
 	end,
 })

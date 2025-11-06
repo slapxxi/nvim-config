@@ -52,7 +52,7 @@ local blueberry = {
 	WildMenu = { fg = colors.white, bg = colors.blue },
 	SnippetTabStop = { fg = colors.text, bg = colors.yellow },
 	MatchParen = { fg = colors.yellow, bold = true },
-	MsgArea = { fg = colors.dark_gray },
+	MsgArea = { fg = colors.gray },
 
 	-- Syntax highlighting (mapped from tokenColors)
 	Statement = { fg = colors.blue },
