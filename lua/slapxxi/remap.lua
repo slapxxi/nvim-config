@@ -13,7 +13,6 @@ map({ "n", "v" }, "H", "^", opts) -- to start of line
 map("n", "V", "V$", opts) -- enter visual mode and go to end of line
 
 -- Yank and Paste
-map({ "n", "v" }, "Y", '"Yy', opts) -- add motion to register Y
 map("n", "<leader>p", ":pu<CR>")
 map("n", "<leader>P", ":pu!<CR>")
 
