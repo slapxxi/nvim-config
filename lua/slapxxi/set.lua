@@ -1,3 +1,13 @@
+local workspace_path = vim.fn.getcwd()
+local cache_dir = vim.fn.stdpath("data")
+local unique_id = vim.fn.fnamemodify(workspace_path, ":t") .. "_" .. vim.fn.sha256(workspace_path):sub(1, 8)
+local shadafile = cache_dir .. "/shada/" .. unique_id .. ".shada"
+
+vim.opt.exrc = true
+vim.opt.secure = true
+
+vim.opt.shadafile = shadafile
+
 vim.opt.relativenumber = true
 vim.opt.nu = true
 vim.opt.numberwidth = 1
