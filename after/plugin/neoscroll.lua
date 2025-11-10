@@ -1,4 +1,4 @@
-if true then
+if false then
 	local neoscroll = require("neoscroll")
 
 	local keymap = {
