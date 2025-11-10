@@ -198,6 +198,8 @@ local blueberry = {
 	qfFileName = { fg = colors.gray },
 	qfText = { fg = colors.dark_gray },
 	QuickFixLine = { fg = colors.blue },
+
+	HlSearchLens = { bg = colors.highlight, fg = colors.gray },
 }
 
 -- Apply the theme
