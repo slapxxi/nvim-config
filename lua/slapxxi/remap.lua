@@ -41,8 +41,9 @@ map("n", "<C-space>", "@@") -- repeat last macro
 
 -- Alignment
 map("n", "G", "Gzz") -- go to the end and center
-map("n", "<C-d>", "<C-d>zz") -- scroll down and center
-map("n", "<C-u>", "<C-u>zz") -- scroll up and center
+-- commented out because of visual "glitches"
+-- map("n", "<C-d>", "<C-d>zz") -- scroll down and center
+-- map("n", "<C-u>", "<C-u>zz") -- scroll up and center
 map("n", "n", "nzz") -- next match and center
 map("n", "<C-e>", "<C-e>j") -- scroll down and center
 map("n", "<C-y>", "<C-y>k") -- scroll up and center

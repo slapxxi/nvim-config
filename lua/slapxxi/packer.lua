@@ -79,6 +79,7 @@ return require("packer").startup(function(use)
 	use({ "numToStr/Comment.nvim" })
 	use({ "windwp/nvim-ts-autotag" })
 	use({ "jake-stewart/multicursor.nvim" })
+	use({ "karb94/neoscroll.nvim" })
 
 	-- Appearance
 	use({
