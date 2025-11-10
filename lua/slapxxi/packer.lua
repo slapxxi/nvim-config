@@ -80,6 +80,13 @@ return require("packer").startup(function(use)
 	use({ "windwp/nvim-ts-autotag" })
 	use({ "jake-stewart/multicursor.nvim" })
 	use({ "karb94/neoscroll.nvim" })
+	use({ "kevinhwang91/nvim-bqf" })
+	use({
+		"junegunn/fzf",
+		run = function()
+			vim.fn["fzf#install"]()
+		end,
+	})
 
 	-- Appearance
 	use({
