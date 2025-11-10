@@ -87,6 +87,7 @@ return require("packer").startup(function(use)
 			vim.fn["fzf#install"]()
 		end,
 	})
+	use({ "kevinhwang91/nvim-hlslens" })
 
 	-- Appearance
 	use({
