@@ -33,8 +33,14 @@ if true then
 		},
 		view = {
 			width = 34,
+			number = true,
+			relativenumber = true,
 		},
 		renderer = {
+			indent_markers = {
+				enable = true,
+				inline_arrows = true,
+			},
 			group_empty = true,
 		},
 		filters = {
