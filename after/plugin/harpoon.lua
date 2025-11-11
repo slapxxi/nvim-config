@@ -44,6 +44,10 @@ vim.keymap.set("n", "<C-;>", function()
 	harpoon:list():select(5)
 end)
 
+vim.keymap.set("n", "<C-'>", function()
+	harpoon:list():select(6)
+end)
+
 -- basic telescope configuration
 local conf = require("telescope.config").values
 local function toggle_telescope(harpoon_files)
