@@ -24,10 +24,8 @@ map("n", "<leader>q", ":qa!<CR>")
 
 -- Search
 map("n", "g/", ":%s/", opts)
-map("v", "g/", ":s/", opts)
-map("n", "<leader>/", ":g/")
 map("v", "<leader>/", "y:%s/<C-R>0/") -- yank and replace currently selected
-map({ "n", "v" }, "<leader><BS>", vim.cmd.noh) -- remove search highlight
+map({ "n", "v" }, "<leader>l", vim.cmd.noh) -- remove search highlight
 
 -- Save
 map("n", "<C-s>", ":w<CR>")
@@ -41,9 +39,6 @@ map("n", "<C-space>", "@@") -- repeat last macro
 
 -- Alignment
 map("n", "G", "Gzz") -- go to the end and center
--- commented out because of visual "glitches"
--- map("n", "<C-d>", "<C-d>zz") -- scroll down and center
--- map("n", "<C-u>", "<C-u>zz") -- scroll up and center
 map("n", "n", "nzz") -- next match and center
 map("n", "<C-e>", "<C-e>j") -- scroll down and center
 map("n", "<C-y>", "<C-y>k") -- scroll up and center
