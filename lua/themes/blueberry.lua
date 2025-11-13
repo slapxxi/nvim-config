@@ -9,11 +9,15 @@ local colors = {
 
 	fg = "#b1bcdc", -- main text
 	gray = "#676d8a", -- properties
+	gray_blue = "#8389AA", -- properties
 	dark_gray = dark_gray, -- Punctuation, inactive elements
 	subtle_gray = "#252734", -- Inactive foreground
 
 	blue = "#1166ff", -- primary accent color
 	light_blue = "#1ab2ff", -- Secondary accent (e.g., constants)
+	pale_blue = "#629aff",
+
+	teal = "#42C5D7",
 
 	yellow = "#f0c82a", -- JSON properties, regex
 	yellow_pastel = "#ffe08c", -- Softer, more pastel yellow
@@ -63,7 +67,7 @@ local blueberry = {
 	Function = { fg = colors.blue }, -- Function calls
 	Keyword = { fg = colors.blue }, -- Keywords
 	Operator = { fg = colors.blue }, -- Punctuation, operators
-	Type = { fg = colors.gray }, -- Types
+	Type = { fg = colors.gray_blue }, -- Types
 	PreProc = { fg = colors.blue }, -- Preprocessor (e.g., storage.type)
 	Special = { fg = colors.light_blue }, -- Embedded, constants
 	Delimiter = { fg = colors.dark_gray }, -- Embedded, constants
@@ -182,6 +186,9 @@ local blueberry = {
 	["@variable"] = { fg = colors.fg }, -- optional: apply to all langs
 	["@variable.member"] = { fg = colors.gray }, -- optional: apply to all langs
 	["@variable.member.javascript"] = { fg = colors.gray },
+
+	["@number"] = { fg = colors.teal }, -- optional: apply to all langs
+	["@number.float"] = { fg = colors.teal }, -- optional: apply to all langs
 
 	["@lsp.type.property"] = { fg = colors.gray },
 	["@lsp.type.class"] = { fg = colors.blue },
