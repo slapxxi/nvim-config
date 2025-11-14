@@ -31,6 +31,9 @@ vim.keymap.set("n", "<leader>ft", builtin.git_status, {})
 
 require("telescope").load_extension("fzf")
 
+require("telescope").load_extension("frecency")
+vim.keymap.set("n", "<leader>fe", ":Telescope frecency workspace=CWD<CR>", {})
+
 require("telescope").setup({
 	pickers = {
 		find_files = {

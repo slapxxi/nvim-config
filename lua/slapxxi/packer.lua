@@ -45,6 +45,7 @@ return require("packer").startup(function(use)
 		tag = "0.1.8",
 		requires = { "nvim-lua/plenary.nvim", { "nvim-telescope/telescope-fzf-native.nvim", run = "make" } },
 	})
+	use({ "nvim-telescope/telescope-frecency.nvim" })
 
 	-- Formatting
 	use({ "stevearc/conform.nvim" })
