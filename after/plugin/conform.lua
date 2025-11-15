@@ -18,6 +18,7 @@ require("conform").setup({
 		},
 	},
 	formatters_by_ft = {
+		go = { "goimports", "gofmt" },
 		lua = { "stylua" },
 		-- Conform will run multiple formatters sequentially
 		python = { "isort", "black" },

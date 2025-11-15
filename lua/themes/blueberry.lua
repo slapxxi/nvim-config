@@ -79,27 +79,15 @@ local blueberry = {
 
 	Directory = { fg = colors.blue },
 
-	TelescopeBorder = { fg = colors.dark_gray },
-	TelescopeSelection = { bg = colors.highlight, fg = colors.white, bold = true },
+	qfFileName = { fg = colors.gray },
+	qfText = { fg = colors.dark_gray },
+	QuickFixLine = { fg = colors.blue },
 
 	-- CmpSel = { bg = colors.red },
 	-- CmpItemAbbr = { bg = colors.yellow },
 	-- CmpItemAbbrMatch = { bg = colors.yellow, fg = colors.white },
 	-- CmpItemKind = { bg = colors.yellow },
 	-- CmpItemMenu = { bg = colors.yellow },
-
-	NvimTreeSymlink = { bg = colors.blue, fg = colors.text },
-	NvimTreeImageFile = { bg = colors.blue, fg = colors.text },
-	NvimTreeExecFile = { bg = colors.blue, fg = colors.text },
-	NvimTreeRootFolder = { fg = colors.gray },
-	NvimTreeIndentMarker = { fg = colors.dark_gray },
-	NvimTreeFolderName = { fg = colors.gray },
-	NvimTreeFolderIcon = { fg = colors.dark_gray },
-	NvimTreeOpenedFolderIcon = { fg = colors.white },
-	NvimTreeOpenedFolderName = { fg = colors.white },
-	NvimTreeGitDirtyIcon = { fg = colors.yellow },
-	NvimTreeGitStagedIcon = { fg = colors.green },
-	NvimTreeSpecialFile = { fg = colors.yellow },
 
 	-- Diff
 	DiffAdd = { bg = colors.bg, fg = colors.green_pastel },
@@ -142,6 +130,44 @@ local blueberry = {
 	-- LSP signature help
 	LspSignatureActiveParameter = { fg = colors.white, bg = colors.bg, bold = true },
 
+	["@tag"] = { fg = colors.blue },
+	["@tag.builtin"] = { fg = colors.fg },
+	["@tag.html"] = { fg = colors.light_blue },
+	["@tag.attribute"] = { fg = colors.gray },
+	["@tag.delimiter"] = { fg = colors.dark_gray },
+
+	["@variable"] = { fg = colors.fg }, -- optional: apply to all langs
+	["@variable.member"] = { fg = colors.gray }, -- optional: apply to all langs
+	["@variable.member.javascript"] = { fg = colors.gray },
+
+	["@number"] = { fg = colors.teal }, -- optional: apply to all langs
+	["@number.float"] = { fg = colors.teal }, -- optional: apply to all langs
+
+	["@module"] = { fg = colors.white },
+
+	["@type.definition"] = { fg = colors.white },
+
+	["@lsp.type.property"] = { fg = colors.gray },
+	["@lsp.type.class"] = { fg = colors.blue },
+	["@lsp.mod.declaration"] = { fg = colors.white },
+	["@lsp.typemod.variable.defaultLibrary"] = { fg = colors.gray },
+	["@lsp.typemod.class.defaultLibrary"] = { fg = colors.white },
+	["@lsp.typemod.property.declaration"] = { fg = colors.gray },
+
+	-- CSS
+	["@type.css"] = { fg = colors.blue },
+	["@variable.css"] = { fg = colors.light_blue },
+
+	-- JSON
+	["@property.json"] = { fg = colors.yellow },
+	["@property.jsonc"] = { fg = colors.yellow },
+
+	-- JSX
+	["@_jsx_attribute"] = { fg = colors.light_blue },
+
+	-- JavaScript
+	javascriptParens = colors.dark_gray,
+
 	-- Markdown
 	RenderMarkdownCode = { bg = colors.line_bg },
 	markdownBold = { fg = colors.fg, bold = true },
@@ -149,8 +175,30 @@ local blueberry = {
 	markdownHeadingDelimiter = { fg = colors.blue },
 	markdownBlockquote = { fg = colors.fg },
 
+	-- Plugins
+	CopilotSuggestion = { fg = colors.copilot, italic = true },
+	CodeiumSuggestion = { fg = colors.copilot, italic = true },
+
+	HlSearchLens = { bg = colors.highlight, fg = colors.gray },
+
+	TelescopeBorder = { fg = colors.dark_gray },
+	TelescopeSelection = { bg = colors.highlight, fg = colors.white, bold = true },
+
 	TreesitterContext = { bg = colors.line_bg, fg = colors.bg },
 	TreesitterContextLineNumber = { bg = colors.line_bg, fg = colors.white },
+
+	NvimTreeSymlink = { bg = colors.blue, fg = colors.text },
+	NvimTreeImageFile = { bg = colors.blue, fg = colors.text },
+	NvimTreeExecFile = { bg = colors.blue, fg = colors.text },
+	NvimTreeRootFolder = { fg = colors.gray },
+	NvimTreeIndentMarker = { fg = colors.dark_gray },
+	NvimTreeFolderName = { fg = colors.gray },
+	NvimTreeFolderIcon = { fg = colors.dark_gray },
+	NvimTreeOpenedFolderIcon = { fg = colors.white },
+	NvimTreeOpenedFolderName = { fg = colors.white },
+	NvimTreeGitDirtyIcon = { fg = colors.yellow },
+	NvimTreeGitStagedIcon = { fg = colors.green },
+	NvimTreeSpecialFile = { fg = colors.yellow },
 
 	-- Terminal colors
 	TermCursor = { fg = colors.bg, bg = colors.blue },
@@ -170,43 +218,6 @@ local blueberry = {
 	terminalBrightMagenta = "#C792EA",
 	terminalBrightCyan = "#19c4e6",
 	terminalBrightWhite = "#f5f7ff",
-
-	-- JavaScript
-	javascriptParens = colors.dark_gray,
-
-	["@tag.builtin"] = { fg = colors.fg },
-	["@tag"] = { fg = colors.blue },
-	["@tag.html"] = { fg = colors.light_blue },
-	["@tag.attribute"] = { fg = colors.gray },
-	["@tag.delimiter"] = { fg = colors.dark_gray },
-
-	["@property.json"] = { fg = colors.yellow },
-	["@property.jsonc"] = { fg = colors.yellow },
-
-	["@variable"] = { fg = colors.fg }, -- optional: apply to all langs
-	["@variable.member"] = { fg = colors.gray }, -- optional: apply to all langs
-	["@variable.member.javascript"] = { fg = colors.gray },
-
-	["@number"] = { fg = colors.teal }, -- optional: apply to all langs
-	["@number.float"] = { fg = colors.teal }, -- optional: apply to all langs
-
-	["@lsp.type.property"] = { fg = colors.gray },
-	["@lsp.type.class"] = { fg = colors.blue },
-	["@lsp.mod.declaration"] = { fg = colors.white },
-	["@lsp.typemod.variable.defaultLibrary"] = { fg = colors.gray },
-	["@lsp.typemod.class.defaultLibrary"] = { fg = colors.white },
-	["@lsp.typemod.property.declaration"] = { fg = colors.gray },
-	["@_jsx_attribute"] = { fg = colors.light_blue },
-	-- ["@lsp.typemod.class"] = { fg = colors.white },
-
-	CopilotSuggestion = { fg = colors.copilot, italic = true },
-	CodeiumSuggestion = { fg = colors.copilot, italic = true },
-
-	qfFileName = { fg = colors.gray },
-	qfText = { fg = colors.dark_gray },
-	QuickFixLine = { fg = colors.blue },
-
-	HlSearchLens = { bg = colors.highlight, fg = colors.gray },
 }
 
 -- Apply the theme
