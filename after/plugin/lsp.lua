@@ -75,6 +75,11 @@ autocmd("LspAttach", {
 -- 	cmd = { "typescript-language-server", "--stdio" },
 -- })
 
+lspconfig.gopls.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+})
+
 lspconfig.eslint.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
