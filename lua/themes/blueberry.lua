@@ -34,7 +34,7 @@ local colors = {
 	white = "#f6f8ff", -- strings color
 
 	copilot = "#434a69",
-	highlight = "#0e1b34", -- Selection highlights
+	highlight = "#101f3c", -- Selection highlights
 	comment = dark_gray, -- Comments
 }
 
@@ -85,7 +85,7 @@ local blueberry = {
 	qfText = { fg = colors.dark_gray },
 	QuickFixLine = { fg = colors.blue },
 
-	-- CmpSel = { bg = colors.red },
+	-- CmpSel = { bg = colors.orange },
 	-- CmpItemAbbr = { bg = colors.yellow },
 	-- CmpItemAbbrMatch = { bg = colors.yellow, fg = colors.white },
 	-- CmpItemKind = { bg = colors.yellow },
