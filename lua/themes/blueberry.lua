@@ -23,6 +23,8 @@ local colors = {
 	yellow_pastel = "#ffe08c", -- Softer, more pastel yellow
 	yellow_transparent = "#ceac27", -- Softer, more pastel yellow
 
+	orange = "#ff6633",
+
 	red = "#ff3c1a", -- Errors
 	red_pastel = "#ff8a75", -- Softer, more pastel red
 
@@ -58,7 +60,7 @@ local blueberry = {
 	MatchParen = { fg = colors.yellow, bold = true },
 	MsgArea = { fg = colors.gray },
 
-	-- Syntax highlighting (mapped from tokenColors)
+	-- Syntax highlighting { mapped from tokenColors }
 	Statement = { fg = colors.blue },
 	Comment = { fg = colors.comment },
 	Constant = { fg = colors.light_blue }, -- Constants
@@ -107,7 +109,7 @@ local blueberry = {
 	FugitiveBlameTime = { fg = colors.gray },
 
 	-- LSP
-	LspReferenceText = { fg = colors.bg, bg = colors.yellow },
+	LspReferenceText = { fg = colors.bg, bg = colors.pale_blue },
 
 	-- LSP diagnostics
 	-- DiagnosticsError = { fg = colors.red },
@@ -138,6 +140,7 @@ local blueberry = {
 
 	["@variable"] = { fg = colors.fg }, -- optional: apply to all langs
 	["@variable.member"] = { fg = colors.gray }, -- optional: apply to all langs
+	["@variable.parameter"] = { fg = colors.white }, -- optional: apply to all langs
 	["@variable.member.javascript"] = { fg = colors.gray },
 
 	["@number"] = { fg = colors.teal }, -- optional: apply to all langs
@@ -153,6 +156,11 @@ local blueberry = {
 	["@lsp.typemod.variable.defaultLibrary"] = { fg = colors.gray },
 	["@lsp.typemod.class.defaultLibrary"] = { fg = colors.white },
 	["@lsp.typemod.property.declaration"] = { fg = colors.gray },
+
+	-- Go
+	["@function.go"] = { fg = colors.white },
+	["@function.call.go"] = { fg = colors.blue },
+	["@function.method.go"] = { fg = colors.blue },
 
 	-- CSS
 	["@type.css"] = { fg = colors.blue },
