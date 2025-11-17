@@ -1,22 +1,30 @@
-local bg = "#0e0e11"
-local dark_gray = "#3b3e51" -- comments
+local bg = "#0e0e10"
+local dark_gray = "#3d4054" -- comments
 
 local colors = {
 	bg = bg,
 	sidebar_bg = bg,
 	status_bg = bg,
-	line_bg = "#141419",
+	line_bg = "#141418",
 
-	fg = "#afbadd", -- main text
-	gray = "#616786", -- properties
+	fg = "#b1bcdc", -- main text
+	gray = "#676d8a", -- properties
+	gray_blue = "#8389AA", -- properties
 	dark_gray = dark_gray, -- Punctuation, inactive elements
-	subtle_gray = "#252634", -- Inactive foreground
+	subtle_gray = "#252734", -- Inactive foreground
 
 	blue = "#1166ff", -- primary accent color
 	light_blue = "#1ab2ff", -- Secondary accent (e.g., constants)
+	light_blue_a = "#00a2f5", -- Secondary accent (e.g., constants)
+	pale_blue = "#629aff",
+
+	teal = "#42C5D7",
 
 	yellow = "#f0c82a", -- JSON properties, regex
 	yellow_pastel = "#ffe08c", -- Softer, more pastel yellow
+	yellow_transparent = "#ceac27", -- Softer, more pastel yellow
+
+	orange = "#ff6633",
 
 	red = "#ff3c1a", -- Errors
 	red_pastel = "#ff8a75", -- Softer, more pastel red
@@ -24,10 +32,10 @@ local colors = {
 	green = "#98ff35",
 	green_pastel = "#90EE90",
 
-	white = "#f6f8ff", -- Main text color
+	white = "#f6f8ff", -- strings color
 
-	copilot = "#434a6d",
-	highlight = "#0a2556", -- Selection highlights
+	copilot = "#434a69",
+	highlight = "#101f3c", -- Selection highlights
 	comment = dark_gray, -- Comments
 }
 
