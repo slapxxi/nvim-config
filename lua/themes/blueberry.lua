@@ -15,6 +15,7 @@ local colors = {
 
 	blue = "#1166ff", -- primary accent color
 	light_blue = "#1ab2ff", -- Secondary accent (e.g., constants)
+	light_blue_a = "#00a2f5", -- Secondary accent (e.g., constants)
 	pale_blue = "#629aff",
 
 	teal = "#42C5D7",
@@ -158,10 +159,13 @@ local blueberry = {
 	["@lsp.typemod.property.declaration"] = { fg = colors.gray },
 
 	-- Go
+	-- ["@type.builtin.go"] = { fg = colors.gray_blue },
 	["@function.go"] = { fg = colors.white },
+	["@function.builtin.go"] = { fg = colors.light_blue },
+	["@type.builtin.go"] = { fg = colors.light_blue_a },
 	["@function.call.go"] = { fg = colors.blue },
 	["@function.method.go"] = { fg = colors.blue },
-	["@keyword.coroutine.go"] = { fg = colors.light_blue },
+	["@keyword.coroutine.go"] = { fg = colors.light_blue_a },
 
 	-- CSS
 	["@type.css"] = { fg = colors.blue },
