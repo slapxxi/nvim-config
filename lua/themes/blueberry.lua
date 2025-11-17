@@ -161,6 +161,7 @@ local blueberry = {
 	["@function.go"] = { fg = colors.white },
 	["@function.call.go"] = { fg = colors.blue },
 	["@function.method.go"] = { fg = colors.blue },
+	["@keyword.coroutine.go"] = { fg = colors.light_blue },
 
 	-- CSS
 	["@type.css"] = { fg = colors.blue },
