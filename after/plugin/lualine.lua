@@ -8,10 +8,10 @@ local colors = {
 	line_bg = "#141418",
 
 	fg = "#b1bcdc", -- main text
-	gray = "#676d8a", -- properties
-	gray_blue = "#8389AA", -- properties
-	dark_gray = dark_gray, -- Punctuation, inactive elements
 	subtle_gray = "#252734", -- Inactive foreground
+	dark_gray = dark_gray, -- Punctuation, inactive elements
+	gray = "#676d8a", -- properties
+	gray_blue = "#8389AA", -- types
 
 	blue = "#1166ff", -- primary accent color
 	light_blue = "#1ab2ff", -- Secondary accent (e.g., constants)
