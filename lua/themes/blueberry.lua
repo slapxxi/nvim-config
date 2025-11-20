@@ -117,9 +117,9 @@ local blueberry = {
 	-- DiagnosticsWarn = { fg = colors.red },
 	-- DiagnosticsInfo = { fg = colors.red },
 	-- DiagnosticsHint = { fg = colors.red },
-	DiagnosticUnnecessary = { fg = colors.gray, underline = true },
-	DiagnosticUnderlineError = { fg = colors.red_pastel, underline = true },
-	DiagnosticUnderlineWarn = { fg = colors.yellow_pastel, underline = true },
+	DiagnosticUnnecessary = { fg = colors.gray, undercurl = true },
+	DiagnosticUnderlineError = { fg = colors.red_pastel, undercurl = true },
+	DiagnosticUnderlineWarn = { fg = colors.yellow_pastel, undercurl = true },
 
 	LspDiagnosticsDefaultError = { fg = colors.red, bg = colors.bg },
 	LspDiagnosticsDefaultWarning = { fg = colors.yellow, bg = colors.bg },
@@ -165,7 +165,6 @@ local blueberry = {
 	["@type.builtin.go"] = { fg = colors.light_blue_a },
 	["@function.call.go"] = { fg = colors.blue },
 	["@function.method.go"] = { fg = colors.blue },
-	["@keyword.coroutine.go"] = { fg = colors.light_blue_a },
 
 	-- CSS
 	["@type.css"] = { fg = colors.blue },

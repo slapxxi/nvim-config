@@ -1,5 +1,6 @@
 if true then
 	vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+	vim.keymap.set("n", "_", "<CMD>Oil .<CR>", { desc = "Open root directory" })
 
 	require("oil").setup({
 		-- Oil will take over directory buffers (e.g. `vim .` or `:e src/`)
