@@ -118,7 +118,7 @@ local blueberry = {
 	-- DiagnosticsInfo = { fg = colors.red },
 	-- DiagnosticsHint = { fg = colors.red },
 	DiagnosticUnnecessary = { fg = colors.gray, undercurl = true },
-	DiagnosticUnderlineError = { fg = colors.red_pastel, undercurl = true },
+	DiagnosticUnderlineError = { fg = colors.red_pastel, underline = true },
 	DiagnosticUnderlineWarn = { fg = colors.yellow_pastel, undercurl = true },
 
 	LspDiagnosticsDefaultError = { fg = colors.red, bg = colors.bg },
