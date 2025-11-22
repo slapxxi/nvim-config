@@ -139,13 +139,12 @@ local blueberry = {
 	["@tag.attribute"] = { fg = colors.gray },
 	["@tag.delimiter"] = { fg = colors.dark_gray },
 
-	["@variable"] = { fg = colors.fg }, -- optional: apply to all langs
-	["@variable.member"] = { fg = colors.gray }, -- optional: apply to all langs
-	["@variable.parameter"] = { fg = colors.white }, -- optional: apply to all langs
-	["@variable.member.javascript"] = { fg = colors.gray },
+	["@variable"] = { fg = colors.fg },
+	["@variable.member"] = { fg = colors.gray },
+	["@variable.parameter"] = { fg = colors.white },
 
-	["@number"] = { fg = colors.teal }, -- optional: apply to all langs
-	["@number.float"] = { fg = colors.teal }, -- optional: apply to all langs
+	["@number"] = { fg = colors.teal },
+	["@number.float"] = { fg = colors.teal },
 
 	["@module"] = { fg = colors.white },
 
@@ -178,7 +177,11 @@ local blueberry = {
 	["@_jsx_attribute"] = { fg = colors.light_blue },
 
 	-- JavaScript
+	["@variable.member.javascript"] = { fg = colors.gray },
 	javascriptParens = colors.dark_gray,
+
+	-- Lua
+	["@lsp.type.parameter.lua"] = { fg = colors.blue },
 
 	-- Markdown
 	RenderMarkdownCode = { bg = colors.line_bg },
