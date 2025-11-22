@@ -68,11 +68,15 @@ return require("packer").startup(function(use)
 	use({ "tpope/vim-surround" })
 	use({ "tpope/vim-unimpaired" })
 
-	-- Harpoon
+	-- Harpoon/Grapple
+	-- use({
+	-- 	"ThePrimeagen/harpoon",
+	-- 	branch = "harpoon2",
+	-- 	requires = { { "nvim-lua/plenary.nvim" } },
+	-- })
 	use({
-		"ThePrimeagen/harpoon",
-		branch = "harpoon2",
-		requires = { { "nvim-lua/plenary.nvim" } },
+		"cbochs/grapple.nvim",
+		requires = { "nvim-tree/nvim-web-devicons" },
 	})
 
 	-- Quality of Life
