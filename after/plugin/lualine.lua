@@ -65,7 +65,7 @@ require("lualine").setup({
 	},
 	sections = {
 		lualine_a = { { "mode", color = { fg = colors.dark_gray } } },
-		lualine_b = { "branch", "diff", "diagnostics" },
+		lualine_b = { "grapple", "branch", "diff", "diagnostics" },
 		lualine_c = { { "filename", file_status = false, path = 1 } },
 		lualine_x = { "encoding", "fileformat", "filetype" },
 		lualine_y = { { "progress", color = { fg = colors.gray } } },

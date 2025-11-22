@@ -74,9 +74,9 @@ map("n", "<leader>w", ":bd<CR>") -- close
 map("n", "<leader>W", ":bd!<CR>") -- force close
 
 -- CD
-map("n", "<leader>`", ":cd %:p:h<CR>")
-map("n", "<leader>_", ":cd %:p:h | cd ..<CR>")
-map("n", "<leader>-", ":cd-<CR>")
-map("n", "<leader><leader>`", ":lcd %:p:h<CR>")
-map("n", "<leader><leader>_", ":lcd %:p:h | cd ..<CR>")
-map("n", "<leader><leader>-", ":lcd-<CR>")
+map("n", "<leader>`", ":lcd %:p:h<CR>")
+map("n", "<leader>_", ":lcd %:p:h | cd ..<CR>")
+map("n", "<leader>-", ":lcd-<CR>")
+map("n", "<leader><leader>`", ":cd %:p:h<CR>")
+map("n", "<leader><leader>_", ":cd %:p:h | cd ..<CR>")
+map("n", "<leader><leader>-", ":cd-<CR>")

@@ -69,15 +69,15 @@ return require("packer").startup(function(use)
 	use({ "tpope/vim-unimpaired" })
 
 	-- Harpoon/Grapple
+	use({
+		"cbochs/grapple.nvim",
+		requires = { "nvim-tree/nvim-web-devicons" },
+	})
 	-- use({
 	-- 	"ThePrimeagen/harpoon",
 	-- 	branch = "harpoon2",
 	-- 	requires = { { "nvim-lua/plenary.nvim" } },
 	-- })
-	use({
-		"cbochs/grapple.nvim",
-		requires = { "nvim-tree/nvim-web-devicons" },
-	})
 
 	-- Quality of Life
 	use({ "chentoast/marks.nvim" })
@@ -93,6 +93,14 @@ return require("packer").startup(function(use)
 		end,
 	})
 	use({ "kevinhwang91/nvim-hlslens" })
+	use({
+		"cbochs/portal.nvim",
+		-- Optional dependencies
+		requires = {
+			"cbochs/grapple.nvim",
+			"ThePrimeagen/harpoon",
+		},
+	})
 
 	-- Appearance
 	use({
