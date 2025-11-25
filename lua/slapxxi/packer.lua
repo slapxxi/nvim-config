@@ -80,8 +80,8 @@ return require("packer").startup(function(use)
 	-- })
 
 	-- Quality of Life
-	use({ "chentoast/marks.nvim" })
 	use({ "lewis6991/gitsigns.nvim" })
+	use({ "chentoast/marks.nvim" })
 	use({ "numToStr/Comment.nvim" })
 	use({ "windwp/nvim-ts-autotag" })
 	use({ "jake-stewart/multicursor.nvim" })
