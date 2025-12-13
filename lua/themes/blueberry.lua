@@ -35,7 +35,7 @@ local colors = {
 	white = "#f6f8ff", -- strings color
 
 	copilot = "#434a69",
-	highlight = "#101f3c", -- Selection highlights
+	highlight = "#0b1d41", -- Selection highlights
 	comment = dark_gray, -- Comments
 }
 
@@ -48,7 +48,7 @@ local blueberry = {
 	CursorLine = { bg = colors.line_bg },
 	LineNr = { fg = colors.dark_gray },
 	CursorLineNr = { fg = colors.blue },
-	Visual = { bg = colors.white, fg = colors.bg },
+	Visual = { bg = colors.highlight },
 	Search = { bg = colors.yellow_transparent, fg = colors.bg }, -- editor.findMatchBackground
 	IncSearch = { bg = colors.blue, fg = colors.white }, -- editor.findMatchHighlightBackground
 	StatusLine = { fg = colors.dark_gray, bg = colors.status_bg },
