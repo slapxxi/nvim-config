@@ -215,6 +215,8 @@ local blueberry = {
 	NvimTreeGitStagedIcon = { fg = colors.green },
 	NvimTreeSpecialFile = { fg = colors.yellow },
 
+	MarkSignNumHl = {},
+
 	-- Terminal colors
 	TermCursor = { fg = colors.bg, bg = colors.blue },
 	terminalBlack = "#0e0e12",
