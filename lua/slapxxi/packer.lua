@@ -68,7 +68,7 @@ return require("packer").startup(function(use)
 	use({ "tpope/vim-surround" })
 	use({ "tpope/vim-unimpaired" })
 
-	-- Harpoon/Grapple
+  -- Harpoon/Grapple
 	use({
 		"cbochs/grapple.nvim",
 		requires = { "nvim-tree/nvim-web-devicons" },
