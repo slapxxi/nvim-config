@@ -44,13 +44,11 @@ map("n", "<C-e>", "<C-e>j") -- scroll down and center
 map("n", "<C-y>", "<C-y>k") -- scroll up and center
 
 -- Quickfix
-map("n", "<M-S-j>", ":cnext<CR>zz") -- qf next item
-map("n", "<M-S-k>", ":cprev<CR>zz") -- qf prev item
 map("n", "<leader>c", "<cmd>copen<CR><c-w>w<cmd>cc<cr>") -- qf prev item
 
 -- Move Lines
-map("n", "<A-j>", ":m .+1<CR>==") -- move line up(n)
-map("n", "<A-k>", ":m .-2<CR>==") -- move line down(n)
+map("n", "<M-S-j>", ":m .+1<CR>==") -- qf next item
+map("n", "<M-S-k>", ":m .-2<CR>==") -- qf prev item
 map("v", "<A-j>", ":m '>+1<CR>gv=gv") -- move line up(v)
 map("v", "<A-k>", ":m '<-2<CR>gv=gv") -- move line down(v)
 
@@ -81,3 +79,8 @@ map("n", "<leader>-", ":lcd-<CR>")
 map("n", "<leader><leader>`", ":cd %:p:h<CR>")
 map("n", "<leader><leader>_", ":cd %:p:h | cd ..<CR>")
 map("n", "<leader><leader>-", ":cd-<CR>")
+
+map("v", "+", "\"+y")
+
+map('n', 'z.', ':normal! zszH<CR>', { silent = true, desc = "Center view horizontally" })
+
