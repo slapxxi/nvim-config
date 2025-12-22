@@ -60,8 +60,8 @@ map("n", "<leader>c", "<cmd>copen<CR><c-w>w<cmd>cc<cr>") -- qf prev item
 -- Move Lines
 map("n", "<M-S-j>", ":m .+1<CR>==") -- qf next item
 map("n", "<M-S-k>", ":m .-2<CR>==") -- qf prev item
-map("v", "<A-j>", ":m '>+1<CR>gv=gv") -- move line up(v)
-map("v", "<A-k>", ":m '<-2<CR>gv=gv") -- move line down(v)
+map("v", "<M-S-j>", ":m '>+1<CR>gv=gv") -- move line up(v)
+map("v", "<M-S-k>", ":m '<-2<CR>gv=gv") -- move line down(v)
 
 -- Insert Mode Navigation
 map("i", "<C-a>", "<Home>")
