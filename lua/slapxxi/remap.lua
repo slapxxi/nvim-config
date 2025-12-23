@@ -69,7 +69,7 @@ map("i", "<M-CR>", "<CR><Esc>O  ")
 map("n", "<C-g>", "<C-^>") -- alternate buffer
 map("n", "<M-p>", ":bp<CR>") -- prev buffer
 map("n", "<M-n>", ":bn<CR>") -- next buffer
-map("n", "<leader>w", ":bd<CR>") -- close
+map("n", "<leader>w", "<c-w>c") -- close
 map("n", "<leader>W", ":bd!<CR>") -- force close
 
 -- CD
@@ -84,3 +84,4 @@ map("v", "+", "\"+y")
 
 map('n', 'z.', ':normal! zszH<CR>', { silent = true, desc = "Center view horizontally" })
 
+map("n", "<leader>z", ":tab split<CR>")
