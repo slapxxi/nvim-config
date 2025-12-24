@@ -74,14 +74,37 @@ map("n", "<leader>W", ":bd!<CR>") -- force close
 
 -- CD
 map("n", "<leader>`", ":lcd %:p:h<CR>")
-map("n", "<leader>_", ":lcd %:p:h | cd ..<CR>")
+map("n", "<leader>_", ":lcd %:p:h | lcd ..<CR>")
 map("n", "<leader>-", ":lcd-<CR>")
 map("n", "<leader><leader>`", ":cd %:p:h<CR>")
 map("n", "<leader><leader>_", ":cd %:p:h | cd ..<CR>")
 map("n", "<leader><leader>-", ":cd-<CR>")
 
-map("v", "+", "\"+y")
+map("v", "+", '"+y')
 
-map('n', 'z.', ':normal! zszH<CR>', { silent = true, desc = "Center view horizontally" })
+map("n", "z.", ":normal! zszH<CR>", { silent = true, desc = "Center view horizontally" })
 
 map("n", "<leader>z", ":tab split<CR>")
+
+local function get_git_root()
+	-- finddir searches upwards for the .git directory starting from the current buffer's directory
+	local dot_git_path = vim.fn.finddir(".git", ".;")
+	if dot_git_path and dot_git_path ~= "" and vim.fn.isdirectory(dot_git_path) then
+		-- fnamemodify returns the parent directory of the .git path found
+		return vim.fn.fnamemodify(dot_git_path, ":h")
+	end
+	return nil -- Return nil if not in a git repo
+end
+
+vim.api.nvim_create_user_command("CdGitRoot", function()
+	local git_root = get_git_root()
+	if git_root then
+		-- Change the current working directory to the git root
+		vim.api.nvim_set_current_dir(git_root)
+		print("Changed directory to: " .. git_root)
+	else
+		print("Not in a Git repository.")
+	end
+end, {})
+
+map("n", "<leader>~", ":CdGitRoot<CR>")
