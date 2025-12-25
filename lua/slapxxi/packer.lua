@@ -132,4 +132,9 @@ return require("packer").startup(function(use)
 			require("supermaven-nvim").setup({})
 		end,
 	})
+
+	use("mfussenegger/nvim-dap")
+	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } })
+	use("leoluz/nvim-dap-go")
+	use("theHamsta/nvim-dap-virtual-text")
 end)

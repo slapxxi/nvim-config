@@ -202,6 +202,9 @@ local blueberry = {
 	TreesitterContext = { bg = colors.line_bg, fg = colors.bg },
 	TreesitterContextLineNumber = { bg = colors.line_bg, fg = colors.white },
 
+	DapBreakpoint = { fg = colors.red, bg = colors.bg },
+	DapStopped = { fg = colors.green, bg = colors.bg },
+
 	NvimTreeSymlink = { bg = colors.blue, fg = colors.text },
 	NvimTreeImageFile = { bg = colors.blue, fg = colors.text },
 	NvimTreeExecFile = { bg = colors.blue, fg = colors.text },
