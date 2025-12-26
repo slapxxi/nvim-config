@@ -42,9 +42,9 @@ if true then
 	})
 
 	vim.fn.sign_define("DapStopped", {
-		text = "▶",
-		texthl = "DapStopped",
-		linehl = "DapBreakpoint",
+		text = "\u{ea9c}",
+		texthl = "DapStoppedNumHl",
+		linehl = "DapStopped",
 		numhl = "DapStopped",
 	})
 

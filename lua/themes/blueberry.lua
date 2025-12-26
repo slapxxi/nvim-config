@@ -205,6 +205,7 @@ local blueberry = {
 
 	DapBreakpoint = { fg = colors.red, bg = colors.bg },
 	DapStopped = { bg = colors.highlight_debug },
+	DapStoppedNumHl = { fg = colors.blue, bg = colors.bg },
 
 	NvimTreeSymlink = { bg = colors.blue, fg = colors.text },
 	NvimTreeImageFile = { bg = colors.blue, fg = colors.text },
