@@ -35,7 +35,8 @@ local colors = {
 	white = "#f6f8ff", -- strings color
 
 	copilot = "#434a69",
-	highlight = "#0b1d41", -- Selection highlights
+	highlight = "#0f2958", -- Selection highlights
+	highlight_debug = "#111b27",
 	comment = dark_gray, -- Comments
 }
 
@@ -203,7 +204,7 @@ local blueberry = {
 	TreesitterContextLineNumber = { bg = colors.line_bg, fg = colors.white },
 
 	DapBreakpoint = { fg = colors.red, bg = colors.bg },
-	DapStopped = { fg = colors.green, bg = colors.bg },
+	DapStopped = { bg = colors.highlight_debug },
 
 	NvimTreeSymlink = { bg = colors.blue, fg = colors.text },
 	NvimTreeImageFile = { bg = colors.blue, fg = colors.text },

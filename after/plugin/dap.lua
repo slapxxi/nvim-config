@@ -1,8 +1,9 @@
 if true then
 	local dap = require("dap")
 	local dapui = require("dapui")
+	local widgets = require("dap.ui.widgets")
 
-	vim.keymap.set("n", "<F5>", dap.continue)
+	vim.keymap.set("n", "<leader>;", dap.continue)
 	vim.keymap.set("n", "<leader>.", dap.run_to_cursor)
 	vim.keymap.set("n", "<leader>]", dap.step_over)
 	vim.keymap.set("n", "<leader>[", dap.step_into)
@@ -18,17 +19,18 @@ if true then
 	end)
 
 	vim.keymap.set({ "n", "v" }, "<Leader>dh", function()
-		require("dap.ui.widgets").hover()
+		widgets.hover()
 	end)
+
 	vim.keymap.set({ "n", "v" }, "<Leader>dp", function()
-		require("dap.ui.widgets").preview()
+		widgets.preview()
 	end)
+
 	vim.keymap.set("n", "<Leader>df", function()
-		local widgets = require("dap.ui.widgets")
 		widgets.centered_float(widgets.frames)
 	end)
+
 	vim.keymap.set("n", "<Leader>ds", function()
-		local widgets = require("dap.ui.widgets")
 		widgets.centered_float(widgets.scopes)
 	end)
 
@@ -40,10 +42,10 @@ if true then
 	})
 
 	vim.fn.sign_define("DapStopped", {
-		text = "  ", -- An arrow icon (requires Nerd Font)
-		texthl = "DapStopped", -- Color for the icon
-		linehl = "DapStopped", -- Background color for the entire line
-		numhl = "DapStopped", -- Color for the line number
+		text = "▶",
+		texthl = "DapStopped",
+		linehl = "DapBreakpoint",
+		numhl = "DapStopped",
 	})
 
 	require("dapui").setup()
