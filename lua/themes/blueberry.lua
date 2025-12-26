@@ -36,7 +36,7 @@ local colors = {
 
 	copilot = "#434a69",
 	highlight = "#0f2958", -- Selection highlights
-	highlight_debug = "#111b27",
+	highlight_debug = "#122132",
 	comment = dark_gray, -- Comments
 }
 
