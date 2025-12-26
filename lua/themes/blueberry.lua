@@ -204,6 +204,7 @@ local blueberry = {
 	TreesitterContextLineNumber = { bg = colors.line_bg, fg = colors.white },
 
 	DapBreakpoint = { fg = colors.red, bg = colors.bg },
+	DapBreakpointCondition = { fg = colors.yellow, bg = colors.bg },
 	DapStopped = { bg = colors.highlight_debug },
 	DapStoppedNumHl = { fg = colors.blue, bg = colors.bg },
 

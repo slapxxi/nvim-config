@@ -97,6 +97,13 @@ if true then
 		numhl = "",
 	})
 
+	vim.fn.sign_define("DapBreakpointCondition", {
+		text = "•",
+		texthl = "DapBreakpointCondition",
+		linehl = "",
+		numhl = "",
+	})
+
 	vim.fn.sign_define("DapStopped", {
 		text = "\u{ea9c}",
 		texthl = "DapStoppedNumHl",

@@ -3,7 +3,7 @@ if true then
 
 	remap("n", "<leader>a", "<cmd>Grapple tag<CR>")
 	remap("n", "<leader>e", "<cmd>Grapple toggle_tags<CR>")
-	remap("n", "<leader>d", "<cmd>Grapple untag<CR>")
+	remap("n", "<leader>D", "<cmd>Grapple untag<CR>")
 
 	remap("n", "<leader>k", "<cmd>Grapple cycle_tags prev<CR>")
 	remap("n", "<leader>j", "<cmd>Grapple cycle_tags next<CR>")
