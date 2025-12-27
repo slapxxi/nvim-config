@@ -27,19 +27,22 @@ if true then
 		end)
 	end
 
-	-- weak support
-	-- map("n", "<leader>k", dap.step_back)
+	-- navigation
 	map("n", "<leader>;", dap.continue)
 	map("n", "<leader>.", dap.run_to_cursor)
-	map("n", "<leader>]", dap.step_over)
-	map("n", "<leader>[", dap.step_into)
-	map("n", "<leader><BS>", dap.step_out)
+	map("n", "<leader>j", dap.step_over)
+	map("n", "<leader>l", dap.step_into)
+	map("n", "<leader>k", dap.step_back)
+	map("n", "<leader>h", dap.step_out)
+	map("n", "<leader>u", dap.up)
+	map("n", "<leader>d", dap.down)
+
+	--breakpoints
 	map("n", "<leader>B", dap.toggle_breakpoint)
 	map("n", "<leader>dc", dap.clear_breakpoints)
-	map("n", "<leader><Up>", dap.up)
-	map("n", "<leader><Down>", dap.down)
 	map("n", "<leader>db", set_conditional_breakpoint)
 
+	-- process
 	map("n", "<leader>dT", dap.terminate)
 	map("n", "<leader>dR", dap.restart)
 	map("n", "<leader>dP", dap.pause)
@@ -50,7 +53,7 @@ if true then
 		dap.repl.open()
 	end)
 
-	map("n", "<leader>?", function()
+	map({ "n", "v" }, "<leader>?", function()
 		dapui.eval(nil, { enter = true })
 	end)
 	map("n", "<leader>do", function()

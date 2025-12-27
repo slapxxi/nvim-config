@@ -25,7 +25,7 @@ map("n", "<leader>q", ":qa!<CR>")
 -- Search
 map("n", "g/", ":%s/", opts)
 map("v", "<leader>/", "y:%s/<C-R>0/") -- yank and replace currently selected
-map({ "n", "v" }, "<leader>l", vim.cmd.noh) -- remove search highlight
+map({ "n", "v" }, "<leader><BS>", vim.cmd.noh) -- remove search highlight
 
 -- Save
 map("n", "<C-s>", ":w<CR>")

@@ -1,4 +1,5 @@
 local builtin = require("telescope.builtin")
+local extensions = require("telescope").extensions
 
 local find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" }
 
@@ -33,6 +34,12 @@ require("telescope").load_extension("fzf")
 
 require("telescope").load_extension("frecency")
 vim.keymap.set("n", "<leader>fe", ":Telescope frecency workspace=CWD<CR>", {})
+
+require("telescope").load_extension("dap")
+vim.keymap.set("n", "<leader>fdv", ":Telescope dap variables<CR>", {})
+vim.keymap.set("n", "<leader>fdf", ":Telescope dap frames<CR>", {})
+vim.keymap.set("n", "<leader>fdc", ":Telescope dap commands<CR>", {})
+vim.keymap.set("n", "<leader>fdb", ":Telescope dap list_breakpoints<CR>", {})
 
 require("telescope").setup({
 	pickers = {

@@ -61,7 +61,7 @@ autocmd("LspAttach", {
 
 		vim.keymap.set(
 			"n",
-			"<leader>h",
+			"<leader>L",
 			"<cmd>lua vim.diagnostic.open_float(nil, {focus = false, border = 'rounded'})<cr>",
 			opts
 		)
