@@ -51,7 +51,7 @@ if true then
 	end)
 
 	map("n", "<leader>?", function()
-		dapui.eval(nil, { enter = false })
+		dapui.eval(nil, { enter = true })
 	end)
 	map("n", "<leader>do", function()
 		dapui.toggle({ reset = true })
