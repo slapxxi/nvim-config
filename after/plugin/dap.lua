@@ -27,16 +27,26 @@ if true then
 		end)
 	end
 
+	-- weak support
+	-- map("n", "<leader>k", dap.step_back)
 	map("n", "<leader>;", dap.continue)
 	map("n", "<leader>.", dap.run_to_cursor)
 	map("n", "<leader>]", dap.step_over)
 	map("n", "<leader>[", dap.step_into)
 	map("n", "<leader><BS>", dap.step_out)
 	map("n", "<leader>B", dap.toggle_breakpoint)
-	map("n", "<Leader>dB", function()
-		dap.set_breakpoint(vim.fn.input("Breakpoint condition: "))
-	end)
-	map("n", "<leader>de", function()
+	map("n", "<leader>dc", dap.clear_breakpoints)
+	map("n", "<leader><Up>", dap.up)
+	map("n", "<leader><Down>", dap.down)
+	map("n", "<leader>db", set_conditional_breakpoint)
+
+	map("n", "<leader>dT", dap.terminate)
+	map("n", "<leader>dR", dap.restart)
+	map("n", "<leader>dP", dap.pause)
+	map("n", "<leader>dL", dap.run_last)
+	map("n", "<leader>dD", dap.disconnect)
+
+	map("n", "<leader>dE", function()
 		dap.repl.open()
 	end)
 
@@ -44,7 +54,7 @@ if true then
 		dapui.eval(nil, { enter = false })
 	end)
 	map("n", "<leader>do", function()
-		dapui.toggle()
+		dapui.toggle({ reset = true })
 	end)
 	map("n", "<Leader>dus", function()
 		dapui.toggle({ layout = 1 })
@@ -52,7 +62,6 @@ if true then
 	map("n", "<Leader>dut", function()
 		dapui.toggle({ layout = 2 })
 	end)
-	map("n", "<Leader>dB", set_conditional_breakpoint)
 
 	map({ "n", "v" }, "<Leader>dh", function()
 		widgets.hover()
@@ -66,13 +75,20 @@ if true then
 	map("n", "<Leader>ds", function()
 		widgets.centered_float(widgets.scopes)
 	end)
+	map({ "n", "v" }, "<Leader>de", function()
+		widgets.centered_float(widgets.expression)
+	end)
+	map("n", "<Leader>dt", function()
+		widgets.centered_float(widgets.threads)
+	end)
 
 	require("dapui").setup({
 		layouts = {
 			{
 				elements = {
-					{ id = "scopes", size = 0.7 },
-					{ id = "watches", size = 0.3 },
+					{ id = "breakpoints", size = 0.2 },
+					{ id = "scopes", size = 0.6 },
+					{ id = "watches", size = 0.2 },
 				},
 				position = "left",
 				size = 40,
