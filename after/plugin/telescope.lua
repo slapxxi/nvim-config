@@ -1,5 +1,4 @@
 local builtin = require("telescope.builtin")
-local extensions = require("telescope").extensions
 
 local find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" }
 
@@ -10,8 +9,17 @@ vim.keymap.set("n", "<C-p>", function()
 end, { desc = "Go to file (includes ignored)" })
 
 vim.keymap.set("n", "<leader>ff", function()
-	local opts = require("telescope.themes").get_ivy({})
+	local git_root = vim.fs.root(0, ".git")
+	local opts = require("telescope.themes").get_ivy({ cwd = git_root or vim.fn.getcwd() })
 	require("telescope.builtin").find_files(opts)
+end, { desc = "Go to file (includes ignored)" })
+
+vim.keymap.set("n", "<leader>fa", function()
+	local git_root = vim.fs.root(0, ".git")
+	require("telescope.builtin").find_files({
+		cwd = git_root or vim.fn.getcwd(),
+		find_command = find_command,
+	})
 end, { desc = "Go to file (includes ignored)" })
 
 vim.keymap.set("n", "<leader>fl", builtin.live_grep)

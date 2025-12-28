@@ -78,8 +78,14 @@ require("lualine").setup({
 				end,
 				color = { fg = colors.light_blue },
 			},
-			"encoding",
-			"fileformat",
+			{
+				function()
+					return vim.fn.fnamemodify(vim.fn.getcwd(), ":~")
+				end,
+				-- icon = "󰉋", -- Optional: add a folder icon
+			},
+			-- "encoding",
+			-- "fileformat",
 			"filetype",
 		},
 		lualine_y = { { "progress", color = { fg = colors.gray } } },
