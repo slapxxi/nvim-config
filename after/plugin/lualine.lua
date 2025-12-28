@@ -8,10 +8,10 @@ local colors = {
 	line_bg = "#141418",
 
 	fg = "#b1bcdc", -- main text
-	subtle_gray = "#252734", -- Inactive foreground
-	dark_gray = dark_gray, -- Punctuation, inactive elements
 	gray = "#676d8a", -- properties
-	gray_blue = "#8389AA", -- types
+	gray_blue = "#8389AA", -- properties
+	dark_gray = dark_gray, -- Punctuation, inactive elements
+	subtle_gray = "#252734", -- Inactive foreground
 
 	blue = "#1166ff", -- primary accent color
 	light_blue = "#1ab2ff", -- Secondary accent (e.g., constants)
@@ -35,7 +35,8 @@ local colors = {
 	white = "#f6f8ff", -- strings color
 
 	copilot = "#434a69",
-	highlight = "#101f3c", -- Selection highlights
+	highlight = "#0f2958", -- Selection highlights
+	highlight_debug = "#122132",
 	comment = dark_gray, -- Comments
 }
 
@@ -67,7 +68,20 @@ require("lualine").setup({
 		lualine_a = { { "mode", color = { fg = colors.dark_gray } } },
 		lualine_b = { "grapple", "branch", "diff", "diagnostics" },
 		lualine_c = { { "filename", file_status = false, path = 1 } },
-		lualine_x = { "encoding", "fileformat", "filetype" },
+		lualine_x = {
+			{
+				function()
+					return "󰨰 " .. require("dap").status()
+				end,
+				cond = function()
+					return package.loaded["dap"] and require("dap").status() ~= ""
+				end,
+				color = { fg = colors.light_blue },
+			},
+			"encoding",
+			"fileformat",
+			"filetype",
+		},
 		lualine_y = { { "progress", color = { fg = colors.gray } } },
 		lualine_z = { "location" },
 	},
@@ -82,5 +96,5 @@ require("lualine").setup({
 	tabline = {},
 	winbar = {},
 	inactive_winbar = {},
-	extensions = {},
+	extensions = { "nvim-dap-ui" },
 })
