@@ -5,8 +5,8 @@ if true then
 	remap("n", "<leader>e", "<cmd>Grapple toggle_tags<CR>")
 	remap("n", "<leader>D", "<cmd>Grapple untag<CR>")
 
-	remap("n", "<leader>k", "<cmd>Grapple cycle_tags prev<CR>")
-	remap("n", "<leader>j", "<cmd>Grapple cycle_tags next<CR>")
+	remap("n", "<s-m-h>", "<cmd>Grapple cycle_tags prev<CR>")
+	remap("n", "<s-m-l>", "<cmd>Grapple cycle_tags next<CR>")
 
 	remap("n", "<c-j>", "<cmd>Grapple select index=1<CR>")
 	remap("n", "<c-k>", "<cmd>Grapple select index=2<CR>")
