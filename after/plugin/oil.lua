@@ -75,7 +75,19 @@ if true then
 			["-"] = { "actions.parent", mode = "n" },
 			["_"] = { "actions.open_cwd", mode = "n" },
 			["`"] = { "actions.cd", mode = "n" },
-			["~"] = { "actions.cd", opts = { scope = "tab" }, mode = "n" },
+			["~"] = {
+				callback = function()
+					-- Get the current directory from oil
+					local oil = require("oil")
+					local dir = oil.get_current_dir()
+					if dir then
+						-- Execute window-local cd (lcd)
+						vim.cmd("lcd " .. vim.fn.fnameescape(dir))
+						print("Window CWD changed to: " .. dir)
+					end
+				end,
+				desc = "cd to current oil directory (window scope)",
+			},
 			["gs"] = { "actions.change_sort", mode = "n" },
 			["gx"] = "actions.open_external",
 			["g."] = { "actions.toggle_hidden", mode = "n" },
