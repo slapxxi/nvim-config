@@ -1,6 +1,55 @@
 local builtin = require("telescope.builtin")
+local pickers = require("telescope.pickers")
+local finders = require("telescope.finders")
+local make_entry = require("telescope.make_entry")
+local conf = require("telescope.config").values
 
 local find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" }
+
+local function multigrep(opts)
+	opts = opts or {}
+	opts.cwd = opts.cwd or vim.fn.getcwd()
+
+	local finder = finders.new_async_job({
+		cwd = opts.cwd,
+		entry_maker = make_entry.gen_from_vimgrep(opts),
+		command_generator = function(prompt)
+			if not prompt or prompt == "" then
+				return nil
+			end
+
+			local pieces = vim.split(prompt, "  ")
+			local args = { "rg" }
+
+			if pieces[1] then
+				table.insert(args, "-e")
+				table.insert(args, pieces[1])
+			end
+
+			if pieces[2] then
+				table.insert(args, "-g")
+				table.insert(args, pieces[2])
+			end
+
+			return vim.tbl_flatten({
+				args,
+				{ "--color=never", "--no-heading", "--with-filename", "--line-number", "--column", "--smart-case" },
+			})
+		end,
+	})
+
+	pickers
+		.new(opts, {
+			debounce = 100,
+			prompt_title = "Multi Grep",
+			finder = finder,
+			previewer = conf.grep_previewer({}),
+			sorter = require("telescope.sorters").empty(),
+		})
+		:find()
+end
+
+vim.keymap.set("n", "<leader>fmg", multigrep)
 
 vim.keymap.set("n", "<C-p>", function()
 	require("telescope.builtin").find_files({
@@ -35,8 +84,6 @@ vim.keymap.set("n", "<leader>fd", builtin.diagnostics, {})
 vim.keymap.set("n", "<leader>fg", builtin.git_files)
 vim.keymap.set("n", "<leader>fc", builtin.git_bcommits, {})
 vim.keymap.set("n", "<leader>ft", builtin.git_status, {})
-
--- vim.keymap.set("n", "<leader>fh", builtin.help_tags)
 
 require("telescope").load_extension("fzf")
 
