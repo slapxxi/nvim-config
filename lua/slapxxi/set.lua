@@ -3,6 +3,58 @@ local cache_dir = vim.fn.stdpath("data")
 local unique_id = vim.fn.fnamemodify(workspace_path, ":t") .. "_" .. vim.fn.sha256(workspace_path):sub(1, 8)
 local shadafile = cache_dir .. "/shada/" .. unique_id .. ".shada"
 
+function MyCustomTabLine()
+	local s = ""
+	local current_tab = vim.fn.tabpagenr()
+
+	for i = 1, vim.fn.tabpagenr("$") do
+		-- 1. Set highlight group based on whether this is the active tab
+		if i == current_tab then
+			s = s .. "%#TabLineSel#"
+		else
+			s = s .. "%#TabLine#"
+		end
+
+		-- 2. Set the tabpage number (enables mouse clicks to switch tabs)
+		s = s .. "%" .. i .. "T"
+
+		-- 3. Get the buffer name for the active window in this tab
+		local buflist = vim.fn.tabpagebuflist(i)
+		local winnr = vim.fn.tabpagewinnr(i)
+		local bufnr = buflist[winnr]
+		local bufname = vim.fn.bufname(bufnr)
+
+		-- Format the label: [Index] Filename
+		local label = " " .. i .. " "
+		if bufname ~= "" then
+			label = label .. vim.fn.fnamemodify(bufname, ":t") .. " "
+		else
+			label = label .. "[No Name] "
+		end
+
+		-- 4. Add a modified indicator if any buffer in the tab is modified
+		local modified = false
+		for _, b in ipairs(buflist) do
+			if vim.fn.getbufvar(b, "&modified") == 1 then
+				modified = true
+				break
+			end
+		end
+		if modified then
+			label = label .. "+ "
+		end
+
+		s = s .. label
+	end
+
+	-- 5. Fill the remaining space and reset the click target
+	s = s .. "%#TabLineFill#%T"
+
+	return s
+end
+
+vim.opt.tabline = "%!v:lua.MyCustomTabLine()"
+
 vim.opt.exrc = true
 vim.opt.secure = true
 

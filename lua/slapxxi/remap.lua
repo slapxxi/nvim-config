@@ -4,6 +4,17 @@ local opts = { noremap = true, silent = true }
 
 vim.g.mapleader = " "
 
+-- Tabs
+map("n", "<C-1>", ":1tabn<CR>")
+map("n", "<C-2>", ":2tabn<CR>")
+map("n", "<C-3>", ":3tabn<CR>")
+map("n", "<C-4>", ":4tabn<CR>")
+map("n", "<C-5>", ":5tabn<CR>")
+map("n", "<C-6>", ":6tabn<CR>")
+map("n", "<C-7>", ":7tabn<CR>")
+map("n", "<C-8>", ":8tabn<CR>")
+map("n", "<C-9>", ":9tabn<CR>")
+
 -- General
 map("n", "<leader>,", "A,<Esc>", opts) -- add comma at the end and go normal mode
 

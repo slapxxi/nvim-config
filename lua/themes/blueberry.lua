@@ -3,6 +3,7 @@ local dark_gray = "#3d4054" -- comments
 
 local colors = {
 	bg = bg,
+	bg_dark = "#08080a",
 	sidebar_bg = bg,
 	status_bg = bg,
 	line_bg = "#141418",
@@ -80,6 +81,10 @@ local blueberry = {
 	Folded = { fg = colors.dark_gray },
 	SpecialKey = { fg = colors.dark_gray },
 	NonText = { fg = colors.fg },
+
+	TabLine = { fg = colors.dark_gray, bg = colors.bg_dark },
+	TabLineFill = { fg = colors.dark_gray, bg = colors.bg_dark },
+	TabLineSel = { fg = colors.white, bg = colors.bg },
 
 	Directory = { fg = colors.blue },
 
