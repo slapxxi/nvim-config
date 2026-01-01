@@ -94,4 +94,4 @@ vim.opt.iskeyword:remove("_")
 
 vim.opt.wrap = false
 
-vim.o.autochdir = false
+vim.opt.autochdir = false
