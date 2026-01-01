@@ -133,6 +133,40 @@ if true then
 	require("dap-go").setup()
 	require("nvim-dap-virtual-text").setup()
 
+	dap.adapters["pwa-node"] = {
+		type = "server",
+		port = "${port}",
+		executable = {
+			command = "js-debug-adapter",
+			args = { "${port}" },
+		},
+	}
+
+	local utils = require("dap.utils")
+	local jsconfig = {
+		{
+			type = "pwa-node",
+			request = "launch",
+			name = "Launch file",
+			program = "${file}",
+			cwd = "${workspaceFolder}",
+			protocol = "inspector",
+			sourceMaps = true,
+		},
+		{
+			type = "pwa-node",
+			request = "attach",
+			name = "Attach by Process ID",
+			cwd = "${workspaceFolder}",
+			processId = utils.pick_process,
+		},
+	}
+
+	dap.configurations.typescript = jsconfig
+	dap.configurations.javascript = jsconfig
+	dap.configurations.typescriptreact = jsconfig
+	dap.configurations.javascriptreact = jsconfig
+
 	vim.fn.sign_define("DapBreakpoint", {
 		text = "•",
 		texthl = "DapBreakpoint",
