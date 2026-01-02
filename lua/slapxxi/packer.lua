@@ -30,6 +30,7 @@ return require("packer").startup(function(use)
 	use({ "hrsh7th/cmp-path" })
 	use({ "hrsh7th/cmp-cmdline" })
 	use({ "hrsh7th/cmp-nvim-lsp-signature-help" })
+	use({ "ray-x/lsp_signature.nvim" })
 
 	-- Snippets
 	use({ "hrsh7th/vim-vsnip" })
