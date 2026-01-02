@@ -27,6 +27,29 @@ if true then
 		end)
 	end
 
+	local function dap_jump_to_current_line()
+		local session = dap.session()
+		if not session then
+			print("No active debug session")
+			return
+		end
+
+		local frame = session.current_frame
+		if not frame then
+			print("No current frame")
+			return
+		end
+
+		local line = frame.line
+		local path = frame.source and frame.source.path
+
+		if path then
+			vim.cmd("edit " .. vim.fn.fnameescape(path))
+		end
+
+		vim.api.nvim_win_set_cursor(0, { line, 0 })
+	end
+
 	-- navigation
 	map("n", "<leader>;", dap.continue)
 	map("n", "<leader>.", dap.run_to_cursor)
@@ -41,6 +64,7 @@ if true then
 	map("n", "<leader>B", dap.toggle_breakpoint)
 	map("n", "<leader>dc", dap.clear_breakpoints)
 	map("n", "<leader>db", set_conditional_breakpoint)
+	map("n", "<leader>dj", dap_jump_to_current_line)
 
 	-- process
 	map("n", "<leader>dT", dap.terminate)
@@ -108,6 +132,40 @@ if true then
 
 	require("dap-go").setup()
 	require("nvim-dap-virtual-text").setup()
+
+	dap.adapters["pwa-node"] = {
+		type = "server",
+		port = "${port}",
+		executable = {
+			command = "js-debug-adapter",
+			args = { "${port}" },
+		},
+	}
+
+	local utils = require("dap.utils")
+	local jsconfig = {
+		{
+			type = "pwa-node",
+			request = "launch",
+			name = "Launch file",
+			program = "${file}",
+			cwd = "${workspaceFolder}",
+			protocol = "inspector",
+			sourceMaps = true,
+		},
+		{
+			type = "pwa-node",
+			request = "attach",
+			name = "Attach by Process ID",
+			cwd = "${workspaceFolder}",
+			processId = utils.pick_process,
+		},
+	}
+
+	dap.configurations.typescript = jsconfig
+	dap.configurations.javascript = jsconfig
+	dap.configurations.typescriptreact = jsconfig
+	dap.configurations.javascriptreact = jsconfig
 
 	vim.fn.sign_define("DapBreakpoint", {
 		text = "•",
