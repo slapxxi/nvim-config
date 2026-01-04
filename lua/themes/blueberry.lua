@@ -8,7 +8,7 @@ local colors = {
 	line_bg = "#141418",
 
 	fg = "#b2bcdd", -- main text
-	gray = "#666c88", -- types
+	gray = "#676d89", -- types
 	gray_blue = "#8187a8", -- properties
 	dark_gray = "#3d4054", -- punctuation
 	subtle_gray = "#252734", -- inactive fg
