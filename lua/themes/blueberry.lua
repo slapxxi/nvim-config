@@ -1,18 +1,17 @@
 local bg = "#0e0e10"
-local dark_gray = "#3d4054" -- comments
 
 local colors = {
-	bg = bg,
+	bg = "#0e0e10",
 	bg_dark = "#08080a",
 	sidebar_bg = bg,
 	status_bg = bg,
 	line_bg = "#141418",
 
 	fg = "#b1bcdc", -- main text
-	gray = "#676d8a", -- properties
-	gray_blue = "#8389AA", -- properties
-	dark_gray = dark_gray, -- Punctuation, inactive elements
-	subtle_gray = "#252734", -- Inactive foreground
+	gray = "#656b88", -- types
+	gray_blue = "#8086a7", -- properties
+	dark_gray = "#3d4054", -- punctuation
+	subtle_gray = "#252734", -- inactive fg
 
 	blue = "#1166ff", -- primary accent color
 	light_blue = "#1ab2ff", -- Secondary accent (e.g., constants)
@@ -38,7 +37,32 @@ local colors = {
 	copilot = "#434a69",
 	highlight = "#0f2958", -- Selection highlights
 	highlight_debug = "#122132",
-	comment = dark_gray, -- Comments
+}
+
+local semantic_colors = {
+	text = colors.fg,
+	variable = colors.fg,
+	type = colors.gray,
+	property = colors.gray_blue,
+	enumMember = colors.gray_blue,
+	class = colors.gray_blue,
+	interface = colors.gray_blue,
+	struct = colors.gray_blue,
+	event = colors.gray_blue,
+	operator = colors.gray_blue,
+	fn = colors.gray_blue,
+	method = colors.gray_blue,
+	macro = colors.gray_blue,
+	keyword = colors.blue,
+	modifier = colors.gray_blue,
+	comment = colors.dark_gray,
+	statement = colors.blue,
+	name = colors.white,
+	number = colors.teal,
+	constant = colors.light_blue,
+	builtin = colors.light_blue_a,
+	call = colors.blue,
+	string = colors.white,
 }
 
 local blueberry = {
@@ -64,15 +88,15 @@ local blueberry = {
 	MsgArea = { fg = colors.gray },
 
 	-- Syntax highlighting { mapped from tokenColors }
-	Statement = { fg = colors.blue },
-	Comment = { fg = colors.comment },
-	Constant = { fg = colors.light_blue }, -- Constants
-	String = { fg = colors.white }, -- Strings
+	Statement = { fg = semantic_colors.statement },
+	Comment = { fg = semantic_colors.comment },
+	Constant = { fg = semantic_colors.constant }, -- Constants
+	String = { fg = semantic_colors.string }, -- Strings
 	Identifier = { fg = colors.white }, -- Variable names, function names
 	Function = { fg = colors.blue }, -- Function calls
 	Keyword = { fg = colors.blue }, -- Keywords
 	Operator = { fg = colors.blue }, -- Punctuation, operators
-	Type = { fg = colors.gray_blue }, -- Types
+	Type = { fg = colors.gray }, -- Types
 	PreProc = { fg = colors.blue }, -- Preprocessor (e.g., storage.type)
 	Special = { fg = colors.light_blue }, -- Embedded, constants
 	Delimiter = { fg = colors.dark_gray }, -- Embedded, constants
@@ -142,34 +166,36 @@ local blueberry = {
 	["@tag"] = { fg = colors.blue },
 	["@tag.builtin"] = { fg = colors.fg },
 	["@tag.html"] = { fg = colors.light_blue },
-	["@tag.attribute"] = { fg = colors.gray },
+	["@tag.attribute"] = { fg = semantic_colors.property },
 	["@tag.delimiter"] = { fg = colors.dark_gray },
 
-	["@variable"] = { fg = colors.fg },
-	["@variable.member"] = { fg = colors.gray },
-	["@variable.parameter"] = { fg = colors.white },
+	["@variable"] = { fg = semantic_colors.text },
+	["@variable.member"] = { fg = semantic_colors.property },
+	["@variable.parameter"] = { fg = semantic_colors.name },
 
-	["@number"] = { fg = colors.teal },
-	["@number.float"] = { fg = colors.teal },
+	["@number"] = { fg = semantic_colors.number },
+	["@number.float"] = { fg = semantic_colors.number },
 
-	["@module"] = { fg = colors.white },
+	["@module"] = { fg = semantic_colors.name },
 
-	["@type.definition"] = { fg = colors.white },
+	["@type.definition"] = { fg = semantic_colors.name },
 
-	["@lsp.type.property"] = { fg = colors.gray },
-	["@lsp.type.class"] = { fg = colors.blue },
-	["@lsp.mod.declaration"] = { fg = colors.white },
-	["@lsp.typemod.variable.defaultLibrary"] = { fg = colors.gray },
-	["@lsp.typemod.class.defaultLibrary"] = { fg = colors.white },
-	["@lsp.typemod.property.declaration"] = { fg = colors.gray },
+	["@lsp.type.property"] = { fg = semantic_colors.property },
+	["@lsp.type.class"] = { fg = semantic_colors.keyword },
+	["@lsp.mod.declaration"] = { fg = semantic_colors.name },
+	["@lsp.typemod.variable.defaultLibrary"] = { fg = semantic_colors.type },
+	["@lsp.typemod.class.defaultLibrary"] = { fg = semantic_colors.name },
+	["@lsp.typemod.property.declaration"] = { fg = semantic_colors.property },
 
 	-- Go
 	-- ["@type.builtin.go"] = { fg = colors.gray_blue },
-	["@function.go"] = { fg = colors.white },
+	["@function.go"] = { fg = semantic_colors.name },
 	["@function.builtin.go"] = { fg = colors.light_blue },
 	["@type.builtin.go"] = { fg = colors.light_blue_a },
-	["@function.call.go"] = { fg = colors.blue },
-	["@function.method.go"] = { fg = colors.blue },
+	["@function.call.go"] = { fg = semantic_colors.call },
+	["@function.method.go"] = { fg = semantic_colors.name },
+	["@function.method.call.go"] = { fg = colors.blue },
+	["@property.go"] = { fg = colors.gray_blue },
 
 	-- CSS
 	["@type.css"] = { fg = colors.blue },
@@ -183,7 +209,7 @@ local blueberry = {
 	["@_jsx_attribute"] = { fg = colors.light_blue },
 
 	-- JavaScript
-	["@variable.member.javascript"] = { fg = colors.gray },
+	["@variable.member.javascript"] = { fg = colors.gray_blue },
 	javascriptParens = colors.dark_gray,
 
 	-- Lua
