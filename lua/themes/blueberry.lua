@@ -7,9 +7,9 @@ local colors = {
 	status_bg = bg,
 	line_bg = "#141418",
 
-	fg = "#b1bcdc", -- main text
-	gray = "#656b88", -- types
-	gray_blue = "#8086a7", -- properties
+	fg = "#b2bcdd", -- main text
+	gray = "#666c88", -- types
+	gray_blue = "#8187a8", -- properties
 	dark_gray = "#3d4054", -- punctuation
 	subtle_gray = "#252734", -- inactive fg
 
@@ -98,7 +98,7 @@ local blueberry = {
 	Operator = { fg = colors.blue }, -- Punctuation, operators
 	Type = { fg = colors.gray }, -- Types
 	PreProc = { fg = colors.blue }, -- Preprocessor (e.g., storage.type)
-	Special = { fg = colors.light_blue }, -- Embedded, constants
+	Special = { fg = semantic_colors.constant }, -- Embedded, constants
 	Delimiter = { fg = colors.dark_gray }, -- Embedded, constants
 	Error = { fg = colors.red }, -- Errors
 	Todo = { fg = colors.yellow, bg = colors.bg },
@@ -183,19 +183,19 @@ local blueberry = {
 	["@lsp.type.property"] = { fg = semantic_colors.property },
 	["@lsp.type.class"] = { fg = semantic_colors.keyword },
 	["@lsp.mod.declaration"] = { fg = semantic_colors.name },
-	["@lsp.typemod.variable.defaultLibrary"] = { fg = semantic_colors.type },
+	["@lsp.typemod.variable.defaultLibrary"] = { fg = semantic_colors.builtin },
 	["@lsp.typemod.class.defaultLibrary"] = { fg = semantic_colors.name },
 	["@lsp.typemod.property.declaration"] = { fg = semantic_colors.property },
 
 	-- Go
 	-- ["@type.builtin.go"] = { fg = colors.gray_blue },
 	["@function.go"] = { fg = semantic_colors.name },
-	["@function.builtin.go"] = { fg = colors.light_blue },
-	["@type.builtin.go"] = { fg = colors.light_blue_a },
+	["@function.builtin.go"] = { fg = semantic_colors.builtin },
+	["@type.builtin.go"] = { fg = semantic_colors.builtin },
 	["@function.call.go"] = { fg = semantic_colors.call },
 	["@function.method.go"] = { fg = semantic_colors.name },
-	["@function.method.call.go"] = { fg = colors.blue },
-	["@property.go"] = { fg = colors.gray_blue },
+	["@function.method.call.go"] = { fg = semantic_colors.call },
+	["@property.go"] = { fg = semantic_colors.property },
 
 	-- CSS
 	["@type.css"] = { fg = colors.blue },
