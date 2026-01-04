@@ -14,13 +14,15 @@ cmp.setup({
 		completeopt = "menu,menuone,noselect",
 	},
 	window = {
-		completion = cmp.config.window.bordered(),
+		completion = cmp.config.window.bordered({
+			border = "rounded",
+		}),
 		documentation = cmp.config.window.bordered(),
 	},
 	sources = {
 		{ name = "vsnip", priority = 1000 },
 		{ name = "nvim_lsp" },
-		{ name = "nvim_lsp_signature_help" },
+		-- { name = "nvim_lsp_signature_help" },
 		{ name = "buffer" },
 		{ name = "path" },
 	},
@@ -65,17 +67,38 @@ cmp.setup({
 	}),
 	formatting = {
 		fields = { "abbr", "kind" },
-		format = require("lspkind").cmp_format({
-			before = require("tailwind-tools.cmp").lspkind_format,
-			menu = {
-				buffer = "[Buffer]",
-				nvim_lsp = "[LSP]",
-				luasnip = "[LuaSnip]",
-				vsnip = "[VSnip]",
-				nvim_lua = "[Lua]",
-				latex_symbols = "[Latex]",
-			},
-		}),
+		-- format = require("lspkind").cmp_format({
+		-- 	before = require("tailwind-tools.cmp").lspkind_format,
+		-- 	menu = {
+		-- 		buffer = "[Buffer]",
+		-- 		nvim_lsp = "[LSP]",
+		-- 		luasnip = "[LuaSnip]",
+		-- 		vsnip = "[VSnip]",
+		-- 		nvim_lua = "[Lua]",
+		-- 		latex_symbols = "[Latex]",
+		-- 	},
+		-- }),
+		format = function(entry, vim_item)
+			local kind_name = require("cmp.types").lsp.CompletionItemKind[entry:get_kind()]
+
+			vim_item = require("lspkind").cmp_format({
+				before = require("tailwind-tools.cmp").lspkind_format,
+				menu = {
+					buffer = "[Buffer]",
+					nvim_lsp = "[LSP]",
+					luasnip = "[LuaSnip]",
+					vsnip = "[VSnip]",
+					nvim_lua = "[Lua]",
+					latex_symbols = "[Latex]",
+				},
+			})(entry, vim_item)
+
+			if kind_name then
+				vim_item.abbr_hl_group = "CmpItemKind" .. kind_name
+			end
+
+			return vim_item
+		end,
 	},
 })
 

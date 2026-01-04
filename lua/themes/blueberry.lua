@@ -163,6 +163,18 @@ local blueberry = {
 	-- LSP signature help
 	LspSignatureActiveParameter = { fg = colors.white, bg = colors.bg, bold = true },
 
+	-- CMP Kinds
+	CmpItemKindSnippet = { fg = semantic_colors.number },
+	CmpItemKindFunction = { fg = semantic_colors.call },
+	CmpItemKindMethod = { fg = semantic_colors.call },
+	CmpItemKindConstant = { fg = semantic_colors.constant },
+	CmpItemKindKeyword = { fg = semantic_colors.builtin },
+	CmpItemKindModule = { fg = semantic_colors.name },
+	CmpItemKindStruct = { fg = semantic_colors.type },
+	CmpItemKindClass = { fg = semantic_colors.type },
+	CmpItemKindField = { fg = semantic_colors.builtin },
+	CmpItemKindText = { fg = semantic_colors.comment },
+
 	["@tag"] = { fg = colors.blue },
 	["@tag.builtin"] = { fg = colors.fg },
 	["@tag.html"] = { fg = colors.light_blue },
