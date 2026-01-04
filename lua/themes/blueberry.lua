@@ -174,6 +174,8 @@ local blueberry = {
 	CmpItemKindClass = { fg = semantic_colors.type },
 	CmpItemKindField = { fg = semantic_colors.builtin },
 	CmpItemKindText = { fg = semantic_colors.comment },
+	CmpItemAbbrMatch = { bold = true },
+	CmpItemAbbrMatchFuzzy = { italic = true },
 
 	["@tag"] = { fg = colors.blue },
 	["@tag.builtin"] = { fg = colors.fg },
