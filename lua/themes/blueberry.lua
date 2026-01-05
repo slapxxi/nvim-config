@@ -7,13 +7,14 @@ local colors = {
 	status_bg = bg,
 	line_bg = "#141418",
 
-	fg = "#b2bcdd", -- main text
-	gray = "#676d89", -- types
-	gray_blue = "#8187a8", -- properties
+	fg = "#b3bdde", -- main text
+	gray = "#666c88", -- types
+	gray_blue = "#8389aa", -- properties
 	dark_gray = "#3d4054", -- punctuation
 	subtle_gray = "#252734", -- inactive fg
 
 	blue = "#1166ff", -- primary accent color
+	blue_darker = "#0e5ae0", -- primary accent color
 	light_blue = "#1ab2ff", -- Secondary accent (e.g., constants)
 	light_blue_a = "#00a2f5", -- Secondary accent (e.g., constants)
 	pale_blue = "#629aff",
@@ -39,7 +40,8 @@ local colors = {
 	highlight_debug = "#122132",
 }
 
-local semantic_colors = {
+-- semantic colors
+local scolors = {
 	text = colors.fg,
 	variable = colors.fg,
 	type = colors.gray,
@@ -63,6 +65,9 @@ local semantic_colors = {
 	builtin = colors.light_blue_a,
 	call = colors.blue,
 	string = colors.white,
+	highlight = colors.highlight,
+	highlight_debug = colors.highlight_debug,
+	-- highlight_cmp = "#1e2437",
 }
 
 local blueberry = {
@@ -88,17 +93,17 @@ local blueberry = {
 	MsgArea = { fg = colors.gray },
 
 	-- Syntax highlighting { mapped from tokenColors }
-	Statement = { fg = semantic_colors.statement },
-	Comment = { fg = semantic_colors.comment },
-	Constant = { fg = semantic_colors.constant }, -- Constants
-	String = { fg = semantic_colors.string }, -- Strings
+	Statement = { fg = scolors.statement },
+	Comment = { fg = scolors.comment },
+	Constant = { fg = scolors.constant }, -- Constants
+	String = { fg = scolors.string }, -- Strings
 	Identifier = { fg = colors.white }, -- Variable names, function names
 	Function = { fg = colors.blue }, -- Function calls
 	Keyword = { fg = colors.blue }, -- Keywords
 	Operator = { fg = colors.blue }, -- Punctuation, operators
 	Type = { fg = colors.gray }, -- Types
 	PreProc = { fg = colors.blue }, -- Preprocessor (e.g., storage.type)
-	Special = { fg = semantic_colors.constant }, -- Embedded, constants
+	Special = { fg = scolors.constant }, -- Embedded, constants
 	Delimiter = { fg = colors.dark_gray }, -- Embedded, constants
 	Error = { fg = colors.red }, -- Errors
 	Todo = { fg = colors.yellow, bg = colors.bg },
@@ -164,52 +169,55 @@ local blueberry = {
 	LspSignatureActiveParameter = { fg = colors.white, bg = colors.bg, bold = true },
 
 	-- CMP Kinds
-	CmpItemKindSnippet = { fg = semantic_colors.number },
-	CmpItemKindFunction = { fg = semantic_colors.call },
-	CmpItemKindMethod = { fg = semantic_colors.call },
-	CmpItemKindConstant = { fg = semantic_colors.constant },
-	CmpItemKindKeyword = { fg = semantic_colors.builtin },
-	CmpItemKindModule = { fg = semantic_colors.name },
-	CmpItemKindStruct = { fg = semantic_colors.type },
-	CmpItemKindClass = { fg = semantic_colors.type },
-	CmpItemKindField = { fg = semantic_colors.builtin },
-	CmpItemKindText = { fg = semantic_colors.comment },
+	CmpItemKindSnippet = { fg = scolors.number },
+	CmpItemKindFunction = { fg = scolors.call },
+	CmpItemKindMethod = { fg = colors.blue_darker },
+	CmpItemKindConstant = { fg = scolors.constant },
+	CmpItemKindKeyword = { fg = scolors.builtin },
+	CmpItemKindModule = { fg = scolors.name },
+	CmpItemKindStruct = { fg = scolors.type },
+	CmpItemKindInterface = { fg = colors.pale_blue },
+	CmpItemKindClass = { fg = scolors.constant },
+	CmpItemKindField = { fg = scolors.property },
+	CmpItemKindText = { fg = scolors.comment },
+	CmpItemKindVariable = { fg = scolors.text },
 	CmpItemAbbrMatch = { bold = true },
 	CmpItemAbbrMatchFuzzy = { italic = true },
+	CmpPmenuSel = { bg = scolors.highlight },
 
 	["@tag"] = { fg = colors.blue },
 	["@tag.builtin"] = { fg = colors.fg },
 	["@tag.html"] = { fg = colors.light_blue },
-	["@tag.attribute"] = { fg = semantic_colors.property },
+	["@tag.attribute"] = { fg = scolors.property },
 	["@tag.delimiter"] = { fg = colors.dark_gray },
 
-	["@variable"] = { fg = semantic_colors.text },
-	["@variable.member"] = { fg = semantic_colors.property },
-	["@variable.parameter"] = { fg = semantic_colors.name },
+	["@variable"] = { fg = scolors.text },
+	["@variable.member"] = { fg = scolors.property },
+	["@variable.parameter"] = { fg = scolors.name },
 
-	["@number"] = { fg = semantic_colors.number },
-	["@number.float"] = { fg = semantic_colors.number },
+	["@number"] = { fg = scolors.number },
+	["@number.float"] = { fg = scolors.number },
 
-	["@module"] = { fg = semantic_colors.name },
+	["@module"] = { fg = scolors.name },
 
-	["@type.definition"] = { fg = semantic_colors.name },
+	["@type.definition"] = { fg = scolors.name },
 
-	["@lsp.type.property"] = { fg = semantic_colors.property },
-	["@lsp.type.class"] = { fg = semantic_colors.keyword },
-	["@lsp.mod.declaration"] = { fg = semantic_colors.name },
-	["@lsp.typemod.variable.defaultLibrary"] = { fg = semantic_colors.builtin },
-	["@lsp.typemod.class.defaultLibrary"] = { fg = semantic_colors.name },
-	["@lsp.typemod.property.declaration"] = { fg = semantic_colors.property },
+	["@lsp.type.property"] = { fg = scolors.property },
+	["@lsp.type.class"] = { fg = scolors.keyword },
+	["@lsp.mod.declaration"] = { fg = scolors.name },
+	["@lsp.typemod.variable.defaultLibrary"] = { fg = scolors.builtin },
+	["@lsp.typemod.class.defaultLibrary"] = { fg = scolors.name },
+	["@lsp.typemod.property.declaration"] = { fg = scolors.property },
 
 	-- Go
 	-- ["@type.builtin.go"] = { fg = colors.gray_blue },
-	["@function.go"] = { fg = semantic_colors.name },
-	["@function.builtin.go"] = { fg = semantic_colors.builtin },
-	["@type.builtin.go"] = { fg = semantic_colors.builtin },
-	["@function.call.go"] = { fg = semantic_colors.call },
-	["@function.method.go"] = { fg = semantic_colors.name },
-	["@function.method.call.go"] = { fg = semantic_colors.call },
-	["@property.go"] = { fg = semantic_colors.property },
+	["@function.go"] = { fg = scolors.name },
+	["@function.builtin.go"] = { fg = scolors.builtin },
+	["@type.builtin.go"] = { fg = scolors.builtin },
+	["@function.call.go"] = { fg = scolors.call },
+	["@function.method.go"] = { fg = scolors.name },
+	["@function.method.call.go"] = { fg = scolors.call },
+	["@property.go"] = { fg = scolors.property },
 
 	-- CSS
 	["@type.css"] = { fg = colors.blue },

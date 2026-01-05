@@ -16,6 +16,7 @@ cmp.setup({
 	window = {
 		completion = cmp.config.window.bordered({
 			border = "rounded",
+			winhighlight = "Normal:CmpPmenu,CursorLine:CmpPmenuSel,Search:None",
 		}),
 		documentation = cmp.config.window.bordered(),
 	},
