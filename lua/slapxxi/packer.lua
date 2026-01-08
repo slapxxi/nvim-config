@@ -33,8 +33,12 @@ return require("packer").startup(function(use)
 	use({ "ray-x/lsp_signature.nvim" })
 
 	-- Snippets
-	use({ "hrsh7th/vim-vsnip" })
-	use({ "hrsh7th/cmp-vsnip" })
+	use({
+		"L3MON4D3/LuaSnip",
+		tag = "v2.*",
+		run = "make install_jsregexp",
+	})
+	use({ "saadparwaiz1/cmp_luasnip" })
 	use({ "rafamadriz/friendly-snippets" })
 
 	-- Lint
