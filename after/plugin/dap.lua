@@ -62,10 +62,10 @@ if true then
 
 	--breakpoints
 	map("n", "<leader>B", dap.toggle_breakpoint)
-	map("n", "<leader>dc", dap.clear_breakpoints)
 	map("n", "<leader>db", set_conditional_breakpoint)
 	map("n", "<leader>dj", dap_jump_to_current_line)
 
+	map("n", "<leader>dC", dap.clear_breakpoints)
 	-- process
 	map("n", "<leader>dT", dap.terminate)
 	map("n", "<leader>dR", dap.restart)
