@@ -1,6 +1,7 @@
 require("slapxxi.packer")
 require("slapxxi.remap")
 require("slapxxi.set")
+require("slapxxi.snippets")
 
 local augroup = vim.api.nvim_create_augroup
 local autocmd = vim.api.nvim_create_autocmd
