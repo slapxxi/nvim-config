@@ -113,7 +113,7 @@ local blueberry = {
 
 	TabLine = { fg = colors.dark_gray, bg = colors.bg_dark },
 	TabLineFill = { fg = colors.dark_gray, bg = colors.bg_dark },
-	TabLineSel = { fg = colors.white, bg = colors.bg },
+	TabLineSel = { fg = colors.gray, bg = colors.bg },
 
 	Directory = { fg = colors.blue },
 

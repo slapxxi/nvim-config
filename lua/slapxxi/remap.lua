@@ -19,8 +19,8 @@ map("n", "<m-9>", ":tabn 9<CR>")
 map("n", "<leader>,", "A,<Esc>", opts) -- add comma at the end and go normal mode
 
 -- Move
-map({ "n", "v" }, "L", "$", opts) -- to end of line
-map({ "n", "v" }, "H", "^", opts) -- to start of line
+map({ "n", "x" }, "L", "$", opts) -- to end of line
+map({ "n", "x" }, "H", "^", opts) -- to start of line
 map("n", "V", "V$", opts) -- enter visual mode and go to end of line
 
 -- Yank and Paste
