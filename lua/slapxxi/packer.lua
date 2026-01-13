@@ -10,8 +10,7 @@ return require("packer").startup(function(use)
 	use({ "mason-org/mason.nvim" })
 
 	-- Parser
-	use({ "nvim-treesitter/nvim-treesitter", run = "TSUpdate" })
-	use({ "nvim-treesitter/playground" })
+	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", branch = "master" })
 	use({ "nvim-treesitter/nvim-treesitter-context" })
 	use({
 		"nvim-treesitter/nvim-treesitter-textobjects",
@@ -78,11 +77,6 @@ return require("packer").startup(function(use)
 		"cbochs/grapple.nvim",
 		requires = { "nvim-tree/nvim-web-devicons" },
 	})
-	-- use({
-	-- 	"ThePrimeagen/harpoon",
-	-- 	branch = "harpoon2",
-	-- 	requires = { { "nvim-lua/plenary.nvim" } },
-	-- })
 
 	-- Quality of Life
 	use({ "lewis6991/gitsigns.nvim" })
