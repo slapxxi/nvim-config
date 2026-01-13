@@ -41,7 +41,6 @@ map({ "n", "v" }, "<leader><BS>", vim.cmd.noh) -- remove search highlight
 
 -- Save
 map("n", "<C-s>", ":w<CR>")
-map("n", "<leader>s", ":w<CR>")
 map("i", "<C-s>", "<C-o>:w<CR>")
 map("n", "<C-S-s>", ":w!<CR>") -- force save
 
