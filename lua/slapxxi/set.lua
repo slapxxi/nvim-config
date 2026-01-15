@@ -95,3 +95,5 @@ vim.opt.iskeyword:remove("_")
 vim.opt.wrap = false
 
 vim.opt.autochdir = false
+
+vim.o.autoread = true
