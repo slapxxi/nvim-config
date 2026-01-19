@@ -95,6 +95,8 @@ lspconfig.html.setup({
 lspconfig.cssls.setup({
 	capabilities = capabilities,
 })
+lspconfig.css_variables.setup({})
+lspconfig.cssmodules_ls.setup({})
 
 lspconfig.tailwindcss.setup({})
 

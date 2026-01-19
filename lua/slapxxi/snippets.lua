@@ -10,3 +10,13 @@ ls.add_snippets("go", {
 		t({ "", "}" }),
 	}),
 })
+
+local cn = {
+	s("cn", {
+		t({ "className=" }),
+		i(1),
+	}),
+}
+
+ls.add_snippets("javascriptreact", cn)
+ls.add_snippets("typescriptreact", cn)
