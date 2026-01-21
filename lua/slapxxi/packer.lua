@@ -69,6 +69,7 @@ return require("packer").startup(function(use)
 
 	-- tpope
 	use({ "tpope/vim-fugitive" })
+	use({ "tpope/vim-rhubarb" })
 	use({ "tpope/vim-surround" })
 	use({ "tpope/vim-unimpaired" })
 
