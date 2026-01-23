@@ -12,13 +12,6 @@ local yank_group = augroup("yank_group", {})
 -- mark with I mark when leaving insert mode via Esc key. doesnt work  with <C-c>
 -- autocmd("InsertLeave", { group = automarkGroup, pattern = "*", command = "normal! mI" })
 
-autocmd("BufWritePre", {
-	pattern = "*",
-	callback = function(args)
-		require("conform").format({ bufnr = args.buf })
-	end,
-})
-
 autocmd("TextYankPost", {
 	group = yank_group,
 	pattern = "*",

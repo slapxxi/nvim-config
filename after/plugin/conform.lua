@@ -25,7 +25,7 @@ require("conform").setup({
 		-- You can customize some of the format options for the filetype (:help conform.format)
 		rust = { "rustfmt", lsp_format = "fallback" },
 		-- Conform will run the first available formatter
-		javascript = { "eslint_d", "prettierd", "prettier", stop_after_first = true },
+		javascript = { "eslint_d", "prettierd", "prettier" },
 		typescript = { "eslint_d", "prettierd", "prettier", stop_after_first = true },
 		typescriptreact = { "eslint_d", "prettierd", "prettier", stop_after_first = true },
 		javascriptreact = { "eslint_d", "prettierd", "prettier", stop_after_first = true },
@@ -38,3 +38,19 @@ require("conform").setup({
 		svg = { "svgo" },
 	},
 })
+
+vim.keymap.set({ "n", "i" }, "<C-s>", function()
+	require("conform").format({
+		async = false,
+		lsp_fallback = true,
+	})
+
+	vim.cmd("write")
+end, { desc = "Format with Conform and save file" })
+
+-- vim.api.nvim_create_autocmd("FileType", {
+-- 	pattern = "*",
+-- 	callback = function(args)
+-- 		require("conform").format({ bufnr = args.buf })
+-- 	end,
+-- })
