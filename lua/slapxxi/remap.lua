@@ -81,7 +81,7 @@ map("n", "<C-g>", "<C-^>") -- alternate buffer
 map("n", "<M-p>", ":bp<CR>") -- prev buffer
 map("n", "<M-n>", ":bn<CR>") -- next buffer
 map("n", "<leader>w", "<c-w>c") -- close
-map("n", "<leader>W", ":bd!<CR>") -- force close
+map("n", "<leader>W", ":tabc<CR>") -- tab close
 
 -- CD
 map("n", "<leader>`", ":lcd %:p:h<CR>")
