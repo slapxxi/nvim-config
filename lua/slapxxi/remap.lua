@@ -97,6 +97,10 @@ map("n", "z.", ":normal! zszH<CR>", { silent = true, desc = "Center view horizon
 
 map("n", "<leader>z", ":tab split<CR>")
 
+-- Git
+vim.keymap.set("v", "dp", ":diffput<CR>", { silent = true })
+vim.keymap.set("v", "do", ":diffget<CR>", { silent = true })
+
 local function get_git_root()
 	-- finddir searches upwards for the .git directory starting from the current buffer's directory
 	local dot_git_path = vim.fn.finddir(".git", ".;")
