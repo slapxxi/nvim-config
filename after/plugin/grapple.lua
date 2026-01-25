@@ -3,10 +3,6 @@ if true then
 
 	remap("n", "<leader>a", "<cmd>Grapple tag<CR>")
 	remap("n", "<leader>e", "<cmd>Grapple toggle_tags<CR>")
-	remap("n", "<leader>D", "<cmd>Grapple untag<CR>")
-
-	remap("n", "<s-m-h>", "<cmd>Grapple cycle_tags prev<CR>")
-	remap("n", "<s-m-l>", "<cmd>Grapple cycle_tags next<CR>")
 
 	remap("n", "<c-j>", "<cmd>Grapple select index=1<CR>")
 	remap("n", "<c-k>", "<cmd>Grapple select index=2<CR>")
@@ -21,6 +17,9 @@ if true then
 	remap("n", "<m-h>", "<cmd>Grapple select index=4 scope=git<CR>")
 	remap("n", "<m-;>", "<cmd>Grapple select index=5 scope=git<CR>")
 	remap("n", "<m-'>", "<cmd>Grapple select index=6 scope=git<CR>")
+
+	remap("n", "<s-m-h>", "<cmd>Grapple cycle_tags prev<CR>")
+	remap("n", "<s-m-l>", "<cmd>Grapple cycle_tags next<CR>")
 
 	require("telescope").load_extension("grapple")
 	remap("n", "<leader>fh", "<cmd>Telescope grapple tags<CR>")
