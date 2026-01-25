@@ -67,8 +67,11 @@ return require("packer").startup(function(use)
 		end,
 	})
 
-	-- tpope
+	-- Git
 	use({ "tpope/vim-fugitive" })
+	use({ "ThePrimeagen/git-worktree.nvim" })
+
+	-- tpope
 	use({ "tpope/vim-rhubarb" })
 	use({ "tpope/vim-surround" })
 	use({ "tpope/vim-unimpaired" })

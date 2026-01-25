@@ -41,9 +41,9 @@ map({ "n", "v" }, "<leader><BS>", vim.cmd.noh) -- remove search highlight
 
 -- Save
 map("n", "<C-s>", ":w<CR>")
-map("n", "<leader>S", ":wa<CR>")
+map("n", "<C-S-s>", ":wa<CR>")
 map("i", "<C-s>", "<C-o>:w<CR>")
-map("n", "<C-S-s>", ":w!<CR>") -- force save
+map("i", "<C-S-s>", "<C-o>:wa<CR>")
 
 -- Macros
 map("n", "Q", "@q") -- repeat q macro
@@ -99,8 +99,8 @@ map("n", "z.", ":normal! zszH<CR>", { silent = true, desc = "Center view horizon
 map("n", "<leader>z", ":tab split<CR>")
 
 -- Git
-vim.keymap.set("v", "dp", ":diffput<CR>", { silent = true })
-vim.keymap.set("v", "do", ":diffget<CR>", { silent = true })
+vim.keymap.set("x", "<leader>p", ":diffput<CR>", { silent = true })
+vim.keymap.set("x", "<leader>o", ":diffget<CR>", { silent = true })
 
 local function get_git_root()
 	-- finddir searches upwards for the .git directory starting from the current buffer's directory

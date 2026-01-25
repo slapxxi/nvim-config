@@ -59,11 +59,14 @@ if true then
 	map("n", "<leader>h", dap.step_out)
 	map("n", "<leader>u", dap.up)
 	map("n", "<leader>d", dap.down)
+	map("n", "<leader>>", dap_jump_to_current_line)
+	map({ "n", "v" }, "<leader>?", function()
+		dapui.eval(nil, { enter = true })
+	end)
 
 	--breakpoints
 	map("n", "<leader>B", dap.toggle_breakpoint)
 	map("n", "<leader>db", set_conditional_breakpoint)
-	map("n", "<leader>dj", dap_jump_to_current_line)
 
 	map("n", "<leader>dC", dap.clear_breakpoints)
 	-- process
@@ -77,9 +80,6 @@ if true then
 		dap.repl.open()
 	end)
 
-	map({ "n", "v" }, "<leader>?", function()
-		dapui.eval(nil, { enter = true })
-	end)
 	map("n", "<leader>do", function()
 		dapui.toggle({ reset = true })
 	end)
@@ -90,10 +90,10 @@ if true then
 		dapui.toggle({ layout = 2 })
 	end)
 
-	map({ "n", "v" }, "<Leader>dh", function()
+	map({ "n", "v" }, "<leader>dh", function()
 		widgets.hover()
 	end)
-	map({ "n", "v" }, "<Leader>dp", function()
+	map({ "n", "v" }, "<leader>dp", function()
 		widgets.preview()
 	end)
 	map("n", "<Leader>df", function()
@@ -102,10 +102,10 @@ if true then
 	map("n", "<Leader>ds", function()
 		widgets.centered_float(widgets.scopes)
 	end)
-	map({ "n", "v" }, "<Leader>de", function()
+	map({ "n", "v" }, "<leader>de", function()
 		widgets.centered_float(widgets.expression)
 	end)
-	map("n", "<Leader>dt", function()
+	map("n", "<leader>dt", function()
 		widgets.centered_float(widgets.threads)
 	end)
 
