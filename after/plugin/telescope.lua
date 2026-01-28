@@ -26,7 +26,7 @@ vim.keymap.set("n", "<leader>fa", function()
 	})
 end, { desc = "Go to file (includes ignored)" })
 
-vim.keymap.set("n", "<leader>fr", builtin.live_grep)
+vim.keymap.set("n", "<leader>fe", builtin.live_grep)
 vim.keymap.set("n", "<leader>fb", builtin.buffers)
 vim.keymap.set("n", "<leader>fr", builtin.resume, {})
 vim.keymap.set("n", "<leader>fm", builtin.marks, {})
@@ -46,7 +46,7 @@ vim.keymap.set("n", "<leader>fgf", builtin.git_files)
 require("telescope").load_extension("fzf")
 
 require("telescope").load_extension("frecency")
-vim.keymap.set("n", "<leader>fe", ":Telescope frecency workspace=CWD<CR>", {})
+vim.keymap.set("n", "<leader>ffre", ":Telescope frecency workspace=CWD<CR>", {})
 
 require("telescope").load_extension("dap")
 vim.keymap.set("n", "<leader>fdv", ":Telescope dap variables<CR>", {})
