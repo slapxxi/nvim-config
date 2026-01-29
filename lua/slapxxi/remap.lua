@@ -31,7 +31,8 @@ map({ "n", "v" }, "<leader>y", [["+y]]) -- copy to system clipboard
 map("n", "<leader>Y", [["+Y]]) -- copy to system clipboard
 
 -- Quit
-map("n", "<leader>q", ":qa!<CR>")
+map("n", "<leader>q", ":q<CR>")
+map("n", "<leader>Q", ":qa!<CR>")
 
 -- Search
 map("n", "g/", ":%s/", opts)
