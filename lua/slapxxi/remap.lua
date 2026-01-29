@@ -103,13 +103,31 @@ vim.keymap.set("x", "<leader>p", ":diffput<CR>", { silent = true })
 vim.keymap.set("x", "<leader>o", ":diffget<CR>", { silent = true })
 
 local function get_git_root()
-	-- finddir searches upwards for the .git directory starting from the current buffer's directory
-	local dot_git_path = vim.fn.finddir(".git", ".;")
-	if dot_git_path and dot_git_path ~= "" and vim.fn.isdirectory(dot_git_path) then
-		-- fnamemodify returns the parent directory of the .git path found
-		return vim.fn.fnamemodify(dot_git_path, ":h")
+	-- search upward for either a `.git` directory OR file
+	local dot_git = vim.fn.findfile(".git", ".;")
+	if dot_git == "" then
+		dot_git = vim.fn.finddir(".git", ".;")
 	end
-	return nil -- Return nil if not in a git repo
+
+	if dot_git == "" then
+		return nil -- not inside a git repo
+	end
+
+	-- Resolve to absolute path (полный путь)
+	dot_git = vim.fn.fnamemodify(dot_git, ":p")
+
+	-- Case 1: .git is a directory (normal repo)
+	if vim.fn.isdirectory(dot_git) == 1 then
+		return vim.fn.fnamemodify(dot_git, ":h")
+	end
+
+	-- Case 2: .git is a file (worktree)
+	if vim.fn.filereadable(dot_git) == 1 then
+		-- Root is still the parent directory of this file
+		return vim.fn.fnamemodify(dot_git, ":h")
+	end
+
+	return nil
 end
 
 vim.api.nvim_create_user_command("CdGitRoot", function()
