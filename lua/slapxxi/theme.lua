@@ -16,14 +16,16 @@ local colors = {
 
 	white = "#f6f8fa", -- strings color
 
+	blue_500 = "#1166ff", -- primary accent color
+	blue_400 = "#1ab2ff", -- Secondary accent (e.g., constants)
+	blue_800 = "#0f2958", -- Selection highlights
+	blue_900 = "#122132",
+
 	blue = "#1166ff", -- primary accent color
 	blue_darker = "#0e5ae0", -- primary accent color
 	light_blue = "#1ab2ff", -- Secondary accent (e.g., constants)
 	light_blue_a = "#00a2f5", -- Secondary accent (e.g., constants)
 	pale_blue = "#629aff",
-
-	blue_500 = "#1166ff", -- primary accent color
-	blue_400 = "#1ab2ff", -- Secondary accent (e.g., constants)
 
 	teal = "#42C5D7",
 
@@ -40,8 +42,6 @@ local colors = {
 	green_pastel = "#90EE90",
 
 	copilot = "#434a69",
-	highlight = "#0f2958", -- Selection highlights
-	highlight_debug = "#122132",
 }
 
 -- semantic colors
@@ -73,8 +73,8 @@ local scolors = {
 	builtin = colors.light_blue_a,
 	call = colors.blue_500,
 	string = colors.white,
-	highlight = colors.highlight,
-	highlight_debug = colors.highlight_debug,
+	highlight = colors.blue_800,
+	highlight_debug = colors.blue_900,
 	line = "#151518",
 }
 

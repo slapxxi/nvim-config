@@ -166,17 +166,17 @@ local blueberry = {
 	CopilotSuggestion = { fg = colors.copilot, italic = true },
 	CodeiumSuggestion = { fg = colors.copilot, italic = true },
 
-	HlSearchLens = { bg = colors.highlight, fg = colors.gray },
+	HlSearchLens = { bg = scolors.highlight, fg = colors.gray },
 
 	TelescopeBorder = { fg = scolors.comment },
-	TelescopeSelection = { bg = colors.highlight, fg = colors.white, bold = true },
+	TelescopeSelection = { bg = scolors.highlight, fg = colors.white, bold = true },
 
 	TreesitterContext = { bg = scolors.line, fg = scolors.bg },
 	TreesitterContextLineNumber = { bg = scolors.line, fg = colors.white },
 
 	DapBreakpoint = { fg = colors.red, bg = scolors.bg },
 	DapBreakpointCondition = { fg = colors.yellow, bg = scolors.bg },
-	DapStopped = { bg = colors.highlight_debug },
+	DapStopped = { bg = scolors.highlight_debug },
 	DapStoppedNumHl = { fg = colors.blue, bg = scolors.bg },
 
 	NvimTreeSymlink = { bg = colors.blue, fg = colors.text },
