@@ -12,7 +12,7 @@ local colors = {
 	gray_800 = "#3b3e49", -- punctuation
 	gray_900 = "#252732", -- inactive fg
 	gray_950 = "#101012", -- bg
-	gray_1000 = "#08080a", -- dark bg
+	gray_1000 = "#0a0a0c", -- dark bg
 
 	white = "#f6f8fa", -- strings color
 
