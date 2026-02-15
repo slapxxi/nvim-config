@@ -1,5 +1,6 @@
 local theme = require("slapxxi.theme")
 local colors = theme.colors
+local scolors = theme.scolors
 
 require("lualine").setup({
 	options = {
@@ -7,7 +8,7 @@ require("lualine").setup({
 		-- theme = "auto",
 		-- theme = "iceberg_dark",
 		theme = {
-			normal = { c = { fg = colors.gray, bg = colors.bg } },
+			normal = { c = { fg = scolors.type, bg = scolors.bg } },
 		},
 		component_separators = {},
 		section_separators = {},
@@ -26,7 +27,7 @@ require("lualine").setup({
 		},
 	},
 	sections = {
-		lualine_a = { { "mode", color = { fg = colors.dark_gray } } },
+		lualine_a = { { "mode", color = { fg = scolors.comment } } },
 		lualine_b = { "grapple", "branch", "diff", "diagnostics" },
 		lualine_c = { { "filename", file_status = false, path = 1 } },
 		lualine_x = {
@@ -49,7 +50,7 @@ require("lualine").setup({
 			-- "fileformat",
 			"filetype",
 		},
-		lualine_y = { { "progress", color = { fg = colors.gray } } },
+		lualine_y = { { "progress", color = { fg = scolors.type } } },
 		lualine_z = { "location" },
 	},
 	inactive_sections = {
