@@ -15,7 +15,7 @@ local colors = {
 	punctuation_gray = "#3c3f4a", -- punctuation
 	subtle_gray = "#252732", -- inactive fg
 
-	gray_400 = "#b8c3d7", -- main text
+	gray_300 = "#b8c3d7", -- main text
 	gray_500 = "#848a9e", -- properties
 	gray_600 = "#676d81", -- types
 	gray_700 = "#414450", -- comment
@@ -56,9 +56,9 @@ local colors = {
 -- semantic colors
 local scolors = {
 	bg = colors.gray_950,
-	fg = colors.gray_400,
-	text = colors.gray_400,
-	variable = colors.gray_400,
+	fg = colors.gray_300,
+	text = colors.gray_300,
+	variable = colors.gray_300,
 	type = colors.gray_600,
 	property = colors.gray_500,
 	enumMember = colors.gray_500,
