@@ -3,6 +3,9 @@ require("slapxxi.remap")
 require("slapxxi.set")
 require("slapxxi.snippets")
 
+local theme = require("slapxxi.theme")
+local scolors = theme.scolors
+
 local augroup = vim.api.nvim_create_augroup
 local autocmd = vim.api.nvim_create_autocmd
 
@@ -97,13 +100,13 @@ autocmd("BufLeave", {
 autocmd("CmdlineEnter", {
 	callback = function()
 		-- Change the message area (command line) colors
-		vim.api.nvim_set_hl(0, "MsgArea", { fg = "#f6f8ff" })
+		vim.api.nvim_set_hl(0, "MsgArea", { fg = scolors.string })
 	end,
 })
 
 autocmd("CmdlineLeave", {
 	callback = function()
 		-- Restore your normal MsgArea highlight
-		vim.api.nvim_set_hl(0, "MsgArea", { fg = "#676d8a" })
+		vim.api.nvim_set_hl(0, "MsgArea", { fg = scolors.type })
 	end,
 })

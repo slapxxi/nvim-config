@@ -1,107 +1,24 @@
--- local bg = "#0e0e10"
-local bg = "#101012"
-
-local colors = {
-	bg = bg,
-	bg_dark = "#08080a",
-	sidebar_bg = bg,
-	status_bg = bg,
-	line_bg = "#151518",
-
-	fg = "#b7c2d7", -- main text
-	gray = "#666c80", -- types
-	gray_blue = "#858ba0", -- properties
-	dark_gray = "#3e414c", -- comment
-	punctuation_gray = "#3c3f4a", -- punctuation
-	subtle_gray = "#252732", -- inactive fg
-
-	gray_300 = "#b8c3d7", -- main text
-	gray_500 = "#848a9e", -- properties
-	gray_600 = "#676d81", -- types
-	gray_700 = "#414450", -- comment
-	gray_800 = "#3b3e49", -- punctuation
-	gray_900 = "#252732", -- inactive fg
-	gray_950 = "#101012", -- bg
-
-	blue = "#1166ff", -- primary accent color
-	blue_darker = "#0e5ae0", -- primary accent color
-	light_blue = "#1ab2ff", -- Secondary accent (e.g., constants)
-	light_blue_a = "#00a2f5", -- Secondary accent (e.g., constants)
-	pale_blue = "#629aff",
-
-	blue_500 = "#1166ff", -- primary accent color
-	blue_400 = "#1ab2ff", -- Secondary accent (e.g., constants)
-
-	teal = "#42C5D7",
-
-	yellow = "#f0c82a", -- JSON properties, regex
-	yellow_pastel = "#ffe08c", -- Softer, more pastel yellow
-	yellow_transparent = "#ceac27", -- Softer, more pastel yellow
-
-	orange = "#ff6633",
-
-	red = "#ff3c1a", -- Errors
-	red_pastel = "#ff8a75", -- Softer, more pastel red
-
-	green = "#98ff35",
-	green_pastel = "#90EE90",
-
-	white = "#f6f8fa", -- strings color
-
-	copilot = "#434a69",
-	highlight = "#0f2958", -- Selection highlights
-	highlight_debug = "#122132",
-}
-
--- semantic colors
-local scolors = {
-	bg = colors.gray_950,
-	fg = colors.gray_300,
-	text = colors.gray_300,
-	variable = colors.gray_300,
-	type = colors.gray_600,
-	property = colors.gray_500,
-	enumMember = colors.gray_500,
-	class = colors.gray_500,
-	interface = colors.gray_500,
-	struct = colors.gray_500,
-	event = colors.gray_500,
-	operator = colors.gray_500,
-	fn = colors.gray_500,
-	method = colors.gray_500,
-	macro = colors.gray_500,
-	keyword = colors.blue_500,
-	modifier = colors.gray_500,
-	comment = colors.gray_700,
-	punctuation = colors.gray_800,
-	statement = colors.blue,
-	name = colors.white,
-	number = colors.teal,
-	constant = colors.light_blue,
-	builtin = colors.light_blue_a,
-	call = colors.blue_500,
-	string = colors.white,
-	highlight = colors.highlight,
-	highlight_debug = colors.highlight_debug,
-}
+local theme = require("slapxxi.theme")
+local colors = theme.colors
+local scolors = theme.scolors
 
 local blueberry = {
 	-- Basic UI elements
 	Normal = { fg = scolors.fg, bg = scolors.bg },
 	NormalFloat = { fg = colors.blue_500 }, -- Floating windows
 	WinSeparator = { fg = scolors.comment },
-	Cursor = { fg = colors.bg, bg = colors.blue },
-	CursorLine = { bg = colors.line_bg },
+	Cursor = { fg = scolors.bg, bg = colors.blue },
+	CursorLine = { bg = scolors.line },
 	LineNr = { fg = scolors.comment },
 	CursorLineNr = { fg = colors.blue_500 },
 	Visual = { bg = scolors.highlight },
 	Search = { bg = colors.yellow_transparent, fg = scolors.bg }, -- editor.findMatchBackground
 	IncSearch = { bg = colors.blue_500, fg = scolors.string }, -- editor.findMatchHighlightBackground
-	StatusLine = { fg = scolors.comment, bg = colors.status_bg },
-	StatusLineNC = { fg = colors.subtle_gray, bg = colors.status_bg },
+	StatusLine = { fg = scolors.comment, bg = scolors.bg },
+	StatusLineNC = { fg = colors.subtle_gray, bg = scolors.bg },
 	VertSplit = { fg = colors.gray }, -- sideBar.border
-	Pmenu = { fg = colors.fg, bg = colors.subtle_gray }, -- editorSuggestWidget.background
-	PmenuSel = { bg = colors.yellow, fg = colors.bg }, -- editorSuggestWidget.selectedBackground
+	Pmenu = { fg = scolors.fg, bg = colors.subtle_gray }, -- editorSuggestWidget.background
+	PmenuSel = { bg = colors.yellow, fg = scolors.bg }, -- editorSuggestWidget.selectedBackground
 	WildMenu = { fg = colors.white, bg = colors.blue },
 	SnippetTabStop = { fg = colors.text, bg = colors.yellow },
 	MatchParen = { fg = colors.yellow, bold = true },
@@ -124,11 +41,11 @@ local blueberry = {
 	Todo = { fg = colors.yellow, bg = scolors.bg },
 	Folded = { fg = scolors.comment },
 	SpecialKey = { fg = scolors.comment },
-	NonText = { fg = colors.fg },
+	NonText = { fg = scolors.fg },
 
-	TabLine = { fg = scolors.comment, bg = colors.bg_dark },
-	TabLineFill = { fg = scolors.comment, bg = colors.bg_dark },
-	TabLineSel = { fg = colors.gray, bg = colors.bg },
+	TabLine = { fg = scolors.comment, bg = scolors.backdrop },
+	TabLineFill = { fg = scolors.comment, bg = scolors.backdrop },
+	TabLineSel = { fg = colors.gray, bg = scolors.bg },
 
 	Directory = { fg = colors.blue },
 
@@ -157,17 +74,17 @@ local blueberry = {
 	DiagnosticUnderlineError = { fg = colors.red_pastel, underline = true },
 	DiagnosticUnderlineWarn = { fg = colors.yellow_pastel, undercurl = true },
 
-	LspDiagnosticsDefaultError = { fg = colors.red, bg = colors.bg },
-	LspDiagnosticsDefaultWarning = { fg = colors.yellow, bg = colors.bg },
-	LspDiagnosticsDefaultInformation = { fg = colors.light_blue, bg = colors.bg },
-	LspDiagnosticsDefaultHint = { fg = colors.gray, bg = colors.bg },
+	LspDiagnosticsDefaultError = { fg = colors.red, bg = scolors.bg },
+	LspDiagnosticsDefaultWarning = { fg = colors.yellow, bg = scolors.bg },
+	LspDiagnosticsDefaultInformation = { fg = colors.light_blue, bg = scolors.bg },
+	LspDiagnosticsDefaultHint = { fg = colors.gray, bg = scolors.bg },
 
 	-- LSP floating windows
-	LspFloatWinNormal = { fg = colors.fg, bg = colors.red },
+	LspFloatWinNormal = { fg = scolors.fg, bg = colors.red },
 	LspFloatWinBorder = { fg = scolors.comment, bg = colors.red },
 
 	-- LSP signature help
-	LspSignatureActiveParameter = { fg = colors.white, bg = colors.bg, bold = true },
+	LspSignatureActiveParameter = { fg = colors.white, bg = scolors.bg, bold = true },
 
 	-- CMP Kinds
 	CmpItemKindSnippet = { fg = scolors.number },
@@ -187,7 +104,7 @@ local blueberry = {
 	CmpPmenuSel = { bg = scolors.highlight },
 
 	["@tag"] = { fg = colors.blue },
-	["@tag.builtin"] = { fg = colors.fg },
+	["@tag.builtin"] = { fg = scolors.fg },
 	["@tag.html"] = { fg = colors.light_blue },
 	["@tag.attribute"] = { fg = scolors.property },
 	["@tag.delimiter"] = { fg = scolors.comment },
@@ -239,11 +156,11 @@ local blueberry = {
 	["@lsp.type.parameter.lua"] = { fg = colors.blue },
 
 	-- Markdown
-	RenderMarkdownCode = { bg = colors.line_bg },
-	markdownBold = { fg = colors.fg, bold = true },
+	RenderMarkdownCode = { bg = scolors.line },
+	markdownBold = { fg = scolors.fg, bold = true },
 	markdownItalic = { fg = "#a2bffc", italic = true }, -- markup.changed
 	markdownHeadingDelimiter = { fg = colors.blue },
-	markdownBlockquote = { fg = colors.fg },
+	markdownBlockquote = { fg = scolors.fg },
 
 	-- Plugins
 	CopilotSuggestion = { fg = colors.copilot, italic = true },
@@ -254,13 +171,13 @@ local blueberry = {
 	TelescopeBorder = { fg = scolors.comment },
 	TelescopeSelection = { bg = colors.highlight, fg = colors.white, bold = true },
 
-	TreesitterContext = { bg = colors.line_bg, fg = colors.bg },
-	TreesitterContextLineNumber = { bg = colors.line_bg, fg = colors.white },
+	TreesitterContext = { bg = scolors.line, fg = scolors.bg },
+	TreesitterContextLineNumber = { bg = scolors.line, fg = colors.white },
 
-	DapBreakpoint = { fg = colors.red, bg = colors.bg },
-	DapBreakpointCondition = { fg = colors.yellow, bg = colors.bg },
+	DapBreakpoint = { fg = colors.red, bg = scolors.bg },
+	DapBreakpointCondition = { fg = colors.yellow, bg = scolors.bg },
 	DapStopped = { bg = colors.highlight_debug },
-	DapStoppedNumHl = { fg = colors.blue, bg = colors.bg },
+	DapStoppedNumHl = { fg = colors.blue, bg = scolors.bg },
 
 	NvimTreeSymlink = { bg = colors.blue, fg = colors.text },
 	NvimTreeImageFile = { bg = colors.blue, fg = colors.text },
@@ -278,8 +195,8 @@ local blueberry = {
 	MarkSignNumHl = {},
 
 	-- Terminal colors
-	TermCursor = { fg = colors.bg, bg = colors.blue },
-	terminalBlack = colors.bg,
+	TermCursor = { fg = scolors.bg, bg = colors.blue },
+	terminalBlack = scolors.bg,
 	terminalRed = "#eb4a47",
 	terminalGreen = "#b0f547",
 	terminalYellow = "#ffc82a",
@@ -294,7 +211,7 @@ local blueberry = {
 	terminalBrightBlue = "#1166ff",
 	terminalBrightMagenta = "#C792EA",
 	terminalBrightCyan = "#19c4e6",
-	terminalBrightWhite = "#f5f7ff",
+	terminalBrightWhite = scolors.string,
 }
 
 -- Apply the theme
