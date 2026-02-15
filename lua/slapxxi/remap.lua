@@ -57,7 +57,7 @@ map("n", "<C-e>", "<C-e>j") -- scroll down and center
 map("n", "<C-y>", "<C-y>k") -- scroll up and center
 
 -- Quickfix
-map("n", "<leader>c", "<cmd>copen<CR><c-w>w<cmd>cc<cr>") -- qf prev item
+map("n", "<leader>co", ":copen<CR>")
 
 -- Move Lines
 map("n", "<M-S-j>", ":m .+1<CR>==") -- qf next item
