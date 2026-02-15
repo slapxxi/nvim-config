@@ -1,23 +1,36 @@
-local bg = "#0e0e10"
+-- local bg = "#0e0e10"
+local bg = "#101012"
 
 local colors = {
-	bg = "#0e0e10",
+	bg = bg,
 	bg_dark = "#08080a",
 	sidebar_bg = bg,
 	status_bg = bg,
-	line_bg = "#141418",
+	line_bg = "#151518",
 
-	fg = "#b3bdde", -- main text
-	gray = "#666c88", -- types
-	gray_blue = "#8389aa", -- properties
-	dark_gray = "#3d4054", -- punctuation
-	subtle_gray = "#252734", -- inactive fg
+	fg = "#b7c2d7", -- main text
+	gray = "#666c80", -- types
+	gray_blue = "#858ba0", -- properties
+	dark_gray = "#3e414c", -- comment
+	punctuation_gray = "#3c3f4a", -- punctuation
+	subtle_gray = "#252732", -- inactive fg
+
+	gray_400 = "#b8c3d7", -- main text
+	gray_500 = "#848a9e", -- properties
+	gray_600 = "#676d81", -- types
+	gray_700 = "#414450", -- comment
+	gray_800 = "#3b3e49", -- punctuation
+	gray_900 = "#252732", -- inactive fg
+	gray_950 = "#101012", -- bg
 
 	blue = "#1166ff", -- primary accent color
 	blue_darker = "#0e5ae0", -- primary accent color
 	light_blue = "#1ab2ff", -- Secondary accent (e.g., constants)
 	light_blue_a = "#00a2f5", -- Secondary accent (e.g., constants)
 	pale_blue = "#629aff",
+
+	blue_500 = "#1166ff", -- primary accent color
+	blue_400 = "#1ab2ff", -- Secondary accent (e.g., constants)
 
 	teal = "#42C5D7",
 
@@ -33,7 +46,7 @@ local colors = {
 	green = "#98ff35",
 	green_pastel = "#90EE90",
 
-	white = "#f6f8ff", -- strings color
+	white = "#f6f8fa", -- strings color
 
 	copilot = "#434a69",
 	highlight = "#0f2958", -- Selection highlights
@@ -42,47 +55,49 @@ local colors = {
 
 -- semantic colors
 local scolors = {
-	text = colors.fg,
-	variable = colors.fg,
-	type = colors.gray,
-	property = colors.gray_blue,
-	enumMember = colors.gray_blue,
-	class = colors.gray_blue,
-	interface = colors.gray_blue,
-	struct = colors.gray_blue,
-	event = colors.gray_blue,
-	operator = colors.gray_blue,
-	fn = colors.gray_blue,
-	method = colors.gray_blue,
-	macro = colors.gray_blue,
-	keyword = colors.blue,
-	modifier = colors.gray_blue,
-	comment = colors.dark_gray,
+	bg = colors.gray_950,
+	fg = colors.gray_400,
+	text = colors.gray_400,
+	variable = colors.gray_400,
+	type = colors.gray_600,
+	property = colors.gray_500,
+	enumMember = colors.gray_500,
+	class = colors.gray_500,
+	interface = colors.gray_500,
+	struct = colors.gray_500,
+	event = colors.gray_500,
+	operator = colors.gray_500,
+	fn = colors.gray_500,
+	method = colors.gray_500,
+	macro = colors.gray_500,
+	keyword = colors.blue_500,
+	modifier = colors.gray_500,
+	comment = colors.gray_700,
+	punctuation = colors.gray_800,
 	statement = colors.blue,
 	name = colors.white,
 	number = colors.teal,
 	constant = colors.light_blue,
 	builtin = colors.light_blue_a,
-	call = colors.blue,
+	call = colors.blue_500,
 	string = colors.white,
 	highlight = colors.highlight,
 	highlight_debug = colors.highlight_debug,
-	-- highlight_cmp = "#1e2437",
 }
 
 local blueberry = {
 	-- Basic UI elements
-	Normal = { fg = colors.fg, bg = colors.bg },
-	NormalFloat = { fg = colors.blue }, -- Floating windows
-	WinSeparator = { fg = colors.dark_gray },
+	Normal = { fg = scolors.fg, bg = scolors.bg },
+	NormalFloat = { fg = colors.blue_500 }, -- Floating windows
+	WinSeparator = { fg = scolors.comment },
 	Cursor = { fg = colors.bg, bg = colors.blue },
 	CursorLine = { bg = colors.line_bg },
-	LineNr = { fg = colors.dark_gray },
-	CursorLineNr = { fg = colors.blue },
-	Visual = { bg = colors.highlight },
-	Search = { bg = colors.yellow_transparent, fg = colors.bg }, -- editor.findMatchBackground
-	IncSearch = { bg = colors.blue, fg = colors.white }, -- editor.findMatchHighlightBackground
-	StatusLine = { fg = colors.dark_gray, bg = colors.status_bg },
+	LineNr = { fg = scolors.comment },
+	CursorLineNr = { fg = colors.blue_500 },
+	Visual = { bg = scolors.highlight },
+	Search = { bg = colors.yellow_transparent, fg = scolors.bg }, -- editor.findMatchBackground
+	IncSearch = { bg = colors.blue_500, fg = scolors.string }, -- editor.findMatchHighlightBackground
+	StatusLine = { fg = scolors.comment, bg = colors.status_bg },
 	StatusLineNC = { fg = colors.subtle_gray, bg = colors.status_bg },
 	VertSplit = { fg = colors.gray }, -- sideBar.border
 	Pmenu = { fg = colors.fg, bg = colors.subtle_gray }, -- editorSuggestWidget.background
@@ -104,38 +119,28 @@ local blueberry = {
 	Type = { fg = colors.gray }, -- Types
 	PreProc = { fg = colors.blue }, -- Preprocessor (e.g., storage.type)
 	Special = { fg = scolors.constant }, -- Embedded, constants
-	Delimiter = { fg = colors.dark_gray }, -- Embedded, constants
+	Delimiter = { fg = scolors.punctuation }, -- Embedded, constants
 	Error = { fg = colors.red }, -- Errors
-	Todo = { fg = colors.yellow, bg = colors.bg },
-	Folded = { fg = colors.dark_gray },
-	SpecialKey = { fg = colors.dark_gray },
+	Todo = { fg = colors.yellow, bg = scolors.bg },
+	Folded = { fg = scolors.comment },
+	SpecialKey = { fg = scolors.comment },
 	NonText = { fg = colors.fg },
 
-	TabLine = { fg = colors.dark_gray, bg = colors.bg_dark },
-	TabLineFill = { fg = colors.dark_gray, bg = colors.bg_dark },
+	TabLine = { fg = scolors.comment, bg = colors.bg_dark },
+	TabLineFill = { fg = scolors.comment, bg = colors.bg_dark },
 	TabLineSel = { fg = colors.gray, bg = colors.bg },
 
 	Directory = { fg = colors.blue },
 
 	qfFileName = { fg = colors.gray },
-	qfText = { fg = colors.dark_gray },
+	qfText = { fg = scolors.comment },
 	QuickFixLine = { fg = colors.blue },
 
-	-- CmpSel = { bg = colors.orange },
-	-- CmpItemAbbr = { bg = colors.yellow },
-	-- CmpItemAbbrMatch = { bg = colors.yellow, fg = colors.white },
-	-- CmpItemKind = { bg = colors.yellow },
-	-- CmpItemMenu = { bg = colors.yellow },
-
 	-- Diff
-	DiffAdd = { bg = colors.bg, fg = colors.green_pastel },
-	DiffDelete = { bg = colors.bg, fg = colors.red_pastel },
-	DiffChange = { bg = colors.bg, fg = colors.yellow_pastel },
-	DiffText = { bg = colors.bg, fg = colors.fg },
-	-- diffEditor = { bg = "#0e0e12" }, -- diffEditor.background
-	-- diffAdded = { fg = colors.green_pastel },
-	-- diffRemoved = { fg = colors.red_pastel },
-	-- diffRemoved = { fg = colors.red_pastel },
+	DiffAdd = { bg = scolors.bg, fg = colors.green_pastel },
+	DiffDelete = { bg = scolors.bg, fg = colors.red_pastel },
+	DiffChange = { bg = scolors.bg, fg = colors.yellow_pastel },
+	DiffText = { bg = scolors.bg, fg = scolors.fg },
 
 	-- Git
 	GitSignsAdd = { fg = "#addb67" }, -- gitDecoration.untrackedResourceForeground
@@ -145,13 +150,9 @@ local blueberry = {
 	FugitiveBlameTime = { fg = colors.gray },
 
 	-- LSP
-	LspReferenceText = { fg = colors.bg, bg = colors.pale_blue },
+	LspReferenceText = { fg = scolors.bg, bg = colors.pale_blue },
 
 	-- LSP diagnostics
-	-- DiagnosticsError = { fg = colors.red },
-	-- DiagnosticsWarn = { fg = colors.red },
-	-- DiagnosticsInfo = { fg = colors.red },
-	-- DiagnosticsHint = { fg = colors.red },
 	DiagnosticUnnecessary = { fg = colors.gray, undercurl = true },
 	DiagnosticUnderlineError = { fg = colors.red_pastel, underline = true },
 	DiagnosticUnderlineWarn = { fg = colors.yellow_pastel, undercurl = true },
@@ -163,7 +164,7 @@ local blueberry = {
 
 	-- LSP floating windows
 	LspFloatWinNormal = { fg = colors.fg, bg = colors.red },
-	LspFloatWinBorder = { fg = colors.dark_gray, bg = colors.red },
+	LspFloatWinBorder = { fg = scolors.comment, bg = colors.red },
 
 	-- LSP signature help
 	LspSignatureActiveParameter = { fg = colors.white, bg = colors.bg, bold = true },
@@ -189,7 +190,7 @@ local blueberry = {
 	["@tag.builtin"] = { fg = colors.fg },
 	["@tag.html"] = { fg = colors.light_blue },
 	["@tag.attribute"] = { fg = scolors.property },
-	["@tag.delimiter"] = { fg = colors.dark_gray },
+	["@tag.delimiter"] = { fg = scolors.comment },
 
 	["@variable"] = { fg = scolors.text },
 	["@variable.member"] = { fg = scolors.property },
@@ -232,7 +233,7 @@ local blueberry = {
 
 	-- JavaScript
 	["@variable.member.javascript"] = { fg = colors.gray_blue },
-	javascriptParens = colors.dark_gray,
+	javascriptParens = scolors.comment,
 
 	-- Lua
 	["@lsp.type.parameter.lua"] = { fg = colors.blue },
@@ -250,7 +251,7 @@ local blueberry = {
 
 	HlSearchLens = { bg = colors.highlight, fg = colors.gray },
 
-	TelescopeBorder = { fg = colors.dark_gray },
+	TelescopeBorder = { fg = scolors.comment },
 	TelescopeSelection = { bg = colors.highlight, fg = colors.white, bold = true },
 
 	TreesitterContext = { bg = colors.line_bg, fg = colors.bg },
@@ -265,9 +266,9 @@ local blueberry = {
 	NvimTreeImageFile = { bg = colors.blue, fg = colors.text },
 	NvimTreeExecFile = { bg = colors.blue, fg = colors.text },
 	NvimTreeRootFolder = { fg = colors.gray },
-	NvimTreeIndentMarker = { fg = colors.dark_gray },
+	NvimTreeIndentMarker = { fg = scolors.comment },
 	NvimTreeFolderName = { fg = colors.gray },
-	NvimTreeFolderIcon = { fg = colors.dark_gray },
+	NvimTreeFolderIcon = { fg = scolors.comment },
 	NvimTreeOpenedFolderIcon = { fg = colors.white },
 	NvimTreeOpenedFolderName = { fg = colors.white },
 	NvimTreeGitDirtyIcon = { fg = colors.yellow },
@@ -278,7 +279,7 @@ local blueberry = {
 
 	-- Terminal colors
 	TermCursor = { fg = colors.bg, bg = colors.blue },
-	terminalBlack = "#0e0e12",
+	terminalBlack = colors.bg,
 	terminalRed = "#eb4a47",
 	terminalGreen = "#b0f547",
 	terminalYellow = "#ffc82a",
