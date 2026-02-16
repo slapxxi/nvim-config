@@ -11,12 +11,23 @@ ls.add_snippets("go", {
 	}),
 })
 
-local cn = {
+local jsSnippets = {
+	s("clog", {
+		t({ "console.log(" }),
+		i(1),
+		t({ ")" }),
+	}),
+}
+
+ls.add_snippets("javascript", jsSnippets)
+ls.add_snippets("typescript", jsSnippets)
+
+local reactSnippets = {
 	s("cn", {
 		t({ "className=" }),
 		i(1),
 	}),
 }
 
-ls.add_snippets("javascriptreact", cn)
-ls.add_snippets("typescriptreact", cn)
+ls.add_snippets("javascriptreact", reactSnippets)
+ls.add_snippets("typescriptreact", reactSnippets)
