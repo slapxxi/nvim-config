@@ -96,10 +96,10 @@ map("x", "<leader>p", ":diffput<CR>", { silent = true })
 map("x", "<leader>o", ":diffget<CR>", { silent = true })
 
 -- CD
-map("n", "<leader>`", ":lcd %:p:h<CR>")
-map("n", "<leader>_", ":lcd %:p:h | lcd ..<CR>")
+map("n", "<leader>`", ":lcd %:p:h<CR>", { desc = "lcd to current directory" })
+map("n", "<leader>_", ":lcd %:p:h | lcd ..<CR>", { desc = "lcd to parent directory" })
 map("n", "<leader>-", ":lcd-<CR>", { desc = "lcd to previous directory" })
 
-map("n", "<leader><leader>`", ":cd %:p:h<CR>")
-map("n", "<leader><leader>_", ":cd %:p:h | cd ..<CR>")
+map("n", "<leader><leader>`", ":cd %:p:h<CR>", { desc = "cd to current directory" })
+map("n", "<leader><leader>_", ":cd %:p:h | cd ..<CR>", { desc = "cd to parent directory" })
 map("n", "<leader><leader>-", ":cd-<CR>", { desc = "cd to previous directory" })
