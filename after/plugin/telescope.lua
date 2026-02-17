@@ -42,6 +42,7 @@ vim.keymap.set("n", "<leader>fgg", builtin.git_files)
 vim.keymap.set("n", "<leader>fgs", builtin.git_status, {})
 vim.keymap.set("n", "<leader>fgc", builtin.git_bcommits, {})
 vim.keymap.set("n", "<leader>fgf", builtin.git_files)
+vim.keymap.set("n", "<leader>fga", ":AdvancedGitSearch<CR>")
 
 require("telescope").load_extension("fzf")
 
@@ -60,7 +61,7 @@ require("telescope").setup({
 			hidden = true, --[[ theme = "ivy" ]]
 		},
 	},
-	extensions = { fzf = {} },
+	extensions = { fzf = {}, advanced_git_search = {} },
 	defaults = {
 		sorting_strategy = "ascending", -- display results top->bottom
 		layout_config = {
@@ -78,6 +79,8 @@ require("telescope").setup({
 		},
 	},
 })
+
+require("telescope").load_extension("advanced_git_search")
 
 local function multigrep(opts)
 	opts = opts or {}

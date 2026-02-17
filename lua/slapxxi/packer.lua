@@ -70,7 +70,7 @@ return require("packer").startup(function(use)
 	-- Git
 	use({ "tpope/vim-fugitive" })
 	use({ "ThePrimeagen/git-worktree.nvim" })
-	use({ "sindrets/diffview.nvim" })
+	use({ "aaronhallaert/advanced-git-search.nvim" })
 
 	-- tpope
 	use({ "tpope/vim-rhubarb" })
