@@ -5,7 +5,7 @@ local colors = {
 	punctuation_gray = "#3c3f4a", -- punctuation
 	subtle_gray = "#252732", -- inactive fg
 
-	gray_300 = "#b8c3d7", -- main text
+	gray_300 = "#b7c2d7", -- main text
 	gray_500 = "#848a9f", -- properties
 	gray_600 = "#676d81", -- types
 	gray_700 = "#414450", -- comment
