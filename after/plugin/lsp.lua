@@ -46,27 +46,80 @@ autocmd("LspAttach", {
 	callback = function(event)
 		local opts = { buffer = event.buf }
 
-		vim.keymap.set("n", "<F2>", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
-		vim.keymap.set({ "n", "x" }, "<F3>", "<cmd>lua vim.lsp.buf.format({async = true})<cr>", opts)
+		vim.keymap.set("n", "<F2>", "<cmd>lua vim.lsp.buf.rename()<cr>", { buffer = event.buf, desc = "LSP Rename" })
 
-		vim.keymap.set("n", "K", "<cmd>lua vim.lsp.buf.hover({ border='rounded' })<cr>", opts)
-		vim.keymap.set("n", "gd", "<cmd>lua vim.lsp.buf.definition()<cr>", opts)
-		vim.keymap.set("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<cr>", opts)
-		vim.keymap.set("n", "go", "<cmd>lua vim.lsp.buf.type_definition()<cr>", opts)
-		vim.keymap.set("n", "grr", "<cmd>lua vim.lsp.buf.references()<cr>", opts)
-		vim.keymap.set("n", "gs", "<cmd>lua vim.lsp.buf.signature_help()<cr>", opts)
-		vim.keymap.set("n", "gn", "<cmd>lua vim.diagnostic.goto_next({ float = { border = 'rounded' } })<cr>", opts)
+		vim.keymap.set(
+			{ "n", "x" },
+			"<F3>",
+			"<cmd>lua vim.lsp.buf.format({async = true})<cr>",
+			{ buffer = event.buf, desc = "LSP Format" }
+		)
 
-		vim.keymap.set("n", "gci", vim.lsp.buf.incoming_calls, opts)
-		vim.keymap.set("n", "gco", vim.lsp.buf.outgoing_calls, opts)
+		vim.keymap.set(
+			"n",
+			"K",
+			"<cmd>lua vim.lsp.buf.hover({ border='rounded' })<cr>",
+			{ buffer = event.buf, desc = "LSP Hover" }
+		)
+
+		vim.keymap.set(
+			"n",
+			"gd",
+			"<cmd>lua vim.lsp.buf.definition()<cr>",
+			{ buffer = event.buf, desc = "Go to definition" }
+		)
+
+		vim.keymap.set(
+			"n",
+			"gD",
+			"<cmd>lua vim.lsp.buf.declaration()<cr>",
+			{ buffer = event.buf, desc = "Go to declaration" }
+		)
+
+		vim.keymap.set(
+			"n",
+			"go",
+			"<cmd>lua vim.lsp.buf.type_definition()<cr>",
+			{ buffer = event.buf, desc = "Go to type definition" }
+		)
+
+		vim.keymap.set(
+			"n",
+			"grr",
+			"<cmd>lua vim.lsp.buf.references()<cr>",
+			{ buffer = event.buf, desc = "Go to references" }
+		)
+
+		vim.keymap.set(
+			"n",
+			"gs",
+			"<cmd>lua vim.lsp.buf.signature_help()<cr>",
+			{ buffer = event.buf, desc = "Signature help" }
+		)
+
+		vim.keymap.set(
+			"n",
+			"gn",
+			"<cmd>lua vim.diagnostic.goto_next({ float = { border = 'rounded' } })<cr>",
+			{ buffer = event.buf, desc = "Next diagnostic" }
+		)
+
+		vim.keymap.set("n", "gci", vim.lsp.buf.incoming_calls, { buffer = event.buf, desc = "LSP Incoming calls" })
+		vim.keymap.set("n", "gco", vim.lsp.buf.outgoing_calls, { buffer = event.buf, desc = "LSP Outgoing calls" })
 
 		vim.keymap.set(
 			"n",
 			"Y",
 			"<cmd>lua vim.diagnostic.open_float(nil, {focus = false, border = 'rounded'})<cr>",
-			opts
+			{ buffer = event.buf, desc = "LSP Diagnostics" }
 		)
-		vim.keymap.set({ "n", "v" }, "<leader>H", "<cmd>lua vim.lsp.buf.code_action()<cr>", opts)
+
+		vim.keymap.set(
+			{ "n", "v" },
+			"<leader>H",
+			"<cmd>lua vim.lsp.buf.code_action()<cr>",
+			{ buffer = event.buf, desc = "LSP Code actions" }
+		)
 	end,
 })
 
