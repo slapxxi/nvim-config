@@ -11,15 +11,15 @@ if true then
 	remap("n", "<c-;>", "<cmd>Grapple select index=5<CR>")
 	remap("n", "<c-'>", "<cmd>Grapple select index=6<CR>")
 
-	remap("n", "<m-j>", "<cmd>Grapple select index=1 scope=git<CR>")
-	remap("n", "<m-k>", "<cmd>Grapple select index=2 scope=git<CR>")
-	remap("n", "<m-l>", "<cmd>Grapple select index=3 scope=git<CR>")
-	remap("n", "<m-h>", "<cmd>Grapple select index=4 scope=git<CR>")
-	remap("n", "<m-;>", "<cmd>Grapple select index=5 scope=git<CR>")
-	remap("n", "<m-'>", "<cmd>Grapple select index=6 scope=git<CR>")
+	-- remap("n", "<m-j>", "<cmd>Grapple select index=1 scope=git<CR>")
+	-- remap("n", "<m-k>", "<cmd>Grapple select index=2 scope=git<CR>")
+	-- remap("n", "<m-l>", "<cmd>Grapple select index=3 scope=git<CR>")
+	-- remap("n", "<m-h>", "<cmd>Grapple select index=4 scope=git<CR>")
+	-- remap("n", "<m-;>", "<cmd>Grapple select index=5 scope=git<CR>")
+	-- remap("n", "<m-'>", "<cmd>Grapple select index=6 scope=git<CR>")
 
-	remap("n", "<s-m-h>", "<cmd>Grapple cycle_tags prev<CR>")
-	remap("n", "<s-m-l>", "<cmd>Grapple cycle_tags next<CR>")
+	-- remap("n", "<s-m-h>", "<cmd>Grapple cycle_tags prev<CR>")
+	-- remap("n", "<s-m-l>", "<cmd>Grapple cycle_tags next<CR>")
 
 	require("telescope").load_extension("grapple")
 	remap("n", "<leader>fh", "<cmd>Telescope grapple tags<CR>")

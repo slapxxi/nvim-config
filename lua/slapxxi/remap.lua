@@ -103,3 +103,19 @@ map("n", "<leader>-", ":lcd-<CR>", { desc = "lcd to previous directory" })
 map("n", "<leader><leader>`", ":cd %:p:h<CR>", { desc = "cd to current directory" })
 map("n", "<leader><leader>_", ":cd %:p:h | cd ..<CR>", { desc = "cd to parent directory" })
 map("n", "<leader><leader>-", ":cd-<CR>", { desc = "cd to previous directory" })
+
+-- Windows
+map("n", "<m-j>", "j")
+map("n", "<m-l>", "l")
+map("n", "<m-k>", "k")
+map("n", "<m-h>", "h")
+
+map("n", "<m-w>", "w")
+map("n", "<m-t>", "t")
+map("n", "<m-b>", "b")
+
+map("n", "<m-c>", "c")
+map("n", "<m-o>", "o")
+
+map("n", "<m-v>", "v")
+map("n", "<m-s>", "s")
