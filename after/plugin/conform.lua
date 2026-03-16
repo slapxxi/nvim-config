@@ -48,6 +48,9 @@ require("conform").setup({
 	},
 })
 
+vim.keymap.set("n", "<leader>F", function()
+	require("conform").format({ formatters = { "prettier" } })
+end, { desc = "[F]ormat" })
 vim.api.nvim_create_user_command("FormatDisable", function(args)
 	if args.bang then
 		-- FormatDisable! will disable formatting just for this buffer
