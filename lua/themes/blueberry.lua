@@ -142,6 +142,9 @@ local blueberry = {
 	-- CSS
 	["@type.css"] = { fg = colors.blue },
 	["@variable.css"] = { fg = colors.light_blue },
+	["@type.scss"] = { fg = scolors.name },
+	["@property.scss"] = { fg = scolors.property },
+	["@variable.scss"] = { fg = scolors.property },
 
 	-- JSON
 	["@property.json"] = { fg = colors.yellow },

@@ -14,7 +14,7 @@ local colors = {
 	gray_950 = "#101012", -- bg
 	gray_1000 = "#0a0a0c", -- dark bg
 
-	white = "#f6f8fa", -- strings color
+	white = "#fdfdf6", -- strings color
 
 	blue_500 = "#1166ff", -- primary accent color
 	blue_400 = "#1ab2ff", -- Secondary accent (e.g., constants)
