@@ -98,14 +98,6 @@ return require("packer").startup(function(use)
 		end,
 	})
 	use({ "kevinhwang91/nvim-hlslens" })
-	use({
-		"cbochs/portal.nvim",
-		-- Optional dependencies
-		requires = {
-			"cbochs/grapple.nvim",
-			"ThePrimeagen/harpoon",
-		},
-	})
 
 	-- Appearance
 	use({
