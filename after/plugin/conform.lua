@@ -36,8 +36,8 @@ require("conform").setup({
 		-- Conform will run the first available formatter
 		javascript = { "eslint_d", "prettierd", "prettier" },
 		typescript = { "eslint_d", "prettierd", "prettier", stop_after_first = true },
-		typescriptreact = { "eslint_d", "prettierd", "prettier", stop_after_first = true },
-		javascriptreact = { "eslint_d", "prettierd", "prettier", stop_after_first = true },
+		typescriptreact = { "prettierd", "prettier", stop_after_first = true },
+		javascriptreact = { "prettierd", "prettier", stop_after_first = true },
 		json = { "prettier" },
 		jsonc = { "prettier" },
 		html = { "prettier" },
@@ -49,8 +49,9 @@ require("conform").setup({
 })
 
 vim.keymap.set("n", "<leader>F", function()
-	require("conform").format({ formatters = { "prettier" } })
+	require("conform").format({ formatters = { "eslint_d" } })
 end, { desc = "[F]ormat" })
+
 vim.api.nvim_create_user_command("FormatDisable", function(args)
 	if args.bang then
 		-- FormatDisable! will disable formatting just for this buffer
