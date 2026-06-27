@@ -23,6 +23,7 @@ local blueberry = {
 	SnippetTabStop = { fg = colors.text, bg = colors.yellow },
 	MatchParen = { fg = colors.yellow, bold = true },
 	MsgArea = { fg = colors.gray },
+	Underlined = {},
 
 	-- Syntax highlighting { mapped from tokenColors }
 	Statement = { fg = scolors.statement },
