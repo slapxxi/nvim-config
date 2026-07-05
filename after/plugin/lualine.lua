@@ -28,7 +28,21 @@ require("lualine").setup({
 	},
 	sections = {
 		lualine_a = { { "mode", color = { fg = scolors.comment } } },
-		lualine_b = { "grapple", "branch", "diff", "diagnostics" },
+		lualine_b = {
+			"grapple",
+			"branch",
+			"diff",
+			{
+				"diagnostics",
+				diagnostics_color = {
+					-- Adjust the table properties below to match your theme's exact color keys
+					error = { fg = colors.red_pastel },
+					warn = { fg = colors.yellow_pastel },
+					info = { fg = colors.blue },
+					hint = { fg = colors.green },
+				},
+			},
+		},
 		lualine_c = { { "filename", file_status = false, path = 1 } },
 		lualine_x = {
 			{

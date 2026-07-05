@@ -46,9 +46,6 @@ vim.keymap.set("n", "<leader>fga", ":AdvancedGitSearch<CR>")
 
 require("telescope").load_extension("fzf")
 
-require("telescope").load_extension("frecency")
-vim.keymap.set("n", "<leader>ffre", ":Telescope frecency workspace=CWD<CR>", {})
-
 require("telescope").load_extension("dap")
 vim.keymap.set("n", "<leader>fdv", ":Telescope dap variables<CR>", {})
 vim.keymap.set("n", "<leader>fdf", ":Telescope dap frames<CR>", {})

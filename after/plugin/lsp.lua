@@ -134,10 +134,15 @@ lspconfig.gopls.setup({
 	capabilities = capabilities,
 })
 
-lspconfig.eslint.setup({
-	on_attach = on_attach,
-	capabilities = capabilities,
-})
+-- lspconfig.eslint.setup({
+-- 	on_attach = on_attach,
+-- 	capabilities = capabilities,
+-- })
+
+-- lspconfig.oxlint.setup({
+-- 	on_attach = on_attach,
+-- 	capabilities = capabilities,
+-- })
 
 lspconfig.lua_ls.setup({})
 

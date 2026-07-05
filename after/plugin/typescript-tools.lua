@@ -6,6 +6,11 @@ if true then
 	require("typescript-tools").setup({
 		on_attach = on_attach,
 		settings = {
+			tsserver_file_preferences = {
+				importModuleSpecifierPreference = "non-relative",
+				importModuleSpecifierEnding = "minimal",
+				includeCompletionsForImportStatements = true,
+			},
 			-- array of strings("fix_all"|"add_missing_imports"|"remove_unused"|
 			-- "remove_unused_imports"|"organize_imports") -- or string "all"
 			-- to include all supported code actions

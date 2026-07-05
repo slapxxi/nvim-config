@@ -24,8 +24,9 @@ ls.add_snippets("typescript", jsSnippets)
 
 local reactSnippets = {
 	s("cn", {
-		t({ "className=" }),
+		t({ 'className="' }),
 		i(1),
+		t({ '"' }),
 	}),
 }
 

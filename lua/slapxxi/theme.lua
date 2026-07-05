@@ -35,8 +35,9 @@ local colors = {
 
 	orange = "#ff6633",
 
-	red = "#ff3c1a", -- Errors
-	red_pastel = "#ff8a75", -- Softer, more pastel red
+	red = "#fb2c36",
+	red_pastel = "#f87171",
+	red_vscode = "#f14c4c",
 
 	green = "#98ff35",
 	green_pastel = "#90EE90",

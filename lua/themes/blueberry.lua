@@ -38,7 +38,7 @@ local blueberry = {
 	PreProc = { fg = colors.blue }, -- Preprocessor (e.g., storage.type)
 	Special = { fg = scolors.constant }, -- Embedded, constants
 	Delimiter = { fg = scolors.punctuation }, -- Embedded, constants
-	Error = { fg = colors.red }, -- Errors
+	Error = { fg = colors.red_pastel }, -- Errors
 	Todo = { fg = colors.yellow, bg = scolors.bg },
 	Folded = { fg = scolors.comment },
 	SpecialKey = { fg = scolors.comment },
@@ -76,8 +76,11 @@ local blueberry = {
 	DiagnosticUnnecessary = { fg = colors.gray, undercurl = true },
 	DiagnosticUnderlineError = { fg = colors.red_pastel, underline = true },
 	DiagnosticUnderlineWarn = { fg = colors.yellow_pastel, undercurl = true },
+	DiagnosticSignError = { fg = colors.red_pastel },
+	DiagnosticSignWarn = { fg = colors.yellow_pastel },
+	DiagnosticFloatingError = { fg = colors.red_pastel },
 
-	LspDiagnosticsDefaultError = { fg = colors.red, bg = scolors.bg },
+	LspDiagnosticsDefaultError = { fg = colors.red_pastel, bg = scolors.bg },
 	LspDiagnosticsDefaultWarning = { fg = colors.yellow, bg = scolors.bg },
 	LspDiagnosticsDefaultInformation = { fg = colors.light_blue, bg = scolors.bg },
 	LspDiagnosticsDefaultHint = { fg = colors.gray, bg = scolors.bg },
