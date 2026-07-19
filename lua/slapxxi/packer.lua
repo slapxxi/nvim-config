@@ -98,6 +98,9 @@ return require("packer").startup(function(use)
 	})
 	use({ "kevinhwang91/nvim-hlslens" })
 
+	-- Tabs
+	use({ "nanozuki/tabby.nvim" })
+
 	-- Appearance
 	use({
 		"nvim-lualine/lualine.nvim",
