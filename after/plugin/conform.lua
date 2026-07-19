@@ -4,7 +4,7 @@ require("conform").setup({
 		if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
 			return
 		end
-		return { timeout_ms = 500, lsp_format = "fallback" }
+		return { timeout_ms = 800, lsp_format = "fallback" }
 	end,
 
 	formatters = {
@@ -38,6 +38,7 @@ require("conform").setup({
 		typescript = { "prettierd", "prettier", stop_after_first = true },
 		typescriptreact = { "prettierd", "prettier", stop_after_first = true },
 		javascriptreact = { "prettierd", "prettier", stop_after_first = true },
+		vue = { "prettierd", "prettier", stop_after_first = true },
 		json = { "prettier" },
 		jsonc = { "prettier" },
 		html = { "prettier" },
