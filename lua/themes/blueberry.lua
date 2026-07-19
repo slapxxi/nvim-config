@@ -32,7 +32,7 @@ local blueberry = {
 	Constant = { fg = scolors.constant }, -- Constants
 	String = { fg = scolors.string }, -- Strings
 	Identifier = { fg = colors.white }, -- Variable names, function names
-	Function = { fg = colors.white }, -- Function calls
+	Function = { fg = colors.white },
 	Keyword = { fg = colors.blue }, -- Keywords
 	Operator = { fg = colors.blue }, -- Punctuation, operators
 	Type = { fg = colors.gray }, -- Types
@@ -113,7 +113,7 @@ local blueberry = {
 	["@function.call"] = { fg = scolors.call },
 
 	["@tag"] = { fg = colors.blue },
-	["@tag.builtin"] = { fg = scolors.fg },
+	["@tag.builtin"] = { fg = scolors.property },
 	["@tag.html"] = { fg = colors.light_blue },
 	["@tag.attribute"] = { fg = scolors.property },
 	["@tag.delimiter"] = { fg = scolors.comment },
@@ -129,6 +129,7 @@ local blueberry = {
 
 	["@type.definition"] = { fg = scolors.name },
 
+	["@lsp.type.component"] = { fg = scolors.keyword },
 	["@lsp.type.property"] = { fg = scolors.property },
 	["@lsp.type.class"] = { fg = scolors.keyword },
 	["@lsp.mod.declaration"] = { fg = scolors.name },
@@ -161,12 +162,18 @@ local blueberry = {
 	-- JSX
 	["@_jsx_attribute"] = { fg = colors.light_blue },
 
+	-- Vue
+	["@tag.vue"] = { fg = scolors.property },
+	["@none.vue"] = { fg = scolors.string },
+	["@variable.member.vue"] = { fg = scolors.builtin },
+
 	-- JavaScript
 	["@variable.member.javascript"] = { fg = colors.gray_blue },
 	javascriptParens = scolors.comment,
 
 	-- Lua
 	["@lsp.type.parameter.lua"] = { fg = colors.blue },
+	["@lsp.type.function.lua"] = {},
 
 	-- Markdown
 	RenderMarkdownCode = { bg = scolors.line },
@@ -257,6 +264,8 @@ local function apply_theme()
 	vim.g.terminal_color_14 = blueberry.terminalBrightCyan
 	vim.g.terminal_color_15 = blueberry.terminalBrightWhite
 end
+
+-- vim.highlight.priorities.semantic_tokens = 75
 
 apply_theme()
 
