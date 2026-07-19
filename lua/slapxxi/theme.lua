@@ -39,6 +39,8 @@ local colors = {
 	red_pastel = "#f87171",
 	red_vscode = "#f14c4c",
 
+	pink = "#f8c1c1",
+
 	green = "#98ff35",
 	green_pastel = "#90EE90",
 
@@ -77,6 +79,9 @@ local scolors = {
 	highlight = colors.blue_800,
 	highlight_debug = colors.blue_900,
 	line = "#151518",
+	error = colors.pink,
+	warn = colors.yellow_pastel,
+	success = colors.green,
 }
 
 local M = {}

@@ -39,7 +39,7 @@ local blueberry = {
 	PreProc = { fg = colors.blue }, -- Preprocessor (e.g., storage.type)
 	Special = { fg = scolors.constant }, -- Embedded, constants
 	Delimiter = { fg = scolors.punctuation }, -- Embedded, constants
-	Error = { fg = colors.red_pastel }, -- Errors
+	Error = { fg = scolors.error },
 	Todo = { fg = colors.yellow, bg = scolors.bg },
 	Folded = { fg = scolors.comment },
 	SpecialKey = { fg = scolors.comment },
@@ -57,9 +57,9 @@ local blueberry = {
 
 	-- Diff
 	diffAdded = { bg = scolors.bg, fg = colors.green_pastel },
-	diffRemoved = { bg = scolors.bg, fg = colors.red_pastel },
+	diffRemoved = { bg = scolors.bg, fg = scolors.error },
 	DiffAdd = { bg = scolors.bg, fg = colors.green_pastel },
-	DiffDelete = { bg = scolors.bg, fg = colors.red_pastel },
+	DiffDelete = { bg = scolors.bg, fg = scolors.error },
 	DiffChange = { bg = scolors.bg, fg = colors.yellow_pastel },
 	DiffText = { bg = scolors.bg, fg = scolors.fg },
 
@@ -75,20 +75,20 @@ local blueberry = {
 
 	-- LSP diagnostics
 	DiagnosticUnnecessary = { fg = colors.gray, undercurl = true },
-	DiagnosticUnderlineError = { fg = colors.red_pastel, underline = true },
+	DiagnosticUnderlineError = { fg = scolors.error, underline = true },
 	DiagnosticUnderlineWarn = { fg = colors.yellow_pastel, undercurl = true },
-	DiagnosticSignError = { fg = colors.red_pastel },
+	DiagnosticSignError = { fg = scolors.error },
 	DiagnosticSignWarn = { fg = colors.yellow_pastel },
-	DiagnosticFloatingError = { fg = colors.red_pastel },
+	DiagnosticFloatingError = { fg = scolors.error },
 
-	LspDiagnosticsDefaultError = { fg = colors.red_pastel, bg = scolors.bg },
+	LspDiagnosticsDefaultError = { fg = scolors.error, bg = scolors.bg },
 	LspDiagnosticsDefaultWarning = { fg = colors.yellow, bg = scolors.bg },
 	LspDiagnosticsDefaultInformation = { fg = colors.light_blue, bg = scolors.bg },
 	LspDiagnosticsDefaultHint = { fg = colors.gray, bg = scolors.bg },
 
 	-- LSP floating windows
-	LspFloatWinNormal = { fg = scolors.fg, bg = colors.red },
-	LspFloatWinBorder = { fg = scolors.comment, bg = colors.red },
+	LspFloatWinNormal = { fg = scolors.fg, bg = scolors.error },
+	LspFloatWinBorder = { fg = scolors.comment, bg = scolors.error },
 
 	-- LSP signature help
 	LspSignatureActiveParameter = { fg = colors.white, bg = scolors.bg, bold = true },

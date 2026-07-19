@@ -36,8 +36,8 @@ require("lualine").setup({
 				"diagnostics",
 				diagnostics_color = {
 					-- Adjust the table properties below to match your theme's exact color keys
-					error = { fg = colors.red_pastel },
-					warn = { fg = colors.yellow_pastel },
+					error = { fg = scolors.error },
+					warn = { fg = colors.warn },
 					info = { fg = colors.blue },
 					hint = { fg = colors.green },
 				},
