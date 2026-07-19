@@ -123,65 +123,95 @@ autocmd("LspAttach", {
 	end,
 })
 
--- lspconfig.ts_ls.setup({
--- 	on_attach = on_attach,
--- 	filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "typescript.tsx", "json", "jsonc" },
--- 	cmd = { "typescript-language-server", "--stdio" },
--- })
+local caps = require("cmp_nvim_lsp").default_capabilities()
 
-lspconfig.gopls.setup({
+vim.lsp.config("ts_ls", {
+	capabilities = caps,
 	on_attach = on_attach,
-	capabilities = capabilities,
-})
-
--- lspconfig.eslint.setup({
--- 	on_attach = on_attach,
--- 	capabilities = capabilities,
--- })
-
--- lspconfig.oxlint.setup({
--- 	on_attach = on_attach,
--- 	capabilities = capabilities,
--- })
-
-lspconfig.lua_ls.setup({})
-
-lspconfig.html.setup({
-	capabilities = capabilities,
-})
-
-lspconfig.cssls.setup({
-	capabilities = capabilities,
-})
-lspconfig.css_variables.setup({})
-lspconfig.cssmodules_ls.setup({})
-
-lspconfig.tailwindcss.setup({})
-
-lspconfig.emmet_language_server.setup({
 	filetypes = {
-		"html",
-		"eruby",
 		"javascript",
 		"javascriptreact",
+		"typescript",
 		"typescriptreact",
-		"css",
-		"less",
-		"sass",
-		"scss",
-		"pug",
+		"typescript.tsx",
+		"json",
+		"jsonc",
+		"vue",
 	},
-	-- Read more about this options in the [vscode docs](https://code.visualstudio.com/docs/editor/emmet#_emmet-configuration).
-	-- **Note:** only the options listed in the table are supported.
 	init_options = {
-		includeLanguages = {},
-		excludeLanguages = {},
-		extensionsPath = {},
-		preferences = {},
-		showAbbreviationSuggestions = true,
-		showExpandedAbbreviation = "always",
-		showSuggestionsAsSnippets = false,
-		syntaxProfiles = {},
-		variables = {},
+		plugins = {
+			{
+				name = "@vue/typescript-plugin",
+				location = vim.fn.stdpath("data")
+					.. "/mason/packages/vue-language-server/node_modules/@vue/language-server",
+				languages = { "vue" },
+			},
+		},
+	},
+	-- cmd = { "typescript-language-server", "--stdio" },
+})
+
+vim.lsp.enable("ts_ls")
+
+vim.lsp.config("vue_ls", {
+	capabilities = caps,
+})
+
+vim.lsp.enable("vue_ls")
+
+-- Go
+vim.lsp.config("gopls", {
+	settings = {
+		gopls = {},
 	},
 })
+vim.lsp.enable("gopls")
+
+-- Lua
+vim.lsp.enable("lua_ls")
+
+-- CSS
+vim.lsp.config("cssls", {
+	capabilities = capabilities,
+})
+vim.lsp.enable("cssls")
+
+vim.lsp.enable("css_variables")
+vim.lsp.enable("cssmodules_ls")
+vim.lsp.enable("tailwindcss")
+
+-- HTML
+vim.lsp.config("html", {
+	capabilities = capabilities,
+})
+vim.lsp.enable("html")
+
+vim.lsp.config("emmet_language_server", {
+	settings = {
+		filetypes = {
+			"html",
+			"eruby",
+			"javascript",
+			"javascriptreact",
+			"typescriptreact",
+			"css",
+			"less",
+			"sass",
+			"scss",
+			"pug",
+			"vue",
+		},
+		init_options = {
+			includeLanguages = {},
+			excludeLanguages = {},
+			extensionsPath = {},
+			preferences = {},
+			showAbbreviationSuggestions = true,
+			showExpandedAbbreviation = "always",
+			showSuggestionsAsSnippets = false,
+			syntaxProfiles = {},
+			variables = {},
+		},
+	},
+})
+vim.lsp.enable("emmet_language_server")

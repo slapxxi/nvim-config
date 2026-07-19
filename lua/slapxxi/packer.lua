@@ -41,7 +41,7 @@ return require("packer").startup(function(use)
 	use({ "rafamadriz/friendly-snippets" })
 
 	-- Lint
-	use({ "jose-elias-alvarez/null-ls.nvim" })
+	use({ "nvimtools/none-ls.nvim" })
 
 	-- Telescope
 	use({
@@ -128,7 +128,6 @@ return require("packer").startup(function(use)
 			require("supermaven-nvim").setup({})
 		end,
 	})
-	use({ "NickvanDyke/opencode.nvim" })
 
 	-- Debugger
 	use("mfussenegger/nvim-dap")

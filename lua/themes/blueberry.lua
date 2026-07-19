@@ -24,6 +24,7 @@ local blueberry = {
 	MatchParen = { fg = colors.yellow, bold = true },
 	MsgArea = { fg = colors.gray },
 	Underlined = {},
+	EndOfBuffer = { fg = colors.dark_gray },
 
 	-- Syntax highlighting { mapped from tokenColors }
 	Statement = { fg = scolors.statement },
@@ -31,7 +32,7 @@ local blueberry = {
 	Constant = { fg = scolors.constant }, -- Constants
 	String = { fg = scolors.string }, -- Strings
 	Identifier = { fg = colors.white }, -- Variable names, function names
-	Function = { fg = colors.blue }, -- Function calls
+	Function = { fg = colors.white }, -- Function calls
 	Keyword = { fg = colors.blue }, -- Keywords
 	Operator = { fg = colors.blue }, -- Punctuation, operators
 	Type = { fg = colors.gray }, -- Types
@@ -108,6 +109,8 @@ local blueberry = {
 	CmpItemAbbrMatch = { bold = true },
 	CmpItemAbbrMatchFuzzy = { italic = true },
 	CmpPmenuSel = { bg = scolors.highlight },
+
+	["@function.call"] = { fg = scolors.call },
 
 	["@tag"] = { fg = colors.blue },
 	["@tag.builtin"] = { fg = scolors.fg },

@@ -1,4 +1,4 @@
-if true then
+if false then
 	vim.keymap.set("n", "<leader>ti", ":TSToolsAddMissingImports<CR>")
 	vim.keymap.set("n", "<leader>tr", ":TSToolsRemoveUnused<CR>")
 	vim.keymap.set("n", "<leader>to", ":TSToolsOrganizeImports<CR>")
@@ -17,6 +17,10 @@ if true then
 			-- specify commands exposed as code_actions
 			expose_as_code_action = { "all" },
 			publish_diagnostics_on = "change",
+			-- vue
+			-- tsserver_plugins = {
+			-- 	"@vue/typescript-plugin", -- Required: Intercepts script tags inside Vue SFCs
+			-- },
 		},
 	})
 end

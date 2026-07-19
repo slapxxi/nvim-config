@@ -2,6 +2,7 @@ require("slapxxi.packer")
 require("slapxxi.remap")
 require("slapxxi.set")
 require("slapxxi.snippets")
+require("slapxxi.commands")
 
 local theme = require("slapxxi.theme")
 local scolors = theme.scolors
