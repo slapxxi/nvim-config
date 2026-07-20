@@ -5,8 +5,8 @@ local scolors = theme.scolors
 local blueberry = {
 	-- Basic UI elements
 	Normal = { fg = scolors.fg, bg = scolors.bg },
-	NormalFloat = { fg = scolors.em }, -- Floating windows
-	WinSeparator = { fg = colors.gray_700 },
+	NormalFloat = { fg = colors.blue_650 }, -- Floating windows
+	WinSeparator = { fg = colors.zinc_700 },
 	Cursor = { fg = scolors.bg, bg = scolors.em },
 	CursorLine = { bg = scolors.line },
 	LineNr = { fg = colors.gray_700 },
@@ -193,7 +193,7 @@ local blueberry = {
 
 	HlSearchLens = { bg = scolors.highlight, fg = scolors.fg },
 
-	TelescopeBorder = { fg = scolors.comment },
+	TelescopeBorder = { fg = colors.zinc_700 },
 	TelescopeSelection = { bg = scolors.highlight, fg = colors.white, bold = true },
 
 	TreesitterContext = { bg = scolors.line, fg = scolors.bg },
