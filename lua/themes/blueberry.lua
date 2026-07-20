@@ -6,25 +6,25 @@ local blueberry = {
 	-- Basic UI elements
 	Normal = { fg = scolors.fg, bg = scolors.bg },
 	NormalFloat = { fg = scolors.em }, -- Floating windows
-	WinSeparator = { fg = scolors.comment },
+	WinSeparator = { fg = colors.gray_700 },
 	Cursor = { fg = scolors.bg, bg = scolors.em },
 	CursorLine = { bg = scolors.line },
-	LineNr = { fg = scolors.comment },
+	LineNr = { fg = colors.gray_700 },
 	CursorLineNr = { fg = scolors.em },
 	Visual = { bg = scolors.highlight },
 	Search = { bg = colors.yellow_transparent, fg = scolors.bg }, -- editor.findMatchBackground
 	IncSearch = { bg = scolors.em, fg = scolors.string }, -- editor.findMatchHighlightBackground
-	StatusLine = { fg = scolors.comment, bg = scolors.bg },
-	StatusLineNC = { fg = colors.subtle_gray, bg = scolors.bg },
-	VertSplit = { fg = colors.gray }, -- sideBar.border
-	Pmenu = { fg = scolors.fg, bg = colors.subtle_gray }, -- editorSuggestWidget.background
+	StatusLine = { fg = colors.gray_700, bg = scolors.bg },
+	StatusLineNC = { fg = colors.g_800, bg = scolors.bg },
+	VertSplit = { fg = colors.g_500 }, -- sideBar.border
+	Pmenu = { fg = scolors.fg, bg = colors.g_800 }, -- editorSuggestWidget.background
 	PmenuSel = { bg = colors.yellow, fg = scolors.bg }, -- editorSuggestWidget.selectedBackground
 	WildMenu = { fg = colors.white, bg = scolors.em },
 	SnippetTabStop = { fg = scolors.fg, bg = colors.yellow },
 	MatchParen = { fg = colors.yellow, bold = true },
-	MsgArea = { fg = colors.gray },
+	MsgArea = { fg = colors.g_500 },
 	Underlined = {},
-	EndOfBuffer = { fg = colors.dark_gray },
+	EndOfBuffer = { fg = colors.zinc_700 },
 
 	-- Syntax highlighting { mapped from tokenColors }
 	Statement = { fg = scolors.statement },
@@ -36,7 +36,7 @@ local blueberry = {
 	Function = { fg = colors.white },
 	Keyword = { fg = scolors.keyword }, -- Keywords
 	Operator = { fg = scolors.em }, -- Punctuation, operators
-	Type = { fg = colors.gray }, -- Types
+	Type = { fg = scolors.type }, -- Types
 	PreProc = { fg = scolors.em }, -- Preprocessor (e.g., storage.type)
 	Special = { fg = scolors.constant }, -- Embedded, constants
 	Delimiter = { fg = scolors.punctuation }, -- Embedded, constants
@@ -48,11 +48,11 @@ local blueberry = {
 
 	TabLine = { fg = scolors.comment, bg = scolors.backdrop },
 	TabLineFill = { fg = scolors.comment, bg = scolors.backdrop },
-	TabLineSel = { fg = colors.gray, bg = scolors.bg },
+	TabLineSel = { fg = colors.g_500, bg = scolors.bg },
 
 	Directory = { fg = scolors.em },
 
-	qfFileName = { fg = colors.gray },
+	qfFileName = { fg = colors.g_500 },
 	qfText = { fg = scolors.comment },
 	QuickFixLine = { fg = scolors.em },
 
@@ -69,13 +69,13 @@ local blueberry = {
 	GitSignsChange = { fg = "#555770" }, -- gitDecoration.modifiedResourceForeground
 	GitSignsDelete = { fg = "#EF5350" }, -- gitDecoration.deletedResourceForeground
 
-	FugitiveBlameTime = { fg = colors.gray },
+	FugitiveBlameTime = { fg = colors.g_500 },
 
 	-- LSP
 	LspReferenceText = { fg = scolors.bg, bg = colors.pale_blue },
 
 	-- LSP diagnostics
-	DiagnosticUnnecessary = { fg = colors.gray, undercurl = true },
+	DiagnosticUnnecessary = { fg = colors.g_500, undercurl = true },
 	DiagnosticUnderlineError = { fg = scolors.error, underline = true },
 	DiagnosticUnderlineWarn = { fg = colors.yellow_pastel, undercurl = true },
 	DiagnosticSignError = { fg = scolors.error },
@@ -85,7 +85,7 @@ local blueberry = {
 	LspDiagnosticsDefaultError = { fg = scolors.error, bg = scolors.bg },
 	LspDiagnosticsDefaultWarning = { fg = colors.yellow, bg = scolors.bg },
 	LspDiagnosticsDefaultInformation = { fg = colors.sky_500, bg = scolors.bg },
-	LspDiagnosticsDefaultHint = { fg = colors.gray, bg = scolors.bg },
+	LspDiagnosticsDefaultHint = { fg = colors.g_500, bg = scolors.bg },
 
 	-- LSP floating windows
 	LspFloatWinNormal = { fg = scolors.fg, bg = scolors.error },

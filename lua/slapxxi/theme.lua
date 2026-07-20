@@ -141,13 +141,13 @@ local scolors = {
 	number = colors.teal,
 	operator = colors.g_450,
 	property = colors.g_450,
-	punctuation = colors.gray_800,
+	punctuation = colors.slate_700,
 	statement = colors.blue,
-	string = colors.gray_400,
+	string = colors.taupe_400,
 	struct = colors.g_450,
 	success = colors.green,
 	type = colors.gray_600,
-	variable = colors.gray_300,
+	variable = colors.zinc_300,
 	warn = colors.yellow_pastel,
 }
 
