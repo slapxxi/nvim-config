@@ -142,9 +142,10 @@ local blueberry = {
 
 	-- Go
 	["@lsp.type.function.go"] = {},
+	["@lsp.type.variable.go"] = {},
 	["@function.go"] = { fg = scolors.name },
 	["@function.call.go"] = { fg = scolors.call },
-	["@lsp.type.namespace.go"] = { fg = scolors.property },
+	["@lsp.type.namespace.go"] = { fg = scolors.fg },
 	["@lsp.typemod.type.definition.go"] = { fg = scolors.name },
 	["@lsp.typemod.variable.definition.go"] = { fg = scolors.name },
 	["@function.builtin.go"] = { fg = scolors.builtin },
