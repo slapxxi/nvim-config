@@ -111,6 +111,7 @@ local blueberry = {
 	CmpPmenuSel = { bg = scolors.highlight },
 
 	["@function.call"] = { fg = scolors.call },
+	["@function.method.call"] = { fg = scolors.call },
 
 	["@tag"] = { fg = colors.blue },
 	["@tag.builtin"] = { fg = scolors.property },
@@ -130,21 +131,24 @@ local blueberry = {
 	["@type.definition"] = { fg = scolors.name },
 
 	["@lsp.type.component"] = { fg = scolors.keyword },
-	["@lsp.type.property"] = { fg = scolors.property },
 	["@lsp.type.class"] = { fg = scolors.keyword },
+	["@lsp.type.method"] = { fg = scolors.keyword },
+	["@lsp.type.property"] = { fg = scolors.property },
 	["@lsp.mod.declaration"] = { fg = scolors.name },
 	["@lsp.typemod.variable.defaultLibrary"] = { fg = scolors.builtin },
 	["@lsp.typemod.class.defaultLibrary"] = { fg = scolors.name },
 	["@lsp.typemod.property.declaration"] = { fg = scolors.property },
 
 	-- Go
-	-- ["@type.builtin.go"] = { fg = colors.gray_blue },
+	["@lsp.type.function.go"] = {},
 	["@function.go"] = { fg = scolors.name },
+	["@function.call.go"] = { fg = scolors.call },
+	["@lsp.type.namespace.go"] = { fg = scolors.property },
+	["@lsp.typemod.type.definition.go"] = { fg = scolors.name },
+	["@lsp.typemod.variable.definition.go"] = { fg = scolors.name },
 	["@function.builtin.go"] = { fg = scolors.builtin },
 	["@type.builtin.go"] = { fg = scolors.builtin },
-	["@function.call.go"] = { fg = scolors.call },
 	["@function.method.go"] = { fg = scolors.name },
-	["@function.method.call.go"] = { fg = scolors.call },
 	["@property.go"] = { fg = scolors.property },
 
 	-- CSS
