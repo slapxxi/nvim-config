@@ -90,8 +90,16 @@ local colors = {
 	red = "#fb2c36",
 	red_pastel = "#f87171",
 	red_vscode = "#f14c4c",
+	red_200 = "#f8ccca",
 
 	pink = "#f8c1c1",
+	rose_200 = "#f7cfd3",
+	rose_300 = "#f5a7ae",
+	rose_350 = "#f38b94",
+	rose_400 = "#f17280",
+
+	maroon_300 = "#ea999c",
+	maroon_500 = "#e64553",
 
 	green = "#98ff35",
 	green_pastel = "#90EE90",
@@ -109,7 +117,7 @@ local scolors = {
 	comment = colors.gray_700,
 	constant = colors.light_blue,
 	enumMember = colors.gray_500,
-	error = colors.pink,
+	error = colors.maroon_300,
 	event = colors.gray_500,
 	fg = colors.zinc_300,
 	fn = colors.gray_500,
