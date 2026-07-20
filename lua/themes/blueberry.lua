@@ -173,7 +173,7 @@ local blueberry = {
 	["@variable.member.vue"] = { fg = scolors.builtin },
 
 	-- JavaScript
-	["@variable.member.javascript"] = { fg = colors.gray_blue },
+	["@variable.member.javascript"] = { fg = scolors.property },
 	javascriptParens = scolors.comment,
 
 	-- Lua
