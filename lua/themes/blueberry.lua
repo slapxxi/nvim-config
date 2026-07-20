@@ -118,7 +118,7 @@ local blueberry = {
 	["@tag.builtin"] = { fg = scolors.property },
 	["@tag.html"] = { fg = colors.sky_500 },
 	["@tag.attribute"] = { fg = scolors.fg },
-	["@tag.delimiter"] = { fg = scolors.comment },
+	["@tag.delimiter"] = { fg = scolors.punctuation },
 
 	["@variable"] = { fg = scolors.fg },
 	["@variable.member"] = { fg = scolors.property },
