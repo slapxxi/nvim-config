@@ -169,7 +169,7 @@ local blueberry = {
 
 	-- Vue
 	["@tag.vue"] = { fg = scolors.property },
-	["@none.vue"] = { fg = scolors.string },
+	["@none.vue"] = { fg = scolors.fg },
 	["@variable.member.vue"] = { fg = scolors.builtin },
 
 	-- JavaScript
