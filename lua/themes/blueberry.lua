@@ -5,21 +5,21 @@ local scolors = theme.scolors
 local blueberry = {
 	-- Basic UI elements
 	Normal = { fg = scolors.fg, bg = scolors.bg },
-	NormalFloat = { fg = colors.blue_500 }, -- Floating windows
+	NormalFloat = { fg = scolors.em }, -- Floating windows
 	WinSeparator = { fg = scolors.comment },
-	Cursor = { fg = scolors.bg, bg = colors.blue },
+	Cursor = { fg = scolors.bg, bg = scolors.em },
 	CursorLine = { bg = scolors.line },
 	LineNr = { fg = scolors.comment },
-	CursorLineNr = { fg = colors.blue_500 },
+	CursorLineNr = { fg = scolors.em },
 	Visual = { bg = scolors.highlight },
 	Search = { bg = colors.yellow_transparent, fg = scolors.bg }, -- editor.findMatchBackground
-	IncSearch = { bg = colors.blue_500, fg = scolors.string }, -- editor.findMatchHighlightBackground
+	IncSearch = { bg = scolors.em, fg = scolors.string }, -- editor.findMatchHighlightBackground
 	StatusLine = { fg = scolors.comment, bg = scolors.bg },
 	StatusLineNC = { fg = colors.subtle_gray, bg = scolors.bg },
 	VertSplit = { fg = colors.gray }, -- sideBar.border
 	Pmenu = { fg = scolors.fg, bg = colors.subtle_gray }, -- editorSuggestWidget.background
 	PmenuSel = { bg = colors.yellow, fg = scolors.bg }, -- editorSuggestWidget.selectedBackground
-	WildMenu = { fg = colors.white, bg = colors.blue },
+	WildMenu = { fg = colors.white, bg = scolors.em },
 	SnippetTabStop = { fg = scolors.fg, bg = colors.yellow },
 	MatchParen = { fg = colors.yellow, bold = true },
 	MsgArea = { fg = colors.gray },
@@ -34,10 +34,10 @@ local blueberry = {
 	Title = { fg = scolors.name, bold = true }, -- Titles
 	Identifier = { fg = colors.white }, -- Variable names, function names
 	Function = { fg = colors.white },
-	Keyword = { fg = colors.blue }, -- Keywords
-	Operator = { fg = colors.blue }, -- Punctuation, operators
+	Keyword = { fg = scolors.keyword }, -- Keywords
+	Operator = { fg = scolors.em }, -- Punctuation, operators
 	Type = { fg = colors.gray }, -- Types
-	PreProc = { fg = colors.blue }, -- Preprocessor (e.g., storage.type)
+	PreProc = { fg = scolors.em }, -- Preprocessor (e.g., storage.type)
 	Special = { fg = scolors.constant }, -- Embedded, constants
 	Delimiter = { fg = scolors.punctuation }, -- Embedded, constants
 	Error = { fg = scolors.error },
@@ -50,11 +50,11 @@ local blueberry = {
 	TabLineFill = { fg = scolors.comment, bg = scolors.backdrop },
 	TabLineSel = { fg = colors.gray, bg = scolors.bg },
 
-	Directory = { fg = colors.blue },
+	Directory = { fg = scolors.em },
 
 	qfFileName = { fg = colors.gray },
 	qfText = { fg = scolors.comment },
-	QuickFixLine = { fg = colors.blue },
+	QuickFixLine = { fg = scolors.em },
 
 	-- Diff
 	diffAdded = { bg = scolors.bg, fg = colors.green_pastel },
@@ -84,7 +84,7 @@ local blueberry = {
 
 	LspDiagnosticsDefaultError = { fg = scolors.error, bg = scolors.bg },
 	LspDiagnosticsDefaultWarning = { fg = colors.yellow, bg = scolors.bg },
-	LspDiagnosticsDefaultInformation = { fg = colors.light_blue, bg = scolors.bg },
+	LspDiagnosticsDefaultInformation = { fg = colors.sky_500, bg = scolors.bg },
 	LspDiagnosticsDefaultHint = { fg = colors.gray, bg = scolors.bg },
 
 	-- LSP floating windows
@@ -97,7 +97,7 @@ local blueberry = {
 	-- CMP Kinds
 	CmpItemKindSnippet = { fg = scolors.number },
 	CmpItemKindFunction = { fg = scolors.call },
-	CmpItemKindMethod = { fg = colors.blue_darker },
+	CmpItemKindMethod = { fg = scolors.em_darker },
 	CmpItemKindConstant = { fg = scolors.constant },
 	CmpItemKindKeyword = { fg = scolors.builtin },
 	CmpItemKindModule = { fg = scolors.name },
@@ -114,9 +114,9 @@ local blueberry = {
 	["@function.call"] = { fg = scolors.call },
 	["@function.method.call"] = { fg = scolors.call },
 
-	["@tag"] = { fg = colors.blue },
+	["@tag"] = { fg = scolors.em },
 	["@tag.builtin"] = { fg = scolors.property },
-	["@tag.html"] = { fg = colors.light_blue },
+	["@tag.html"] = { fg = colors.sky_500 },
 	["@tag.attribute"] = { fg = scolors.fg },
 	["@tag.delimiter"] = { fg = scolors.comment },
 
@@ -153,19 +153,19 @@ local blueberry = {
 	["@property.go"] = { fg = scolors.property },
 
 	-- CSS
-	["@type.css"] = { fg = colors.blue },
-	["@type.scss"] = { fg = colors.blue },
-	["@variable.css"] = { fg = colors.light_blue },
+	["@type.css"] = { fg = scolors.keyword },
+	["@type.scss"] = { fg = scolors.keyword },
+	["@variable.css"] = { fg = colors.sky_500 },
 	["@property.css"] = { fg = scolors.property },
 	["@property.scss"] = { fg = scolors.property },
 	["@variable.scss"] = { fg = scolors.property },
 
 	-- JSON
-	["@property.json"] = { fg = colors.yellow },
-	["@property.jsonc"] = { fg = colors.yellow },
+	["@property.json"] = { fg = scolors.json },
+	["@property.jsonc"] = { fg = scolors.json },
 
 	-- JSX
-	["@_jsx_attribute"] = { fg = colors.light_blue },
+	["@_jsx_attribute"] = { fg = colors.sky_500 },
 
 	-- Vue
 	["@tag.vue"] = { fg = scolors.property },
@@ -177,14 +177,14 @@ local blueberry = {
 	javascriptParens = scolors.comment,
 
 	-- Lua
-	["@lsp.type.parameter.lua"] = { fg = colors.blue },
+	["@lsp.type.parameter.lua"] = { fg = scolors.em },
 	["@lsp.type.function.lua"] = {},
 
 	-- Markdown
 	RenderMarkdownCode = { bg = scolors.line },
 	markdownBold = { fg = scolors.fg, bold = true },
 	markdownItalic = { fg = "#a2bffc", italic = true }, -- markup.changed
-	markdownHeadingDelimiter = { fg = colors.blue },
+	markdownHeadingDelimiter = { fg = scolors.em },
 	markdownBlockquote = { fg = scolors.fg },
 
 	-- Plugins
@@ -202,11 +202,11 @@ local blueberry = {
 	DapBreakpoint = { fg = colors.red, bg = scolors.bg },
 	DapBreakpointCondition = { fg = colors.yellow, bg = scolors.bg },
 	DapStopped = { bg = scolors.highlight_debug },
-	DapStoppedNumHl = { fg = colors.blue, bg = scolors.bg },
+	DapStoppedNumHl = { fg = scolors.em, bg = scolors.bg },
 
-	NvimTreeSymlink = { bg = colors.blue, fg = scolors.fg },
-	NvimTreeImageFile = { bg = colors.blue, fg = scolors.fg },
-	NvimTreeExecFile = { bg = colors.blue, fg = scolors.fg },
+	NvimTreeSymlink = { bg = scolors.em, fg = scolors.fg },
+	NvimTreeImageFile = { bg = scolors.em, fg = scolors.fg },
+	NvimTreeExecFile = { bg = scolors.em, fg = scolors.fg },
 	NvimTreeRootFolder = { fg = scolors.keyword },
 	NvimTreeIndentMarker = { fg = scolors.comment },
 	NvimTreeFolderName = { fg = scolors.name },
@@ -220,12 +220,12 @@ local blueberry = {
 	MarkSignNumHl = {},
 
 	-- Terminal colors
-	TermCursor = { fg = scolors.bg, bg = colors.blue },
+	TermCursor = { fg = scolors.bg, bg = scolors.em },
 	terminalBlack = scolors.bg,
 	terminalRed = colors.red,
 	terminalGreen = colors.green,
 	terminalYellow = colors.yellow,
-	terminalBlue = colors.blue_500,
+	terminalBlue = scolors.em,
 	terminalMagenta = "#C792EA",
 	terminalCyan = "#19c4e6",
 	terminalWhite = scolors.string,
@@ -233,7 +233,7 @@ local blueberry = {
 	terminalBrightRed = "#eb4a47",
 	terminalBrightGreen = colors.green,
 	terminalBrightYellow = colors.yellow,
-	terminalBrightBlue = colors.blue_500,
+	terminalBrightBlue = scolors.em,
 	terminalBrightMagenta = "#C792EA",
 	terminalBrightCyan = "#19c4e6",
 	terminalBrightWhite = scolors.string,

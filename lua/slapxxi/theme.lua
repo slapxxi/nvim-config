@@ -39,6 +39,8 @@ local colors = {
 	zinc_600 = "#52525c",
 	zinc_700 = "#3f3f46",
 	zinc_800 = "#27272a",
+	zinc_925 = "#101012",
+	zinc_950 = "#09090b",
 
 	neutral_300 = "#d4d4d4",
 	neutral_400 = "#a1a1a1",
@@ -71,14 +73,16 @@ local colors = {
 
 	blue_400 = "#1ab2ff", -- Secondary accent (e.g., constants)
 	blue_500 = "#1166ff", -- primary accent color
+	blue_650 = "#1166ff", -- primary accent color
 	blue_800 = "#0f2958", -- Selection highlights
 	blue_900 = "#122132",
 
 	blue = "#1166ff", -- primary accent color
-	blue_darker = "#0e5ae0", -- primary accent color
-	light_blue = "#1ab2ff", -- Secondary accent (e.g., constants)
-	light_blue_a = "#00a2f5", -- Secondary accent (e.g., constants)
+	blue_darker = "#0e5ae0",
 	pale_blue = "#629aff",
+
+	sky_450 = "#00a2f5",
+	sky_500 = "#1ab2ff",
 
 	teal = "#42C5D7",
 
@@ -111,12 +115,13 @@ local colors = {
 -- semantic colors
 local scolors = {
 	backdrop = colors.gray_1000,
-	bg = colors.gray_950,
-	builtin = colors.light_blue_a,
-	call = colors.blue_500,
+	bg = colors.zinc_925,
+	builtin = colors.sky_450,
+	call = colors.blue_650,
 	class = colors.g_450,
 	comment = colors.gray_700,
-	constant = colors.light_blue,
+	constant = colors.sky_500,
+	em = colors.blue_650,
 	enumMember = colors.g_450,
 	error = colors.maroon_300,
 	event = colors.g_450,
@@ -125,9 +130,10 @@ local scolors = {
 	highlight = colors.blue_800,
 	highlight_debug = colors.blue_900,
 	interface = colors.g_450,
-	keyword = colors.blue_500,
+	json = colors.yellow,
+	keyword = colors.blue_650,
 	line = "#151518",
-	literal = colors.light_blue,
+	literal = colors.sky_500,
 	macro = colors.g_450,
 	method = colors.g_450,
 	modifier = colors.g_450,

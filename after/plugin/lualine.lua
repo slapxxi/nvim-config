@@ -52,7 +52,7 @@ require("lualine").setup({
 				cond = function()
 					return package.loaded["dap"] and require("dap").status() ~= ""
 				end,
-				color = { fg = colors.light_blue },
+				color = { fg = colors.sky_500 },
 			},
 			{
 				function()
