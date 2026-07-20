@@ -5,25 +5,71 @@ local colors = {
 	punctuation_gray = "#3c3f4a", -- punctuation
 	subtle_gray = "#252732", -- inactive fg
 
+	-- custom grays (all over the place)
 	gray_100 = "#f4f4f5",
 	gray_200 = "#e4e4e7",
-	-- gray_300 = "#b7c2d7", -- main text slate
-	gray_300 = "#d4d4d8", -- main text zinc
-	gray_400 = "#9f9fa9",
+	gray_300 = "#b7c2d7", -- foreground
+	gray_400 = "#9aa1ae", -- strings
 	gray_500 = "#848a9f", -- properties
 	gray_600 = "#676d81", -- types
 	gray_700 = "#414450", -- comment
 	gray_800 = "#3b3e49", -- punctuation
 	gray_900 = "#252732", -- inactive fg
-	gray_950 = "#101012", -- bg
-	gray_1000 = "#0a0a0c", -- dark bg
+	gray_950 = "#101012", -- background
+	gray_1000 = "#0a0a0c", -- dark background
 
-	-- white = "#fdfdfd", -- neutral
-	-- white = "#f9fafb", -- gray
-	white = "#fafaf9", -- stone
+	slate_300 = "#ccd5e1",
+	slate_400 = "#93a0b7",
+	slate_500 = "#65738c",
+	slate_600 = "#48556b",
+	slate_700 = "#344156",
+	slate_800 = "#1f283c",
 
-	blue_500 = "#1166ff", -- primary accent color
+	g_300 = "#d2d5db",
+	g_400 = "#9aa1ae",
+	g_500 = "#6b7281",
+	g_600 = "#52525c",
+	g_700 = "#384152",
+	g_800 = "#202938",
+
+	zinc_300 = "#d4d4d8",
+	zinc_400 = "#9f9fa9",
+	zinc_500 = "#71717b",
+	zinc_600 = "#52525c",
+	zinc_700 = "#3f3f46",
+	zinc_800 = "#27272a",
+
+	neutral_300 = "#d4d4d4",
+	neutral_400 = "#a1a1a1",
+	neutral_500 = "#737373",
+	neutral_600 = "#525252",
+	neutral_700 = "#404040",
+	neutral_800 = "#262626",
+
+	stone_300 = "#d6d3d1",
+	stone_400 = "#a5a09c",
+	stone_500 = "#77716c",
+	stone_600 = "#57534e",
+	stone_700 = "#44403c",
+	stone_800 = "#282524",
+
+	taupe_300 = "#d6d3d1",
+	taupe_400 = "#a9a19c",
+	taupe_500 = "#7a6e68",
+	taupe_600 = "#59504c",
+	taupe_700 = "#453d3a",
+	taupe_800 = "#2a2422",
+
+	white = "#fdfdfd", -- custom
+	slate_white = "#f8fafc",
+	g_white = "#f9fafb",
+	zinc_white = "#fafafa",
+	neutral_white = "#fafafa",
+	stone_white = "#fafaf9",
+	taupe_white = "#fbfaf9",
+
 	blue_400 = "#1ab2ff", -- Secondary accent (e.g., constants)
+	blue_500 = "#1166ff", -- primary accent color
 	blue_800 = "#0f2958", -- Selection highlights
 	blue_900 = "#122132",
 
@@ -65,7 +111,7 @@ local scolors = {
 	enumMember = colors.gray_500,
 	error = colors.pink,
 	event = colors.gray_500,
-	fg = colors.gray_300,
+	fg = colors.zinc_300,
 	fn = colors.gray_500,
 	highlight = colors.blue_800,
 	highlight_debug = colors.blue_900,
@@ -85,7 +131,6 @@ local scolors = {
 	string = colors.gray_400,
 	struct = colors.gray_500,
 	success = colors.green,
-	text = colors.gray_300,
 	type = colors.gray_600,
 	variable = colors.gray_300,
 	warn = colors.yellow_pastel,

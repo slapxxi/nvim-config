@@ -20,7 +20,7 @@ local blueberry = {
 	Pmenu = { fg = scolors.fg, bg = colors.subtle_gray }, -- editorSuggestWidget.background
 	PmenuSel = { bg = colors.yellow, fg = scolors.bg }, -- editorSuggestWidget.selectedBackground
 	WildMenu = { fg = colors.white, bg = colors.blue },
-	SnippetTabStop = { fg = colors.text, bg = colors.yellow },
+	SnippetTabStop = { fg = scolors.fg, bg = colors.yellow },
 	MatchParen = { fg = colors.yellow, bold = true },
 	MsgArea = { fg = colors.gray },
 	Underlined = {},
@@ -31,6 +31,7 @@ local blueberry = {
 	Comment = { fg = scolors.comment },
 	Constant = { fg = scolors.constant }, -- Constants
 	String = { fg = scolors.string }, -- Strings
+	Title = { fg = scolors.name, bold = true }, -- Titles
 	Identifier = { fg = colors.white }, -- Variable names, function names
 	Function = { fg = colors.white },
 	Keyword = { fg = colors.blue }, -- Keywords
@@ -105,7 +106,7 @@ local blueberry = {
 	CmpItemKindClass = { fg = scolors.constant },
 	CmpItemKindField = { fg = scolors.property },
 	CmpItemKindText = { fg = scolors.comment },
-	CmpItemKindVariable = { fg = scolors.text },
+	CmpItemKindVariable = { fg = scolors.fg },
 	CmpItemAbbrMatch = { bold = true },
 	CmpItemAbbrMatchFuzzy = { italic = true },
 	CmpPmenuSel = { bg = scolors.highlight },
@@ -119,7 +120,7 @@ local blueberry = {
 	["@tag.attribute"] = { fg = scolors.fg },
 	["@tag.delimiter"] = { fg = scolors.comment },
 
-	["@variable"] = { fg = scolors.text },
+	["@variable"] = { fg = scolors.fg },
 	["@variable.member"] = { fg = scolors.property },
 	["@variable.parameter"] = { fg = scolors.name },
 
@@ -190,7 +191,7 @@ local blueberry = {
 	CopilotSuggestion = { fg = colors.copilot, italic = true },
 	CodeiumSuggestion = { fg = colors.copilot, italic = true },
 
-	HlSearchLens = { bg = scolors.highlight, fg = colors.gray },
+	HlSearchLens = { bg = scolors.highlight, fg = scolors.fg },
 
 	TelescopeBorder = { fg = scolors.comment },
 	TelescopeSelection = { bg = scolors.highlight, fg = colors.white, bold = true },
@@ -203,15 +204,15 @@ local blueberry = {
 	DapStopped = { bg = scolors.highlight_debug },
 	DapStoppedNumHl = { fg = colors.blue, bg = scolors.bg },
 
-	NvimTreeSymlink = { bg = colors.blue, fg = colors.text },
-	NvimTreeImageFile = { bg = colors.blue, fg = colors.text },
-	NvimTreeExecFile = { bg = colors.blue, fg = colors.text },
-	NvimTreeRootFolder = { fg = colors.gray },
+	NvimTreeSymlink = { bg = colors.blue, fg = scolors.fg },
+	NvimTreeImageFile = { bg = colors.blue, fg = scolors.fg },
+	NvimTreeExecFile = { bg = colors.blue, fg = scolors.fg },
+	NvimTreeRootFolder = { fg = scolors.keyword },
 	NvimTreeIndentMarker = { fg = scolors.comment },
-	NvimTreeFolderName = { fg = colors.gray },
+	NvimTreeFolderName = { fg = scolors.name },
 	NvimTreeFolderIcon = { fg = scolors.comment },
-	NvimTreeOpenedFolderIcon = { fg = colors.white },
-	NvimTreeOpenedFolderName = { fg = colors.white },
+	NvimTreeOpenedFolderIcon = { fg = scolors.name },
+	NvimTreeOpenedFolderName = { fg = scolors.name },
 	NvimTreeGitDirtyIcon = { fg = colors.yellow },
 	NvimTreeGitStagedIcon = { fg = colors.green },
 	NvimTreeSpecialFile = { fg = colors.yellow },
