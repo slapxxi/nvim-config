@@ -97,6 +97,7 @@ local colors = {
 	red_pastel = "#f87171",
 	red_vscode = "#f14c4c",
 	red_200 = "#f8ccca",
+	red_500 = "#ef5350",
 
 	pink = "#f8c1c1",
 	rose_200 = "#f7cfd3",

@@ -65,9 +65,9 @@ local blueberry = {
 	DiffText = { bg = scolors.bg, fg = scolors.fg },
 
 	-- Git
-	GitSignsAdd = { fg = "#addb67" }, -- gitDecoration.untrackedResourceForeground
-	GitSignsChange = { fg = "#555770" }, -- gitDecoration.modifiedResourceForeground
-	GitSignsDelete = { fg = "#EF5350" }, -- gitDecoration.deletedResourceForeground
+	GitSignsAdd = { fg = colors.green_pastel }, -- gitDecoration.untrackedResourceForeground
+	GitSignsChange = { fg = colors.g_600 }, -- gitDecoration.modifiedResourceForeground
+	GitSignsDelete = { fg = colors.red_500 }, -- gitDecoration.deletedResourceForeground
 
 	FugitiveBlameTime = { fg = colors.g_500 },
 
