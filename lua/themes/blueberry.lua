@@ -35,7 +35,7 @@ local blueberry = {
 	Identifier = { fg = colors.white }, -- Variable names, function names
 	Function = { fg = colors.white },
 	Keyword = { fg = scolors.keyword }, -- Keywords
-	Operator = { fg = scolors.em }, -- Punctuation, operators
+	Operator = { fg = scolors.operator }, -- Punctuation, operators
 	Type = { fg = scolors.type }, -- Types
 	PreProc = { fg = scolors.em }, -- Preprocessor (e.g., storage.type)
 	Special = { fg = scolors.constant }, -- Embedded, constants
@@ -141,6 +141,7 @@ local blueberry = {
 	["@lsp.typemod.property.declaration"] = { fg = scolors.property },
 
 	-- Go
+	["@lsp.type.string.go"] = {},
 	["@lsp.type.function.go"] = {},
 	["@lsp.type.variable.go"] = {},
 	["@function.go"] = { fg = scolors.name },

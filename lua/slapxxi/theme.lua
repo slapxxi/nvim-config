@@ -73,19 +73,35 @@ local colors = {
 	taupe_white = "#fbfaf9",
 
 	blue_400 = "#1ab2ff", -- Secondary accent (e.g., constants)
-	blue_500 = "#1166ff", -- primary accent color
+	blue_500 = "#427eff", -- primary accent color
+	blue_600 = "#155dfc", -- primary accent color
 	blue_650 = "#1166ff", -- primary accent color
+	blue_700 = "#427eff", -- primary accent color
 	blue_800 = "#0f2958", -- Selection highlights
 	blue_900 = "#122132",
 
 	blue = "#1166ff", -- primary accent color
 	blue_darker = "#0e5ae0",
 	pale_blue = "#629aff",
+	cornflower_blue = "#6495ed",
+	mariner = "#3570db",
+	san_marino = "#537cc6",
 
+	teal = "#42c5d7",
+	teal_400 = "#50d0be",
+	teal_500 = "#41b7a7",
+
+	cyan_400 = "#48cef0",
+	cyan_500 = "#3cb4d8",
+	cyan_600 = "#2f8fb6",
+
+	sky_400 = "#4bb8fc",
 	sky_450 = "#00a2f5",
-	sky_500 = "#1ab2ff",
+	sky_500 = "#34a2ef",
+	sky_600 = "#2681cd",
 
-	teal = "#42C5D7",
+	indigo_500 = "#615fff",
+	indigo_600 = "#4f39f6",
 
 	yellow = "#f0c82a", -- JSON properties, regex
 	yellow_pastel = "#ffe08c", -- Softer, more pastel yellow
@@ -100,6 +116,7 @@ local colors = {
 	red_500 = "#ef5350",
 
 	pink = "#f8c1c1",
+
 	rose_200 = "#f7cfd3",
 	rose_300 = "#f5a7ae",
 	rose_350 = "#f38b94",
@@ -119,7 +136,7 @@ local scolors = {
 	backdrop = colors.gray_1000,
 	bg = colors.zinc_925,
 	builtin = colors.sky_450,
-	call = colors.blue_650,
+	call = colors.cornflower_blue,
 	class = colors.g_450,
 	comment = colors.gray_700,
 	constant = colors.sky_500,
@@ -141,7 +158,7 @@ local scolors = {
 	modifier = colors.g_450,
 	name = colors.white,
 	number = colors.teal,
-	operator = colors.g_450,
+	operator = colors.blue_650,
 	property = colors.g_450,
 	punctuation = colors.gray_800,
 	statement = colors.blue_650,
