@@ -155,9 +155,10 @@ local blueberry = {
 	["@property.go"] = { fg = scolors.property },
 
 	-- CSS
+	["@function.css"] = { fg = scolors.call },
 	["@type.css"] = { fg = scolors.keyword },
 	["@type.scss"] = { fg = scolors.keyword },
-	["@variable.css"] = { fg = colors.sky_500 },
+	["@variable.css"] = { fg = scolors.special },
 	["@property.css"] = { fg = scolors.property },
 	["@property.scss"] = { fg = scolors.property },
 	["@variable.scss"] = { fg = scolors.property },
