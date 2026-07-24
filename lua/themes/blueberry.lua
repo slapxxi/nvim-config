@@ -114,6 +114,7 @@ local blueberry = {
 
 	["@function.call"] = { fg = scolors.call },
 	["@function.method.call"] = { fg = scolors.call },
+	["@function.builtin"] = { fg = scolors.builtin },
 
 	["@tag"] = { fg = scolors.em },
 	["@tag.builtin"] = { fg = scolors.property },
@@ -134,7 +135,7 @@ local blueberry = {
 
 	["@lsp.type.component"] = { fg = scolors.keyword },
 	["@lsp.type.class"] = { fg = scolors.keyword },
-	["@lsp.type.method"] = { fg = scolors.call },
+	["@lsp.type.method"] = { fg = scolors.name },
 	["@lsp.type.property"] = { fg = scolors.property },
 	["@lsp.mod.declaration"] = { fg = scolors.name },
 	["@lsp.typemod.variable.defaultLibrary"] = { fg = scolors.builtin },
@@ -183,6 +184,7 @@ local blueberry = {
 	-- Lua
 	["@lsp.type.function.lua"] = {},
 	["@lsp.type.parameter.lua"] = {},
+	["@lsp.type.method.lua"] = {},
 
 	-- Markdown
 	RenderMarkdownCode = { bg = scolors.line },
