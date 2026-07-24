@@ -134,7 +134,7 @@ local blueberry = {
 
 	["@lsp.type.component"] = { fg = scolors.keyword },
 	["@lsp.type.class"] = { fg = scolors.keyword },
-	["@lsp.type.method"] = { fg = scolors.call },
+	["@lsp.type.method"] = { fg = scolors.name },
 	["@lsp.type.property"] = { fg = scolors.property },
 	["@lsp.mod.declaration"] = { fg = scolors.name },
 	["@lsp.typemod.variable.defaultLibrary"] = { fg = scolors.builtin },
