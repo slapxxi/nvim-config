@@ -8,7 +8,7 @@ require("lualine").setup({
 		-- theme = "auto",
 		-- theme = "iceberg_dark",
 		theme = {
-			normal = { c = { fg = scolors.type, bg = scolors.bg } },
+			normal = { c = { fg = scolors.subtle, bg = scolors.bg } },
 		},
 		component_separators = {},
 		section_separators = {},
@@ -27,7 +27,7 @@ require("lualine").setup({
 		},
 	},
 	sections = {
-		lualine_a = { { "mode", color = { fg = scolors.comment } } },
+		lualine_a = { { "mode", color = { fg = scolors.muted } } },
 		lualine_b = {
 			"grapple",
 			"branch",
@@ -64,7 +64,7 @@ require("lualine").setup({
 			-- "fileformat",
 			"filetype",
 		},
-		lualine_y = { { "progress", color = { fg = scolors.type } } },
+		lualine_y = { { "progress", color = { fg = scolors.subtle } } },
 		lualine_z = { "location" },
 	},
 	inactive_sections = {

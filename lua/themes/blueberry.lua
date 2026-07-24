@@ -5,16 +5,17 @@ local scolors = theme.scolors
 local blueberry = {
 	-- Basic UI elements
 	Normal = { fg = scolors.fg, bg = scolors.bg },
-	NormalFloat = { fg = colors.blue_650 }, -- Floating windows
-	WinSeparator = { fg = colors.zinc_700 },
+	NormalFloat = { fg = scolors.fg }, -- Floating windows
+	FloatBorder = { fg = scolors.separator },
+	WinSeparator = { fg = scolors.separator },
 	Cursor = { fg = scolors.bg, bg = scolors.em },
 	CursorLine = { bg = scolors.line },
-	LineNr = { fg = colors.gray_700 },
+	LineNr = { fg = scolors.muted },
 	CursorLineNr = { fg = scolors.em },
 	Visual = { bg = scolors.highlight },
 	Search = { bg = colors.yellow_transparent, fg = scolors.bg }, -- editor.findMatchBackground
 	IncSearch = { bg = scolors.em, fg = scolors.string }, -- editor.findMatchHighlightBackground
-	StatusLine = { fg = colors.gray_700, bg = scolors.bg },
+	StatusLine = { fg = colors.muted, bg = scolors.bg },
 	StatusLineNC = { fg = colors.g_800, bg = scolors.bg },
 	VertSplit = { fg = colors.g_500 }, -- sideBar.border
 	Pmenu = { fg = scolors.fg, bg = colors.g_800 }, -- editorSuggestWidget.background
@@ -32,8 +33,8 @@ local blueberry = {
 	Constant = { fg = scolors.constant }, -- Constants
 	String = { fg = scolors.string }, -- Strings
 	Title = { fg = scolors.name, bold = true }, -- Titles
-	Identifier = { fg = colors.white }, -- Variable names, function names
-	Function = { fg = colors.white },
+	Identifier = { fg = scolors.name }, -- Variable names, function names
+	Function = { fg = scolors.name },
 	Keyword = { fg = scolors.keyword }, -- Keywords
 	Operator = { fg = scolors.operator }, -- Punctuation, operators
 	Type = { fg = scolors.type }, -- Types
@@ -53,7 +54,7 @@ local blueberry = {
 	Directory = { fg = scolors.em },
 
 	qfFileName = { fg = colors.g_500 },
-	qfText = { fg = scolors.comment },
+	qfText = { fg = scolors.muted },
 	QuickFixLine = { fg = scolors.em },
 
 	-- Diff
@@ -133,7 +134,7 @@ local blueberry = {
 
 	["@lsp.type.component"] = { fg = scolors.keyword },
 	["@lsp.type.class"] = { fg = scolors.keyword },
-	["@lsp.type.method"] = { fg = scolors.keyword },
+	["@lsp.type.method"] = { fg = scolors.call },
 	["@lsp.type.property"] = { fg = scolors.property },
 	["@lsp.mod.declaration"] = { fg = scolors.name },
 	["@lsp.typemod.variable.defaultLibrary"] = { fg = scolors.builtin },
@@ -158,7 +159,7 @@ local blueberry = {
 	["@function.css"] = { fg = scolors.call },
 	["@type.css"] = { fg = scolors.keyword },
 	["@type.scss"] = { fg = scolors.keyword },
-	["@variable.css"] = { fg = scolors.special },
+	["@variable.css"] = { fg = scolors.property },
 	["@property.css"] = { fg = scolors.property },
 	["@property.scss"] = { fg = scolors.property },
 	["@variable.scss"] = { fg = scolors.property },
@@ -180,8 +181,8 @@ local blueberry = {
 	javascriptParens = scolors.comment,
 
 	-- Lua
-	["@lsp.type.parameter.lua"] = { fg = scolors.em },
 	["@lsp.type.function.lua"] = {},
+	["@lsp.type.parameter.lua"] = {},
 
 	-- Markdown
 	RenderMarkdownCode = { bg = scolors.line },
