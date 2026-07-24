@@ -90,13 +90,13 @@ autocmd("BufLeave", {
 autocmd("CmdlineEnter", {
 	callback = function()
 		-- Change the message area (command line) colors
-		vim.api.nvim_set_hl(0, "MsgArea", { fg = scolors.string })
+		vim.api.nvim_set_hl(0, "MsgArea", { fg = scolors.fg })
 	end,
 })
 
 autocmd("CmdlineLeave", {
 	callback = function()
 		-- Restore your normal MsgArea highlight
-		vim.api.nvim_set_hl(0, "MsgArea", { fg = scolors.type })
+		vim.api.nvim_set_hl(0, "MsgArea", { fg = scolors.subtle })
 	end,
 })

@@ -23,9 +23,9 @@ local blueberry = {
 	WildMenu = { fg = colors.white, bg = scolors.em },
 	SnippetTabStop = { fg = scolors.fg, bg = colors.yellow },
 	MatchParen = { fg = colors.yellow, bold = true },
-	MsgArea = { fg = colors.g_500 },
-	Underlined = {},
+	MsgArea = { fg = scolors.subtle },
 	EndOfBuffer = { fg = colors.zinc_700 },
+	Underlined = {},
 
 	-- Syntax highlighting { mapped from tokenColors }
 	Statement = { fg = scolors.statement },
