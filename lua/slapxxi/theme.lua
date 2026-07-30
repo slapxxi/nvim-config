@@ -107,6 +107,9 @@ local colors = {
 	yellow = "#f0c82a", -- JSON properties, regex
 	yellow_pastel = "#ffe08c", -- Softer, more pastel yellow
 	yellow_transparent = "#ceac27", -- Softer, more pastel yellow
+	yellow_950 = "#3e2209",
+
+	amber_950 = "#411d05",
 
 	orange = "#ff6633",
 
@@ -115,6 +118,7 @@ local colors = {
 	red_vscode = "#f14c4c",
 	red_200 = "#f8ccca",
 	red_500 = "#ef5350",
+	red_950 = "#40100b",
 
 	pink = "#f8c1c1",
 
@@ -128,6 +132,8 @@ local colors = {
 
 	green = "#98ff35",
 	green_pastel = "#90EE90",
+
+	green_950 = "#112d17",
 
 	copilot = "#434a69",
 }

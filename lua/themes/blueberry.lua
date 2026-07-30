@@ -58,12 +58,12 @@ local blueberry = {
 	QuickFixLine = { fg = scolors.em },
 
 	-- Diff
-	diffAdded = { bg = scolors.bg, fg = colors.green_pastel },
-	diffRemoved = { bg = scolors.bg, fg = scolors.error },
-	DiffAdd = { bg = scolors.bg, fg = colors.green_pastel },
-	DiffDelete = { bg = scolors.bg, fg = scolors.error },
-	DiffChange = { bg = scolors.bg, fg = colors.yellow_pastel },
-	DiffText = { bg = scolors.bg, fg = scolors.fg },
+	diffAdded = { bg = colors.green_950 },
+	diffRemoved = { bg = colors.red_950 },
+	DiffAdd = { bg = colors.green_950 },
+	DiffChange = { bg = colors.blue_800 },
+	DiffDelete = { bg = colors.red_950 },
+	DiffText = {},
 
 	-- Git
 	GitSignsAdd = { fg = colors.green_pastel }, -- gitDecoration.untrackedResourceForeground
