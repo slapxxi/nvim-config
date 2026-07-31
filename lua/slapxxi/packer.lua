@@ -132,6 +132,22 @@ return require("packer").startup(function(use)
 		end,
 	})
 
+	-- Testing
+	use("andythigpen/nvim-coverage")
+	use({
+		"nvim-neotest/neotest",
+		requires = {
+			"nvim-neotest/nvim-nio",
+			"nvim-lua/plenary.nvim",
+			"antoinemadec/FixCursorHold.nvim",
+			"marilari88/neotest-vitest",
+			{
+				"fredrikaverpil/neotest-golang",
+				tag = "v1.5.0",
+			},
+		},
+	})
+
 	-- Debugger
 	use("mfussenegger/nvim-dap")
 	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } })

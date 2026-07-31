@@ -65,6 +65,18 @@ local blueberry = {
 	DiffDelete = { bg = colors.red_950 },
 	DiffText = {},
 
+	-- Neotest
+	NeotestExpandMarker = { fg = scolors.muted },
+	NeotestIndent = { fg = scolors.muted },
+	NeotestAdapterName = { fg = colors.blue_650 },
+	NeotestFailed = { fg = colors.red_500 },
+	NeotestPassed = { fg = colors.green_pastel },
+	NeotestRunning = { fg = colors.yellow_pastel },
+	NeotestSkipped = { fg = scolors.dimmed },
+	NeotestTest = { fg = colors.sky_500 },
+	NeotestFile = { fg = scolors.dimmed },
+	NeotestDir = { fg = scolors.dimmed },
+
 	-- Git
 	GitSignsAdd = { fg = colors.green_pastel }, -- gitDecoration.untrackedResourceForeground
 	GitSignsChange = { fg = colors.g_600 }, -- gitDecoration.modifiedResourceForeground

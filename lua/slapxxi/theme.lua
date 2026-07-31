@@ -147,6 +147,7 @@ local scolors = {
 	class = colors.g_450,
 	comment = colors.gray_700,
 	constant = colors.sky_500,
+	dimmed = colors.g_450,
 	em = colors.blue_650,
 	enumMember = colors.g_450,
 	error = colors.maroon_300,
