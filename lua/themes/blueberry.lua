@@ -69,11 +69,12 @@ local blueberry = {
 	NeotestExpandMarker = { fg = scolors.muted },
 	NeotestIndent = { fg = scolors.muted },
 	NeotestAdapterName = { fg = colors.blue_650 },
+	NeotestNamespace = { fg = scolors.name, bold = true },
 	NeotestFailed = { fg = colors.red_500 },
 	NeotestPassed = { fg = colors.green_pastel },
 	NeotestRunning = { fg = colors.yellow_pastel },
 	NeotestSkipped = { fg = scolors.dimmed },
-	NeotestTest = { fg = colors.sky_500 },
+	NeotestTest = { fg = scolors.fg },
 	NeotestFile = { fg = scolors.dimmed },
 	NeotestDir = { fg = scolors.dimmed },
 

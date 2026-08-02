@@ -7,6 +7,7 @@ if true then
 
 	neotest.setup({
 		adapters = {
+			require("neotest-vitest"),
 			require("neotest-golang")(config),
 		},
 	})
@@ -55,5 +56,9 @@ if true then
 	-- Stop tests
 	vim.keymap.set("n", "<leader>tx", function()
 		neotest.run.stop()
+	end, { desc = "Test: Stop Nearest" })
+
+	vim.keymap.set("n", "<leader>tW", function()
+		neotest.watch.watch()
 	end, { desc = "Test: Stop Nearest" })
 end
