@@ -173,7 +173,7 @@ local blueberry = {
 	["@function.css"] = { fg = scolors.call },
 	["@type.css"] = { fg = scolors.keyword },
 	["@type.scss"] = { fg = scolors.keyword },
-	["@variable.css"] = { fg = scolors.property },
+	["@variable.css"] = { fg = scolors.fg },
 	["@property.css"] = { fg = scolors.property },
 	["@property.scss"] = { fg = scolors.property },
 	["@variable.scss"] = { fg = scolors.property },

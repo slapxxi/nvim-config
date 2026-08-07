@@ -35,7 +35,7 @@ ls.add_snippets("javascriptreact", reactSnippets)
 ls.add_snippets("typescriptreact", reactSnippets)
 
 local vueSnippets = {
-	s("c", {
+	s("cla", {
 		t({ 'class="' }),
 		i(1),
 		t({ '"' }),
