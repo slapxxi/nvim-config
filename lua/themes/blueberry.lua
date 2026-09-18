@@ -61,7 +61,7 @@ local blueberry = {
 	diffAdded = { bg = colors.green_950 },
 	diffRemoved = { bg = colors.red_950 },
 	DiffAdd = { bg = colors.green_950 },
-	DiffChange = { bg = colors.blue_800 },
+	DiffChange = { bg = colors.blue_900 },
 	DiffDelete = { bg = colors.red_950 },
 	DiffText = {},
 
