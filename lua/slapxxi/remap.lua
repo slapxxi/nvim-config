@@ -72,6 +72,17 @@ map("i", "<M-h>", "<Left>")
 map("i", "<M-j>", "<Down>")
 map("i", "<M-k>", "<Up>")
 
+local function leave_insert_preserving_indent()
+	local line = vim.api.nvim_get_current_line()
+	if line:match("^%s+$") then
+		return [[a<BS><Esc>]]
+	end
+	return [[<Esc>]]
+end
+
+map("i", "<Esc>", leave_insert_preserving_indent, { expr = true, noremap = true, silent = true })
+map("i", "<C-c>", leave_insert_preserving_indent, { expr = true, noremap = true, silent = true })
+
 -- Newline Insert
 map("n", "<M-o>", "o<Esc>")
 map("n", "<M-O>", "O<Esc>")

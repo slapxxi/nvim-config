@@ -7,6 +7,24 @@ local yank_group = augroup("yank_group", {})
 local theme = require("slapxxi.theme")
 local scolors = theme.scolors
 
+-- vim.api.nvim_create_autocmd("InsertLeave", {
+-- 	group = vim.api.nvim_create_augroup("MinuetVirtualTextDismiss", { clear = true }),
+-- 	callback = function()
+-- 		local vt = require("minuet.virtualtext")
+-- 		vt.action.dismiss()
+-- 	end,
+-- })
+
+vim.api.nvim_create_autocmd("InsertLeave", {
+	group = vim.api.nvim_create_augroup("MinuetVirtualTextDismiss", { clear = true }),
+	callback = function()
+		local vt = require("minuet.virtualtext")
+		if vt.action.is_visible() then
+			vt.action.dismiss()
+		end
+	end,
+})
+
 autocmd("TextYankPost", {
 	group = yank_group,
 	pattern = "*",

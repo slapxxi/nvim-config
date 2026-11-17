@@ -125,12 +125,14 @@ return require("packer").startup(function(use)
 	})
 
 	-- AI
-	use({
-		"supermaven-inc/supermaven-nvim",
-		config = function()
-			require("supermaven-nvim").setup({})
-		end,
-	})
+	-- use({
+	-- 	"supermaven-inc/supermaven-nvim",
+	-- 	config = function()
+	-- 		require("supermaven-nvim").setup({})
+	-- 	end,
+	-- })
+
+	use("milanglacier/minuet-ai.nvim")
 
 	-- Testing
 	use("andythigpen/nvim-coverage")

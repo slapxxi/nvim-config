@@ -1,4 +1,4 @@
-if true then
+if false then
 	require("supermaven-nvim").setup({
 		keymaps = {
 			accept_suggestion = "<Tab>",
