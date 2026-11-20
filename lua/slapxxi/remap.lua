@@ -1,76 +1,74 @@
-local map = vim.keymap.set
-
 local opts = { noremap = true, silent = true }
 
 vim.g.mapleader = " "
 
 -- Tabs
-map("n", "<m-1>", ":tabn 1<CR>")
-map("n", "<m-2>", ":tabn 2<CR>")
-map("n", "<m-3>", ":tabn 3<CR>")
-map("n", "<m-4>", ":tabn 4<CR>")
-map("n", "<m-5>", ":tabn 5<CR>")
-map("n", "<m-6>", ":tabn 6<CR>")
-map("n", "<m-7>", ":tabn 7<CR>")
-map("n", "<m-8>", ":tabn 8<CR>")
-map("n", "<m-9>", ":tabn 9<CR>")
+vim.keymap.set("n", "<m-1>", ":tabn 1<CR>")
+vim.keymap.set("n", "<m-2>", ":tabn 2<CR>")
+vim.keymap.set("n", "<m-3>", ":tabn 3<CR>")
+vim.keymap.set("n", "<m-4>", ":tabn 4<CR>")
+vim.keymap.set("n", "<m-5>", ":tabn 5<CR>")
+vim.keymap.set("n", "<m-6>", ":tabn 6<CR>")
+vim.keymap.set("n", "<m-7>", ":tabn 7<CR>")
+vim.keymap.set("n", "<m-8>", ":tabn 8<CR>")
+vim.keymap.set("n", "<m-9>", ":tabn 9<CR>")
 
 -- General
-map("n", "<leader>,", "A,<Esc>", opts) -- add comma at the end and go normal mode
+vim.keymap.set("n", "<leader>,", "A,<Esc>", opts) -- add comma at the end and go normal mode
 
 -- Move
-map({ "n", "x" }, "L", "$", opts) -- to end of line
-map({ "n", "x" }, "H", "^", opts) -- to start of line
-map("n", "V", "V$", opts) -- enter visual mode and go to end of line
+vim.keymap.set({ "n", "x" }, "L", "$", opts) -- to end of line
+vim.keymap.set({ "n", "x" }, "H", "^", opts) -- to start of line
+vim.keymap.set("n", "V", "V$", opts) -- enter visual mode and go to end of line
 
 -- Yank and Paste
-map("n", "<leader>p", ":pu<CR>")
-map("n", "<leader>P", ":pu!<CR>")
+vim.keymap.set("n", "<leader>p", ":pu<CR>")
+vim.keymap.set("n", "<leader>P", ":pu!<CR>")
 
-map({ "n", "v" }, "<leader>y", [["+y]]) -- copy to system clipboard
-map("n", "<leader>Y", [["+Y]]) -- copy to system clipboard
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]]) -- copy to system clipboard
+vim.keymap.set("n", "<leader>Y", [["+Y]]) -- copy to system clipboard
 
 -- Quit
-map("n", "<leader>q", ":q<CR>")
-map("n", "<leader>Q", ":qa!<CR>")
+vim.keymap.set("n", "<leader>q", ":q<CR>")
+vim.keymap.set("n", "<leader>Q", ":qa!<CR>")
 
 -- Search
-map("n", "g/", ":%s/", opts)
-map("v", "g/", ":s/", opts)
-map("v", "<leader>/", "y:%s/<C-R>0/") -- yank and replace currently selected
-map({ "n", "v" }, "<leader><BS>", vim.cmd.noh) -- remove search highlight
+vim.keymap.set("n", "g/", ":%s/", opts)
+vim.keymap.set("v", "g/", ":s/", opts)
+vim.keymap.set("v", "<leader>/", "y:%s/<C-R>0/") -- yank and replace currently selected
+vim.keymap.set({ "n", "v" }, "<leader><BS>", vim.cmd.noh) -- remove search highlight
 
 -- Save
-map("n", "<C-s>", ":w<CR>")
-map("n", "<C-S-s>", ":wa<CR>")
-map("i", "<C-s>", "<C-o>:w<CR>")
-map("i", "<C-S-s>", "<C-o>:wa<CR>")
+vim.keymap.set("n", "<C-s>", ":w<CR>")
+vim.keymap.set("n", "<C-S-s>", ":wa<CR>")
+vim.keymap.set("i", "<C-s>", "<C-o>:w<CR>")
+vim.keymap.set("i", "<C-S-s>", "<C-o>:wa<CR>")
 
 -- Macros
-map("n", "Q", "@q") -- repeat q macro
-map("n", "<C-space>", "@@") -- repeat last macro
+vim.keymap.set("n", "Q", "@q") -- repeat q macro
+vim.keymap.set("n", "<C-space>", "@@") -- repeat last macro
 
 -- Alignment
-map("n", "G", "Gzz") -- go to the end and center
-map("n", "n", "nzz") -- next match and center
-map("n", "<C-e>", "<C-e>j") -- scroll down and center
-map("n", "<C-y>", "<C-y>k") -- scroll up and center
+vim.keymap.set("n", "G", "Gzz") -- go to the end and center
+vim.keymap.set("n", "n", "nzz") -- next match and center
+vim.keymap.set("n", "<C-e>", "<C-e>j") -- scroll down and center
+vim.keymap.set("n", "<C-y>", "<C-y>k") -- scroll up and center
 
 -- Quickfix
-map("n", "<leader>co", ":copen<CR>")
+vim.keymap.set("n", "<leader>co", ":copen<CR>")
 
 -- Move Lines
-map("n", "<M-S-j>", ":m .+1<CR>==") -- qf next item
-map("n", "<M-S-k>", ":m .-2<CR>==") -- qf prev item
-map("v", "<M-S-j>", ":m '>+1<CR>gv=gv") -- move line up(v)
-map("v", "<M-S-k>", ":m '<-2<CR>gv=gv") -- move line down(v)
+vim.keymap.set("n", "<M-S-j>", ":m .+1<CR>==") -- qf next item
+vim.keymap.set("n", "<M-S-k>", ":m .-2<CR>==") -- qf prev item
+vim.keymap.set("v", "<M-S-j>", ":m '>+1<CR>gv=gv") -- move line up(v)
+vim.keymap.set("v", "<M-S-k>", ":m '<-2<CR>gv=gv") -- move line down(v)
 
 -- Insert Mode Navigation
-map("i", "<C-a>", "<Home>")
-map("i", "<M-l>", "<Right>")
-map("i", "<M-h>", "<Left>")
-map("i", "<M-j>", "<Down>")
-map("i", "<M-k>", "<Up>")
+vim.keymap.set("i", "<C-a>", "<Home>")
+vim.keymap.set("i", "<M-l>", "<Right>")
+vim.keymap.set("i", "<M-h>", "<Left>")
+vim.keymap.set("i", "<M-j>", "<Down>")
+vim.keymap.set("i", "<M-k>", "<Up>")
 
 local function leave_insert_preserving_indent()
 	local line = vim.api.nvim_get_current_line()
@@ -80,45 +78,45 @@ local function leave_insert_preserving_indent()
 	return [[<Esc>]]
 end
 
-map("i", "<Esc>", leave_insert_preserving_indent, { expr = true, noremap = true, silent = true })
-map("i", "<C-c>", leave_insert_preserving_indent, { expr = true, noremap = true, silent = true })
+vim.keymap.set("i", "<Esc>", leave_insert_preserving_indent, { expr = true, noremap = true, silent = true })
+vim.keymap.set("i", "<C-c>", leave_insert_preserving_indent, { expr = true, noremap = true, silent = true })
 
 -- Newline Insert
-map("n", "<M-o>", "o<Esc>")
-map("n", "<M-O>", "O<Esc>")
-map("n", "<M-CR>", "o<Esc>")
-map("i", "<M-CR>", "<CR><Esc>O  ")
+vim.keymap.set("n", "<M-o>", "o<Esc>")
+vim.keymap.set("n", "<M-O>", "O<Esc>")
+vim.keymap.set("n", "<M-CR>", "o<Esc>")
+vim.keymap.set("i", "<M-CR>", "<CR><Esc>O  ")
 
 -- Buffers
-map("n", "<C-g>", "<C-^>") -- alternate buffer
-map("n", "<M-p>", ":bp<CR>") -- prev buffer
-map("n", "<M-n>", ":bn<CR>") -- next buffer
-map("n", "<leader>w", "<c-w>c") -- close
-map("n", "<leader>W", ":tabc<CR>") -- tab close
+vim.keymap.set("n", "<C-g>", "<C-^>") -- alternate buffer
+vim.keymap.set("n", "<M-p>", ":bp<CR>") -- prev buffer
+vim.keymap.set("n", "<M-n>", ":bn<CR>") -- next buffer
+vim.keymap.set("n", "<leader>w", "<c-w>c") -- close
+vim.keymap.set("n", "<leader>W", ":tabc<CR>") -- tab close
 
-map("v", "+", '"+y')
+vim.keymap.set("v", "+", '"+y')
 
-map("n", "z.", ":normal! zszH<CR>", { silent = true, desc = "Center view horizontally" })
+vim.keymap.set("n", "z.", ":normal! zszH<CR>", { silent = true, desc = "Center view horizontally" })
 
-map("n", "<leader>z", ":tab split<CR>")
+vim.keymap.set("n", "<leader>z", ":tab split<CR>")
 
 -- Git
-map("x", "<leader>p", ":diffput<CR>", { silent = true })
-map("x", "<leader>o", ":diffget<CR>", { silent = true })
+vim.keymap.set("x", "<leader>p", ":diffput<CR>", { silent = true })
+vim.keymap.set("x", "<leader>o", ":diffget<CR>", { silent = true })
 
 -- CD
-map("n", "<leader>`", ":lcd %:p:h<CR>", { desc = "lcd to current directory" })
-map("n", "<leader>_", ":lcd %:p:h | lcd ..<CR>", { desc = "lcd to parent directory" })
-map("n", "<leader>-", ":lcd-<CR>", { desc = "lcd to previous directory" })
+vim.keymap.set("n", "<leader>`", ":lcd %:p:h<CR>", { desc = "lcd to current directory" })
+vim.keymap.set("n", "<leader>_", ":lcd %:p:h | lcd ..<CR>", { desc = "lcd to parent directory" })
+vim.keymap.set("n", "<leader>-", ":lcd-<CR>", { desc = "lcd to previous directory" })
 
-map("n", "<leader><leader>`", ":cd %:p:h<CR>", { desc = "cd to current directory" })
-map("n", "<leader><leader>_", ":cd %:p:h | cd ..<CR>", { desc = "cd to parent directory" })
-map("n", "<leader><leader>-", ":cd-<CR>", { desc = "cd to previous directory" })
+vim.keymap.set("n", "<leader><leader>`", ":cd %:p:h<CR>", { desc = "cd to current directory" })
+vim.keymap.set("n", "<leader><leader>_", ":cd %:p:h | cd ..<CR>", { desc = "cd to parent directory" })
+vim.keymap.set("n", "<leader><leader>-", ":cd-<CR>", { desc = "cd to previous directory" })
 
--- Windows
-map("n", "<m-j>", "j")
-map("n", "<m-l>", "l")
-map("n", "<m-k>", "k")
-map("n", "<m-h>", "h")
+-- Windows if not manage by tmux plugin
+-- vim.keymap.set("n", "<m-j>", "j")
+-- vim.keymap.set("n", "<m-l>", "l")
+-- vim.keymap.set("n", "<m-k>", "k")
+-- vim.keymap.set("n", "<m-h>", "h")
 
-map("n", "|", "|")
+vim.keymap.set("n", "|", "|")

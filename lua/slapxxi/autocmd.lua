@@ -118,3 +118,26 @@ autocmd("CmdlineLeave", {
 		vim.api.nvim_set_hl(0, "MsgArea", { fg = scolors.subtle })
 	end,
 })
+
+local vectorcode_cacher = require("vectorcode.config").get_cacher_backend()
+
+vim.api.nvim_create_autocmd({ "BufReadPre" }, {
+	pattern = { "*.go", "*.tsx", "*.jsx", "*.js", "*.ts", "*.md" },
+	callback = function(args)
+		if not vectorcode_cacher.buf_is_registered(args.buf) then
+			vectorcode_cacher.register_buffer(args.buf, {
+				n_query = 1,
+				exclude_this = false,
+			})
+		end
+	end,
+})
+
+vim.api.nvim_create_autocmd({ "BufDelete" }, {
+	pattern = { "*.go", "*.tsx", "*.jsx", "*.js", "*.ts", "*.md" },
+	callback = function(args)
+		if vectorcode_cacher.buf_is_registered(args.buf) then
+			vectorcode_cacher.deregister_buffer(args.buf)
+		end
+	end,
+})

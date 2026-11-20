@@ -82,6 +82,19 @@ return require("packer").startup(function(use)
 		requires = { "nvim-tree/nvim-web-devicons" },
 	})
 
+	-- tmux integration
+	use({
+		"christoomey/vim-tmux-navigator",
+		cmd = {
+			"TmuxNavigateLeft",
+			"TmuxNavigateDown",
+			"TmuxNavigateUp",
+			"TmuxNavigateRight",
+			"TmuxNavigatePrevious",
+			"TmuxNavigatorProcessList",
+		},
+	})
+
 	-- Quality of Life
 	use({ "lewis6991/gitsigns.nvim" })
 	use({ "chentoast/marks.nvim" })
@@ -133,6 +146,8 @@ return require("packer").startup(function(use)
 	-- })
 
 	use("milanglacier/minuet-ai.nvim")
+	use("Davidyz/VectorCode")
+	-- use({ "cursortab/cursortab.nvim", run = "cd server && go build" })
 
 	-- Testing
 	use("andythigpen/nvim-coverage")
