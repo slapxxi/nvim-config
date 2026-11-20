@@ -1,5 +1,6 @@
 if true then
 	vim.g.tmux_navigator_no_mappings = 1
+	vim.g.tmux_navigator_disable_when_zoomed = 1
 
 	local opts = { silent = true }
 
